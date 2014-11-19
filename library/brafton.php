@@ -73,7 +73,6 @@ add_action( 'wpcf7_enqueue_scripts', '_kill_scripts' );
 if ( function_exists( 'register_nav_menus' ) ) {
 	register_nav_menus( 
 		array ( 
-			'primary' => 'Primary', 
 			'support' => 'Support',
 			'footer' => 'Footer'
 		) 
@@ -350,30 +349,7 @@ function create_post_types() {
 			'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'author' )
 		)
 	);
-	register_post_type( 'slide',
-		array(
-			'labels' => array(
-				'name' => __( 'Slides' ),
-				'singular_name' => __( 'Slide' ),
-				'all_items' => __( 'View All Slides' ),
-				'add_new' => __( 'Add New Slide')
-			),
-			'query_var' => true,
-    			'capability_type' => 'post',
-			'description' => 'The content appearing on the homepage slider.',
-			'exclude_from_search' => true,
-			'public' => true,
-			'publicly_queryable' => false,
-			'show_ui' => true, 
-    			'show_in_menu' => true,
-			'show_in_nav_menus' => false,
-			'show_in_admin_bar' => false,
-			'has_archive' => false,
-			'menu_position' => 5,
-			'supports' => array( 'title', 'editor', 'thumbnail' ),
-			'comments' => false
-		)
-	);
+	
 	register_post_type( 'downloadables',
 		array(
 			'labels' => array( 
