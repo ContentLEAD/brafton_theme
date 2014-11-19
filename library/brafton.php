@@ -1667,15 +1667,6 @@ wp_reset_postdata();
 
 //FOR NEW BLOG/NEWS ARTICLES
 
-//Enqueue css for blog/news
-
-function blog_archive_css() {
-	wp_enqueue_style('single-article-css', get_template_directory_uri() . '/css/single.css');
-	wp_enqueue_style('archive-css', get_template_directory_uri() . '/css/archive.css');
-}
-
-add_action('wp_enqueue_scripts', 'blog_archive_css');
-
 //readtime function 
 
 function readtime() {
