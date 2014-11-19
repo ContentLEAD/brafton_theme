@@ -1,0 +1,79 @@
+/*Here is some Sass conviniently set aside to handle all the subcategory hover effects...*/
+
+/*Subcategory Hover effects======================================
+	=================================================================
+	=================================================================*/
+
+	.subcategory .subcategory-image {
+		margin-right: 40px;
+		height: 115px;
+		width: 103px;
+		background-size: 100%;
+		margin-top: -5px;
+	}
+
+	.textwidget .subcategory {
+		margin-left: 20px;
+		margin-top: 30px;
+	}
+
+	.subcategory .subcategory-image-sidebar {
+		margin-right: 16px;
+		height: 40px;
+		width: 40px;
+		background-size: 100% !important;
+		margin-top: -9px;
+	}
+
+	.subcat-container {
+		display: block;
+		height: 45px;
+	}
+
+	.sidebar-cat-titles a {
+		text-transform: uppercase;
+		font-weight: 900;
+		font-size: 16px;
+		color: #000;
+	}
+
+	.sidebar-cat-titles a:hover {
+		text-decoration: underline !important;
+	}
+
+	/*content-marketing*/
+
+	.subcategory .content-marketing-sidebar {
+		background: url(../images/blog-images/subcategory_thumbs/contentmarketing_sidebar.png) no-repeat;
+		float: left;
+	}
+
+	.subcategory .content-marketing {
+		background: url(../images/blog-images/subcategory_thumbs/contentmarketing.png);
+		margin-bottom: -10px;
+		transition: background 0.3s;
+		-webkit-transition: background 0.3s;
+	}
+
+	.subcategory .content-marketing:hover {
+		background: url(../images/blog-images/subcategory_thumbs/contentmarketing_hover.png);
+
+	}
+
+	/*seo*/
+
+	.subcategory .seo-sidebar {
+		background: url(../images/blog-images/subcategory_thumbs/seo_sidebar.png) no-repeat;
+		float: left;
+	}
+
+	.subcategory .seo{
+		background: url(../images/blog-images/subcategory_thumbs/seo.png);
+
+		transition: background 0.3s;
+		-webkit-transition: background 0.3s;
+	}
+
+	.subcategory .seo:hover{
+		background: url(../images/blog-images/subcategory_thumbs/seo_hover.png);
+	}

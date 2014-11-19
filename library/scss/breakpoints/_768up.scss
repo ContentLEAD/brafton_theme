@@ -1,0 +1,945 @@
+/******************************************************************
+Site Name:Brafton
+Author:Michael DeWitt
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+
+
+/*********************
+GENERAL STYLES
+*********************/
+
+body {
+	margin-top: -25px;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+
+.wrap {
+	width: 760px;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+
+.header {}
+
+	#logo {}
+
+/*********************
+NAVIGATION STYLES
+*********************/
+nav {
+	float: right;
+}
+
+.nav {
+	border: 0;
+	ul {
+		background:$white;
+		margin-top:0;
+	}
+	li {
+		float: left;
+		position: relative;
+
+		a {
+			border-bottom: 0;
+
+			/*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+			&:hover, &:focus {
+				color: $white;
+				text-decoration: none;
+			}
+		}
+
+		&:first-child {}
+		&:last-child {}
+
+		/*
+		plan your menus and drop-downs wisely.
+		*/
+		ul.sub-menu,
+		ul.children {
+			background: #fff;
+			margin-top: 0;
+			border: 0;
+			position: absolute;
+			visibility: hidden;
+			z-index: 8999;
+
+			li {
+
+				a {
+					color: $black;
+					padding-left: 10px;
+					border-right: 0;
+					display: block;
+					width: 180px;
+					border-bottom: 1px solid #ccc;
+					padding: 0.75em;
+
+					&:hover,
+					&:focus {
+						background: $black;
+						color: $white;
+					}
+
+					&:link {}
+				}
+
+				&:first-child {}
+
+				&:last-child {
+
+					a {
+						border-bottom: 0;
+					}
+				}
+
+				/*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+				ul {
+					top:0;
+					left:100%;
+				}
+			}
+
+			/* highlight sub-menu current page */
+			li.current-menu-item,
+			li.current_page_item,
+			li.current_page_ancestor {
+				a {}
+			}
+		}
+
+		/* showing sub-menus */
+		&:hover > ul {
+			top: auto;
+			visibility:visible;
+		}
+
+	} /* end .menu ul li */
+
+	/* highlight current page */
+	li.current-menu-item,
+	li.current_page_item,
+	li.current_page_ancestor {
+		a {}
+	}  /* end current highlighters */
+
+} /* end .nav */
+
+/***************************
+BLOG
+****************************/
+
+
+.tagbar {
+	background: url(../images/blog-images/tagbar.png) no-repeat;
+	background-size: 100%;
+	margin-bottom: -5px;
+	height: 47px;
+}
+
+/*tag sprites===============================
+============================================*/
+
+.tag-image {
+	background:none no-repeat left center;
+	background-size: 100%;
+	display: inline-block;
+	margin-top: 3px;
+	margin-right: 2%;
+}
+
+/*all tag*/
+
+.all-tag {
+	background-image: url(../images/blog-images/tags/all.png);
+	background-position: 0 0;
+	padding-bottom: 3.2%;
+	width: 4.3%;
+	height: 0;
+}
+
+.all-tag:hover,
+.all-tag.selected {
+	background-position: 0 100%;
+}
+
+/*brafton community*/
+
+.brafton-community {
+	background-image: url(../images/blog-images/tags/community.png);
+	background-position: 0 0;
+	width: 15%;
+	height: 0;
+	padding-bottom: 3.2%;
+}
+
+.brafton-community:hover,
+.brafton-community.selected {
+	background-position: 0 100%;
+}
+
+
+/*content strategy*/
+
+.content-strategy {
+	background-image: url(../images/blog-images/tags/contentstrategy.png);
+	background-position: 0 0;
+	width: 13%;
+	height: 0;
+	padding-bottom: 3.1%;
+}
+
+.content-strategy:hover,
+.content-strategy.selected {
+	background-position: 0 100%;
+}
+
+
+/*engaging customers*/
+
+.engaging-customers {
+	background-image: url(../images/blog-images/tags/engaging.png);
+	background-position: 0 0;
+	width: 17%;
+	height: 0;
+	padding-bottom: 3.1%;
+}
+
+.engaging-customers:hover,
+.engaging-customers.selected {
+	background-position: 0 100%;
+}
+
+/*get found*/
+
+.getting-found {
+	background-image: url(../images/blog-images/tags/gettingfound.png);
+	background-position: 0 0;
+	width: 9%;
+	height: 0;
+	padding-bottom: 3.2%;
+}
+
+.getting-found:hover,
+.getting-found.selected {
+	background-position: 0 100%;
+}
+
+
+/*lead gen & sales*/
+
+.sales {
+	background-image: url(../images/blog-images/tags/sales.png);
+	background-position: 0 0;
+	width: 13%;
+	height: 0;
+	padding-bottom: 3.1%;;
+}
+
+.sales:hover,
+.sales.selected {
+	background-position: 0 100%;
+}
+
+
+/*marketing-news*/
+
+.marketing-news {
+	background-image: url(../images/blog-images/tags/marketingnews.png);
+	background-position: 0 0;
+	width: 13%;
+	height: 0;
+	padding-bottom: 3.1%;
+}
+
+.marketing-news:hover,
+.marketing-news.selected {
+	background-position: 0 100%;
+}
+
+
+
+/*side bar versions of all these tags*/
+#sidebar .brafton-community,
+#sidebar .content-strategy,
+#sidebar .engaging-customers,
+#sidebar .getting-found, 
+#sidebar .sales,
+#sidebar .marketing-news {
+	width: 100%;
+	padding-bottom: 44px;
+}
+
+#sidebar .brafton-community {
+	background-size: 60%;
+}
+
+#sidebar .sales,
+#sidebar .marketing-news,
+#sidebar .content-strategy {
+	background-size: 55%;
+}
+
+#sidebar .getting-found {
+	background-size: 36%;
+}
+
+#sidebar .engaging-customers {
+	background-size: 73%;
+}
+
+
+/***************************
+BLOG-SINGLE POST
+****************************/
+
+
+
+.single .blog_header,
+.archive .featured-post .blog_header {
+	min-height: 315px;
+	background: url(../images/blog-images/headerbackground.png) no-repeat;
+	background-size: 100%;
+}
+
+	.title_info_container {
+		padding-bottom: 10px;
+	}
+
+	.icons.small .cube {
+		border-radius: 50%;
+	}
+
+	.share .count {
+		border-radius: 50%;
+	}
+
+	.share {
+		display: inline-block;
+		margin: 0 !important;
+		width: 60px;
+		position: fixed;
+		left: 10px !important;
+		top: 200px !important;
+		z-index: 9999;
+
+		a {
+			display: block;
+			margin-top: 20px !important;
+		}
+	}
+
+	.image-inner {
+		margin: 22px 0px 0px -4px;
+		width: 33%;
+		border: none;
+		display: inline-block;
+		float: left;
+	}
+
+	#archive .featured-post .image-inner {
+		margin: 22px 10px 0px -6px;
+		width: 33%;
+		border: none;
+	}
+
+	.title_info_container {
+		width: 100%;
+		display: inline-block;
+	}
+
+	article h1 {
+		background: none;
+		color: black;
+		width: 100%;
+		float: left;
+		font-weight: 400;
+		display: block;
+		padding-bottom: 0px;;
+	}
+
+
+	#topinfo {
+
+		position: relative;
+		width: 60%;
+		float: left;
+
+		a {
+			text-decoration: none;
+		}
+
+		.author {
+			float: left;
+			position: relative;
+			top: 0;
+			margin-right: 40px;
+			right: 0;
+
+			img {
+				border-radius: 50%;
+				max-width: 78px
+			}
+			.user {
+				display: block;
+				text-align: center;
+			}
+		}  
+		
+		.subcategory {
+			float: left;
+		}
+	}
+
+
+
+/*special css for twits and videos*/
+
+	.tagged-twit {
+
+		#topinfo {
+			width: 95%;
+			min-height: 225px;
+		}
+
+		.single-twit {
+			position: absolute;
+			width: 55%;
+			top: -210px;
+		}
+
+		.author-cat-time-container {
+			float: right;
+			width: 40%;
+		}
+
+		 #body {
+			margin-top: 230px;
+		}
+
+	}
+
+	.readtime img {
+		width: 60px;
+		display: inline-block;
+		float: left;
+	}
+
+	.readtime span {
+		float: left;
+		margin-top: 18px;
+		font-size: 18px;
+		font-weight: 800;
+	}
+
+
+	#body {
+		width: 60%;
+		margin-left: 60px;
+
+		.share {
+			display: none;
+		}
+	}
+
+
+
+/*Footer stuff*/
+
+.tag_thumbnails img {
+	width: 94px;
+}
+
+.boilerplate {
+	margin: 0 !important;
+}
+
+.boilerplate .bio {
+	background: url(../images/blog-images/authorbackground.png);
+}
+
+.boilerplate .icons {
+	float: left;
+	margin-top: 9px;
+}
+
+.authorprofile {
+	background: none !important;
+	float: left !important;
+}
+
+.authorprofile img {
+	width: 70px;
+	float: left;
+}
+
+.single hr,
+.archive hr {
+	border: none;
+}
+
+.single .arrow_to_infinity {
+	background: url(../images/blog-images/arrow_to_infinity.png) no-repeat;
+	width: 100%;
+	display: block;
+	height: 34px;
+	background-size: 100%;
+	margin-bottom: -15px;
+}
+
+.bottom-cta {
+	background: url(../images/blog-images/footerbackground.png) no-repeat;
+	background-size: 100%;
+	height: 64px;
+	margin-top: 75px;
+	overflow: visible;
+	margin-bottom: 35px;
+}
+
+
+#comments h1 {
+	margin-bottom: 20px;
+}
+
+.ourlatestfooter,
+.leadscon,
+.askamarketer {
+	width: 252px;
+	height: 139px;
+	display: inline-block;
+	margin-top: -50px;
+	background-size: 100%;
+	margin-left: 20px;
+}
+
+.ourlatestfooter {
+	background: url(../images/blog-images/ourlatestfooter.png) no-repeat;
+	background-size: 100%;
+
+	/*transition: background-position 0.3s;
+	-webkit-transition: background-position 0.3s;*/
+
+}
+
+.leadscon {
+	background: url(../images/blog-images/leadscon.png) no-repeat;
+	background-size: 100%;
+
+	/*transition: background-position 0.3s;
+	-webkit-transition: background-position 0.3s;*/
+}
+
+.askamarketer {
+	background: url(../images/blog-images/askamarketer.png) no-repeat;
+	background-size: 100%;
+
+	/*transition: background-position 0.3s;
+	-webkit-transition: background-position 0.3s;*/
+}
+
+.ourlatestfooter:hover {
+	background-position: 0px -140px;
+}
+
+.leadscon:hover {
+	background-position: 0px -140px;
+}
+
+.askamarketer:hover {
+	background-position: 0px -140px;
+	cursor: pointer;
+}
+
+.bottom-cta-container {
+	width: 825px;
+	display: block;
+	margin: auto;
+}
+
+
+/*RESPONSIVE DESIGN*/
+
+
+/*ipad landscape*/
+
+@media (max-width : 1200px)  {
+	.single #body {
+		width: 58%;
+		margin-left: 30px;
+	}
+
+	.scrolly img {
+		max-width: 100%;
+	}
+
+	.ourlatestfooter, .leadscon, .askamarketer {
+		margin-top: -35px;
+	}
+}
+
+/*ipad portrait*/
+
+@media (max-width : 960px)  {
+	.single #body {
+		width: 90%;
+		margin-left: 60px;
+	}
+
+	.scrolly {
+		display: none;
+	}
+
+	.tag-image, .all-tag {
+		display: none;
+	}
+
+	.single article h1 {
+		font-size: 20px;
+	}
+	.single .row .twelvecol {
+		margin: 0 0 0em;
+	}
+
+	.single #topinfo {
+		margin-bottom: 3em;
+	}
+
+	#topinfo img {
+		max-width: 60px
+	}
+
+	.single .subcategory .subcategory-image  {
+		margin-top: -8px;
+		width: 80px;
+		height: 82px;
+		background-size: 100%;
+	}
+
+	.single .subcategory .subcategory-image:hover {
+		background-size: 100%;
+	}
+
+	.ourlatestfooter, .leadscon, .askamarketer {
+		margin-left: 60px;
+	}
+}
+
+@media (min-width: 481px) and (max-width: 685px) {
+	.author, .subcategory, .readtime {
+		display: none !important;
+	}
+}
+
+/*smartphones*/
+
+
+@media (min-width : 320px) and (max-width : 480px) {
+	.single #single {
+		margin-top: -35px;
+	}
+	.tagbar {
+		background: none;
+		height: 0px;
+	}
+
+	.single .blog_header {
+		background: none;
+	}
+
+	.single #topinfo {
+		position: relative;
+		width: 100%;
+		display: block;
+		margin-bottom: 0.8em;
+		float: left;
+	}
+
+	.single article h1 {
+		font-size: 34px;
+	}
+
+	.author, .subcategory, .readtime {
+		display: none !important;
+	}
+
+	.single .image-inner {
+		width: 100%;
+		border: none;
+	}
+
+	.single .image-inner img {
+		width: 100%;
+	}
+
+	.single .bottom-cta {
+		background: none;
+	}
+
+	.arrow_to_infinity {
+		display: none;
+	}
+
+
+	.ourlatestfooter,
+	.leadscon,
+	.askamarketer {
+		display: none;
+	}
+
+	.single-post .share {
+		display: block;
+		width: 100%;
+		position: relative;
+		top: 0px !important;
+		left: 0px !important;
+		margin-bottom: 20px !important;
+	}
+
+
+	.single-post .share a {
+		margin-top: 20px !important;
+		display: inline-block;
+	}
+
+	.single #body {
+		width: 100%;
+		margin-left: 0px;
+		text-align: justify;
+	}
+
+	.author_avatar_container {
+		margin: 15px 15px;
+		float: left;
+	}
+
+	.bottom-cta {
+		display: none;
+	}
+
+}
+
+@media (max-width: 365px) {
+	.share .count {
+		display: none;
+	}
+
+	.share a {
+		margin-right: 0px !important;
+	}
+
+	.icons.small .cube {
+		margin: 11px;
+	}
+
+	.icons.small .cube {
+		text-align: center;
+	}
+}
+
+
+/*Special responsive CSS for twits/videos*/
+
+@media (max-width: 1075px) {
+
+	.tagged-twit .author-cat-time-container {
+		float: left;
+		width: 100%;
+	}
+
+	.tagged-twit .single-twit {
+		position: relative;
+		width: 100%;
+		top: 0px;
+	}
+
+	.tagged-twit #body {
+		margin-top: 10px;
+	}
+
+}
+
+@media (max-width: 960px) {
+	.single.tagged-twit .blog_header {
+		min-height: 125px;
+	}
+	.tagged-twit #topinfo {
+		min-height: 0px;
+	}
+
+	.tagged-twit #topinfo .author,
+	.tagged-twit #topinfo .subcategory,
+	.tagged-twit #topinfo .readtime {
+		display: none;
+	}
+}
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+	margin-top: 2.2em;
+}
+
+	.widgettitle {
+		border-bottom: 2px solid #444;
+		margin-bottom: 0.75em;
+	}
+
+	.widget {
+		padding: 0 10px;
+		margin: 2.2em 0;
+
+		ul {
+			li {
+				margin-bottom: 0.75em;
+
+				&:first-child {}
+				&:last-child {}
+				a {}
+				/* deep nesting */
+
+				ul {
+					margin-top: 0.75em;
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+
+
+	/* links widget */
+	.widget_links {}
+	.widget_links ul {}
+	.widget_links ul li {}
+	.widget_links ul li a {}
+
+	/* meta widget */
+	.widget_meta {}
+	.widget_meta ul {}
+	.widget_meta ul li {}
+	.widget_meta ul li a {}
+
+	/* pages widget */
+	.widget_pages {}
+	.widget_pages ul {}
+	.widget_pages ul li {}
+	.widget_pages ul li a {}
+
+	/* recent-posts widget */
+	.widget_recent_entries {}
+	.widget_recent_entries ul {}
+	.widget_recent_entries ul li {}
+	.widget_recent_entries ul li a {}
+
+	/* archives widget */
+	.widget_archive {}
+	.widget_archive ul {}
+	.widget_archive ul li {}
+	.widget_archive ul li a {}
+	.widget_archive select {}
+	.widget_archive option {}
+
+	/* tag-cloud widget */
+	.widget_links {}
+	.widget_links li:after {}
+	.widget_links li:before {}
+	.widget_tag_cloud {}
+	.widget_tag_cloud a {}
+	.widget_tag_cloud a:after {}
+	.widget_tag_cloud a:before {}
+
+	/* calendar widget */
+	.widget_calendar {}
+	#calendar_wrap {}
+	#calendar_wrap th {}
+	#calendar_wrap td {}
+	#wp-calendar tr td {}
+	#wp-calendar caption {}
+	#wp-calendar a {}
+	#wp-calendar #today {}
+	#wp-calendar #prev {}
+	#wp-calendar #next {}
+	#wp-calendar #next a {}
+	#wp-calendar #prev a {}
+
+	/* category widget */
+	.widget_categories {}
+	.widget_categories ul {}
+	.widget_categories ul li {}
+	.widget_categories ul ul.children {}
+	.widget_categories a {}
+	.widget_categories select{}
+	.widget_categories select#cat {}
+	.widget_categories select.postform {}
+	.widget_categories option {}
+	.widget_categories .level-0 {}
+	.widget_categories .level-1 {}
+	.widget_categories .level-2 {}
+	.widget_categories .level-3 {}
+
+	/* recent-comments widget */
+	.recentcomments {}
+	#recentcomments {}
+	#recentcomments li {}
+	#recentcomments li a {}
+	.widget_recent_comments {}
+
+	/* search widget */
+	#searchform {}
+	.widget_search {}
+	.screen-reader-text {}
+
+	/* text widget */
+	.textwidget {}
+	.widget_text {}
+	.textwidget p {}
+
+
+/*********************
+FOOTER STYLES
+*********************/
+
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer-links {
+	ul {
+		li {
+			a {
+				&:hover {}
+			}
+			/*
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/
+			ul {}
+		}
+	}
+} /* end .footer-links */
+
