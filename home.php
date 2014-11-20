@@ -1,6 +1,7 @@
 <?php get_header(); ?>
-<div id="content">
 <?php putRevSlider( "home" ) ?>
+<div id="content">
+<div class="wrap cf">
 <div id="home-secondary" class="m-all row">
 	<div id="home-news" class="m-all d-1of3 widget-area cf">
 		<aside>
@@ -30,6 +31,7 @@
 		</aside>
 	</div>
 </div><!-- End #home-secondary -->
+</div>
 </div>
 
 <?php get_footer(); ?>

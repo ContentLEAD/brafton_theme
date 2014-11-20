@@ -9,13 +9,15 @@ to IE, we're going to use SASS to create an easily readable css file.
 Here, we import all the styles the standard stylesheet gets, only
 without the media queries. No need to worry about editing anything!
 
-******************************************************************//******************************************************************
+******************************************************************/
+/******************************************************************
 IMPORTS & DEPENDENCIES
 Remember, all the BASE styles are called already since IE can
 read those. Below, we need to import only the stuff IE can't
 understand (what's inside the media queries). We also need to
 import the mixins file so SASS can understand the variables.
-******************************************************************//******************************************************************
+******************************************************************/
+/******************************************************************
 Site Name:
 Author:
 
@@ -26,15 +28,20 @@ base values, and defaults. We want to make sure this file ONLY
 contains variables that way our files don't get all messy.
 No one likes a mess.
 
-******************************************************************//*********************
+******************************************************************/
+/*********************
 COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
-*********************//*CORE BRAFTON COLORS*//*End core brafton colors...*//*
+*********************/
+/*CORE BRAFTON COLORS*/
+/*End core brafton colors...*/
+/*
 Here's a great tutorial on how to
 use color variables properly:
 http://sachagreif.com/sass-color-variables/
-*//******************************************************************
+*/
+/******************************************************************
 Site Name:Brafton.com
 Author: Michael DeWitt
 
@@ -49,15 +56,19 @@ http://trentwalton.com/2012/06/19/fluid-type/
 http://ia.net/blog/responsive-typography-the-basics/
 http://alistapart.com/column/responsive-typography-is-a-physical-discipline
 
-******************************************************************//*********************
+******************************************************************/
+/*********************
 FONT FACE (IN YOUR FACE)
-*********************//*
+*********************/
+/*
  i imported this one in the functions file so bones would look sweet.
  don't forget to remove it for your site.
-*//*
+*/
+/*
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
-*//******************************************************************
+*/
+/******************************************************************
 Site Name:
 Author:
 
@@ -77,14 +88,17 @@ http://sachagreif.com/useful-sass-mixins/
 http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
 http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
 
-******************************************************************//*********************
+******************************************************************/
+/*********************
 TRANSITION
-*********************//*
+*********************/
+/*
 I totally rewrote this to be cleaner and easier to use.
 You'll need to be using Sass 3.2+ for these to work.
 Thanks to @anthonyshort for the inspiration on these.
 USAGE: @include transition(all 0.2s ease-in-out);
-*//******************************************************************
+*/
+/******************************************************************
 Site Name:
 Author:
 
@@ -97,7 +111,8 @@ media queries, let's just add some styles that serves a fixed grid.
 Again, if you want to roll your own, just remove this junk and put
 whatever you use in here.
 
-******************************************************************//******************************************************************
+******************************************************************/
+/******************************************************************
 Site Name:
 Author:
 
@@ -112,14 +127,17 @@ A word of warning. This size COULD be a larger mobile device,
 so you still want to keep it pretty light and simply expand
 upon your base.scss styles.
 
-******************************************************************//*
+******************************************************************/
+/*
 IMPORTANT NOTE ABOUT SASS 3.3 & UP
 You can't use @extend within media queries
 anymore, so just be aware that if you drop
 them in here, they won't work.
-*//*********************
+*/
+/*********************
 NAVIGATION STYLES
-*********************//******************************************************************
+*********************/
+/******************************************************************
 Site Name:Brafton
 Author:Michael DeWitt
 
@@ -131,17 +149,24 @@ So you can start working with more styles, background images,
 and other resources. You'll also notice the grid starts to
 come into play. Have fun!
 
-******************************************************************//*********************
+******************************************************************/
+/*********************
 GENERAL STYLES
-*********************//*
+*********************/
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+/*
 you can call the larger styles if you want, but there's really no need
-*//******************************************************************
+*/
+/******************************************************************
 ADDITIONAL IE FIXES
 These fixes are now ONLY seen by IE, so you don't have to worry
 about using prefixes, although it's best practice. For more info
 on using Modernizr classes, check out this link:
 http://www.modernizr.com/docs/
-******************************************************************//*
+******************************************************************/
+/*
 For example, you can use something like:
 
 .no-textshadow .class { ... }
@@ -153,7 +178,8 @@ header.php file to see what they are:
 
 .lt-ie8 .class { ... }
 
-*//******************************************************************
+*/
+/******************************************************************
 Site Name:
 Author:
 
@@ -162,52 +188,767 @@ Stylesheet: Desktop Stylsheet
 This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
-******************************************************************/@font-face{font-family:'Proxima Nova';/* IE6-8 Fix */src:url('../fonts/ProximaNova-Reg-webfont.eot');src:url('../fonts/ProximaNova-Reg-webfont.eot?') format('eot'), local('Proxima Nova Regular'), local('ProximaNova-Reg_0'), url('../fonts/ProximaNova-Reg-webfont.woff') format('woff');font-weight:400;font-style:normal;}@font-face{font-family:'Proxima Nova';/* IE6-8 Fix */src:url('../fonts/ProximaNova-RegIt-webfont.eot');src:url('../fonts/ProximaNova-RegIt-webfont.eot?') format('eot'), local('Proxima Nova Regular'), local('ProximaNova-Reg_0'), url('../fonts/ProximaNova-RegIt-webfont.woff') format('woff');font-weight:400;font-style:italic;}@font-face{font-family:'Proxima Nova';/* IE6-8 Fix */src:url('../fonts/ProximaNova-Sbold-webfont.eot');src:url('../fonts/ProximaNova-Sbold-webfont.eot?') format('eot'), local('Proxima Nova Semibold'), local('ProximaNova-Sbold'), url('../fonts/ProximaNova-Sbold-webfont.woff') format('woff');font-weight:600;font-style:normal;}@font-face{font-family:'Proxima Nova';/* IE6-8 Fix */src:url('../fonts/ProximaNova-SboldIt-webfont.eot');src:url('../fonts/ProximaNova-SboldIt-webfont.eot?') format('eot'), local('Proxima Nova Semibold'), local('ProximaNova-SboldIt'), url('../fonts/ProximaNova-SboldIt-webfont.woff') format('woff');font-weight:600;font-style:italic;}@font-face{font-family:'Proxima Nova';/* IE6-8 Fix */src:url('../fonts/ProximaNova-Bold-webfont.eot');src:url('../fonts/ProximaNova-Bold-webfont.eot?') format('eot'), local('Proxima Nova Bold'), local('ProximaNova-Bold'), url('../fonts/ProximaNova-Bold-webfont.woff') format('woff');font-weight:700;font-style:normal;}@font-face{font-family:'Proxima Nova';/* IE6-8 Fix */src:url('../fonts/ProximaNova-BoldIt-webfont.eot');src:url('../fonts/ProximaNova-BoldIt-webfont.eot?') format('eot'), local('Proxima Nova Bold'), local('ProximaNova-Bold'), url('../fonts/ProximaNova-BoldIt-webfont.woff') format('woff');font-weight:700;font-style:italic;/*
+******************************************************************/
+@font-face {
+  font-family: 'Proxima Nova';
+  /* IE6-8 Fix */
+  src: url('../fonts/ProximaNova-Reg-webfont.eot');
+  src: url('../fonts/ProximaNova-Reg-webfont.eot?') format('eot'), local('Proxima Nova Regular'), local('ProximaNova-Reg_0'), url('../fonts/ProximaNova-Reg-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  /* IE6-8 Fix */
+  src: url('../fonts/ProximaNova-RegIt-webfont.eot');
+  src: url('../fonts/ProximaNova-RegIt-webfont.eot?') format('eot'), local('Proxima Nova Regular'), local('ProximaNova-Reg_0'), url('../fonts/ProximaNova-RegIt-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  /* IE6-8 Fix */
+  src: url('../fonts/ProximaNova-Sbold-webfont.eot');
+  src: url('../fonts/ProximaNova-Sbold-webfont.eot?') format('eot'), local('Proxima Nova Semibold'), local('ProximaNova-Sbold'), url('../fonts/ProximaNova-Sbold-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  /* IE6-8 Fix */
+  src: url('../fonts/ProximaNova-SboldIt-webfont.eot');
+  src: url('../fonts/ProximaNova-SboldIt-webfont.eot?') format('eot'), local('Proxima Nova Semibold'), local('ProximaNova-SboldIt'), url('../fonts/ProximaNova-SboldIt-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  /* IE6-8 Fix */
+  src: url('../fonts/ProximaNova-Bold-webfont.eot');
+  src: url('../fonts/ProximaNova-Bold-webfont.eot?') format('eot'), local('Proxima Nova Bold'), local('ProximaNova-Bold'), url('../fonts/ProximaNova-Bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  /* IE6-8 Fix */
+  src: url('../fonts/ProximaNova-BoldIt-webfont.eot');
+  src: url('../fonts/ProximaNova-BoldIt-webfont.eot?') format('eot'), local('Proxima Nova Bold'), local('ProximaNova-Bold'), url('../fonts/ProximaNova-BoldIt-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+  /*
 The following is based of Typebase:
 https://github.com/devinhunt/typebase.css
 I've edited it a bit, but it's a nice starting point.
-*/}p{-ms-word-break:break-all;-ms-word-wrap:break-all;word-break:break-word;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;-webkit-hyphenate-before:2;-webkit-hyphenate-after:3;hyphenate-lines:3;-webkit-font-feature-settings:"liga", "dlig";-moz-font-feature-settings:"liga=1, dlig=1";-ms-font-feature-settings:"liga", "dlig";-o-font-feature-settings:"liga", "dlig";font-feature-settings:"liga", "dlig";}.nav{/* .menu is clearfixed inside mixins.scss */}.menu{/* end .menu *//*********************
+*/
+}
+p {
+  -ms-word-break: break-all;
+  -ms-word-wrap: break-all;
+  word-break: break-word;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+}
+.nav {
+  /* .menu is clearfixed inside mixins.scss */
+}
+.menu {
+  /* end .menu */
+  /*********************
 POSTS & CONTENT STYLES
-*********************//* entry content */}.menu ul{/* end .menu ul */}.menu ul li{/* end .menu ul li *//* highlight current page */}.menu ul li:last-child{/*
+*********************/
+  /* entry content */
+}
+.menu ul {
+  /* end .menu ul */
+}
+.menu ul li {
+  /* end .menu ul li */
+  /* highlight current page */
+}
+.menu ul li:last-child {
+  /*
 				plan your menus and drop-downs wisely.
-				*/}.menu ul li.current-menu-item,.menu ul li.current_page_item,.menu ul li.current_page_ancestor{/* end current highlighters */}.entry-content{/* end .entry-content *//*********************
+				*/
+}
+.menu ul li.current-menu-item, .menu ul li.current_page_item, .menu ul li.current_page_ancestor {
+  /* end current highlighters */
+}
+.entry-content {
+  /* end .entry-content */
+  /*********************
 FOOTER STYLES
-*********************//*
+*********************/
+  /*
 check your menus here. do they look good?
 do they need tweaking?
-*/}.entry-content .alignleft,.entry-content img.alignleft{margin-right:1.5em;display:inline;float:left;}.entry-content .alignright,.entry-content img.alignright{margin-left:1.5em;display:inline;float:right;}.entry-content .aligncenter,.entry-content img.aligncenter{margin-right:auto;margin-left:auto;display:block;clear:both;}.footer-links{/* end .footer-links */}body{margin-top:-25px;/*********************
-LAYOUT & GRID STYLES
-*********************/}.wrap{width:760px;/*********************
+*/
+}
+.entry-content .alignleft, .entry-content img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left;
+}
+.entry-content .alignright, .entry-content img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right;
+}
+.entry-content .aligncenter, .entry-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+.footer-links {
+  /* end .footer-links */
+}
+.wrap {
+  width: 760px;
+  /*********************
 HEADER STYLES
-*********************/}#logo{/*********************
+*********************/
+}
+#logo {
+  /*********************
 NAVIGATION STYLES
-*********************/}nav{float:right;}.nav{border:0;/* end .nav *//***************************
+*********************/
+}
+nav {
+  float: right;
+}
+.nav {
+  border: 0;
+  /* end .nav */
+  /***************************
 BLOG
-****************************/}.nav ul{background:#fff;margin-top:0;}.nav li{float:left;position:relative;/* end .menu ul li *//* highlight current page */}.nav li a{/*
+****************************/
+}
+.nav ul {
+  background: #fff;
+  margin-top: 0;
+}
+.nav li {
+  float: left;
+  position: relative;
+  /* end .menu ul li */
+  /* highlight current page */
+}
+.nav li a {
+  /*
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.
-			*/border-bottom:0;}.nav li a:hover,.nav li a:focus{color:#fff;text-decoration:none;}.nav li:last-child{/*
+			*/
+  border-bottom: 0;
+}
+.nav li a:hover, .nav li a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.nav li:last-child {
+  /*
 		plan your menus and drop-downs wisely.
-		*/}.nav li ul.sub-menu,.nav li ul.children{background:#fff;margin-top:0;border:0;position:absolute;visibility:hidden;z-index:8999;/* showing sub-menus */}.nav li ul.sub-menu li,.nav li ul.children li{/* highlight sub-menu current page */}.nav li ul.sub-menu li a,.nav li ul.children li a{color:#000;padding-left:10px;border-right:0;display:block;width:180px;border-bottom:1px solid #ccc;padding:0.75em;}.nav li ul.sub-menu li a:hover,.nav li ul.children li a:hover,.nav li ul.sub-menu li a:focus,.nav li ul.children li a:focus{background:#000;color:#fff;}.nav li ul.sub-menu li:last-child,.nav li ul.children li:last-child{/*
+		*/
+}
+.nav li ul.sub-menu, .nav li ul.children {
+  background: #fff;
+  margin-top: 0;
+  border: 0;
+  position: absolute;
+  visibility: hidden;
+  z-index: 8999;
+  /* showing sub-menus */
+}
+.nav li ul.sub-menu li, .nav li ul.children li {
+  /* highlight sub-menu current page */
+}
+.nav li ul.sub-menu li a, .nav li ul.children li a {
+  color: #000;
+  padding-left: 10px;
+  border-right: 0;
+  display: block;
+  width: 180px;
+  border-bottom: 1px solid #ccc;
+  padding: 0.75em;
+}
+.nav li ul.sub-menu li a:hover, .nav li ul.children li a:hover, .nav li ul.sub-menu li a:focus, .nav li ul.children li a:focus {
+  background: #000;
+  color: #fff;
+}
+.nav li ul.sub-menu li:last-child, .nav li ul.children li:last-child {
+  /*
 				if you need to go deeper, go nuts
 				just remember deeper menus suck
 				for usability. k, bai.
-				*/}.nav li ul.sub-menu li:last-child a,.nav li ul.children li:last-child a{border-bottom:0;}.nav li ul.sub-menu li ul,.nav li ul.children li ul{top:0;left:100%;}.nav li:hover > ul{top:auto;visibility:visible;}.nav li.current-menu-item,.nav li.current_page_item,.nav li.current_page_ancestor{/* end current highlighters */}.tagbar{background:url(../images/blog-images/tagbar.png) no-repeat;background-size:100%;margin-bottom:-5px;height:47px;/*tag sprites===============================
-============================================*/}.tag-image{background:none no-repeat left center;background-size:100%;display:inline-block;margin-top:3px;margin-right:2%;/*all tag*/}.all-tag{background-image:url(../images/blog-images/tags/all.png);background-position:0 0;padding-bottom:3.2%;width:4.3%;height:0;}.all-tag:hover,.all-tag.selected{background-position:0 100%;/*brafton community*/}.brafton-community{background-image:url(../images/blog-images/tags/community.png);background-position:0 0;width:15%;height:0;padding-bottom:3.2%;}.brafton-community:hover,.brafton-community.selected{background-position:0 100%;/*content strategy*/}.content-strategy{background-image:url(../images/blog-images/tags/contentstrategy.png);background-position:0 0;width:13%;height:0;padding-bottom:3.1%;}.content-strategy:hover,.content-strategy.selected{background-position:0 100%;/*engaging customers*/}.engaging-customers{background-image:url(../images/blog-images/tags/engaging.png);background-position:0 0;width:17%;height:0;padding-bottom:3.1%;}.engaging-customers:hover,.engaging-customers.selected{background-position:0 100%;/*get found*/}.getting-found{background-image:url(../images/blog-images/tags/gettingfound.png);background-position:0 0;width:9%;height:0;padding-bottom:3.2%;}.getting-found:hover,.getting-found.selected{background-position:0 100%;/*lead gen & sales*/}.sales{background-image:url(../images/blog-images/tags/sales.png);background-position:0 0;width:13%;height:0;padding-bottom:3.1%;}.sales:hover,.sales.selected{background-position:0 100%;/*marketing-news*/}.marketing-news{background-image:url(../images/blog-images/tags/marketingnews.png);background-position:0 0;width:13%;height:0;padding-bottom:3.1%;}.marketing-news:hover,.marketing-news.selected{background-position:0 100%;/*side bar versions of all these tags*/}#sidebar .brafton-community,#sidebar .content-strategy,#sidebar .engaging-customers,#sidebar .getting-found,#sidebar .sales,#sidebar .marketing-news{width:100%;padding-bottom:44px;}#sidebar .brafton-community{background-size:60%;}#sidebar .sales,#sidebar .marketing-news,#sidebar .content-strategy{background-size:55%;}#sidebar .getting-found{background-size:36%;}#sidebar .engaging-customers{background-size:73%;/***************************
+				*/
+}
+.nav li ul.sub-menu li:last-child a, .nav li ul.children li:last-child a {
+  border-bottom: 0;
+}
+.nav li ul.sub-menu li ul, .nav li ul.children li ul {
+  top: 0;
+  left: 100%;
+}
+.nav li:hover > ul {
+  top: auto;
+  visibility: visible;
+}
+.nav li.current-menu-item, .nav li.current_page_item, .nav li.current_page_ancestor {
+  /* end current highlighters */
+}
+.tagbar {
+  background: url(../images/blog-images/tagbar.png) no-repeat;
+  background-size: 100%;
+  margin-bottom: -5px;
+  height: 47px;
+  /*tag sprites===============================
+============================================*/
+}
+.tag-image {
+  background: none no-repeat left center;
+  background-size: 100%;
+  display: inline-block;
+  margin-top: 3px;
+  margin-right: 2%;
+  /*all tag*/
+}
+.all-tag {
+  background-image: url(../images/blog-images/tags/all.png);
+  background-position: 0 0;
+  padding-bottom: 3.2%;
+  width: 4.3%;
+  height: 0;
+}
+.all-tag:hover, .all-tag.selected {
+  background-position: 0 100%;
+  /*brafton community*/
+}
+.brafton-community {
+  background-image: url(../images/blog-images/tags/community.png);
+  background-position: 0 0;
+  width: 15%;
+  height: 0;
+  padding-bottom: 3.2%;
+}
+.brafton-community:hover, .brafton-community.selected {
+  background-position: 0 100%;
+  /*content strategy*/
+}
+.content-strategy {
+  background-image: url(../images/blog-images/tags/contentstrategy.png);
+  background-position: 0 0;
+  width: 13%;
+  height: 0;
+  padding-bottom: 3.1%;
+}
+.content-strategy:hover, .content-strategy.selected {
+  background-position: 0 100%;
+  /*engaging customers*/
+}
+.engaging-customers {
+  background-image: url(../images/blog-images/tags/engaging.png);
+  background-position: 0 0;
+  width: 17%;
+  height: 0;
+  padding-bottom: 3.1%;
+}
+.engaging-customers:hover, .engaging-customers.selected {
+  background-position: 0 100%;
+  /*get found*/
+}
+.getting-found {
+  background-image: url(../images/blog-images/tags/gettingfound.png);
+  background-position: 0 0;
+  width: 9%;
+  height: 0;
+  padding-bottom: 3.2%;
+}
+.getting-found:hover, .getting-found.selected {
+  background-position: 0 100%;
+  /*lead gen & sales*/
+}
+.sales {
+  background-image: url(../images/blog-images/tags/sales.png);
+  background-position: 0 0;
+  width: 13%;
+  height: 0;
+  padding-bottom: 3.1%;
+}
+.sales:hover, .sales.selected {
+  background-position: 0 100%;
+  /*marketing-news*/
+}
+.marketing-news {
+  background-image: url(../images/blog-images/tags/marketingnews.png);
+  background-position: 0 0;
+  width: 13%;
+  height: 0;
+  padding-bottom: 3.1%;
+}
+.marketing-news:hover, .marketing-news.selected {
+  background-position: 0 100%;
+  /*side bar versions of all these tags*/
+}
+#sidebar .brafton-community, #sidebar .content-strategy, #sidebar .engaging-customers, #sidebar .getting-found, #sidebar .sales, #sidebar .marketing-news {
+  width: 100%;
+  padding-bottom: 44px;
+}
+#sidebar .brafton-community {
+  background-size: 60%;
+}
+#sidebar .sales, #sidebar .marketing-news, #sidebar .content-strategy {
+  background-size: 55%;
+}
+#sidebar .getting-found {
+  background-size: 36%;
+}
+#sidebar .engaging-customers {
+  background-size: 73%;
+  /***************************
 BLOG-SINGLE POST
-****************************/}.single .blog_header,.archive .featured-post .blog_header{min-height:315px;background:url(../images/blog-images/headerbackground.png) no-repeat;background-size:100%;}.title_info_container{padding-bottom:10px;}.icons.small .cube{border-radius:50%;}.share .count{border-radius:50%;}.share{display:inline-block;margin:0 !important;width:60px;position:fixed;left:10px !important;top:200px !important;z-index:9999;}.share a{display:block;margin-top:20px !important;}.image-inner{margin:22px 0px 0px -4px;width:33%;border:none;display:inline-block;float:left;}#archive .featured-post .image-inner{margin:22px 10px 0px -6px;width:33%;border:none;}.title_info_container{width:100%;display:inline-block;}article h1{background:none;color:black;width:100%;float:left;font-weight:400;display:block;padding-bottom:0px;}#topinfo{position:relative;width:60%;float:left;/*special css for twits and videos*/}#topinfo a{text-decoration:none;}#topinfo .author{float:left;position:relative;top:0;margin-right:40px;right:0;}#topinfo .author img{border-radius:50%;max-width:78px;}#topinfo .author .user{display:block;text-align:center;}#topinfo .subcategory{float:left;}.tagged-twit #topinfo{width:95%;min-height:225px;}.tagged-twit .single-twit{position:absolute;width:55%;top:-210px;}.tagged-twit .author-cat-time-container{float:right;width:40%;}.tagged-twit #body{margin-top:230px;}.readtime img{width:60px;display:inline-block;float:left;}.readtime span{float:left;margin-top:18px;font-size:18px;font-weight:800;}#body{width:60%;margin-left:60px;/*Footer stuff*/}#body .share{display:none;}.tag_thumbnails img{width:94px;}.boilerplate{margin:0 !important;}.boilerplate .bio{background:url(../images/blog-images/authorbackground.png);}.boilerplate .icons{float:left;margin-top:9px;}.authorprofile{background:none !important;float:left !important;}.authorprofile img{width:70px;float:left;}.single hr,.archive hr{border:none;}.single .arrow_to_infinity{background:url(../images/blog-images/arrow_to_infinity.png) no-repeat;width:100%;display:block;height:34px;background-size:100%;margin-bottom:-15px;}.bottom-cta{background:url(../images/blog-images/footerbackground.png) no-repeat;background-size:100%;height:64px;margin-top:75px;overflow:visible;margin-bottom:35px;}#comments h1{margin-bottom:20px;}.ourlatestfooter,.leadscon,.askamarketer{width:252px;height:139px;display:inline-block;margin-top:-50px;background-size:100%;margin-left:20px;}.ourlatestfooter{background:url(../images/blog-images/ourlatestfooter.png) no-repeat;/*transition: background-position 0.3s;
-	-webkit-transition: background-position 0.3s;*/background-size:100%;}.leadscon{background:url(../images/blog-images/leadscon.png) no-repeat;/*transition: background-position 0.3s;
-	-webkit-transition: background-position 0.3s;*/background-size:100%;}.askamarketer{background:url(../images/blog-images/askamarketer.png) no-repeat;/*transition: background-position 0.3s;
-	-webkit-transition: background-position 0.3s;*/background-size:100%;}.ourlatestfooter:hover{background-position:0px -140px;}.leadscon:hover{background-position:0px -140px;}.askamarketer:hover{background-position:0px -140px;cursor:pointer;}.bottom-cta-container{width:825px;display:block;margin:auto;/*RESPONSIVE DESIGN*//*ipad landscape*/}@media (max-width:1200px){/*ipad portrait*/.single #body{width:58%;margin-left:30px;}.scrolly img{max-width:100%;}.ourlatestfooter,.leadscon,.askamarketer{margin-top:-35px;}}@media (max-width:960px){.single #body{width:90%;margin-left:60px;}.scrolly{display:none;}.tag-image,.all-tag{display:none;}.single article h1{font-size:20px;}.single .row .twelvecol{margin:0 0 0em;}.single #topinfo{margin-bottom:3em;}#topinfo img{max-width:60px;}.single .subcategory .subcategory-image{margin-top:-8px;width:80px;height:82px;background-size:100%;}.single .subcategory .subcategory-image:hover{background-size:100%;}.ourlatestfooter,.leadscon,.askamarketer{margin-left:60px;}}@media (min-width:481px) and (max-width:685px){/*smartphones*/.author,.subcategory,.readtime{display:none !important;}}@media (min-width:320px) and (max-width:480px){.single #single{margin-top:-35px;}.tagbar{background:none;height:0px;}.single .blog_header{background:none;}.single #topinfo{position:relative;width:100%;display:block;margin-bottom:0.8em;float:left;}.single article h1{font-size:34px;}.author,.subcategory,.readtime{display:none !important;}.single .image-inner{width:100%;border:none;}.single .image-inner img{width:100%;}.single .bottom-cta{background:none;}.arrow_to_infinity{display:none;}.ourlatestfooter,.leadscon,.askamarketer{display:none;}.single-post .share{display:block;width:100%;position:relative;top:0px !important;left:0px !important;margin-bottom:20px !important;}.single-post .share a{margin-top:20px !important;display:inline-block;}.single #body{width:100%;margin-left:0px;text-align:justify;}.author_avatar_container{margin:15px 15px;float:left;}.bottom-cta{display:none;}}@media (max-width:365px){/*Special responsive CSS for twits/videos*/.share .count{display:none;}.share a{margin-right:0px !important;}.icons.small .cube{margin:11px;}.icons.small .cube{text-align:center;}}@media (max-width:1075px){.tagged-twit .author-cat-time-container{float:left;width:100%;}.tagged-twit .single-twit{position:relative;width:100%;top:0px;}.tagged-twit #body{margin-top:10px;}}@media (max-width:960px){/*********************
+****************************/
+}
+.single .blog_header, .archive .featured-post .blog_header {
+  min-height: 315px;
+  background: url(../images/blog-images/headerbackground.png) no-repeat;
+  background-size: 100%;
+}
+.title_info_container {
+  padding-bottom: 10px;
+}
+.icons.small .cube {
+  border-radius: 50%;
+}
+.share .count {
+  border-radius: 50%;
+}
+.share {
+  display: inline-block;
+  margin: 0 !important;
+  width: 60px;
+  position: fixed;
+  left: 10px !important;
+  top: 200px !important;
+  z-index: 9999;
+}
+.share a {
+  display: block;
+  margin-top: 20px !important;
+}
+.image-inner {
+  margin: 22px 0px 0px -4px;
+  width: 33%;
+  border: none;
+  display: inline-block;
+  float: left;
+}
+#archive .featured-post .image-inner {
+  margin: 22px 10px 0px -6px;
+  width: 33%;
+  border: none;
+}
+.title_info_container {
+  width: 100%;
+  display: inline-block;
+}
+article h1 {
+  background: none;
+  color: black;
+  width: 100%;
+  float: left;
+  font-weight: 400;
+  display: block;
+  padding-bottom: 0px;
+}
+#topinfo {
+  position: relative;
+  width: 60%;
+  float: left;
+  /*special css for twits and videos*/
+}
+#topinfo a {
+  text-decoration: none;
+}
+#topinfo .author {
+  float: left;
+  position: relative;
+  top: 0;
+  margin-right: 40px;
+  right: 0;
+}
+#topinfo .author img {
+  border-radius: 50%;
+  max-width: 78px;
+}
+#topinfo .author .user {
+  display: block;
+  text-align: center;
+}
+#topinfo .subcategory {
+  float: left;
+}
+.tagged-twit #topinfo {
+  width: 95%;
+  min-height: 225px;
+}
+.tagged-twit .single-twit {
+  position: absolute;
+  width: 55%;
+  top: -210px;
+}
+.tagged-twit .author-cat-time-container {
+  float: right;
+  width: 40%;
+}
+.tagged-twit #body {
+  margin-top: 230px;
+}
+.readtime img {
+  width: 60px;
+  display: inline-block;
+  float: left;
+}
+.readtime span {
+  float: left;
+  margin-top: 18px;
+  font-size: 18px;
+  font-weight: 800;
+}
+#body {
+  width: 60%;
+  margin-left: 60px;
+  /*Footer stuff*/
+}
+#body .share {
+  display: none;
+}
+.tag_thumbnails img {
+  width: 94px;
+}
+.boilerplate {
+  margin: 0 !important;
+}
+.boilerplate .bio {
+  background: url(../images/blog-images/authorbackground.png);
+}
+.boilerplate .icons {
+  float: left;
+  margin-top: 9px;
+}
+.authorprofile {
+  background: none !important;
+  float: left !important;
+}
+.authorprofile img {
+  width: 70px;
+  float: left;
+}
+.single hr, .archive hr {
+  border: none;
+}
+.single .arrow_to_infinity {
+  background: url(../images/blog-images/arrow_to_infinity.png) no-repeat;
+  width: 100%;
+  display: block;
+  height: 34px;
+  background-size: 100%;
+  margin-bottom: -15px;
+}
+.bottom-cta {
+  background: url(../images/blog-images/footerbackground.png) no-repeat;
+  background-size: 100%;
+  height: 64px;
+  margin-top: 75px;
+  overflow: visible;
+  margin-bottom: 35px;
+}
+#comments h1 {
+  margin-bottom: 20px;
+}
+.ourlatestfooter, .leadscon, .askamarketer {
+  width: 252px;
+  height: 139px;
+  display: inline-block;
+  margin-top: -50px;
+  background-size: 100%;
+  margin-left: 20px;
+}
+.ourlatestfooter {
+  background: url(../images/blog-images/ourlatestfooter.png) no-repeat;
+  /*transition: background-position 0.3s;
+	-webkit-transition: background-position 0.3s;*/
+  background-size: 100%;
+}
+.leadscon {
+  background: url(../images/blog-images/leadscon.png) no-repeat;
+  /*transition: background-position 0.3s;
+	-webkit-transition: background-position 0.3s;*/
+  background-size: 100%;
+}
+.askamarketer {
+  background: url(../images/blog-images/askamarketer.png) no-repeat;
+  /*transition: background-position 0.3s;
+	-webkit-transition: background-position 0.3s;*/
+  background-size: 100%;
+}
+.ourlatestfooter:hover {
+  background-position: 0px -140px;
+}
+.leadscon:hover {
+  background-position: 0px -140px;
+}
+.askamarketer:hover {
+  background-position: 0px -140px;
+  cursor: pointer;
+}
+.bottom-cta-container {
+  width: 825px;
+  display: block;
+  margin: auto;
+  /*RESPONSIVE DESIGN*/
+  /*ipad landscape*/
+}
+@media (max-width: 1200px) {
+  /*ipad portrait*/  .single #body {
+    width: 58%;
+    margin-left: 30px;
+  }
+  .scrolly img {
+    max-width: 100%;
+  }
+  .ourlatestfooter, .leadscon, .askamarketer {
+    margin-top: -35px;
+  }
+}
+@media (max-width: 960px) {
+  .single #body {
+    width: 90%;
+    margin-left: 60px;
+  }
+  .scrolly {
+    display: none;
+  }
+  .tag-image, .all-tag {
+    display: none;
+  }
+  .single article h1 {
+    font-size: 20px;
+  }
+  .single .row .twelvecol {
+    margin: 0 0 0em;
+  }
+  .single #topinfo {
+    margin-bottom: 3em;
+  }
+  #topinfo img {
+    max-width: 60px;
+  }
+  .single .subcategory .subcategory-image {
+    margin-top: -8px;
+    width: 80px;
+    height: 82px;
+    background-size: 100%;
+  }
+  .single .subcategory .subcategory-image:hover {
+    background-size: 100%;
+  }
+  .ourlatestfooter, .leadscon, .askamarketer {
+    margin-left: 60px;
+  }
+}
+@media (min-width: 481px) and (max-width: 685px) {
+  /*smartphones*/  .author, .subcategory, .readtime {
+    display: none !important;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .single #single {
+    margin-top: -35px;
+  }
+  .tagbar {
+    background: none;
+    height: 0px;
+  }
+  .single .blog_header {
+    background: none;
+  }
+  .single #topinfo {
+    position: relative;
+    width: 100%;
+    display: block;
+    margin-bottom: 0.8em;
+    float: left;
+  }
+  .single article h1 {
+    font-size: 34px;
+  }
+  .author, .subcategory, .readtime {
+    display: none !important;
+  }
+  .single .image-inner {
+    width: 100%;
+    border: none;
+  }
+  .single .image-inner img {
+    width: 100%;
+  }
+  .single .bottom-cta {
+    background: none;
+  }
+  .arrow_to_infinity {
+    display: none;
+  }
+  .ourlatestfooter, .leadscon, .askamarketer {
+    display: none;
+  }
+  .single-post .share {
+    display: block;
+    width: 100%;
+    position: relative;
+    top: 0px !important;
+    left: 0px !important;
+    margin-bottom: 20px !important;
+  }
+  .single-post .share a {
+    margin-top: 20px !important;
+    display: inline-block;
+  }
+  .single #body {
+    width: 100%;
+    margin-left: 0px;
+    text-align: justify;
+  }
+  .author_avatar_container {
+    margin: 15px 15px;
+    float: left;
+  }
+  .bottom-cta {
+    display: none;
+  }
+}
+@media (max-width: 365px) {
+  /*Special responsive CSS for twits/videos*/  .share .count {
+    display: none;
+  }
+  .share a {
+    margin-right: 0px !important;
+  }
+  .icons.small .cube {
+    margin: 11px;
+  }
+  .icons.small .cube {
+    text-align: center;
+  }
+}
+@media (max-width: 1075px) {
+  .tagged-twit .author-cat-time-container {
+    float: left;
+    width: 100%;
+  }
+  .tagged-twit .single-twit {
+    position: relative;
+    width: 100%;
+    top: 0px;
+  }
+  .tagged-twit #body {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 960px) {
+  /*********************
 SIDEBARS & ASIDES
-*********************/.single.tagged-twit .blog_header{min-height:125px;}.tagged-twit #topinfo{min-height:0px;}.tagged-twit #topinfo .author,.tagged-twit #topinfo .subcategory,.tagged-twit #topinfo .readtime{display:none;}}.sidebar{margin-top:2.2em;}.widgettitle{border-bottom:2px solid #444;margin-bottom:0.75em;}.widget{padding:0 10px;margin:2.2em 0;/* links widget */}.widget ul li{margin-bottom:0.75em;}.widget ul li a{/* deep nesting */}.widget ul li ul{margin-top:0.75em;padding-left:1em;}.widget_links ul li a{/* meta widget */}.widget_meta ul li a{/* pages widget */}.widget_pages ul li a{/* recent-posts widget */}.widget_recent_entries ul li a{/* archives widget */}.widget_archive option{/* tag-cloud widget */}.widget_tag_cloud a:before{/* calendar widget */}#wp-calendar #prev a{/* category widget */}.widget_categories .level-3{/* recent-comments widget */}.widget_recent_comments{/* search widget */}.screen-reader-text{/* text widget */}.textwidget p{/*********************
+*********************/  .single.tagged-twit .blog_header {
+    min-height: 125px;
+  }
+  .tagged-twit #topinfo {
+    min-height: 0px;
+  }
+  .tagged-twit #topinfo .author, .tagged-twit #topinfo .subcategory, .tagged-twit #topinfo .readtime {
+    display: none;
+  }
+}
+.sidebar {
+  margin-top: 2.2em;
+}
+.widgettitle {
+  border-bottom: 2px solid #444;
+  margin-bottom: 0.75em;
+}
+.widget {
+  padding: 0 10px;
+  margin: 1em 0;
+  /* links widget */
+}
+.widget ul li {
+  margin-bottom: 0.75em;
+}
+.widget ul li a {
+  /* deep nesting */
+}
+.widget ul li ul {
+  margin-top: 0.75em;
+  padding-left: 1em;
+}
+.widget_links ul li a {
+  /* meta widget */
+}
+.widget_meta ul li a {
+  /* pages widget */
+}
+.widget_pages ul li a {
+  /* recent-posts widget */
+}
+.widget_recent_entries ul li a {
+  /* archives widget */
+}
+.widget_archive option {
+  /* tag-cloud widget */
+}
+.widget_tag_cloud a:before {
+  /* calendar widget */
+}
+#wp-calendar #prev a {
+  /* category widget */
+}
+.widget_categories .level-3 {
+  /* recent-comments widget */
+}
+.widget_recent_comments {
+  /* search widget */
+}
+.screen-reader-text {
+  /* text widget */
+}
+.textwidget p {
+  /*********************
 FOOTER STYLES
-*********************//*
+*********************/
+  /*
 you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!
-*/}.footer-links{/* end .footer-links */}.footer-links ul li a{/*
+*/
+}
+.footer-links {
+  /* end .footer-links */
+}
+.footer-links ul li a {
+  /*
 			be careful with the depth of your menus.
 			it's very rare to have multi-depth menus in
 			the footer.
-			*/}.wrap{width:1040px;}
+			*/
+}
+.wrap {
+  width: 96%;
+}

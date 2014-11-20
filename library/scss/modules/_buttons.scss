@@ -23,35 +23,25 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-
-%btn {
-  display: inline-block;
-  position: relative;
-  font-family: $sans-serif;
-  text-decoration: none;
+.button {
+  border: none;
+  border-radius: 0;
+  background: $green;
   color: $white;
-  font-size: 0.9em;
-  font-size: 34px;
-  line-height: 34px;
-  font-weight: normal;
-  padding: 0 24px;
-  border-radius: 4px;
-  border: 0;
+  opacity: 0.9;
   cursor: pointer;
-  @include transition(background-color 0.14s ease-in-out);
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 2.2;
+  position: relative;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  width: 100%;
 
-  // hovering on the btn
-  &:hover, &:focus {
-    color: $white;
-    text-decoration: none;
-  } // end hover
+  &:hover {
+    opacity: 1;
+  }
 
-  // clicking on the button
-  &:active {
-    top: 1px; // adds a tiny hop to the click
-  } // end active
-
-} // end .button
+}
 
 /*
 An example button.

@@ -264,20 +264,33 @@ and more scalable.
 
 } /* end .nav */
 
+/*********************
+MARKETO FORMS
+**********************/
 
+.mktField {
+
+	margin-bottom: 40px;
+
+	.cell-left {
+		width: 25%;
+	}
+
+	.mktInput {
+		width: 65%;
+		float: right;
+	}
+}
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 
 #content {
-	margin-top: 1.5em;
-}
-
+	
 		.hentry {
 			background-color: $white;
 			border-radius: 3px;
 			margin-bottom: 1.5em;
-			border: 1px solid $border-color;
 
 			header {
 				border-bottom: 1px solid $light-gray;
@@ -505,15 +518,13 @@ POSTS & CONTENT STYLES
 	.tags {
 		margin: 0;
 	}
+}
 
 
 /**********************************************************
 BASE HOMEPAGE STYLES
 ***********************************************************/
 
-/******************
-HOMEPAGE STYLES
-*******************/
 .home {
 
 	/*format rev slider*/
@@ -529,6 +540,18 @@ HOMEPAGE STYLES
 
 	/*below the slider*/
 
+	.sidebar_arrow_to_infinity {
+		width: 100%;
+		height: 30px;
+		float: left;
+		opacity: 0.5;
+		background: url(../images/blog-images/sidebar_arrow_to_infinity.png) no-repeat;
+		background-size: 100%;
+	}
+
+	.icons { line-height: 0; }
+
+
 	#home-social .icons a {
     border-radius: 50%;
 	
@@ -537,18 +560,23 @@ HOMEPAGE STYLES
 	    border-bottom: 0;
 	}
 
-	#search {
-	    border-color: $light-grey;
-	}
 
 	.search-icon {
 	    height: 31px;
 	}
 
+	#search-query {
+		width: 80%;
+		float: left;
+		border: 2px solid $light-grey;
+	}
+
 	#search-submit {
-	    padding: 0 !important;
+	    padding: 0;
 	    line-height: 0;
-	    background: $white !important;
+	    border: 0;
+	    background: $white;
+	    float: right;
 	}
 
 	.latest_homepage_headlines {
