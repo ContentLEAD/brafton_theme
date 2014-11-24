@@ -163,7 +163,7 @@ HEADER STYLES
 	#logo {
 		display: block;
 		float: left;
-		width: 100%;
+		width: 275px;
 
 		img {
 			width: 75%;
@@ -188,8 +188,8 @@ and more scalable.
 
 #nav-toggle {
 	position: absolute;
-	right: 0;
-	top: 0;
+	right: -20px;
+	top: 3px;
 
 	span {
 		cursor: pointer;

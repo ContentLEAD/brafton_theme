@@ -1370,7 +1370,7 @@ HEADER STYLES
 #logo {
   display: block;
   float: left;
-  width: 100%;
+  width: 275px;
   /*********************
 NAVIGATION STYLES
 *********************/
@@ -1390,8 +1390,8 @@ and more scalable.
 }
 #nav-toggle {
   position: absolute;
-  right: 0;
-  top: 0;
+  right: -20px;
+  top: 3px;
 }
 #nav-toggle span {
   cursor: pointer;
