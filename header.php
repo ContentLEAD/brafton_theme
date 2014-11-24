@@ -75,13 +75,14 @@
 
 		<div id="container">
 
-			<header class="header d-all" role="banner">
+			<header class="header d-all t-all m-all" role="banner">
 
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" title="Return to Homepage"><img src="http://old.brafton.com/wp-content/uploads/2014/11/BraftonLogo_Full_KO_100px-01.png" width="250" height="55" alt="Brafton Logo" /></a></p>
+					<p id="logo"><a href="<?php echo home_url(); ?>" title="Return to Homepage"><img src="http://old.brafton.com/wp-content/uploads/2014/11/BraftonLogo_Full_KO_100px-01.png" alt="Brafton Logo" /></a></p>
 
 
 					<nav role="navigation">
+						<a href="#" id="nav-toggle"><span></span></a>
 						<?php wp_nav_menu(array(
     					'container' => false,                           // remove nav container
     					'container_class' => 'menu cf',                 // class of container (should you choose to use it)

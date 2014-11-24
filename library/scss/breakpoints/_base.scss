@@ -161,8 +161,13 @@ HEADER STYLES
 }
 
 	#logo {
-		margin: 0.75em 0.5em;
-		display: inline;
+		display: block;
+		float: left;
+		width: 100%;
+
+		img {
+			width: 75%;
+		}
 
 		a {
 			color: $white;
@@ -181,20 +186,64 @@ the navs on the site so our css is cleaner
 and more scalable.
 */
 
+#nav-toggle {
+	position: absolute;
+	right: 0;
+	top: 0;
+
+	span {
+		cursor: pointer;
+		border-radius: 1px;
+		height: 5px;
+		width: 35px;
+		top: 30px;
+		background: white;
+		position: absolute;
+		display: block;
+		content: '';
+
+		&:after, &:before {
+				cursor: pointer;
+				border-radius: 1px;
+				height: 5px;
+				width: 35px;
+				background: white;
+				position: absolute;
+				display: block;
+				content: '';
+			}
+
+		&:before {
+			top: -10px
+		 }
+
+		&:after {
+			bottom: -10px;
+		}
+  	}
+
+  	&:focus {
+  		border:none;
+  	}
+}
+
+nav {
+	float: left;
+	width: 100%;
+}
 .nav {
 	border-bottom: 0;
 	margin: 0;
-	float: right;
 
 	li {
 
 		a {
 			display: block;
-			font-size: 0.8em;
+			font-size: 1.5em;
 			color: $white;
 			text-decoration: none;
 			text-transform: uppercase;
-			padding: 2em;
+			padding: 0.5em;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -224,10 +273,12 @@ and more scalable.
 			li {
 
 				a {
-					padding-left: 30px;
+					padding-left: 75px;
 
 					&:hover,
-					&:focus {}
+					&:focus {
+						color: $white;
+					}
 
 					&:link {}
 
@@ -245,11 +296,10 @@ and more scalable.
 
 	li.highlight {
 		a {
-			background: $green;
-			color: $black;
+			background: #8dc01d;
+			color: #000;
 			font-weight: bold;
-			font-size: 0.9em;
-			padding: 1.75em;
+			font-size: 1.5em;
 		}
 	}
 
@@ -263,6 +313,7 @@ and more scalable.
 	}  /* end current highlighters */
 
 } /* end .nav */
+
 
 /*********************
 MARKETO FORMS
@@ -529,7 +580,7 @@ BASE HOMEPAGE STYLES
 
 	/*format rev slider*/
 
-	.forcefullwidth_wrapper_tp_banner {
+	.rev_slider_wrapper {
 		float: left;
 
 		div {

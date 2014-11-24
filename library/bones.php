@@ -158,6 +158,13 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script( 'bones-js' );
 
+		//responsive nav js and css
+
+		wp_register_script( 'bones-mobilenav', get_stylesheet_directory_uri() . '/library/js/libs/responsive-nav.min.js', array(), '1.1', false );
+		wp_enqueue_script('bones-mobilenav');
+
+		wp_enqueue_style( 'responsive-nav', get_stylesheet_directory_uri() . '/library/css/responsive-nav.css');
+
 	}
 }
 

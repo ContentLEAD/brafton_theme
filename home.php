@@ -1,9 +1,10 @@
 <?php get_header(); ?>
+
 <?php putRevSlider( "home" ) ?>
 <div id="content">
 <div class="wrap cf">
 <div id="home-secondary" class="m-all row">
-	<div id="home-news" class="m-all d-1of3 widget-area cf">
+	<div id="home-news" class="m-all d-1of3 t-1of3 widget-area cf">
 		<aside>
 			<ul>
 				<?php if ( !function_exists( "dynamic_sidebar" ) || !dynamic_sidebar( "Home News" ) ) : ?>
@@ -12,7 +13,7 @@
 			</ul>
 		</aside>
 	</div>
-	<div id="home-social" class="m-all d-1of3">
+	<div id="home-social" class="m-all d-1of3 t-1of3">
 		<aside>
 			<ul>
 				<?php if ( !function_exists( "dynamic_sidebar" ) || !dynamic_sidebar( "Home Social" ) ) : ?>
@@ -21,7 +22,7 @@
 			</ul>
 		</aside>
 	</div>
-	<div id="home-subscribe" class="m-all d-1of3 last">
+	<div id="home-subscribe" class="m-all d-1of3 t-1of3 last">
 		<aside>
 			<ul>
 			

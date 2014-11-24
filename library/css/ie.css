@@ -259,6 +259,15 @@ p {
   -o-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig";
 }
+#logo {
+  margin: 0.25em 0.5em;
+}
+#logo img {
+  width: 250px;
+}
+#nav-toggle {
+  float: right;
+}
 .nav {
   /* .menu is clearfixed inside mixins.scss */
 }
@@ -314,7 +323,7 @@ do they need tweaking?
   /* end .footer-links */
 }
 .wrap {
-  width: 760px;
+  width: 96%;
   /*********************
 HEADER STYLES
 *********************/
@@ -323,88 +332,9 @@ HEADER STYLES
   /*********************
 NAVIGATION STYLES
 *********************/
-}
-nav {
-  float: right;
-}
-.nav {
-  border: 0;
-  /* end .nav */
   /***************************
 BLOG
 ****************************/
-}
-.nav ul {
-  background: #fff;
-  margin-top: 0;
-}
-.nav li {
-  float: left;
-  position: relative;
-  /* end .menu ul li */
-  /* highlight current page */
-}
-.nav li a {
-  /*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
-			*/
-  border-bottom: 0;
-}
-.nav li a:hover, .nav li a:focus {
-  color: #fff;
-  text-decoration: none;
-}
-.nav li:last-child {
-  /*
-		plan your menus and drop-downs wisely.
-		*/
-}
-.nav li ul.sub-menu, .nav li ul.children {
-  background: #fff;
-  margin-top: 0;
-  border: 0;
-  position: absolute;
-  visibility: hidden;
-  z-index: 8999;
-  /* showing sub-menus */
-}
-.nav li ul.sub-menu li, .nav li ul.children li {
-  /* highlight sub-menu current page */
-}
-.nav li ul.sub-menu li a, .nav li ul.children li a {
-  color: #000;
-  padding-left: 10px;
-  border-right: 0;
-  display: block;
-  width: 180px;
-  border-bottom: 1px solid #ccc;
-  padding: 0.75em;
-}
-.nav li ul.sub-menu li a:hover, .nav li ul.children li a:hover, .nav li ul.sub-menu li a:focus, .nav li ul.children li a:focus {
-  background: #000;
-  color: #fff;
-}
-.nav li ul.sub-menu li:last-child, .nav li ul.children li:last-child {
-  /*
-				if you need to go deeper, go nuts
-				just remember deeper menus suck
-				for usability. k, bai.
-				*/
-}
-.nav li ul.sub-menu li:last-child a, .nav li ul.children li:last-child a {
-  border-bottom: 0;
-}
-.nav li ul.sub-menu li ul, .nav li ul.children li ul {
-  top: 0;
-  left: 100%;
-}
-.nav li:hover > ul {
-  top: auto;
-  visibility: visible;
-}
-.nav li.current-menu-item, .nav li.current_page_item, .nav li.current_page_ancestor {
-  /* end current highlighters */
 }
 .tagbar {
   background: url(../images/blog-images/tagbar.png) no-repeat;
@@ -951,4 +881,105 @@ mobile. Make sure to double check these!
 }
 .wrap {
   width: 96%;
+  /*move from mobile menu to desktop menu...*/
+}
+#logo {
+  display: inline;
+  width: auto;
+}
+nav {
+  float: right;
+  width: auto;
+}
+.nav {
+  float: right;
+  border: 0;
+  /* end .nav */
+}
+.nav ul {
+  background: #fff;
+  margin-top: 0;
+}
+.nav li {
+  float: left;
+  position: relative;
+  /* end .menu ul li */
+}
+.nav li a {
+  border-bottom: 0;
+  display: block;
+  font-size: 0.8em;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  /*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+  padding: 2em;
+}
+.nav li a:hover, .nav li a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+.nav li:last-child {
+  /*
+		plan your menus and drop-downs wisely.
+		*/
+}
+.nav li ul.sub-menu, .nav li ul.children {
+  background: #fff;
+  margin-top: 0;
+  border: 0;
+  position: absolute;
+  visibility: hidden;
+  z-index: 8999;
+  /* showing sub-menus */
+}
+.nav li ul.sub-menu li, .nav li ul.children li {
+  /* highlight sub-menu current page */
+}
+.nav li ul.sub-menu li a, .nav li ul.children li a {
+  color: #000;
+  padding-left: 10px;
+  border-right: 0;
+  display: block;
+  width: 180px;
+  border-bottom: 1px solid #ccc;
+  padding: 0.75em;
+}
+.nav li ul.sub-menu li a:hover, .nav li ul.children li a:hover, .nav li ul.sub-menu li a:focus, .nav li ul.children li a:focus {
+  background: #000;
+  color: #fff;
+}
+.nav li ul.sub-menu li:last-child, .nav li ul.children li:last-child {
+  /*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+}
+.nav li ul.sub-menu li:last-child a, .nav li ul.children li:last-child a {
+  border-bottom: 0;
+}
+.nav li ul.sub-menu li ul, .nav li ul.children li ul {
+  top: 0;
+  left: 100%;
+}
+.nav li:hover > ul {
+  top: auto;
+  visibility: visible;
+}
+.nav li.highlight {
+  /* highlight current page */
+}
+.nav li.highlight a {
+  background: #8dc01d;
+  color: #000;
+  font-weight: bold;
+  font-size: 0.9em;
+  padding: 1.75em;
+}
+.nav li.current-menu-item, .nav li.current_page_item, .nav li.current_page_ancestor {
+  /* end current highlighters */
 }
