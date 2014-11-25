@@ -693,6 +693,24 @@ p {
   -ms-font-feature-settings: "liga", "dlig";
   -o-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig";
+  /*Other custom font classes...*/
+}
+.grey {
+  color: grey;
+}
+.big-font {
+  font-size: 3.2em;
+  line-height: 1;
+}
+.extra-big-font {
+  font-size: 7em;
+  line-height: 1.5;
+}
+.med-font {
+  font-size: 2.1em;
+}
+.text-bold {
+  font-weight: 700;
 }
 .last-col {
   float: right;
@@ -1217,6 +1235,104 @@ style a page via class
 .home {
   /* home page */
 }
+.home .rev_slider_wrapper {
+  float: left;
+  /*below the slider*/
+}
+.home .rev_slider_wrapper div {
+  background-color: #fff;
+}
+.home .sidebar_arrow_to_infinity {
+  width: 100%;
+  height: 30px;
+  float: left;
+  opacity: 0.5;
+  background: url(../images/blog-images/sidebar_arrow_to_infinity.png) no-repeat;
+  background-size: 100%;
+}
+.home .icons {
+  line-height: 0;
+}
+.home #home-social .icons a {
+  border-radius: 50%;
+}
+.home .icons {
+  border-bottom: 0;
+}
+.home .search-icon {
+  height: 31px;
+}
+.home #search-query {
+  width: 66%;
+  float: left;
+  border: 2px solid #f1f1f2;
+}
+.home #search-submit {
+  padding: 0;
+  line-height: 0;
+  border: 0;
+  background: #fff;
+  float: left;
+}
+.home .latest_homepage_headlines h3 {
+  font-size: 1.3em;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 5px;
+  background: #f1f1f2;
+  text-transform: uppercase;
+  font-weight: 100;
+  color: #000;
+}
+.home .latest_homepage_headlines h3 a {
+  color: #000;
+  text-decoration: none;
+}
+.home .homepage-demo-request {
+  font-size: 1.5em;
+}
+.home .homepage_article {
+  display: block;
+  width: 100%;
+  float: left;
+  margin: 10px 0px;
+  font-size: 16px;
+}
+.home .homepage_article img {
+  float: left;
+  margin-right: 10px;
+  width: 160px;
+  height: 160px;
+}
+.home .blog_homepage_article, .home .news_homepage_article {
+  margin-top: 20px;
+}
+.home .homepage_article .article-title {
+  line-height: 20px;
+}
+.home .homepage_article a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 100;
+}
+.home .homepage_article a:hover {
+  text-decoration: underline;
+}
+.home .time-tag {
+  margin-top: 20px;
+}
+.home .time-tag a {
+  margin-right: 20px !important;
+  text-transform: uppercase;
+}
+.home #home-social a {
+  margin-right: 0;
+  font-weight: 100;
+}
+.home li.widget_search {
+  margin-bottom: 0;
+}
 .blog {
   /* blog template page */
 }
@@ -1291,6 +1407,9 @@ style a page via class
 }
 .page-template {
   /* custom page template page */
+}
+.page-template .vertical-gup {
+  float: left;
 }
 .page-template-page-php {
   /* individual page template (i.e. body.page-template-contact-php */
@@ -1504,21 +1623,36 @@ MARKETO FORMS
 .mktField {
   margin-bottom: 25px;
   float: left;
-  /*********************
-POSTS & CONTENT STYLES
-*********************/
 }
 .mktField .cell-left {
-  width: 25%;
+  margin-right: 5%;
   float: left;
+  text-align: right;
+  width: 25%;
+  font-size: 0.9em;
 }
 .mktField .mktInput {
   float: left;
 }
+form .req {
+  border-left: 2px solid red;
+}
+.feature {
+  padding: 0.75em;
+  background: rgba(250, 219, 94, 0.7);
+  float: left;
+  font-weight: 600;
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+  width: 100%;
+  /*********************
+POSTS & CONTENT STYLES
+*********************/
+}
 #content {
-  /**********************************************************
-BASE HOMEPAGE STYLES
-***********************************************************/
+  /******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
 }
 #content .hentry {
   background-color: #fff;
@@ -1551,6 +1685,20 @@ BASE HOMEPAGE STYLES
 }
 #content .page {
   /* general article on a page style */
+}
+#content .page .mission-statement h3 {
+  margin: 0.75em;
+  font-size: 1.65em;
+}
+#content .page .mission-statement ul {
+  list-style-type: disc;
+  padding: 2em;
+}
+#content .page .mission-statement div {
+  float: left;
+}
+#content .page .mission-statement p {
+  margin-bottom: 0;
 }
 #content .attachment {
   /* general style on an attatchment */
@@ -1674,111 +1822,6 @@ BASE HOMEPAGE STYLES
 }
 #content .tags {
   margin: 0;
-}
-.home {
-  /******************************************************************
-PAGE NAVI STYLES
-******************************************************************/
-}
-.home .rev_slider_wrapper {
-  float: left;
-  /*unveiled in 768 and up...*/
-  visibility: hidden;
-  /*below the slider*/
-}
-.home .rev_slider_wrapper div {
-  background-color: #fff;
-}
-.home .sidebar_arrow_to_infinity {
-  width: 100%;
-  height: 30px;
-  float: left;
-  opacity: 0.5;
-  background: url(../images/blog-images/sidebar_arrow_to_infinity.png) no-repeat;
-  background-size: 100%;
-}
-.home .icons {
-  line-height: 0;
-}
-.home #home-social .icons a {
-  border-radius: 50%;
-}
-.home .icons {
-  border-bottom: 0;
-}
-.home .search-icon {
-  height: 31px;
-}
-.home #search-query {
-  width: 66%;
-  float: left;
-  border: 2px solid #f1f1f2;
-}
-.home #search-submit {
-  padding: 0;
-  line-height: 0;
-  border: 0;
-  background: #fff;
-  float: left;
-}
-.home .latest_homepage_headlines h3 {
-  font-size: 1.3em;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-align: center;
-  padding: 5px;
-  background: #f1f1f2;
-  text-transform: uppercase;
-  font-weight: 100;
-  color: #000;
-}
-.home .latest_homepage_headlines h3 a {
-  color: #000;
-  text-decoration: none;
-}
-.home .homepage-demo-request {
-  font-size: 1.5em;
-}
-.home .homepage_article {
-  display: block;
-  width: 100%;
-  float: left;
-  margin: 10px 0px;
-  font-size: 16px;
-}
-.home .homepage_article img {
-  float: left;
-  margin-right: 10px;
-  width: 160px;
-  height: 160px;
-}
-.home .blog_homepage_article, .home .news_homepage_article {
-  margin-top: 20px;
-}
-.home .homepage_article .article-title {
-  line-height: 20px;
-}
-.home .homepage_article a {
-  color: #000;
-  text-decoration: none;
-  font-weight: 100;
-}
-.home .homepage_article a:hover {
-  text-decoration: underline;
-}
-.home .time-tag {
-  margin-top: 20px;
-}
-.home .time-tag a {
-  margin-right: 20px !important;
-  text-transform: uppercase;
-}
-.home #home-social a {
-  margin-right: 0;
-  font-weight: 100;
-}
-.home li.widget_search {
-  margin-bottom: 0;
 }
 .pagination, .wp-prev-next {
   margin: 1.5em 0;
@@ -1999,6 +2042,15 @@ COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 }
+.sidebar img {
+  max-width: 100%;
+}
+.sidebar #testi {
+  height: 530px;
+  overflow: hidden;
+  clear: both;
+  margin-top: -81px;
+}
 .widget {
   list-style-type: none;
 }
@@ -2056,6 +2108,34 @@ FOOTER STYLES
 }
 video {
   max-width: 100%;
+  /*===========================
+Legacy style classes...  :(
+=============================*/
+}
+.inline {
+  display: inline-block;
+  margin: 0 1em;
+  vertical-align: top;
+}
+.aligncenter {
+  display: block;
+  line-height: 0;
+  margin: 1.5em auto;
+  text-align: center;
+}
+.entry-content .aligncenter, .entry-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+.wp-caption-text {
+  font-size: 1em;
+  background: #eee;
+  line-height: 1.3;
+  margin: 1em 0 0;
+  padding: 0.5em 1em;
+  text-align: center;
 }
 @media only screen and (min-width: 481px) {
   /******************************************************************
@@ -2187,14 +2267,9 @@ HEADER STYLES
     /*********************
 NAVIGATION STYLES
 *********************/
-  }
-  .home {
     /***************************
 BLOG
 ****************************/
-  }
-  .home .rev_slider_wrapper {
-    visibility: visible;
   }
   .tagbar {
     background: url(../images/blog-images/tagbar.png) no-repeat;

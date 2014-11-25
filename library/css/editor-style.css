@@ -581,6 +581,24 @@ body#tinymce.wp-editor p {
   -ms-font-feature-settings: "liga", "dlig";
   -o-font-feature-settings: "liga", "dlig";
   font-feature-settings: "liga", "dlig";
+  /*Other custom font classes...*/
+}
+body#tinymce.wp-editor .grey {
+  color: grey;
+}
+body#tinymce.wp-editor .big-font {
+  font-size: 3.2em;
+  line-height: 1;
+}
+body#tinymce.wp-editor .extra-big-font {
+  font-size: 7em;
+  line-height: 1.5;
+}
+body#tinymce.wp-editor .med-font {
+  font-size: 2.1em;
+}
+body#tinymce.wp-editor .text-bold {
+  font-weight: 700;
 }
 body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
   /* on hover */

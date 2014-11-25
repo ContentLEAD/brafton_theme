@@ -1,3 +1,8 @@
+<?php 
+/*
+Template Name: Careers 
+*/
+?>
 <?php get_header(); ?>
 
 			<div id="content">
@@ -24,8 +29,50 @@
 
 									<?php
 										// the content (pretty self explanatory huh)
-										the_content();
+										the_content(); ?>
 
+										<!--//jobvite javascript...-->
+										<iframe id="jobviteframe" style="font-size: 14px; line-height: 1.5em;" src="http://hire.jobvite.com/CompanyJobs/Careers.aspx?c=qAD9Vfw1&amp;jvresize=http://www.brafton.com/FrameResize.html" height="500" width="100%" frameborder="0" scrolling="yes"></iframe>
+										<script type="text/javascript">// <![CDATA[
+										var l = location.href;
+										      var args = '';
+										      var k = '';
+										      var iStart = l.indexOf('?jvk=');
+										      if (iStart == -1) iStart = l.indexOf('&#038;jvk=');
+										      if (iStart != -1) {
+										            iStart += 5;
+										            var iEnd = l.indexOf('&#038;', iStart);
+										            if (iEnd == -1) iEnd = l.length;
+										            k = l.substring(iStart, iEnd);
+										      }
+										      iStart = l.indexOf('?jvi=');
+										      if (iStart == -1) iStart = l.indexOf('&#038;jvi=');
+										      if (iStart != -1) {
+										            iStart += 5;
+										            var iEnd = l.indexOf('&#038;', iStart);
+										            if (iEnd == -1) iEnd = l.length;
+										            args += '&#038;j=' + l.substring(iStart, iEnd);
+										            if (!k.length) args += '&#038;k=Job';
+										            var iStart = l.indexOf('?jvs=');
+										            if (iStart == -1) iStart = l.indexOf('&#038;jvs=');
+										            if (iStart != -1){
+										                  iStart += 5;
+										                  var iEnd = l.indexOf('&#038;', iStart);
+										                  if (iEnd == -1) iEnd = l.length;
+										                  args += '&#038;s=' + l.substring(iStart, iEnd);
+										            }
+										      }
+										      if (k.length) args += '&#038;k=' + k;
+										      if (args.length) document.getElementById('jobviteframe').src += args;
+										      function resizeFrame(height, scrollToTop) {
+										            if (scrollToTop) window.scrollTo(0, 0);
+										            var oFrame = document.getElementById('jobviteframe');
+										            if (oFrame) oFrame.height = height;
+										      }
+										// ]]></script>
+										<!--END JOBVITE CODE -->
+
+										<?php
 										/*
 										 * Link Pages is used in case you have posts that are set to break into
 										 * multiple pages. You can remove this if you don't plan on doing that.
@@ -51,8 +98,6 @@
 
 								</footer>
 
-								<?php comments_template(); ?>
-
 							</article>
 
 							<?php endwhile; else : ?>
@@ -74,7 +119,7 @@
 						</div>
 
 						<div class="sidebar d-2of7 t-1of3 m-all">
-							<?php dynamic_sidebar("Page Sidebar"); ?>
+							<?php dynamic_sidebar( "Careers Right Sidebar"); ?>
 						</div>
 
 
