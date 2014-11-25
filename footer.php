@@ -28,6 +28,15 @@
 
 		<?php // all js scripts are loaded in library/bones.php ?>
 		<?php wp_footer(); ?>
+		<?php if( is_single() ) { ?>
+			<script>
+				//scroll cta jquery
+
+				jQuery(document).ready( function($) {
+					$(".scrolly").followFrom(700);
+				});
+			</script>
+		<?php } ?>
 
 	</body>
 

@@ -120,44 +120,7 @@
 		<div id="lightbox-link" class="askamarketer">
 		</div>
 	</div>
-
 </div>	
-<script>
-//scroll cta jquery
-
-jQuery(document).ready( function($) {
-	$.fn.followFrom = function(pos) {
-		var $this = this,
-			$window = $(window);
-
-		$window.scroll(function(e) {
-			if ( $window.scrollTop() < pos ) {
-				$this.css({
-					position: 'relative',
-					top: 0
-				});
-			} else {
-				$this.css({
-					position: 'fixed',
-					top: '25px',
-					width: '350px'
-				});
-			}
-		});
-	};
-
-	$(".scrolly").followFrom(700);
-
-	//Put title div ABOVE featured image in mobile view
-	window.onresize = function() {
-		var wd = $(window).width();
-		console.log(wd);
-		if( wd < 480 ) {
-			$('#topinfo').insertBefore('.image-inner');
-		}
-	}
-});
-</script>
 
 <script src="//app-sj04.marketo.com/js/forms2/js/forms2.js"></script>
 <form id="mktoForm_1337"></form>

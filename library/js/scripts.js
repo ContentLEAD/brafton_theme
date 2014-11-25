@@ -255,4 +255,36 @@ jQuery(document).ready(function($) {
     });
 
 
+    //some jquery for single.php
+
+    $.fn.followFrom = function(pos) {
+        var $this = this,
+            $window = $(window);
+
+        $window.scroll(function(e) {
+            if ( $window.scrollTop() < pos ) {
+                $this.css({
+                    position: 'relative',
+                    top: 0
+                });
+            } else {
+                $this.css({
+                    position: 'fixed',
+                    top: '25px',
+                    width: '350px'
+                });
+            }
+        });
+    };
+
+    //Put title div ABOVE featured image in mobile view
+    window.onresize = function() {
+        var wd = $(window).width();
+        console.log(wd);
+        if( wd < 480 ) {
+            $('#topinfo').insertBefore('.image-inner');
+        }
+    }
+
+
 }); /* end of as page load scripts */
