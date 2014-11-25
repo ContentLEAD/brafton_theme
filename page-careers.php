@@ -9,7 +9,7 @@ Template Name: Careers
 
 				<div id="inner-content" class="wrap cf">
 
-						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+						<div id="main" class="m-all t-all d-all cf" role="main">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -21,56 +21,71 @@ Template Name: Careers
 
 									<?php if( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 
-									<?php brafton_share( 'top' ); ?>
-
 								</header> <?php // end article header ?>
 
 								<section class="entry-content cf" itemprop="articleBody">
 
 									<?php
-										// the content (pretty self explanatory huh)
-										the_content(); ?>
+									// the content (pretty self explanatory huh)
+									the_content(); ?>
 
-										<!--//jobvite javascript...-->
-										<iframe id="jobviteframe" style="font-size: 14px; line-height: 1.5em;" src="http://hire.jobvite.com/CompanyJobs/Careers.aspx?c=qAD9Vfw1&amp;jvresize=http://www.brafton.com/FrameResize.html" height="500" width="100%" frameborder="0" scrolling="yes"></iframe>
-										<script type="text/javascript">// <![CDATA[
-										var l = location.href;
-										      var args = '';
-										      var k = '';
-										      var iStart = l.indexOf('?jvk=');
-										      if (iStart == -1) iStart = l.indexOf('&#038;jvk=');
-										      if (iStart != -1) {
-										            iStart += 5;
-										            var iEnd = l.indexOf('&#038;', iStart);
-										            if (iEnd == -1) iEnd = l.length;
-										            k = l.substring(iStart, iEnd);
-										      }
-										      iStart = l.indexOf('?jvi=');
-										      if (iStart == -1) iStart = l.indexOf('&#038;jvi=');
-										      if (iStart != -1) {
-										            iStart += 5;
-										            var iEnd = l.indexOf('&#038;', iStart);
-										            if (iEnd == -1) iEnd = l.length;
-										            args += '&#038;j=' + l.substring(iStart, iEnd);
-										            if (!k.length) args += '&#038;k=Job';
-										            var iStart = l.indexOf('?jvs=');
-										            if (iStart == -1) iStart = l.indexOf('&#038;jvs=');
-										            if (iStart != -1){
-										                  iStart += 5;
-										                  var iEnd = l.indexOf('&#038;', iStart);
-										                  if (iEnd == -1) iEnd = l.length;
-										                  args += '&#038;s=' + l.substring(iStart, iEnd);
-										            }
-										      }
-										      if (k.length) args += '&#038;k=' + k;
-										      if (args.length) document.getElementById('jobviteframe').src += args;
-										      function resizeFrame(height, scrollToTop) {
-										            if (scrollToTop) window.scrollTo(0, 0);
-										            var oFrame = document.getElementById('jobviteframe');
-										            if (oFrame) oFrame.height = height;
-										      }
-										// ]]></script>
-										<!--END JOBVITE CODE -->
+									<div id="form" class="d-all t-all m-all">
+										<?php get_template_part('marketoforms/contact_marketo_form'); ?>
+	
+										Please note: To contact us about a job application, use our <a href="careers">Careers</a> page.
+									</div>
+
+									<div class="d-all t-all m-all">
+
+									<aside class="d-1of2 t-1of2 m-all">
+
+										<h4>Offices</h4>
+
+										<ul>
+
+											<li><strong>Boston (HQ)</strong><br/><a href="http://g.co/maps/hxvyn" title="See Brafton's Boston office on a Map" target="_blank" class="address">1 Winthrop Square, Floor 5, Boston MA 02110</a></li>
+
+											<li><strong>Chicago</strong><br/><a href="http://goo.gl/lh1Xnq" title="See Brafton's Chicago office on a Map" target="_blank" class="address">168 North Clinton Street, 4th Floor, Chicago IL 60661</a></li>
+
+											<li><strong>San Francisco</strong><br/><a href="http://goo.gl/maps/sp3q0" title="See Brafton's San Francisco office on a Map" target="_blank" class="address">220 Montgomery Street, Suite 917, San Francisco CA 94104</a></li>
+
+										</ul>
+
+									</aside>
+
+									<aside class="d-1of2 t-1of2 m-all no-margins last" id="phone">
+
+										<h4>Contact Information</h4>
+
+										<div class="d-1of2 t-1of2 m-all no-margins">
+
+										<ul>
+
+											<li><strong>Main</strong><br />617.206.3040</li>
+
+											<li><strong>Fax</strong><br />866.272.8112</li>
+
+										</ul>
+
+										</div>
+
+										<div class="d-1of2 t-1of2 m-all no-margins last">
+
+										<ul>
+
+											<li><strong>General Inbox</strong><br/><a href="mailto:info@brafton.com">info@brafton.com</a></li>
+
+											<li><strong>Operations</strong><br/><a href="mailto:operations@brafton.com">operations@brafton.com</a></li>
+
+											<li><strong>Integration Support</strong><br/><a href="mailto:techsupport@brafton.com">techsupport@brafton.com</a></li>
+
+										</ul>
+
+										</div>
+
+									</aside>
+
+									</div>
 
 										<?php
 										/*
@@ -117,14 +132,7 @@ Template Name: Careers
 							<?php endif; ?>
 
 						</div>
-
-						<div class="sidebar d-2of7 t-1of3 m-all">
-							<?php dynamic_sidebar( "Careers Right Sidebar"); ?>
-						</div>
-
-
+					</div>
 				</div>
-
-			</div>
 
 <?php get_footer(); ?>
