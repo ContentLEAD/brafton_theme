@@ -1682,6 +1682,8 @@ PAGE NAVI STYLES
 }
 .home .rev_slider_wrapper {
   float: left;
+  /*unveiled in 768 and up...*/
+  visibility: hidden;
   /*below the slider*/
 }
 .home .rev_slider_wrapper div {
@@ -2185,9 +2187,14 @@ HEADER STYLES
     /*********************
 NAVIGATION STYLES
 *********************/
+  }
+  .home {
     /***************************
 BLOG
 ****************************/
+  }
+  .home .rev_slider_wrapper {
+    visibility: visible;
   }
   .tagbar {
     background: url(../images/blog-images/tagbar.png) no-repeat;
