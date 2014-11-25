@@ -1,3 +1,5 @@
+
+/*homepage social icons...*/
 .icons {
 
     line-height: 0;
@@ -112,5 +114,25 @@
 	    line-height: 24px;
 	    padding: 0 0.5em;
 	    width: auto;
+	}
+}
+
+/*page defualt social icon layout...*/
+
+.page {
+
+	.icons.small .cube {
+			border-radius: 50%;
+		}
+
+	.share {
+		display: inline-block;
+		margin-top: 30px;
+		width: 60px;
+		z-index: 9999;
+
+		.count {
+			border-radius: 50%;
+		}
 	}
 }

@@ -165,6 +165,10 @@ function bones_scripts_and_styles() {
 
 		wp_enqueue_style( 'responsive-nav', get_stylesheet_directory_uri() . '/library/css/responsive-nav.css');
 
+		//Sharrre
+
+		wp_enqueue_script('sharrrejs', get_stylesheet_directory_uri() . '/library/js/libs/jquery.sharrre.min.js', array('jquery'), '1.1', false);
+
 	}
 }
 

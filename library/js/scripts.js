@@ -126,6 +126,94 @@ var nav = responsiveNav("#menu-primary", { // Selector
 */
 jQuery(document).ready(function($) {
 
-
+  //sharrre buttons...
+  //CHANGE load: and urlCurl FROM OLD TO WWW WHEN MIGRATING!!!
+  Modernizr.load([
+      {
+        load: 'http://old.brafton.com/wp-content/themes/brafton/library/js/libs/jquery.sharrre.min.js',
+        complete: function(){
+          var template = '<div class="count">{total}</div>';
+          var url = 'http://www.brafton.com/' + window.location.pathname;
+          var title = $('h1').text();
+          $('a[data-service="linkedin"]').sharrre({
+              click: function( api, options ){
+                api.simulateClick();
+                api.openPopup('linkedin');
+              },
+              enableHover: false,
+              enableTracking: true,
+              share: { linkedin: true },
+              title: title,
+              template: '<div class="cube linkedin"></div>' + template,
+              url: url
+          });
+          $('a[data-service="twitter"]').sharrre({
+            buttons: { twitter: { via: 'Brafton', related: 'Brafton' } },
+            click: function( api, options ){
+              api.simulateClick();
+              api.openPopup('twitter');
+            },
+            enableHover: false,
+            enableTracking: true,
+            share: { twitter: true },
+            title: title,
+            template: '<div class="cube twitter"></div>' + template,
+            url: url
+          });
+          $('a[data-service="facebook"]').sharrre({
+            click: function( api, options ){
+              api.simulateClick();
+              api.openPopup('facebook');
+            },
+            enableHover: false,
+            enableTracking: true,
+            share: { facebook: true },
+            title: title,
+            template: '<div class="cube facebook"></div>' + template,
+            url: url
+          });
+          $('a[data-service="gplus"]').sharrre({
+            click: function( api, options ){
+              api.simulateClick();
+              api.openPopup('googlePlus');
+            },
+            enableHover: false,
+            enableTracking: true,
+            share: { googlePlus: true },
+            title: title,
+            template: '<div class="cube gplus"></div>' + template,
+            url: url,
+            urlCurl: 'http://old.brafton.com/wp-content/themes/brafton/library/php/sharrre.php'
+          });
+          $('a[data-service="pinterest"]').sharrre({
+            click: function( api, options ){
+              api.simulateClick();
+              api.openPopup('pinterest');
+            },
+            enableHover: false,
+            enableTracking: true,
+            share: { pinterest: true },
+            title: title,
+            template: '<div class="cube pinterest"></div>' + template,
+            url: url,
+            urlCurl: 'http://old.brafton.com/wp-content/themes/brafton/library/php/sharrre.php'
+          });
+          $('a[data-service="stumbleupon"]').sharrre({
+            click: function( api, options ){
+              api.simulateClick();
+              api.openPopup('stumbleupon');
+            },
+            enableHover: false,
+            enableTracking: true,
+            share: { stumbleupon: true },
+            title: title,
+            template: '<div class="cube stumbleupon"></div>' + template,
+            url: url,
+            urlCurl: 'http://old.brafton.com/wp-content/themes/brafton/library/php/sharrre.php'
+          });
+        }
+      },
+    ]);
+  
 
 }); /* end of as page load scripts */

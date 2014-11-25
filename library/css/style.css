@@ -168,6 +168,7 @@ own grids. It's better in the long run and allows you full control
 over your project's layout.
 
 ******************************************************************/
+/*homepage social icons...*/
 /******************************************************************
 Site Name:
 Author:
@@ -981,6 +982,9 @@ really slow down your CSS. Don't overdo it.
 .small .stumbleupon {
   background-position: -502px 0;
 }
+.share {
+  /*page defualt social icon layout...*/
+}
 .share a {
   line-height: 24px;
   margin-right: 2em;
@@ -1002,6 +1006,18 @@ really slow down your CSS. Don't overdo it.
   line-height: 24px;
   padding: 0 0.5em;
   width: auto;
+}
+.page .icons.small .cube {
+  border-radius: 50%;
+}
+.page .share {
+  display: inline-block;
+  margin-top: 30px;
+  width: 60px;
+  z-index: 9999;
+}
+.page .share .count {
+  border-radius: 50%;
 }
 .alert-help, .alert-info, .alert-error, .alert-success {
   margin: 10px;
@@ -1478,6 +1494,9 @@ MARKETO FORMS
   color: #000;
   font-weight: bold;
   font-size: 1.5em;
+}
+.nav li.highlight a:hover {
+  color: #fff;
 }
 .nav li.current-menu-item, .nav li.current_page_item, .nav li.current_page_ancestor {
   /* end current highlighters */
@@ -2289,25 +2308,28 @@ BLOG-SINGLE POST
   }
   .title_info_container {
     padding-bottom: 10px;
-  }
-  .icons.small .cube {
-    border-radius: 50%;
-  }
-  .share .count {
-    border-radius: 50%;
-  }
-  .share {
-    display: inline-block;
-    margin: 0 !important;
-    width: 60px;
-    position: fixed;
-    left: 10px !important;
-    top: 200px !important;
-    z-index: 9999;
-  }
-  .share a {
-    display: block;
-    margin-top: 20px !important;
+    /*.icons.small .cube {
+		border-radius: 50%;
+	}
+
+	.share .count {
+		border-radius: 50%;
+	}
+
+	.share {
+		display: inline-block;
+		margin: 0 !important;
+		width: 60px;
+		position: fixed;
+		left: 10px !important;
+		top: 200px !important;
+		z-index: 9999;
+
+		a {
+			display: block;
+			margin-top: 20px !important;
+		}
+	}*/
   }
   .image-inner {
     margin: 22px 0px 0px -4px;

@@ -16,12 +16,12 @@
 
 									<?php if( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 
+									<?php brafton_share( 'top' ); ?>
+
 								</header> <?php // end article header ?>
 
 								<section class="entry-content cf" itemprop="articleBody">
 
-									<?php if( function_exists( 'brafton_share' ) ) brafton_share( 'top' ); ?>
-									
 									<?php
 										// the content (pretty self explanatory huh)
 										the_content();

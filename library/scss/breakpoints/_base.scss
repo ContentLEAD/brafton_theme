@@ -300,6 +300,10 @@ nav {
 			color: #000;
 			font-weight: bold;
 			font-size: 1.5em;
+
+			&:hover {
+				color: $white;
+			}
 		}
 	}
 

@@ -455,25 +455,28 @@ BLOG-SINGLE POST
 }
 .title_info_container {
   padding-bottom: 10px;
-}
-.icons.small .cube {
-  border-radius: 50%;
-}
-.share .count {
-  border-radius: 50%;
-}
-.share {
-  display: inline-block;
-  margin: 0 !important;
-  width: 60px;
-  position: fixed;
-  left: 10px !important;
-  top: 200px !important;
-  z-index: 9999;
-}
-.share a {
-  display: block;
-  margin-top: 20px !important;
+  /*.icons.small .cube {
+		border-radius: 50%;
+	}
+
+	.share .count {
+		border-radius: 50%;
+	}
+
+	.share {
+		display: inline-block;
+		margin: 0 !important;
+		width: 60px;
+		position: fixed;
+		left: 10px !important;
+		top: 200px !important;
+		z-index: 9999;
+
+		a {
+			display: block;
+			margin-top: 20px !important;
+		}
+	}*/
 }
 .image-inner {
   margin: 22px 0px 0px -4px;

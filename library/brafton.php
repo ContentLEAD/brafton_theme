@@ -45,7 +45,6 @@ function modify_jquery() {
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js', false, '1.8.2');
 		wp_enqueue_script('jquery');
-		wp_enqueue_script( 'scripts',get_bloginfo('template_directory').'/js/scripts.js', array( 'jquery' ),false,false );
 }
 
 define( 'MOBILE_FIRST_BREAKPOINT', 350 );
