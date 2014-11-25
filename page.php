@@ -14,9 +14,14 @@
 
 									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 
+									<?php if( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
+
 								</header> <?php // end article header ?>
 
 								<section class="entry-content cf" itemprop="articleBody">
+
+									<?php if( function_exists( 'brafton_share' ) ) brafton_share( 'top' ); ?>
+									
 									<?php
 										// the content (pretty self explanatory huh)
 										the_content();
@@ -68,7 +73,9 @@
 
 						</div>
 
-						<?php get_sidebar(); ?>
+
+						<?php dynamic_sidebar("Page Sidebar"); ?>
+
 
 				</div>
 

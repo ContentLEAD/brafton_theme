@@ -321,15 +321,16 @@ MARKETO FORMS
 
 .mktField {
 
-	margin-bottom: 40px;
+	margin-bottom: 25px;
+	float: left;
 
 	.cell-left {
 		width: 25%;
+		float: left;
 	}
 
 	.mktInput {
-		width: 65%;
-		float: right;
+		float: left;
 	}
 }
 /*********************
@@ -617,7 +618,7 @@ BASE HOMEPAGE STYLES
 	}
 
 	#search-query {
-		width: 80%;
+		width: 66%;
 		float: left;
 		border: 2px solid $light-grey;
 	}
@@ -627,7 +628,7 @@ BASE HOMEPAGE STYLES
 	    line-height: 0;
 	    border: 0;
 	    background: $white;
-	    float: right;
+	    float: left;
 	}
 
 	.latest_homepage_headlines {
@@ -1044,9 +1045,33 @@ SIDEBARS & ASIDES
 
 	.widget {
 
+		list-style-type: none;
+
+		.search-icon {
+		    height: 31px;
+		}
+
+		#search-query {
+			width: 66%;
+			float: left;
+			border: 2px solid $light-grey;
+		}
+
+		#search-submit {
+		    padding: 0;
+		    line-height: 0;
+		    border: 0;
+		    background: $white;
+		    float: left;
+		}
+
 		ul {
 
+			list-style-type: none;
+
 			li {
+
+				list-style-type: none;
 
 				&:first-child {}
 
@@ -1103,3 +1128,6 @@ FOOTER STYLES
 
 
 	.copyright {}
+video {
+	max-width: 100%;
+}
