@@ -35,7 +35,7 @@ style a page via class
 ********************/
 
 .rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
-.home {
+.home { 						  /* home page */
 	/*format rev slider*/
 
 	.rev_slider_wrapper {
@@ -160,8 +160,24 @@ style a page via class
 	li.widget_search {
 	    margin-bottom: 0;
 	}
-}                          /* home page */
-.blog {}                          /* blog template page */
+} 
+
+                        
+.blog {						/* blog template page */
+
+	.arrow_to_infinity {
+		width: 75%;
+		display: block;
+		height: 60px;
+		margin-left: 5em;
+		float: left;
+		opacity: 0.5;
+		background: url(../images/blog-images/sidebar_arrow_to_infinity.png) no-repeat;
+		background-size: 100%;
+	}
+}   
+
+                       /* blog template page */
 .archive {}                       /* archive page */
 .date {}                          /* date archive page */
 	.date-paged-1 {}                /* replace the number to the corresponding page number */
@@ -1110,6 +1126,14 @@ SIDEBARS & ASIDES
 		    background: $white;
 		    float: left;
 		}
+
+		/*for blog sidebar///*/
+		.sidebar-tag-image {
+			width: 100% !important;
+			padding-bottom: 44px;
+			background-repeat: no-repeat;
+		}
+
 
 		ul {
 

@@ -50,7 +50,7 @@ $cat_posts->query_vars[ 'paged' ] > 1 ? $current = $cat_posts->query_vars[ 'page
 
 
 
-<article id="archive" class="d-all row" itemscope itemtype="http://schema.org/WebPage">
+<article id="archive" class="d-all" itemscope itemtype="http://schema.org/WebPage">
 	<?php if( function_exists( 'brafton_share' ) ) brafton_share( 'top' ); ?>
 	<div class="archive category_body blog">
 	<?php 
@@ -59,21 +59,20 @@ $cat_posts->query_vars[ 'paged' ] > 1 ? $current = $cat_posts->query_vars[ 'page
    	//first article will be wrapped in d-all container
 	if( $i == 0 ) { ?>
 	<section class="d-all">
-    <article id="archive" class="d-all row featured-post">
-
-    <?php } elseif( $i == 1 ) {  //second article starts a new d-2of3 section ?>
-    <section class="d-2of3 secondary-blog">
-	<article id="archive" class="d-all row">
+    <article class="d-all t-all m-all featured-post">
+    <?php } elseif( $i == 1 ) {  //second article starts a new d-2of3 section, in a wrapper for padding... ?>
+    <div class="wrap">
+    	<section class="d-5of7 t-2of3 m-all secondary-blog">
+			<article class="d-all">
 	<?php } elseif ($i > 1 ) { //and the rest of the articles will just be wrapped in article tag, not in a new section ?>
-	<article id="archive" class="d-all row">
+			<article class="d-all">
 	<?php } ?>
 		<?php $author = brafton_author_data( get_the_ID() ); ?>
-			<div class="d-all blog_header row" style="overflow: visible">
 			<?php if( $i == 0 ) { ?>
-			<div class="d-all row tagbar">
-				<?php blog_tagbar(); //see functions.php?>
-			</div>
-			<h1 itemprop="name">Marketing Blog</h1>
+				<div class="d-all tagbar">
+					<?php blog_tagbar(); //see brafton.php?>
+				</div>
+				<h1 itemprop="name" class="title">Marketing Blog</h1>
 			<?php } ?>
 				<?php $size = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
 				<div class="image-inner <?php if( !has_post_thumbnail() ) echo ' no-img'; else echo 'alignleft'; ?>"><?php the_post_thumbnail('medium', array('itemprop' => 'image', 'alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></div>
@@ -95,10 +94,9 @@ $cat_posts->query_vars[ 'paged' ] > 1 ? $current = $cat_posts->query_vars[ 'page
 						</div>	
 						<div class="readtime">
 							<img src="/wp-content/themes/b3/blog-images/time.png"/>
-							<span><?php echo readtime(); //see functions.php ?></span>
+							<span><?php echo readtime(); //see brafton.php ?></span>
 						</div>			
 				</div>
-			</div>
 			<?php if( $i != 0 ) { ?><div class="arrow_to_infinity"></div> <?php } ?>
 		</article>
 
@@ -117,9 +115,8 @@ $cat_posts->query_vars[ 'paged' ] > 1 ? $current = $cat_posts->query_vars[ 'page
 			</ul>
 		</section><!--this closes the d-2of3 section after the last article-->
 	</div>
-
 	<?php wp_reset_query(); ?>
-	<div id="sidebar" class="fourcol last blog_sidebar">
+	<div id="sidebar" class="d-2of7 t-1of3 m-all blog_sidebar">
 		<aside>
 			<ul>
 				<?php dynamic_sidebar( "New Blog Sidebar" ); ?>
@@ -129,7 +126,7 @@ $cat_posts->query_vars[ 'paged' ] > 1 ? $current = $cat_posts->query_vars[ 'page
 	</div>
 </article><!-- End #archive -->
 
-<div class="bottom-cta d-all row">
+<div class="bottom-cta d-all">
 	<div class="bottom-cta-container">
 		<a href="http://www.brafton.com/resources/reduce-reuse-recycle-repurpose-get-content"><div class="ourlatestfooter">
 		</div></a>

@@ -351,162 +351,46 @@ HEADER STYLES
 NAVIGATION STYLES
 *********************/
   /***************************
-BLOG
+BLOG-Landing Page
 ****************************/
 }
-.tagbar {
-  background: url(../images/blog-images/tagbar.png) no-repeat;
-  background-size: 100%;
-  margin-bottom: -5px;
-  height: 47px;
-  /*tag sprites===============================
-============================================*/
-}
-.tag-image {
-  background: none no-repeat left center;
-  background-size: 100%;
-  display: inline-block;
-  margin-top: 3px;
-  margin-right: 2%;
-  /*all tag*/
-}
-.all-tag {
-  background-image: url(../images/blog-images/tags/all.png);
-  background-position: 0 0;
-  padding-bottom: 3.2%;
-  width: 4.3%;
-  height: 0;
-}
-.all-tag:hover, .all-tag.selected {
-  background-position: 0 100%;
-  /*brafton community*/
-}
-.brafton-community {
-  background-image: url(../images/blog-images/tags/community.png);
-  background-position: 0 0;
-  width: 15%;
-  height: 0;
-  padding-bottom: 3.2%;
-}
-.brafton-community:hover, .brafton-community.selected {
-  background-position: 0 100%;
-  /*content strategy*/
-}
-.content-strategy {
-  background-image: url(../images/blog-images/tags/contentstrategy.png);
-  background-position: 0 0;
-  width: 13%;
-  height: 0;
-  padding-bottom: 3.1%;
-}
-.content-strategy:hover, .content-strategy.selected {
-  background-position: 0 100%;
-  /*engaging customers*/
-}
-.engaging-customers {
-  background-image: url(../images/blog-images/tags/engaging.png);
-  background-position: 0 0;
-  width: 17%;
-  height: 0;
-  padding-bottom: 3.1%;
-}
-.engaging-customers:hover, .engaging-customers.selected {
-  background-position: 0 100%;
-  /*get found*/
-}
-.getting-found {
-  background-image: url(../images/blog-images/tags/gettingfound.png);
-  background-position: 0 0;
-  width: 9%;
-  height: 0;
-  padding-bottom: 3.2%;
-}
-.getting-found:hover, .getting-found.selected {
-  background-position: 0 100%;
-  /*lead gen & sales*/
-}
-.sales {
-  background-image: url(../images/blog-images/tags/sales.png);
-  background-position: 0 0;
-  width: 13%;
-  height: 0;
-  padding-bottom: 3.1%;
-}
-.sales:hover, .sales.selected {
-  background-position: 0 100%;
-  /*marketing-news*/
-}
-.marketing-news {
-  background-image: url(../images/blog-images/tags/marketingnews.png);
-  background-position: 0 0;
-  width: 13%;
-  height: 0;
-  padding-bottom: 3.1%;
-}
-.marketing-news:hover, .marketing-news.selected {
-  background-position: 0 100%;
-  /*side bar versions of all these tags*/
-}
-#sidebar .brafton-community, #sidebar .content-strategy, #sidebar .engaging-customers, #sidebar .getting-found, #sidebar .sales, #sidebar .marketing-news {
-  width: 100%;
-  padding-bottom: 44px;
-}
-#sidebar .brafton-community {
-  background-size: 60%;
-}
-#sidebar .sales, #sidebar .marketing-news, #sidebar .content-strategy {
-  background-size: 55%;
-}
-#sidebar .getting-found {
-  background-size: 36%;
-}
-#sidebar .engaging-customers {
-  background-size: 73%;
-  /***************************
-BLOG-SINGLE POST
-****************************/
-}
-.single .blog_header, .archive .featured-post .blog_header {
+.featured-post {
   min-height: 315px;
   background: url(../images/blog-images/headerbackground.png) no-repeat;
   background-size: 100%;
+  margin-bottom: 2em;
+}
+.featured-post h1 {
+  background: none;
+  color: #000;
+  width: 100%;
+  float: left;
+  font-weight: 400;
+  display: block;
+  padding-bottom: 0px;
+  margin: 0.25em 2em;
+}
+.featured-post .image-inner {
+  margin: 1em 1em 0 5em;
+  width: 30%;
+  border: 2px solid black;
 }
 .title_info_container {
   padding-bottom: 10px;
-  /*.icons.small .cube {
-		border-radius: 50%;
-	}
-
-	.share .count {
-		border-radius: 50%;
-	}
-
-	.share {
-		display: inline-block;
-		margin: 0 !important;
-		width: 60px;
-		position: fixed;
-		left: 10px !important;
-		top: 200px !important;
-		z-index: 9999;
-
-		a {
-			display: block;
-			margin-top: 20px !important;
-		}
-	}*/
 }
 .image-inner {
-  margin: 22px 0px 0px -4px;
-  width: 33%;
-  border: none;
+  margin: 1em 1em 0 5em;
+  width: 25%;
+  border: 2px solid black;
   display: inline-block;
   float: left;
 }
-#archive .featured-post .image-inner {
-  margin: 22px 10px 0px -6px;
-  width: 33%;
-  border: none;
+.image-inner img {
+  max-width: 100%;
+  height: auto;
+}
+.secondary-blog article {
+  margin-bottom: 1em;
 }
 .title_info_container {
   width: 100%;
@@ -514,7 +398,7 @@ BLOG-SINGLE POST
 }
 article h1 {
   background: none;
-  color: black;
+  color: #000;
   width: 100%;
   float: left;
   font-weight: 400;

@@ -126,13 +126,21 @@
 		}
 
 	.share {
-		display: inline-block;
+		position: fixed;
+		left: 0;
+		top: 33%;
+		display: block;
 		margin-top: 30px;
 		width: 60px;
 		z-index: 9999;
 
 		.count {
 			border-radius: 50%;
+		}
+
+		a {
+			display: block;
+			margin-bottom: 2em;
 		}
 	}
 }
