@@ -3,8 +3,8 @@
 <article itemscope itemtype="http://schema.org/<?php if(in_category('blog')) echo 'Blog'; else echo 'Article'; ?>" id="single" class="d-all row">
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
 	$author = brafton_author_data( get_the_ID() ); ?>
-		<div class="d-all blog_header row" style="overflow: visible">
-			<div class="d-all row tagbar">
+		<div class="d-all blog_header" style="overflow: visible">
+			<div class="d-all tagbar">
 				<?php blog_tagbar(); //see functions.php ?>
 			</div>
 			<?php //If this is a video post, change things around a bit
@@ -39,7 +39,7 @@
 						<?php subcategory_links(); //see functions.php ?>
 					</div>	
 					<div class="readtime">
-						<img src="/brafton/wp-content/themes/bones/library/images/blog-images/time.png"/>
+						<img src="/wp-content/themes/brafton/library/images/blog-images/time.png"/>
 						<span><?php echo readtime(); //see functions.php ?></span>
 					</div>	
 				</div>		
@@ -80,36 +80,16 @@
 				<?php comments_template(); ?>
 			</div>
 		</div>
-		<div id="sidebar" class="d-1of3 last">
-			<aside>
-				<ul>
-					<?php if ( get_the_ID() == 17049 ) {
-						echo '<script src="//app-sj04.marketo.com/js/forms2/js/forms2.js"></script><form id="mktoForm_1144"></form><script>MktoForms2.loadForm("//app-sj04.marketo.com", "447-XFF-352", 1144, function(form) {form.setValues({"MKTO_Source__c":window.location.pathname});});</script>';
-					} ?>
-					<?php if( get_the_ID() == 72499 ) {
-						echo '<li><iframe src="http://fuel.brafton.com/MarchMadness1.html" height="300" width="100" style="height:488px;width:496px;overflow:hidden;" scrolling="no" ></iframe></li>';
-					} ?>
-					<?php if( get_the_ID() == 72904 ) {
-						echo '<li><iframe src="http://fuel.brafton.com/MarchMadness2.html" height="300" width="100" style="height:488px;width:496px;overflow:hidden;" scrolling="no" ></iframe></li>';
-					} ?>
-					<?php if( get_the_ID() == 72917 ) {
-						echo '<li><iframe src="http://fuel.brafton.com/MarchMadness2-2.html" height="300" width="100" style="height:488px;width:496px;overflow:hidden;" scrolling="no" ></iframe></li>';
-					} ?>
-					<?php if ( get_the_ID() == 73256 ) {
-						echo '<li><iframe src="http://fuel.brafton.com/SocialMarchMadnessFinals.html" height="300" width="100" style="height:327px;width:496px;overflow:hidden;" scrolling="no" ></iframe></li>';
-					}
-					?>
-				<?php if ( !function_exists( "dynamic_sidebar" ) || !dynamic_sidebar( "Single Sidebar" ) ) : ?>
-					<p>Add Widgets to the Post Sidebar</p>
-				<?php endif; ?>
-				</ul>
-			</aside>
+		<div class="sidebar d-1of3 last">
+			<?php if ( !function_exists( "dynamic_sidebar" ) || !dynamic_sidebar( "Single Sidebar" ) ) : ?>
+				<p>Add Widgets to the Post Sidebar</p>
+			<?php endif; ?>
 		</div>
 	</div>
 		<?php endwhile; endif; ?>
 </article><!-- End #single -->
 
-<div class="bottom-cta d-all row">
+<div class="bottom-cta d-all">
 	<div class="bottom-cta-container">
 		<a href="http://www.brafton.com/resources/reduce-reuse-recycle-repurpose-get-content"><div class="ourlatestfooter">
 		</div></a>

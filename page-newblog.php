@@ -93,7 +93,7 @@ $cat_posts->query_vars[ 'paged' ] > 1 ? $current = $cat_posts->query_vars[ 'page
 							<?php subcategory_links(); ?>
 						</div>	
 						<div class="readtime">
-							<img src="/wp-content/themes/b3/blog-images/time.png"/>
+							<img src="/wp-content/themes/brafton/library/images/blog-images/time.png"/>
 							<span><?php echo readtime(); //see brafton.php ?></span>
 						</div>			
 				</div>

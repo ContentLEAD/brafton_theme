@@ -69,6 +69,14 @@ BLOG-Landing Page
 
 }
 
+.blog_header {
+	@extend .featured-post;
+
+	h1 {
+		margin: 0.25em 1em;
+	}
+}
+
 .title_info_container {
 	padding-bottom: 10px;
 }
@@ -97,49 +105,38 @@ BLOG-Landing Page
 	display: inline-block;
 }
 
-article h1 {
-	background: none;
-	color: $black;
-	width: 100%;
+
+#topinfo {
+
+	position: relative;
+	width: 60%;
 	float: left;
-	font-weight: 400;
-	display: block;
-	padding-bottom: 0px;
-}
 
-
-
-	#topinfo {
-
-		position: relative;
-		width: 60%;
-		float: left;
-
-		a {
-			text-decoration: none;
-		}
-
-		.author {
-			float: left;
-			position: relative;
-			top: 0;
-			margin-right: 40px;
-			right: 0;
-
-			img {
-				border-radius: 50%;
-				max-width: 78px
-			}
-			.user {
-				display: block;
-				text-align: center;
-			}
-		}  
-		
-		.subcategory {
-			float: left;
-		}
+	a {
+		text-decoration: none;
 	}
+
+	.author {
+		float: left;
+		position: relative;
+		top: 0;
+		margin-right: 40px;
+		right: 0;
+
+		img {
+			border-radius: 50%;
+			max-width: 78px
+		}
+		.user {
+			display: block;
+			text-align: center;
+		}
+	}  
+	
+	.subcategory {
+		float: left;
+	}
+}
 
 
 
