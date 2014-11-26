@@ -17,6 +17,12 @@ come into play. Have fun!
 GENERAL STYLES
 *********************/
 
+/*unveil the slidr starting in tablet view...*/
+.home {
+	.rev_slider_wrapper {
+		display: block !important;
+	}
+}
 
 /*********************
 LAYOUT & GRID STYLES
@@ -48,7 +54,7 @@ BLOG-Landing Page
 .author-cat-time-container,
 .scrolly,
  {
-	display: inline-block;
+	display: block;
 }
 
 
@@ -265,9 +271,8 @@ BLOG-Landing Page
 	height: 139px;
 	display: inline-block;
 	margin-top: -50px;
-	background-size: 100%;
+	background-size: 100% !important;
 	margin-left: 20px;
-	background-size: 100%;
 }
 
 .ourlatestfooter {

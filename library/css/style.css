@@ -1339,6 +1339,7 @@ style a page via class
 }
 .home .rev_slider_wrapper {
   float: left;
+  display: none !important;
   /*below the slider*/
 }
 .home .rev_slider_wrapper div {
@@ -2368,15 +2369,21 @@ come into play. Have fun!
   /*********************
 GENERAL STYLES
 *********************/
-  /*********************
-LAYOUT & GRID STYLES
-*********************/
+  /*unveil the slidr starting in tablet view...*/
   /*********************
 DESKTOP
 This is the average viewing window. So Desktops, Laptops, and
 in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
-*********************/  .wrap {
+*********************/  .home {
+    /*********************
+LAYOUT & GRID STYLES
+*********************/
+  }
+  .home .rev_slider_wrapper {
+    display: block !important;
+  }
+  .wrap {
     width: 96%;
     /*********************
 HEADER STYLES
@@ -2391,7 +2398,7 @@ BLOG-Landing Page
 ****************************/
   }
   .tagbar, .author-cat-time-container, .scrolly {
-    display: inline-block;
+    display: block;
   }
   .featured-post, .blog_header {
     min-height: 315px;
@@ -2548,9 +2555,8 @@ BLOG-Landing Page
     height: 139px;
     display: inline-block;
     margin-top: -50px;
-    background-size: 100%;
+    background-size: 100% !important;
     margin-left: 20px;
-    background-size: 100%;
   }
   .ourlatestfooter {
     background: url(../images/blog-images/ourlatestfooter.png) no-repeat;

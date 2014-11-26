@@ -40,6 +40,7 @@ style a page via class
 
 	.rev_slider_wrapper {
 		float: left;
+		display: none !important;
 		
 		div {
 			background-color: $white;
