@@ -471,18 +471,19 @@ MARKETO FORMS
 .mktField {
 
 	margin-bottom: 25px;
-	float: left;
 
 	.cell-left {
 		margin-right: 5%;
-		float: left;
+		padding: 0.5em 0;
 		text-align: right;
+		font-size: 0.85em;
 		width: 25%;
-		font-size: 0.9em;
+		float: left;
+		display: inline-block;
 	}
 
-	.mktInput {
-		float: left;
+	.mktFormText {
+		width: 70%;
 	}
 }
 

@@ -51,7 +51,9 @@
 
 								</footer>
 
-								<?php comments_template(); ?>
+								<?php 
+								//No comments on the standard page template
+								//comments_template(); ?>
 
 							</article>
 

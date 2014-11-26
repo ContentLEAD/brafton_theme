@@ -285,31 +285,25 @@ p {
 }
 #nav-toggle {
   float: right;
+  /*Contact page Marketo Form
+******************************/
 }
-.nav {
-  /* .menu is clearfixed inside mixins.scss */
-}
-.menu {
-  /* end .menu */
+.page-template-page-contact-php {
   /*********************
 POSTS & CONTENT STYLES
 *********************/
   /* entry content */
 }
-.menu ul {
-  /* end .menu ul */
+.page-template-page-contact-php .left-col {
+  width: 50%;
+  float: left;
 }
-.menu ul li {
-  /* end .menu ul li */
-  /* highlight current page */
+.page-template-page-contact-php .right-col {
+  width: 49%;
+  float: left;
 }
-.menu ul li:last-child {
-  /*
-				plan your menus and drop-downs wisely.
-				*/
-}
-.menu ul li.current-menu-item, .menu ul li.current_page_item, .menu ul li.current_page_ancestor {
-  /* end current highlighters */
+.page-template-page-contact-php .right-col textarea {
+  margin-bottom: 2em;
 }
 .entry-content {
   /* end .entry-content */
