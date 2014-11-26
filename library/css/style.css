@@ -2737,7 +2737,6 @@ This is for the larger monitors and possibly full screen viewers.
     background: #000;
     color: #fff;
     padding-left: 10px;
-    border-right: 0;
     display: block;
     width: 180px;
     padding: 0.75em;
@@ -2751,8 +2750,7 @@ really slow down your CSS. Don't overdo it.
     /* @include css-gradient(#dfdfdf,#f8f8f8); */
   }
   .nav li ul.sub-menu li a:hover, .nav li ul.children li a:hover, .nav li ul.sub-menu li a:focus, .nav li ul.children li a:focus {
-    background: #fff;
-    color: #000;
+    opacity: 0.8;
   }
   .nav li ul.sub-menu li:last-child, .nav li ul.children li:last-child {
     /*
