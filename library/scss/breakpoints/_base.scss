@@ -500,6 +500,16 @@ form .req {
 	margin-bottom: 0.5em;
 	width: 100%;
 }
+
+/*********************
+Blog and Archives- hide some components until tablet view- 768up.scss
+**********************/
+.tagbar,
+.author-cat-time-container,
+.scrolly,
+ {
+	display: none;
+}
 /*********************
 POSTS & CONTENT STYLES
 *********************/

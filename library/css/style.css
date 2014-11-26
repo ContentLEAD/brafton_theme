@@ -1759,6 +1759,12 @@ form .req {
   margin-bottom: 0.5em;
   width: 100%;
   /*********************
+Blog and Archives- hide some components until tablet view- 768up.scss
+**********************/
+}
+.tagbar, .author-cat-time-container, .scrolly {
+  display: none;
+  /*********************
 POSTS & CONTENT STYLES
 *********************/
 }
@@ -2256,7 +2262,7 @@ Legacy style classes...  :(
   padding: 0.5em 1em;
   text-align: center;
 }
-@media only screen and (min-width: 481px) {
+@media (min-width: 481px) {
   /******************************************************************
 Site Name:
 Author:
@@ -2345,7 +2351,7 @@ do they need tweaking?
     /* end .footer-links */
   }
 }
-@media only screen and (min-width: 768px) {
+@media (min-width: 768px) {
   /******************************************************************
 Site Name:Brafton
 Author:Michael DeWitt
@@ -2383,6 +2389,9 @@ NAVIGATION STYLES
     /***************************
 BLOG-Landing Page
 ****************************/
+  }
+  .tagbar, .author-cat-time-container, .scrolly {
+    display: inline-block;
   }
   .featured-post, .blog_header {
     min-height: 315px;
@@ -2541,41 +2550,27 @@ BLOG-Landing Page
     margin-top: -50px;
     background-size: 100%;
     margin-left: 20px;
+    background-size: 100%;
   }
   .ourlatestfooter {
     background: url(../images/blog-images/ourlatestfooter.png) no-repeat;
-    /*transition: background-position 0.3s;
-	-webkit-transition: background-position 0.3s;*/
-    background-size: 100%;
   }
   .leadscon {
     background: url(../images/blog-images/leadscon.png) no-repeat;
-    /*transition: background-position 0.3s;
-	-webkit-transition: background-position 0.3s;*/
-    background-size: 100%;
   }
   .askamarketer {
     background: url(../images/blog-images/askamarketer.png) no-repeat;
-    /*transition: background-position 0.3s;
-	-webkit-transition: background-position 0.3s;*/
-    background-size: 100%;
   }
-  .ourlatestfooter:hover {
+  .ourlatestfooter:hover, .leadscon:hover, .askamarketer:hover {
     background-position: 0px -140px;
-  }
-  .leadscon:hover {
-    background-position: 0px -140px;
-  }
-  .askamarketer:hover {
-    background-position: 0px -140px;
-    cursor: pointer;
   }
   .bottom-cta-container {
     width: 825px;
     display: block;
     margin: auto;
-    /*RESPONSIVE DESIGN*/
-    /*ipad landscape*/
+    /*********************
+SIDEBARS & ASIDES
+*********************/
   }
   .sidebar {
     margin-top: 2.2em;
@@ -2650,166 +2645,7 @@ mobile. Make sure to double check these!
 			*/
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
-  /*ipad portrait*/  .single #body {
-    width: 58%;
-    margin-left: 30px;
-  }
-  .scrolly img {
-    max-width: 100%;
-  }
-  .ourlatestfooter, .leadscon, .askamarketer {
-    margin-top: -35px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 960px) {
-  .single #body {
-    width: 90%;
-    margin-left: 60px;
-  }
-  .scrolly {
-    display: none;
-  }
-  .tag-image, .all-tag {
-    display: none;
-  }
-  .single article h1 {
-    font-size: 20px;
-  }
-  .single .row .twelvecol {
-    margin: 0 0 0em;
-  }
-  .single #topinfo {
-    margin-bottom: 3em;
-  }
-  #topinfo img {
-    max-width: 60px;
-  }
-  .single .subcategory .subcategory-image {
-    margin-top: -8px;
-    width: 80px;
-    height: 82px;
-    background-size: 100%;
-  }
-  .single .subcategory .subcategory-image:hover {
-    background-size: 100%;
-  }
-  .ourlatestfooter, .leadscon, .askamarketer {
-    margin-left: 60px;
-  }
-}
-@media only screen and (min-width: 768px) and (min-width: 481px) and (max-width: 685px) {
-  /*smartphones*/  .author, .subcategory, .readtime {
-    display: none !important;
-  }
-}
-@media only screen and (min-width: 768px) and (min-width: 320px) and (max-width: 480px) {
-  .single #single {
-    margin-top: -35px;
-  }
-  .tagbar {
-    background: none;
-    height: 0px;
-  }
-  .single .blog_header {
-    background: none;
-  }
-  .single #topinfo {
-    position: relative;
-    width: 100%;
-    display: block;
-    margin-bottom: 0.8em;
-    float: left;
-  }
-  .single article h1 {
-    font-size: 34px;
-  }
-  .author, .subcategory, .readtime {
-    display: none !important;
-  }
-  .single .image-inner {
-    width: 100%;
-    border: none;
-  }
-  .single .image-inner img {
-    width: 100%;
-  }
-  .single .bottom-cta {
-    background: none;
-  }
-  .arrow_to_infinity {
-    display: none;
-  }
-  .ourlatestfooter, .leadscon, .askamarketer {
-    display: none;
-  }
-  .single-post .share {
-    display: block;
-    width: 100%;
-    position: relative;
-    top: 0px !important;
-    left: 0px !important;
-    margin-bottom: 20px !important;
-  }
-  .single-post .share a {
-    margin-top: 20px !important;
-    display: inline-block;
-  }
-  .single #body {
-    width: 100%;
-    margin-left: 0px;
-    text-align: justify;
-  }
-  .author_avatar_container {
-    margin: 15px 15px;
-    float: left;
-  }
-  .bottom-cta {
-    display: none;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 365px) {
-  /*Special responsive CSS for twits/videos*/  .share .count {
-    display: none;
-  }
-  .share a {
-    margin-right: 0px !important;
-  }
-  .icons.small .cube {
-    margin: 11px;
-  }
-  .icons.small .cube {
-    text-align: center;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1075px) {
-  .tagged-twit .author-cat-time-container {
-    float: left;
-    width: 100%;
-  }
-  .tagged-twit .single-twit {
-    position: relative;
-    width: 100%;
-    top: 0px;
-  }
-  .tagged-twit #body {
-    margin-top: 10px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 960px) {
-  /*********************
-SIDEBARS & ASIDES
-*********************/  .single.tagged-twit .blog_header {
-    min-height: 125px;
-  }
-  .tagged-twit #topinfo {
-    min-height: 0px;
-  }
-  .tagged-twit #topinfo .author, .tagged-twit #topinfo .subcategory, .tagged-twit #topinfo .readtime {
-    display: none;
-  }
-}
-@media only screen and (min-width: 1030px) {
+@media (min-width: 1030px) {
   /******************************************************************
 Site Name:
 Author:
@@ -2928,7 +2764,7 @@ This is for the larger monitors and possibly full screen viewers.
     /* end current highlighters */
   }
 }
-@media only screen and (min-width: 1240px) {
+@media (min-width: 1240px) {
   /******************************************************************
 Site Name: 
 Author: 

@@ -44,6 +44,14 @@ NAVIGATION STYLES
 BLOG-Landing Page
 ****************************/
 
+.tagbar,
+.author-cat-time-container,
+.scrolly,
+ {
+	display: inline-block;
+}
+
+
 .featured-post {
 	min-height: 315px;
 	background: url(../images/blog-images/headerbackground.png) no-repeat;
@@ -199,25 +207,27 @@ BLOG-Landing Page
 
 .boilerplate {
 	margin: 0 !important;
+
+	.bio {
+		background: url(../images/blog-images/authorbackground.png);
+	}
+
+	.icons {
+		float: left;
+		margin-top: 9px;
+	}
 }
 
-.boilerplate .bio {
-	background: url(../images/blog-images/authorbackground.png);
-}
 
-.boilerplate .icons {
-	float: left;
-	margin-top: 9px;
-}
 
 .authorprofile {
 	background: none !important;
 	float: left !important;
-}
 
-.authorprofile img {
-	width: 70px;
-	float: left;
+	img {
+		width: 70px;
+		float: left;
+	}
 }
 
 .single hr,
@@ -257,267 +267,31 @@ BLOG-Landing Page
 	margin-top: -50px;
 	background-size: 100%;
 	margin-left: 20px;
+	background-size: 100%;
 }
 
 .ourlatestfooter {
 	background: url(../images/blog-images/ourlatestfooter.png) no-repeat;
-	background-size: 100%;
-
-	/*transition: background-position 0.3s;
-	-webkit-transition: background-position 0.3s;*/
-
 }
 
 .leadscon {
 	background: url(../images/blog-images/leadscon.png) no-repeat;
-	background-size: 100%;
-
-	/*transition: background-position 0.3s;
-	-webkit-transition: background-position 0.3s;*/
 }
 
 .askamarketer {
 	background: url(../images/blog-images/askamarketer.png) no-repeat;
-	background-size: 100%;
-
-	/*transition: background-position 0.3s;
-	-webkit-transition: background-position 0.3s;*/
 }
 
-.ourlatestfooter:hover {
-	background-position: 0px -140px;
-}
-
-.leadscon:hover {
-	background-position: 0px -140px;
-}
-
+.ourlatestfooter:hover,
+.leadscon:hover,
 .askamarketer:hover {
 	background-position: 0px -140px;
-	cursor: pointer;
 }
 
 .bottom-cta-container {
 	width: 825px;
 	display: block;
 	margin: auto;
-}
-
-
-/*RESPONSIVE DESIGN*/
-
-
-/*ipad landscape*/
-
-@media (max-width : 1200px)  {
-	.single #body {
-		width: 58%;
-		margin-left: 30px;
-	}
-
-	.scrolly img {
-		max-width: 100%;
-	}
-
-	.ourlatestfooter, .leadscon, .askamarketer {
-		margin-top: -35px;
-	}
-}
-
-/*ipad portrait*/
-
-@media (max-width : 960px)  {
-	.single #body {
-		width: 90%;
-		margin-left: 60px;
-	}
-
-	.scrolly {
-		display: none;
-	}
-
-	.tag-image, .all-tag {
-		display: none;
-	}
-
-	.single article h1 {
-		font-size: 20px;
-	}
-	.single .row .twelvecol {
-		margin: 0 0 0em;
-	}
-
-	.single #topinfo {
-		margin-bottom: 3em;
-	}
-
-	#topinfo img {
-		max-width: 60px
-	}
-
-	.single .subcategory .subcategory-image  {
-		margin-top: -8px;
-		width: 80px;
-		height: 82px;
-		background-size: 100%;
-	}
-
-	.single .subcategory .subcategory-image:hover {
-		background-size: 100%;
-	}
-
-	.ourlatestfooter, .leadscon, .askamarketer {
-		margin-left: 60px;
-	}
-}
-
-@media (min-width: 481px) and (max-width: 685px) {
-	.author, .subcategory, .readtime {
-		display: none !important;
-	}
-}
-
-/*smartphones*/
-
-
-@media (min-width : 320px) and (max-width : 480px) {
-	.single #single {
-		margin-top: -35px;
-	}
-	.tagbar {
-		background: none;
-		height: 0px;
-	}
-
-	.single .blog_header {
-		background: none;
-	}
-
-	.single #topinfo {
-		position: relative;
-		width: 100%;
-		display: block;
-		margin-bottom: 0.8em;
-		float: left;
-	}
-
-	.single article h1 {
-		font-size: 34px;
-	}
-
-	.author, .subcategory, .readtime {
-		display: none !important;
-	}
-
-	.single .image-inner {
-		width: 100%;
-		border: none;
-	}
-
-	.single .image-inner img {
-		width: 100%;
-	}
-
-	.single .bottom-cta {
-		background: none;
-	}
-
-	.arrow_to_infinity {
-		display: none;
-	}
-
-
-	.ourlatestfooter,
-	.leadscon,
-	.askamarketer {
-		display: none;
-	}
-
-	.single-post .share {
-		display: block;
-		width: 100%;
-		position: relative;
-		top: 0px !important;
-		left: 0px !important;
-		margin-bottom: 20px !important;
-	}
-
-
-	.single-post .share a {
-		margin-top: 20px !important;
-		display: inline-block;
-	}
-
-	.single #body {
-		width: 100%;
-		margin-left: 0px;
-		text-align: justify;
-	}
-
-	.author_avatar_container {
-		margin: 15px 15px;
-		float: left;
-	}
-
-	.bottom-cta {
-		display: none;
-	}
-
-}
-
-@media (max-width: 365px) {
-	.share .count {
-		display: none;
-	}
-
-	.share a {
-		margin-right: 0px !important;
-	}
-
-	.icons.small .cube {
-		margin: 11px;
-	}
-
-	.icons.small .cube {
-		text-align: center;
-	}
-}
-
-
-/*Special responsive CSS for twits/videos*/
-
-@media (max-width: 1075px) {
-
-	.tagged-twit .author-cat-time-container {
-		float: left;
-		width: 100%;
-	}
-
-	.tagged-twit .single-twit {
-		position: relative;
-		width: 100%;
-		top: 0px;
-	}
-
-	.tagged-twit #body {
-		margin-top: 10px;
-	}
-
-}
-
-@media (max-width: 960px) {
-	.single.tagged-twit .blog_header {
-		min-height: 125px;
-	}
-	.tagged-twit #topinfo {
-		min-height: 0px;
-	}
-
-	.tagged-twit #topinfo .author,
-	.tagged-twit #topinfo .subcategory,
-	.tagged-twit #topinfo .readtime {
-		display: none;
-	}
 }
 
 /*********************
