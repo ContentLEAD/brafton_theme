@@ -1726,6 +1726,14 @@ MARKETO FORMS
   color: #000;
   font-weight: bold;
   font-size: 1.5em;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  /*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+  /* @include css-gradient(#dfdfdf,#f8f8f8); */
 }
 .nav li.highlight a:hover {
   color: #fff;
@@ -2558,6 +2566,9 @@ BLOG-Landing Page
     background-size: 100% !important;
     margin-left: 20px;
   }
+  .ourlatestfooter:hover, .leadscon:hover, .askamarketer:hover {
+    background-position: 0px -140px;
+  }
   .ourlatestfooter {
     background: url(../images/blog-images/ourlatestfooter.png) no-repeat;
   }
@@ -2566,9 +2577,6 @@ BLOG-Landing Page
   }
   .askamarketer {
     background: url(../images/blog-images/askamarketer.png) no-repeat;
-  }
-  .ourlatestfooter:hover, .leadscon:hover, .askamarketer:hover {
-    background-position: 0px -140px;
   }
   .bottom-cta-container {
     width: 825px;
@@ -2653,8 +2661,8 @@ mobile. Make sure to double check these!
 }
 @media (min-width: 1030px) {
   /******************************************************************
-Site Name:
-Author:
+Site Name:Brafton
+Author: Michael DeWitt
 
 Stylesheet: Desktop Stylsheet
 
@@ -2726,17 +2734,25 @@ This is for the larger monitors and possibly full screen viewers.
     /* highlight sub-menu current page */
   }
   .nav li ul.sub-menu li a, .nav li ul.children li a {
-    color: #000;
+    background: #000;
+    color: #fff;
     padding-left: 10px;
     border-right: 0;
     display: block;
     width: 180px;
-    border-bottom: 1px solid #ccc;
     padding: 0.75em;
+    -webkit-transition: background 0.2s;
+    transition: background 0.2s;
+    /*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+    /* @include css-gradient(#dfdfdf,#f8f8f8); */
   }
   .nav li ul.sub-menu li a:hover, .nav li ul.children li a:hover, .nav li ul.sub-menu li a:focus, .nav li ul.children li a:focus {
-    background: #000;
-    color: #fff;
+    background: #fff;
+    color: #000;
   }
   .nav li ul.sub-menu li:last-child, .nav li ul.children li:last-child {
     /*

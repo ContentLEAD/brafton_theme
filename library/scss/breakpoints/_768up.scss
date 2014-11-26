@@ -273,6 +273,10 @@ BLOG-Landing Page
 	margin-top: -50px;
 	background-size: 100% !important;
 	margin-left: 20px;
+
+	&:hover {
+		background-position: 0px -140px;
+	}
 }
 
 .ourlatestfooter {
@@ -285,12 +289,6 @@ BLOG-Landing Page
 
 .askamarketer {
 	background: url(../images/blog-images/askamarketer.png) no-repeat;
-}
-
-.ourlatestfooter:hover,
-.leadscon:hover,
-.askamarketer:hover {
-	background-position: 0px -140px;
 }
 
 .bottom-cta-container {
