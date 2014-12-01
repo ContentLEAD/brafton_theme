@@ -1436,10 +1436,7 @@ style a page via class
 .home li.widget_search {
   margin-bottom: 0;
 }
-.blog {
-  /* blog template page */
-}
-.blog .arrow_to_infinity {
+.arrow_to_infinity {
   width: 75%;
   display: block;
   height: 60px;
@@ -1448,6 +1445,9 @@ style a page via class
   opacity: 0.5;
   background: url(../images/blog-images/sidebar_arrow_to_infinity.png) no-repeat;
   background-size: 100%;
+}
+.blog {
+  /* blog template page */
 }
 .archive {
   /* archive page */
@@ -1985,10 +1985,10 @@ PAGE NAVI STYLES
   padding: 0.75em;
   min-width: 1em;
   display: block;
-  color: #2980b9;
+  color: #000;
 }
 .pagination a:hover, .pagination span:hover, .pagination a:focus, .pagination span:focus {
-  background-color: #2980b9;
+  background-color: #000;
   color: #fff;
 }
 .pagination .current {
@@ -2440,10 +2440,12 @@ BLOG-Landing Page
     padding-bottom: 0px;
     margin: 0.25em 2em;
   }
+  .featured-post h3, .blog_header h3 {
+    font-size: 1.75em;
+  }
   .featured-post .image-inner, .blog_header .image-inner {
     margin: 1em 1em 0 5em;
     width: 30%;
-    border: 2px solid black;
   }
   .blog_header h1 {
     margin: 0.25em 1em;
@@ -2454,7 +2456,6 @@ BLOG-Landing Page
   .image-inner {
     margin: 1em 1em 0 5em;
     width: 25%;
-    border: 2px solid black;
     display: inline-block;
     float: left;
   }

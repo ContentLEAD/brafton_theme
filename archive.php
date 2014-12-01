@@ -1,99 +1,73 @@
-<?php get_header(); ?>
-
-			<div id="content">
-
-				<div id="inner-content" class="wrap cf">
-
-						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
-
-							<?php if (is_category()) { ?>
-								<h1 class="archive-title h2">
-									<span><?php _e( 'Posts Categorized:', 'bonestheme' ); ?></span> <?php single_cat_title(); ?>
-								</h1>
-
-							<?php } elseif (is_tag()) { ?>
-								<h1 class="archive-title h2">
-									<span><?php _e( 'Posts Tagged:', 'bonestheme' ); ?></span> <?php single_tag_title(); ?>
-								</h1>
-
-							<?php } elseif (is_author()) {
-								global $post;
-								$author_id = $post->post_author;
-							?>
-								<h1 class="archive-title h2">
-
-									<span><?php _e( 'Posts By:', 'bonestheme' ); ?></span> <?php the_author_meta('display_name', $author_id); ?>
-
-								</h1>
-							<?php } elseif (is_day()) { ?>
-								<h1 class="archive-title h2">
-									<span><?php _e( 'Daily Archives:', 'bonestheme' ); ?></span> <?php the_time('l, F j, Y'); ?>
-								</h1>
-
-							<?php } elseif (is_month()) { ?>
-									<h1 class="archive-title h2">
-										<span><?php _e( 'Monthly Archives:', 'bonestheme' ); ?></span> <?php the_time('F Y'); ?>
-									</h1>
-
-							<?php } elseif (is_year()) { ?>
-									<h1 class="archive-title h2">
-										<span><?php _e( 'Yearly Archives:', 'bonestheme' ); ?></span> <?php the_time('Y'); ?>
-									</h1>
-							<?php } ?>
-
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
-
-								<header class="article-header">
-
-									<h3 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-									<p class="byline vcard"><?php
-										printf(__( 'Posted', 'bonestheme' ) . ' <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> ' . __('by', 'bonestheme' ) . ' <span class="author">%3$s</span> <span class="amp">&</span> ' . __('filed under', 'bonestheme') .  ' %4$s.', get_the_time('Y-m-j'), get_the_time(__( 'F jS, Y', 'bonestheme' )), get_the_author_link( get_the_author_meta( 'ID' ) ), get_the_category_list(', '));
-									?></p>
-
-								</header>
-
-								<section class="entry-content cf">
-
-									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
-
-									<?php the_excerpt(); ?>
-
-								</section>
-
-								<footer class="article-footer">
-
-								</footer>
-
-							</article>
-
-							<?php endwhile; ?>
-
-									<?php bones_page_navi(); ?>
-
-							<?php else : ?>
-
-									<article id="post-not-found" class="hentry cf">
-										<header class="article-header">
-											<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-										</header>
-										<section class="entry-content">
-											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the archive.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
-
-							<?php endif; ?>
-
-						</div>
-
-					<?php get_sidebar(); ?>
-
-				</div>
-
+<?php  get_header(); ?>
+<article id="archive" class="d-all" itemscope itemtype="http://schema.org/WebPage">
+	<div class="archive-title">
+		<?php  if (is_date()) { ?><h1 itemprop="name">Month Archive: <span class="color"><?php  the_time('F Y'); ?></span></h1><?php  } elseif(is_tag()){ /*no header tag archives*/ } else { ?><h1 itemprop="name"><span><?php  single_tag_title(); ?></span></h1><?php  } ?>
+	</div>
+		<?php 
+    $i=0;
+    if( have_posts() ) : while( have_posts() ) : the_post();
+    
+	if( $i == 0 ) { ?>
+		<section class="d-all">
+	    <article id="archive" class="d-all featured-post">
+    <?php } elseif( $i == 1 ) {  //second article starts a new 5of7 section ?>
+	    <section class="d-5of7 t-2of3 m-allsecondary-blog">
+		<article id="archive" class="d-all">
+	<?php } elseif ($i > 1 ) { //and the rest of the articles will just be wrapped in article tag, not in a new section ?>
+		<article id="archive" class="d-all">
+	<?php } ?>
+	<?php $author = brafton_author_data( get_the_ID() ); ?>
+		<header class="d-all">
+			<?php if( $i == 0 ) { ?>
+			<div class="d-all tagbar">
+				<?php blog_tagbar(); ?>
 			</div>
+			<?php } ?>
+			<?php $size = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
+			<div class="image-inner <?php if( !has_post_thumbnail() ) echo ' no-img'; else echo 'alignleft'; ?>"><?php the_post_thumbnail('medium', array('itemprop' => 'image', 'alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></div>
+			<div id="topinfo">
+				<div class="title_info_container">
+				<h3 itemprop="name headline"><a href=<?php echo '"' . get_permalink() . '"'?>><?php the_title(); ?></a></h3>
+				</div>
+					<div class="author">
+						<a href="<?php echo $author['url']; ?>" class="user"><?php echo get_avatar($author['ID']); ?></a>
+						<span>by <?php if(get_the_author() != 'Editorial') : ?>
+							<a href="<?php echo $author['url']; ?>" title="Learn more about: <?php echo $author['name']; ?>" rel="author"><?php echo $author['name']; ?></a>
+							<?php else: ?>
+							Brafton Editorial
+							<?php endif; ?>
+						</span>
+					</div>
+					<div class="subcategory">
+						<?php subcategory_links(); ?>
+					</div>		
+					<div class="readtime">
+						<img src="/wp-content/themes/b3/blog-images/time.png"/>
+						<span><?php echo readtime(); ?></span>
+					</div>			
+			</div>
+		</header>
+		<?php if( $i > 0 ) { ?>
+		<div class="arrow_to_infinity"></div>
+		<?php } ?>
+	</article>
 
-<?php get_footer(); ?>
+	<?php if( $i == 0 ) { 
+			echo '</section>'; //close the twelvecol section surrounding the first post 
+		} 
+
+	$i++;
+    endwhile;
+    endif;
+
+    ?>
+		<?php  _paginate(); ?>
+	</section><!--this closes the eightcol section after the last article-->
+	<div class="d-2of7 t-1of3 m-all sidebar">
+		<aside>
+			<ul>
+				<?php dynamic_sidebar("Archive Sidebar"); ?>
+			</ul>
+		</aside>
+</article><!-- End #archive -->
+<?php  get_footer(); ?>

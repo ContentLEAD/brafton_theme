@@ -373,10 +373,12 @@ BLOG-Landing Page
   padding-bottom: 0px;
   margin: 0.25em 2em;
 }
+.featured-post h3, .blog_header h3 {
+  font-size: 1.75em;
+}
 .featured-post .image-inner, .blog_header .image-inner {
   margin: 1em 1em 0 5em;
   width: 30%;
-  border: 2px solid black;
 }
 .blog_header h1 {
   margin: 0.25em 1em;
@@ -387,7 +389,6 @@ BLOG-Landing Page
 .image-inner {
   margin: 1em 1em 0 5em;
   width: 25%;
-  border: 2px solid black;
   display: inline-block;
   float: left;
 }

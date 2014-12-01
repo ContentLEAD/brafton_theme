@@ -75,10 +75,13 @@ BLOG-Landing Page
 		margin: 0.25em 2em;
 	}
 
+	h3 {
+		font-size: 1.75em;
+	}
+
 	.image-inner {
 		margin: 1em 1em 0 5em;
 		width: 30%;
-		border: 2px solid black;
 	}
 
 }
@@ -98,7 +101,6 @@ BLOG-Landing Page
 .image-inner {
 	margin: 1em 1em 0 5em;
 	width: 25%;
-	border: 2px solid black;
 	display: inline-block;
 	float: left;
 

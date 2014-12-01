@@ -163,10 +163,7 @@ style a page via class
 	}
 } 
 
-                        
-.blog {						/* blog template page */
-
-	.arrow_to_infinity {
+.arrow_to_infinity {
 		width: 75%;
 		display: block;
 		height: 60px;
@@ -176,6 +173,10 @@ style a page via class
 		background: url(../images/blog-images/sidebar_arrow_to_infinity.png) no-repeat;
 		background-size: 100%;
 	}
+
+                        
+.blog {						/* blog template page */
+
 }   
 
                        /* blog template page */
@@ -809,10 +810,10 @@ PAGE NAVI STYLES
       padding: 0.75em;
       min-width: 1em;
       display: block;
-      color: $blue;
+      color: $black;
 
       &:hover, &:focus {
-      	background-color: $blue;
+      	background-color: $black;
       	color: $white;
       }
     }
