@@ -134,30 +134,11 @@ $cat_posts->query_vars[ 'paged' ] > 1 ? $current = $cat_posts->query_vars[ 'page
 		<a href="http://www.brafton.com/news/connect-brafton-leadscon-new-york-aug-14-15-leadscon"><div class="leadscon">
 		</div></a>
 
-		<div id="lightbox-link" class="askamarketer">
+		<div class="askamarketer">
 		</div>
 	</div>
-
 </div>	
 
-<script>
-
-jQuery(document).ready( function($) {
-	//Put title div ABOVE featured image in mobile view
-	/*window.onresize = function() {
-		var wd = $(window).width();
-		if( wd < 480 ) {
-			$('#topinfo').insertBefore('.image-inner');
-		}
-
-		if( wd >= 480 ) {
-			$('#topinfo').insertBefore('.image-inner');
-		}
-	}*/
-});
-
-
-</script>
 <script src="//app-sj04.marketo.com/js/forms2/js/forms2.js"></script>
 <form id="mktoForm_1337"></form>
 

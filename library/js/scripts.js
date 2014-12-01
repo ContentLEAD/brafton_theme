@@ -229,7 +229,7 @@ jQuery(document).ready(function($) {
         }
     }, ]);
 
-    //slider on the careers siebar...
+    //slider on the careers sidebar...
     $("#testi img").load(function() {
         var divwidth = $("#testi img").width();
         console.log(divwidth);
@@ -284,7 +284,16 @@ jQuery(document).ready(function($) {
         if( wd < 480 ) {
             $('#topinfo').insertBefore('.image-inner');
         }
-    }
+    };
+
+
+    //lightbox popup marketo form for blog and single post pages...
+
+    $(".askamarketer").click(function(){
+        MktoForms2.loadForm("//app-sj04.marketo.com", "447-XFF-352", 1337, function (form){MktoForms2.lightbox(form).show();});
+        console.log("test");
+    });
+
 
 
 }); /* end of as page load scripts */

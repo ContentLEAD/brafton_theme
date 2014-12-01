@@ -97,7 +97,7 @@
 		<a href="http://www.brafton.com/news/connect-brafton-leadscon-new-york-aug-14-15-leadscon"><div class="leadscon">
 		</div></a>
 
-		<div id="lightbox-link" class="askamarketer">
+		<div class="askamarketer">
 		</div>
 	</div>
 </div>	

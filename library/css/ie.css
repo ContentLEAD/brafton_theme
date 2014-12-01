@@ -517,6 +517,7 @@ BLOG-Landing Page
 }
 .ourlatestfooter:hover, .leadscon:hover, .askamarketer:hover {
   background-position: 0px -140px;
+  cursor: pointer;
 }
 .ourlatestfooter {
   background: url(../images/blog-images/ourlatestfooter.png) no-repeat;
