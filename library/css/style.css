@@ -1304,16 +1304,16 @@ select {
   /*side bar versions of all these tags*/
 }
 .widget .brafton-community {
-  background-size: 60%;
+  background-size: 63%;
 }
 .widget .sales, .widget .marketing-news, .widget .content-strategy {
-  background-size: 55%;
+  background-size: 58%;
 }
 .widget .getting-found {
-  background-size: 36%;
+  background-size: 39%;
 }
 .widget .engaging-customers {
-  background-size: 73%;
+  background-size: 76%;
 }
 .widget .sidebar-tag-image:hover {
   background-position: 0 100%;
