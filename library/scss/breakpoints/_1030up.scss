@@ -148,3 +148,12 @@ nav {
 	}  /* end current highlighters */
 
 } /* end .nav */
+
+
+/*Bring up the sidebar on the blog hub page on larger devices...*/
+
+.blog_sidebar {
+	position: absolute;
+	right: 0;
+	top: 50%;
+}

@@ -2174,7 +2174,7 @@ SIDEBARS & ASIDES
   max-width: 100%;
 }
 .sidebar #testi {
-  height: 530px;
+  height: 500px;
   overflow: hidden;
   clear: both;
   margin-top: -81px;
@@ -2202,6 +2202,22 @@ SIDEBARS & ASIDES
   width: 100% !important;
   padding-bottom: 44px;
   background-repeat: no-repeat;
+}
+.widget .blog-sidebar-cta a {
+  text-decoration: none;
+}
+.widget .blog-sidebar-cta a:hover {
+  text-decoration: underline;
+}
+.widget .blog-sidebar-cta h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.65em;
+  margin: 0;
+}
+.widget .blog-sidebar-cta img {
+  width: 100%;
+  height: auto;
 }
 .widget ul {
   list-style-type: none;
@@ -2690,6 +2706,7 @@ This is for the larger monitors and possibly full screen viewers.
     float: right;
     border: 0;
     /* end .nav */
+    /*Bring up the sidebar on the blog hub page on larger devices...*/
   }
   .nav ul {
     background: #fff;
@@ -2783,6 +2800,11 @@ really slow down your CSS. Don't overdo it.
   }
   .nav li.current-menu-item, .nav li.current_page_item, .nav li.current_page_ancestor {
     /* end current highlighters */
+  }
+  .blog_sidebar {
+    position: absolute;
+    right: 0;
+    top: 50%;
   }
 }
 @media (min-width: 1240px) {

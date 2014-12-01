@@ -116,7 +116,7 @@ $cat_posts->query_vars[ 'paged' ] > 1 ? $current = $cat_posts->query_vars[ 'page
 		</section><!--this closes the d-2of3 section after the last article-->
 	</div>
 	<?php wp_reset_query(); ?>
-	<div id="sidebar" class="d-2of7 t-1of3 m-all blog_sidebar">
+	<div class="d-1of4 t-1of3 m-all sidebar blog_sidebar">
 		<aside>
 			<ul>
 				<?php dynamic_sidebar( "New Blog Sidebar" ); ?>

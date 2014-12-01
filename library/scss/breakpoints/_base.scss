@@ -1110,7 +1110,7 @@ SIDEBARS & ASIDES
 	}
 
 	#testi {
-		height: 530px;
+		height: 500px;
 		overflow: hidden;
 		clear: both;
 		margin-top: -81px;
@@ -1146,6 +1146,28 @@ SIDEBARS & ASIDES
 			width: 100% !important;
 			padding-bottom: 44px;
 			background-repeat: no-repeat;
+		}
+
+		.blog-sidebar-cta {
+			a {
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			h3 {
+				text-transform: uppercase;
+				text-align: center;
+				font-size: 1.65em;
+				margin: 0;
+			}
+
+			img {
+				width: 100%;
+				height: auto;
+			}
 		}
 
 
