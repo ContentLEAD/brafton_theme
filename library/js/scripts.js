@@ -289,7 +289,7 @@ jQuery(document).ready(function($) {
 
     //lightbox popup marketo form for blog and single post pages...
 
-    $(".askamarketer").click(function(){
+    $(".leadscon").click(function(){
         MktoForms2.loadForm("//app-sj04.marketo.com", "447-XFF-352", 1337, function (form){MktoForms2.lightbox(form).show();});
         console.log("test");
     });

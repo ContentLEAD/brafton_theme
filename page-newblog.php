@@ -131,8 +131,8 @@ $cat_posts->query_vars[ 'paged' ] > 1 ? $current = $cat_posts->query_vars[ 'page
 		<a href="http://www.brafton.com/resources/reduce-reuse-recycle-repurpose-get-content"><div class="ourlatestfooter">
 		</div></a>
 
-		<a href="http://www.brafton.com/news/connect-brafton-leadscon-new-york-aug-14-15-leadscon"><div class="leadscon">
-		</div></a>
+		<div class="leadscon">
+		</div>
 
 		<div class="askamarketer">
 		</div>
