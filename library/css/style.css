@@ -1318,6 +1318,206 @@ select {
 .widget .sidebar-tag-image:hover {
   background-position: 0 100%;
 }
+#sort {
+  background-image: url(case-study-images/SearchBar_Image.png);
+  min-height: 335px;
+  background-size: contain;
+  margin-top: -1px;
+  padding: 8px 0px 20px 0px;
+}
+#sort div.dropdown {
+  display: inline-block;
+}
+#dropdown-container {
+  width: 102%;
+  margin-top: 15%;
+  text-align: center;
+}
+#sel-ind, #sel-prod, #sel-size {
+  width: 160px;
+  margin-right: 20px;
+  height: 28px;
+  opacity: 0.9;
+  border: none;
+  border-radius: 0px;
+}
+.post-type-archive-case_studies #sidebar {
+  display: none;
+}
+.post-type-archive-case_studies .case-study-wrapper {
+  margin-top: -24px;
+}
+.case-study-subheading {
+  text-align: center;
+  margin-top: 10px;
+}
+.viewall {
+  display: inline-block;
+  float: right;
+  height: 100px;
+  width: 150px;
+  margin-top: -64px;
+  margin-right: 100px;
+  /*==================JCAROUSEL FOR CASE STUDIES PAGE===================*/
+  /*
+This is the visible area of you carousel.
+Set a width here to define how much items are visible.
+The width can be either fixed in px or flexible in %.
+Position must be relative!
+*/
+}
+.viewall img {
+  height: 100%;
+  margin-top: -44px;
+  float: right;
+}
+.viewall:hover {
+  cursor: pointer;
+}
+.jcarousel-wrapper {
+  padding: 40px;
+  border-radius: 5px;
+  /*Just a test for fixed bottom*/
+  height: 360px;
+  margin-bottom: 50px;
+}
+.jcarousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 0px;
+  /*
+This is the container of the carousel items.
+You must ensure that the position is relative or absolute and
+that the width is big enough to contain all items.
+*/
+}
+.jcarousel ul {
+  width: 20000em;
+  /* Optional, required in this case since it's a <ul> element */
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /*
+These are the item elements. jCarousel works best, if the items
+have a fixed width and height (but it's not required).
+*/
+}
+.jcarousel li {
+  float: left;
+}
+.jcarousel-nav-container {
+  width: 100%;
+  float: left;
+  display: block;
+  margin-bottom: 5px;
+  margin-top: -25px;
+}
+.jcarousel-prev {
+  float: left;
+  display: inline-block;
+}
+.jcarousel-next {
+  display: inline-block;
+  float: left;
+  margin-right: 5px;
+}
+.jcarousel-prev div {
+  float: left;
+  height: 50px;
+  width: 22px;
+  background: url(/wp-content/themes/b3/case-study-images/darkarrow_left.png) no-repeat;
+  background-size: 100%;
+}
+.jcarousel-next div {
+  height: 50px;
+  width: 22px;
+  background: url(/wp-content/themes/b3/case-study-images/darkarrow_right.png) no-repeat;
+  background-size: 100%;
+}
+.casestudy-nav-title {
+  display: inline;
+  float: left;
+  margin: -10px 5px 0px 5px;
+}
+.casestudy-nav-title h6 {
+  font-size: 18px;
+}
+.arrow-to-infinity {
+  float: left;
+  display: inline-block;
+  background: url(/wp-content/themes/b3/case-study-images/arrow_to_infinity.png) no-repeat;
+  background-size: 100%;
+  margin-top: 12px;
+  height: 25px;
+  width: 69%;
+}
+#carousel-ul p {
+  color: #fff;
+  font-size: 24px;
+}
+.featured-case-study article {
+  height: 300px;
+  padding-top: 0px;
+}
+.featured-case-study article a img {
+  height: 300px;
+  width: 300px;
+  margin-top: -20px;
+  margin-right: 40px;
+}
+.casestudy-seemore {
+  display: inline;
+  color: black !important;
+}
+#industry img, #prod-service img, #client-size img {
+  display: block;
+  opacity: 0.9;
+  width: 160px;
+  height: 99px;
+  margin-bottom: -18px;
+}
+.bottom-fixed-cta {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: -18px;
+  width: 100%;
+  z-index: 9999;
+  left: 0;
+  background-image: url(/wp-content/themes/b3/case-study-images/transparentfooter.png);
+  text-align: center;
+}
+.bottom_cta {
+  background-position: 0px 0px;
+  height: 47px;
+  width: 230px;
+  display: inline-block;
+  margin: 0px 70px;
+}
+.bottom_cta:hover {
+  background-position: 0px -35px;
+}
+.bottomsales {
+  background-image: url(/wp-content/themes/b3/case-study-images/bottomsales.png);
+}
+.bottommarketing {
+  background-image: url(/wp-content/themes/b3/case-study-images/bottommarketing.png);
+}
+.bottomexamples {
+  background-image: url(/wp-content/themes/b3/case-study-images/bottomexamples.png);
+  /*===================End case study dropdown CSS============*/
+}
+.dropdown {
+  margin-right: 35px;
+}
+.case-study-title {
+  position: absolute;
+  top: 6%;
+  font-size: 46px;
+  left: 2%;
+}
 html {
   margin-top: 0px;
 }

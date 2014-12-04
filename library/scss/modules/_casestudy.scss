@@ -26,7 +26,7 @@
 	border-radius: 0px;
 }
 
-.post-type-archive-case_studies 
+.post-type-archive-case_studies {
 
 	#sidebar {
 		display: none;
@@ -55,6 +55,7 @@
 		height: 100%;
 		margin-top: -44px;
 		float: right;
+	}
 
 	&:hover {
 		cursor: pointer;
