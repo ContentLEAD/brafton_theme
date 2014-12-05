@@ -6,15 +6,15 @@ Template Name: Case Studies & Testimonals
 <?php  get_header(); ?>
 
 <!-- Currently not in use as of jan 21 2014 Ali-->
-<article id="archive-case page" class="twelvecol row" itemscope itemtype="http://schema.org/WebPage">
+<article id="archive-case page" class="d-all t-all m-all" itemscope itemtype="http://schema.org/WebPage">
 	
-	<div class="twelvecol row">
+	<div class="d-all t-all m-all">
 
 		<?php if( function_exists( 'brafton_share' ) ) brafton_share(); ?>
 
 		<div class="case-study-wrapper">
 
-			<section class="twelvecol" itemprop="mainContentOfPage">
+			<section class="d-all t-all m-all" itemprop="mainContentOfPage">
 
 				<?php
 
@@ -35,12 +35,11 @@ Template Name: Case Studies & Testimonals
 
 				?>
 				<div id="sort">
-					<div class="case-study-title">Fueling customer success across the web</div>
 					<div id="dropdown-container">
 						<form id="filterform">
 
 							<div class="dropdown" id="industry">
-								<img src="/wp-content/themes/b3/case-study-images/industries.png"/>
+								<img src="/wp-content/themes/brafton/library/images/case-study-images/industries.png"/>
 								<select id="sel-ind">
 									<option selected="selected" value="undefined">--Please select--</option>
 										<?php
@@ -52,7 +51,7 @@ Template Name: Case Studies & Testimonals
 
 
 							<div class="dropdown" id="prod-service">
-								<img src="/wp-content/themes/b3/case-study-images/products.png"/>
+								<img src="/wp-content/themes/brafton/library/images/case-study-images/products.png"/>
 								<select id="sel-prod">
 									<option selected="selected" value="undefined">--Please select--</option>
 									<?php
@@ -65,7 +64,7 @@ Template Name: Case Studies & Testimonals
 							<!--Filter for client size-->
 
 							<div class="dropdown" id="client-size">
-								<img src="/wp-content/themes/b3/case-study-images/clientsize.png"/>
+								<img src="/wp-content/themes/brafton/library/images/case-study-images/clientsize.png"/>
 								<select id="sel-size">
 									<option selected="selected" value="undefined">--Please select--</option>
 									<?php
@@ -77,7 +76,7 @@ Template Name: Case Studies & Testimonals
 
 
 						</form>
-						<div class="viewall reinit-clear"><img src="/wp-content/themes/b3/case-study-images/clearfilter.png"/></div>
+						<div class="viewall reinit-clear"><img src="/wp-content/themes/brafton/library/images/case-study-images/clearfilter.png"/></div>
 					</div>
 				</div>
 
@@ -90,9 +89,9 @@ Template Name: Case Studies & Testimonals
 								'order'=>'DESC',
 								'post_type'=>array('testimonials','case_studies')
 							    );
-							$the_query = new WP_Query( $args1 );
+							$the_query = new WP_Query( $args1 ); ?>
 
-							echo '<div class="jcarousel-wrapper">
+							<div class="jcarousel-wrapper">
 									<div class="jcarousel-nav-container">
 											<a class="jcarousel-prev" href="#"><div></div></a>
 											<div class="casestudy-nav-title"><h6>Case Studies & Testimonials<h6></div>
@@ -100,54 +99,52 @@ Template Name: Case Studies & Testimonals
 											<div class="arrow-to-infinity"></div>
 									</div>
 									<div class="jcarousel">
-										<ul id="carousel-ul">';
+										<ul id="carousel-ul">' 
 
+							<?php
 
 							global $post;
-							 if ( $the_query->have_posts() ) :
-									while ( $the_query->have_posts() ) : $the_query->the_post();
+
+							if ( $the_query->have_posts() ) :while ( $the_query->have_posts() ) : $the_query->the_post();
+							
 							$term=wp_get_post_terms( $post->ID, 'industry');
 							$type=get_post_type( $post );
 							$hover_image=get_post_meta($post->ID, 'hover_image', TRUE);
 
 							switch($type){
 							case 'case_studies':
-							$ptype = 'Case Study';
-							break;
+								$ptype = 'Case Study';
+								break;
 							case 'testimonials':
-							$ptype = 'Testimonial';
-							break;
+								$ptype = 'Testimonial';
+								break;
 							}
 							echo '<article class="shell casethumbs" itemscope itemtype="http://schema.org/NewsArticle">
-									<a href="'.get_permalink().'" title="'.get_the_title().'" rel="bookmark" class="featured_image_link">'.get_the_post_thumbnail(get_the_ID(), array('itemprop' => 'image thumbnailUrl')).
-									'</a>
-									<a href="'.get_permalink().'" title="'.get_the_title().'" rel="bookmark" class="hover_image_link"><img class="hover_image" src="'.$hover_image.'"/></a>
-									<div class="data">	<div class="case_data"><u>'.$ptype.'</u><div class="title"><a itemprop="name headline"  href="'.get_permalink().'" >'.get_the_title().'</a>
-									</div></div><a href="'.get_permalink().'" class="button" >View Details</a></div></article>';
-									endwhile;
-								endif;
+										<a href="'.get_permalink().'" title="'.get_the_title().'" rel="bookmark" class="featured_image_link">'.get_the_post_thumbnail(get_the_ID(), array('itemprop' => 'image thumbnailUrl')).
+										'</a>
+										<a href="'.get_permalink().'" title="'.get_the_title().'" rel="bookmark" class="hover_image_link"><img class="hover_image" src="'.$hover_image.'"/></a>
+										<div class="data">	<div class="case_data"><u>'.$ptype.'</u>
+										</div>
+								  </article>';
+								endwhile; endif; 
 
-							echo '</ul></div></div>';
+								wp_reset_query(); ?>
 
-							wp_reset_postdata();
-							?>
+									</ul>
+								</div>
+							</div>
 						</div>
-						<!--<div class="bottom-case-cta">
-							<a href="http://www.brafton.com/contact" target="_blank"><img src="/wp-content/themes/b3/case-study-images/talktosales.png"></a>
-							<a href="mailto:learning@brafton.com" target="_blank"><img src="/wp-content/themes/b3/case-study-images/askmarketer.png"></a>
-							<a href="http://www.brafton.com/contact" target="_blank"><img src="/wp-content/themes/b3/case-study-images/seeexamples.png" class="last-bottom-cta"></a>
-						</div>-->
 					</section>
 				</div><!--end below filter wrapper-->
 			</div><!--end case-study-wrapper-->
 		</article><!-- End #archive -->
 
 	<div class="bottom-case-cta bottom-fixed-cta">
-		<a href="http://www.brafton.com/contact" target="_blank"><img src="/wp-content/themes/b3/case-study-images/bottomsales.png"></a>
-		<a href="mailto:learning@brafton.com" target="_blank"><img src="/wp-content/themes/b3/case-study-images/bottommarketing.png"></a>
-		<a href="http://www.brafton.com/contact" target="_blank"><img src="/wp-content/themes/b3/case-study-images/bottomexamples.png"></a>
+		<a href="http://www.brafton.com/contact" target="_blank"><div class="bottomsales bottom_cta"></div></a>
+		<a href="mailto:learning@brafton.com" target="_blank"><div class="bottommarketing bottom_cta"></div></a>
+		<a href="http://www.brafton.com/contact" target="_blank"><div class="bottomexamples bottom_cta"></div></a>
 	</div>
-<script type="text/javascript" src="http://www.brafton.com/wp-content/themes/b3/js/jquery.jcarousel.js"></script>
+<script type="text/javascript" src="/wp-content/themes/brafton/library/js/libs/jquery.jcarousel.js"></script>
 <script type="text/javascript">
 
 jQuery(document).ready(function($) {
@@ -186,13 +183,13 @@ $(".hover_image_link").hide();
 		$(document).on("mouseenter", ".featured_image_link", function () {
 			$(this).hide();
 			$(this).next().fadeIn(300);
-		})
+		});
 
 		$(document).on("mouseleave", ".hover_image_link", function () {
 			$(this).hide();
 			$(this).prev().show();
-		})
-	})
+		});
+	});
 
 
 

@@ -1,8 +1,14 @@
+/*This page is ordered as the elements appear on the page, from top to bottom...
+*/
+
+
+/*background and search area*/
+
 #sort {
 
-	background-image: url(case-study-images/SearchBar_Image.png);
+	background-image: url(/wp-content/themes/brafton/library/images/case-study-images/SearchBar_Image.png);
 	min-height: 335px;
-	background-size: contain;
+	background-size: 100%;
 	margin-top: -1px;
 	padding: 8px 0px 20px 0px;
 
@@ -18,29 +24,27 @@
 }
 
 #sel-ind, #sel-prod, #sel-size {
-	width: 160px;
-	margin-right:20px;
-	height:28px;
+
+	width: 185px;
+	margin-top: -25px;
+	height: 28px;
 	opacity: 0.9;
 	border: none;
 	border-radius: 0px;
-}
 
-.post-type-archive-case_studies {
-
-	#sidebar {
-		display: none;
-	}
-
-	.case-study-wrapper {
-		margin-top: -24px;
+	img {
+		display: block;
+		opacity: 0.9;
+		width: 160px;
+		height: 99px;
+		margin-bottom: -18px;	
 	}
 }
 
-.case-study-subheading {
-	text-align: center;
-	margin-top: 10px;
+.dropdown {
+	margin-right:35px;
 }
+
 
 .viewall {
 
@@ -62,8 +66,36 @@
 	}
 }
 
+/*Navigation and arrow*/
 
-/*==================JCAROUSEL FOR CASE STUDIES PAGE===================*/
+.casestudy-nav-title {
+	display: inline;
+	float: left;
+	margin: -10px 5px 0px 5px;
+}
+
+.casestudy-nav-title {
+	h6 {
+		font-size: 18px;
+		margin-top: 15px;
+		margin-bottom: 0;
+	}
+}
+
+.arrow-to-infinity {
+	float: left;
+	display: inline-block;
+	background: url(/wp-content/themes/brafton/library/images/case-study-images/arrow_to_infinity.png) no-repeat;
+	background-size: 100%;
+	margin-top: 12px;
+	height: 25px;
+	width: 69%;
+}
+
+
+/*====================================
+Everything Jcarousel related...
+/*=====================================*/
 
 /*
 This is the visible area of you carousel.
@@ -81,39 +113,29 @@ Position must be relative!
 
 	margin-bottom: 50px;
 }
+
 .jcarousel {
     position: relative;
     overflow: hidden;
     width: 100%;
     display: inline-block;
     padding-bottom: 0px;
+
+    ul {
+	    width: 20000em;
+	    position: relative;
+
+	    /* Optional, required in this case since it's a <ul> element */
+	    list-style: none;
+	    margin: 0;
+	    padding: 0;;
+	}
+
+	li {
+	    /* Required only for block elements like <li>'s */
+	    float: left;
+	}
 }
-
-/*
-This is the container of the carousel items.
-You must ensure that the position is relative or absolute and
-that the width is big enough to contain all items.
-*/
-.jcarousel ul {
-    width: 20000em;
-    position: relative;
-
-    /* Optional, required in this case since it's a <ul> element */
-    list-style: none;
-    margin: 0;
-    padding: 0;;
-}
-
-/*
-These are the item elements. jCarousel works best, if the items
-have a fixed width and height (but it's not required).
-*/
-.jcarousel li {
-    /* Required only for block elements like <li>'s */
-    float: left;
-}
-
-
 
 .jcarousel-nav-container {
 	width: 100%;
@@ -126,85 +148,53 @@ have a fixed width and height (but it's not required).
 .jcarousel-prev {
 	float: left;
 	display: inline-block;
+
+	div{
+		float: left;
+		height: 50px;
+		width: 22px;
+		background: url(/wp-content/themes/brafton/library/images/case-study-images/darkarrow_left.png) no-repeat;
+		background-size: 100%;
+	}
 }
 
 .jcarousel-next {
 	display: inline-block;
 	float: left;
 	margin-right: 5px;
-}
 
-.jcarousel-prev div{
-	float: left;
-	height: 50px;
-	width: 22px;
-	background: url(/wp-content/themes/b3/case-study-images/darkarrow_left.png) no-repeat;
-	background-size: 100%;
-}
-
-.jcarousel-next div{
-	height: 50px;
-	width: 22px;
-	background: url(/wp-content/themes/b3/case-study-images/darkarrow_right.png) no-repeat;
-	background-size: 100%;
-}
-
-
-.casestudy-nav-title {
-	display: inline;
-	float: left;
-	margin: -10px 5px 0px 5px;
-}
-
-.casestudy-nav-title h6 {
-	font-size: 18px;
-}
-
-.arrow-to-infinity {
-	float: left;
-	display: inline-block;
-	background: url(/wp-content/themes/b3/case-study-images/arrow_to_infinity.png) no-repeat;
-	background-size: 100%;
-	margin-top: 12px;
-	height: 25px;
-	width: 69%;
-}
-
-#carousel-ul p {
-	color: #fff;
-	font-size: 24px;
+	div{
+		height: 50px;
+		width: 22px;
+		background: url(/wp-content/themes/brafton/library/images/case-study-images/darkarrow_right.png) no-repeat;
+		background-size: 100%;
+	}
 }
 
 
 
-.featured-case-study article {
-	height: 300px;
-	padding-top: 0px;
-}
+/*Individual case study image formatting...*/
 
-.featured-case-study article a img {
-	height: 300px;
-	width: 300px;
-	margin-top: -20px;
-	margin-right: 40px;
-}
+.shell {
 
-.casestudy-seemore {
-	display: inline;
-	color: black !important;
-}
-
-
-
-#industry img,
-#prod-service img,
-#client-size img {
 	display: block;
-	opacity: 0.9;
-	width: 160px;
-	height: 99px;
-	margin-bottom: -18px;	
+	height: 150px;
+	overflow:hidden;
+	margin-bottom: 1em;
+	margin-right: 20px;
+	position: relative;
+	text-align: center;
+
+	img {
+
+		width: 235px;
+		border-radius: 12px;
+	}
+
 }
+
+
+/*Footer CTA's...*/
 
 
 .bottom-fixed-cta {
@@ -214,45 +204,32 @@ have a fixed width and height (but it's not required).
 	width: 100%;
 	z-index: 9999;
 	left: 0;
-	background-image: url(/wp-content/themes/b3/case-study-images/transparentfooter.png);
+	background-image: url(/wp-content/themes/brafton/library/images/case-study-images/transparentfooter.png);
 	text-align: center;
 }
 
 .bottom_cta {
-	background-position: 0px 0px;
-	height: 47px;
-	width: 230px;
+	background-position: 0 0;
+	height: 0;
+	width: 20%;
+	padding-bottom: 3%;
 	display: inline-block;
-	margin: 0px 70px;
-}
-.bottom_cta:hover {
-	background-position: 0px -35px;
+	background-size: 100%;
+	margin: 12px 45px;
+
+	&:hover {
+		background-position: 0 100%;
+	}
 }
 
 .bottomsales {
-	background-image: url(/wp-content/themes/b3/case-study-images/bottomsales.png);
+	background-image: url(/wp-content/themes/brafton/library/images/case-study-images/bottomsales.png);
 }
 
 .bottommarketing {
-	background-image: url(/wp-content/themes/b3/case-study-images/bottommarketing.png);
+	background-image: url(/wp-content/themes/brafton/library/images/case-study-images/bottommarketing.png);
 }
 
 .bottomexamples {
-	background-image: url(/wp-content/themes/b3/case-study-images/bottomexamples.png);
-}
-
-
-
-/*===================End case study dropdown CSS============*/
-
-
-.dropdown {
-	margin-right:35px;
-}
-
-.case-study-title {
-	position: absolute;
-	top: 6%;
-	font-size: 46px;
-	left: 2%;
+	background-image: url(/wp-content/themes/brafton/library/images/case-study-images/bottomexamples.png);
 }
