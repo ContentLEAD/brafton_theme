@@ -12,7 +12,9 @@
 
                         <div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
 
-                            <h1 class="archive-title h2"><?php post_type_archive_title(); ?></h1>
+                            <section class="entry-content cf" itemprop="articleBody">
+
+                            <h1 class="archive-title h2">Marketing Glossary</h1>
 
                             <?php if( function_exists( 'brafton_share' ) ) brafton_share( 'top' ); ?>
 
@@ -54,6 +56,8 @@
                             <a href="#top" class="btt">Back to top</a>
 
                         </div>
+
+                    </section>
 
                     <div class="sidebar d-2of7 t-1of3 m-all">
                         <?php dynamic_sidebar( "Archive Sidebar" ); ?>

@@ -1627,8 +1627,30 @@ style a page via class
   background: url(../images/blog-images/sidebar_arrow_to_infinity.png) no-repeat;
   background-size: 100%;
 }
-.blog {
-  /* blog template page */
+.post-type-archive-brafton_glossary h2 {
+  text-align: center;
+  border-bottom: 1px solid #aaa;
+}
+.post-type-archive-brafton_glossary h3 {
+  font-weight: bold;
+}
+.post-type-archive-brafton_glossary #pagination {
+  text-align: center;
+  background-color: #000;
+  padding: 1em;
+}
+.post-type-archive-brafton_glossary #pagination div {
+  color: #fff;
+  display: inline;
+  margin-right: 1em;
+}
+.post-type-archive-brafton_glossary #pagination a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em;
+}
+.post-type-archive-brafton_glossary #pagination a:hover {
+  background-color: #333;
 }
 .archive {
   /* archive page */
@@ -1733,7 +1755,7 @@ LAYOUT & GRID STYLES
 *********************/
 }
 .wrap {
-  width: 96%;
+  width: 95%;
   margin: 0 auto;
   /*********************
 LINK STYLES
@@ -2589,7 +2611,7 @@ LAYOUT & GRID STYLES
     display: block !important;
   }
   .wrap {
-    width: 96%;
+    width: 95%;
     /*********************
 HEADER STYLES
 *********************/
@@ -2873,7 +2895,7 @@ be seen on the Desktop.
 LARGE VIEWING SIZE
 This is for the larger monitors and possibly full screen viewers.
 *********************/  .wrap {
-    width: 96%;
+    width: 95%;
     /*move from mobile menu to desktop menu...*/
   }
   #logo {

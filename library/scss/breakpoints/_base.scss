@@ -179,7 +179,39 @@ style a page via class
 
 }   
 
-                       /* blog template page */
+ .post-type-archive-brafton_glossary {
+ 	h2 {
+ 		text-align: center;
+ 		border-bottom: 1px solid #AAA;
+ 	}
+
+ 	h3 {
+ 		font-weight: bold;
+ 	}
+
+ 	#pagination {
+ 		text-align: center;
+ 		background-color: $black;
+ 		padding: 1em;
+
+
+ 		div {
+ 			color: $white;
+ 			display: inline;
+ 			margin-right: 1em
+ 		}
+
+ 		a {
+ 			color: $white;
+ 			text-decoration: none;
+ 			padding: 0.5em;
+
+ 			&:hover {
+ 				background-color: $off-black;
+ 			}
+ 		}
+ 	}
+}                     
 .archive {}                       /* archive page */
 .date {}                          /* date archive page */
 	.date-paged-1 {}                /* replace the number to the corresponding page number */
@@ -222,7 +254,7 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 96%;
+	width: 95%;
 	margin: 0 auto;
 }
 

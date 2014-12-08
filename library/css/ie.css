@@ -341,7 +341,7 @@ LAYOUT & GRID STYLES
   display: block !important;
 }
 .wrap {
-  width: 96%;
+  width: 95%;
   /*********************
 HEADER STYLES
 *********************/
@@ -610,7 +610,7 @@ mobile. Make sure to double check these!
 			*/
 }
 .wrap {
-  width: 96%;
+  width: 95%;
   /*move from mobile menu to desktop menu...*/
 }
 #logo {
