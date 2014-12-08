@@ -1,20 +1,3 @@
-<?php
-/*
- * CUSTOM POST TYPE TEMPLATE
- *
- * This is the custom post type post template. If you edit the post type name, you've got
- * to change the name of this template to reflect that name change.
- *
- * For Example, if your custom post type is "register_post_type( 'bookmarks')",
- * then your single template should be single-bookmarks.php
- *
- * Be aware that you should rename 'custom_cat' and 'custom_tag' to the appropiate custom
- * category and taxonomy slugs, or this template will not finish to load properly.
- *
- * For more info: http://codex.wordpress.org/Post_Type_Templates
-*/
-?>
-
 <?php get_header(); ?>
 
 			<div id="content">
@@ -25,18 +8,20 @@
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 								<header class="article-header">
 
-									<h1 class="single-title custom-post-type-title"><?php the_title(); ?></h1>
-									<p class="byline vcard"><?php
-										printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) ), get_the_term_list( $post->ID, 'custom_cat', ' ', ', ', '' ) );
-									?></p>
+									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 
-								</header>
+									<?php if( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 
-								<section class="entry-content cf">
+									<?php brafton_share( 'top' ); ?>
+
+								</header> <?php // end article header ?>
+
+								<section class="entry-content cf" itemprop="articleBody">
+
 									<?php
 										// the content (pretty self explanatory huh)
 										the_content();
@@ -60,20 +45,19 @@
 											'link_after'  => '</span>',
 										) );
 									?>
-								</section> <!-- end article section -->
+								</section> <?php // end article section ?>
 
-								<footer class="article-footer">
-									<p class="tags"><?php echo get_the_term_list( get_the_ID(), 'custom_tag', '<span class="tags-title">' . __( 'Custom Tags:', 'bonestheme' ) . '</span> ', ', ' ) ?></p>
+								<footer class="article-footer cf">
 
 								</footer>
 
-								<?php comments_template(); ?>
+								<?php 
+								//No comments on the standard page template
+								//comments_template(); ?>
 
 							</article>
 
-							<?php endwhile; ?>
-
-							<?php else : ?>
+							<?php endwhile; else : ?>
 
 									<article id="post-not-found" class="hentry cf">
 										<header class="article-header">
@@ -83,7 +67,7 @@
 											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
 										</section>
 										<footer class="article-footer">
-											<p><?php _e( 'This is the error message in the single-custom_type.php template.', 'bonestheme' ); ?></p>
+												<p><?php _e( 'This is the error message in the page.php template.', 'bonestheme' ); ?></p>
 										</footer>
 									</article>
 
@@ -91,7 +75,10 @@
 
 						</div>
 
-						<?php get_sidebar(); ?>
+						<div class="sidebar d-2of7 t-1of3 m-all">
+							<?php dynamic_sidebar("Page Sidebar"); ?>
+						</div>
+
 
 				</div>
 
