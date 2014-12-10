@@ -39,11 +39,12 @@ nav {
 		a {
 			border-bottom: 0;
 			display: block;
-			font-size: 0.8em;
+			font-size: 0.75em;
 			color: $white;
 			text-decoration: none;
 			text-transform: uppercase;
 			padding: 2em;
+			letter-spacing: 1px;
 
 			/*
 			you can use hover styles here even though this size

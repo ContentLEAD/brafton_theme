@@ -1753,6 +1753,19 @@ style a page via class
 .single-infographic .infographic-container {
   text-align: center;
 }
+.single-infographic #actions {
+  margin: 1em 0;
+}
+.single-infographic #actions .button {
+  margin-right: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  padding: 0.85em;
+  font-size: 0.8em;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
 .single-support .feature {
   width: auto;
   display: inline-block;
@@ -2086,6 +2099,7 @@ PAGE NAVI STYLES
 #content .hentry header {
   border-bottom: 1px solid #f8f9fa;
   padding: 1.5em;
+  padding-bottom: 0;
 }
 #content .hentry footer {
   padding: 1.5em;
@@ -2146,7 +2160,8 @@ PAGE NAVI STYLES
   /* entry content */
 }
 #content .entry-content {
-  padding: 1.5em 1.5em 0;
+  padding: 1.5em;
+  padding-top: 0;
   /* end .entry-content */
 }
 #content .entry-content p {
@@ -2553,6 +2568,11 @@ FOOTER STYLES
 }
 video {
   max-width: 100%;
+}
+#crumbs {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.75em;
   /*===========================
 Legacy style classes...  :(
 =============================*/
@@ -3016,15 +3036,16 @@ This is for the larger monitors and possibly full screen viewers.
   .nav li a {
     border-bottom: 0;
     display: block;
-    font-size: 0.8em;
+    font-size: 0.75em;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    padding: 2em;
     /*
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.
 			*/
-    padding: 2em;
+    letter-spacing: 1px;
   }
   .nav li a:hover, .nav li a:focus {
     color: #fff;

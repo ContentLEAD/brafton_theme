@@ -26,17 +26,16 @@
 									<?php if( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 
 									<?php brafton_share( 'top' ); ?>
+								<div id="topmeta" class="d-all t-all m-all">
+									<div id="actions" class="d-all t-all m-all">
+										<a href="<?php echo $original[0]; ?>" class="download button padder" itemprop="contentURL">Download</a>
+										<a href="#instructions" class="embed button padder">Embed</a>
+									</div>
+								</div>
 
 								</header> <?php // end article header ?>
 
 								<section class="entry-content cf" itemprop="articleBody">
-
-											<div id="topmeta" class="d-all t-all m-all">
-												<div id="actions" class="d-all t-all m-all">
-													<a href="<?php echo $original[0]; ?>" class="download button padder" itemprop="contentURL">Download</a>
-													<a href="#instructions" class="embed button padder">Embed</a>
-												</div>
-											</div>
 											<?php if( function_exists( 'brafton_share' ) ) brafton_share( 'top' ); ?>
 											<?php the_content(); ?>
 											<div class="d-all t-all m-all infographic-container">

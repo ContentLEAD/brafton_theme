@@ -639,15 +639,16 @@ nav {
 .nav li a {
   border-bottom: 0;
   display: block;
-  font-size: 0.8em;
+  font-size: 0.75em;
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
+  padding: 2em;
   /*
 			you can use hover styles here even though this size
 			has the possibility of being a mobile device.
 			*/
-  padding: 2em;
+  letter-spacing: 1px;
 }
 .nav li a:hover, .nav li a:focus {
   color: #fff;
