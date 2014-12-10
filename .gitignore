@@ -56,10 +56,3 @@ temp/
 
 *.codekit
 *.scssc
-
-
-#########
-##  Marketo forms
-#########
-
-marketoforms/
