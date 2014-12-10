@@ -1832,6 +1832,9 @@ style a page via class
 .page-template .vertical-gup {
   float: left;
 }
+.page .feature {
+  text-align: center;
+}
 .page-template-page-php {
   /* individual page template (i.e. body.page-template-contact-php */
 }
