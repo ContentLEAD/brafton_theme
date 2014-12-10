@@ -316,6 +316,12 @@ style a page via class
 .error404 {}                      /* 404 page */
 .single {}  
 
+.single-infographic {
+	.infographic-container {
+		text-align: center;
+	}
+}
+
 .single-support {
 	.feature {
 		width: auto;
