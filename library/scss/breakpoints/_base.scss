@@ -381,6 +381,12 @@ style a page via class
 		float: left;
 	}
 }                 /* custom page template page */
+
+.page {
+	.feature {
+		text-align: center;
+	}
+}
 	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
 	.page-paged-1 {}                /* replace the number to the corresponding page number */
 	.page-parent {}                 /* parent page template */

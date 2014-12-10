@@ -1,0 +1,17 @@
+.portrait { width: 100px; height: 100px; border: 7px solid white; background-image: url('http://www.brafton.com/wp-content/uploads/2014/02/sarah-sprite.png');}
+
+
+
+.portrait {
+  width: 100px;
+  height: 100px;
+  border: 7px solid white; margin-top: 100px;}
+  .portrait.dance1 {
+    background-position: -100px 0; }
+  .portrait.dance2 {
+    background-position: -200px 0; }
+  .portrait.dance3 {
+    background-position: -300px 0; }
+  .portrait.kid {
+    background-position: -520px 0; }
+  .portrait.laser {
