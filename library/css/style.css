@@ -2161,7 +2161,7 @@ PAGE NAVI STYLES
 }
 #content .entry-content {
   padding: 1.5em;
-  padding-top: 0;
+  padding-top: 1em;
   /* end .entry-content */
 }
 #content .entry-content p {
