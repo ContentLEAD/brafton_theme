@@ -7,23 +7,20 @@
 						<h1><?php the_title(); ?></h1>
 					</header>
 					<div id="topmeta" class="d-all t-all m-all">
-						<div id="topinfo" class="fourcol">
+						<div id="topinfo" class="d-1of4">
 							<?php if( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
-						</div>
-						<div id="actions">
-							<a href="<?php echo home_url(); ?>/support/contact" class="embed button padder">Contact Support</a>
 						</div>
 					</div>
 					<div class="d-all t-all m-all">
+					<div id="body" class="d-5of7 t-2of3 m-all">
+						<?php the_content(); ?>
+					</div>
 					<div id="sidebar" class="d-2of7 t-1of3 m-all">
 						<aside>
 						<ul>
 							<?php dynamic_sidebar( "Support Left Menu" ); ?>
 						</ul>
 					</aside>
-					</div>
-					<div id="body" class="d-5of7 t-2of3 m-all">
-						<?php the_content(); ?>
 					</div>
 					</div>
 					<?php endwhile; endif; wp_reset_query(); ?>

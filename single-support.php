@@ -16,8 +16,6 @@
 
 									<?php if( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 
-									<?php brafton_share( 'top' ); ?>
-
 								</header> <?php // end article header ?>
 
 								<section class="entry-content cf" itemprop="articleBody">
