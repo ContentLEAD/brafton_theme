@@ -1,9 +1,6 @@
 <?php  get_header(); ?>
 <article id="archive" class="d-all" itemscope itemtype="http://schema.org/WebPage">
-	<div class="archive-title">
-		<?php  if (is_date()) { ?><h1 itemprop="name">Month Archive: <span class="color"><?php  the_time('F Y'); ?></span></h1><?php  } elseif(is_tag()){ /*no header tag archives*/ } else { ?><h1 itemprop="name"><span><?php  single_tag_title(); ?></span></h1><?php  } ?>
-	</div>
-		<?php 
+	<?php 
     $i=0;
     if( have_posts() ) : while( have_posts() ) : the_post();
     
@@ -19,9 +16,10 @@
 	<?php $author = brafton_author_data( get_the_ID() ); ?>
 		<header class="d-all">
 			<?php if( $i == 0 ) { ?>
-			<div class="d-all tagbar">
-				<?php blog_tagbar(); ?>
-			</div>
+				<div class="d-all tagbar">
+					<?php blog_tagbar(); ?>
+				</div>
+				<?php  if (is_date()) { ?><h1 class="title" itemprop="name">Month Archive: <span class="color"><?php  the_time('F Y'); ?></span></h1><?php  } elseif(is_tag()){ /*no header tag archives*/ } else { ?><h1 itemprop="name"><span><?php  single_tag_title(); ?></span></h1><?php  } ?>
 			<?php } ?>
 			<?php $size = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
 			<div class="image-inner <?php if( !has_post_thumbnail() ) echo ' no-img'; else echo 'alignleft'; ?>"><?php the_post_thumbnail('medium', array('itemprop' => 'image', 'alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></div>
