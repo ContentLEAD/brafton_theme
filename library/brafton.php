@@ -456,6 +456,7 @@ function create_post_types() {
 add_action( 'init', 'create_event_taxonomy' );
 add_action( 'init', 'create_case_taxonomy' );
 add_action( 'init', 'create_prod_taxonomy' );
+add_action( 'init', 'create_client_size_taxonomy' );
 
 function create_prod_taxonomy(){
 
@@ -522,8 +523,40 @@ function create_case_taxonomy(){
 	register_taxonomy( 'industry', array( 'case_studies','testimonials' ), $args );
 
 	
+}
+
+
+function create_client_size_taxonomy() {
+	$labels = array(
+		'name'              => _x( 'Client Sizes', 'taxonomy general name' ),
+		'singular_name'     => _x( 'Client Size', 'taxonomy singular name' ),
+		'search_items'      => __( 'Search Client Size' ),
+		'all_items'         => __( 'All Client Sizes' ),
+		'parent_item'       => __( 'Parent Client Size' ),
+		'parent_item_colon' => __( 'Parent Client Size:' ),
+		'edit_item'         => __( 'Edit Client Size' ),
+		'update_item'       => __( 'Update Client Size' ),
+		'add_new_item'      => __( 'Add New Client Size' ),
+		'new_item_name'     => __( 'New Client Size Name' ),
+		'menu_name'         => __( 'Client Size' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'client-size' ),
+
+
+	);
+
+	register_taxonomy( 'client-size', array( 'case_studies','testimonials' ), $args );
 
 }
+
+
 function create_event_taxonomy() {
 	// Add new taxonomy, make it hierarchical (like categories)
 	$labels = array(
