@@ -103,6 +103,10 @@
 	}
 
 	.sidebar-tag-image {
+		width: 100% !important;
+		padding-bottom: 40px;
+		background-repeat: no-repeat;
+
 		&:hover {
 			background-position: 0 100%;
 		}

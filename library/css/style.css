@@ -1318,6 +1318,11 @@ select {
 .widget .engaging-customers {
   background-size: 76%;
 }
+.widget .sidebar-tag-image {
+  width: 100% !important;
+  padding-bottom: 40px;
+  background-repeat: no-repeat;
+}
 .widget .sidebar-tag-image:hover {
   background-position: 0 100%;
 }
@@ -2509,12 +2514,6 @@ SIDEBARS & ASIDES
   border: 0;
   background: #fff;
   float: left;
-  /*for blog sidebar///*/
-}
-.widget .sidebar-tag-image {
-  width: 100% !important;
-  padding-bottom: 44px;
-  background-repeat: no-repeat;
 }
 .widget .blog-sidebar-cta a {
   text-decoration: none;
