@@ -429,6 +429,27 @@ function create_post_types() {
 			'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'author', 'custom-fields' )
 		)
 	);
+
+	register_post_type( 'executives',
+		array(
+			'labels' => array(
+				'name' => __( 'Executives' ),
+				'singular_name' => __( 'Executive' ),
+				'all_items' => __( 'View Executives' ),
+				'add_new' => __( 'Add New Executive')
+			),
+			'query_var' => true,
+    			'rewrite' => array('slug' => 'executives'),
+    			'capability_type' => 'post',
+			'public' => true,
+			'publicly_queryable' => true,
+			'show_ui' => true, 
+    			'show_in_menu' => true,
+			'has_archive' => true,
+			'menu_position' => 7,
+			'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields', 'revisions' )
+		)
+	);
 		flush_rewrite_rules(false);
 }
 
