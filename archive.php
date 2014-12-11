@@ -8,7 +8,7 @@
 		<section class="d-all">
 	    <article id="archive" class="d-all featured-post">
     <?php } elseif( $i == 1 ) {  //second article starts a new 5of7 section ?>
-	    <section class="d-5of7 t-2of3 m-allsecondary-blog">
+	    <section class="d-5of7 t-2of3 m-all secondary-blog">
 		<article id="archive" class="d-all">
 	<?php } elseif ($i > 1 ) { //and the rest of the articles will just be wrapped in article tag, not in a new section ?>
 		<article id="archive" class="d-all">
@@ -19,7 +19,7 @@
 				<div class="d-all tagbar">
 					<?php blog_tagbar(); ?>
 				</div>
-				<?php  if (is_date()) { ?><h1 class="title" itemprop="name">Month Archive: <span class="color"><?php  the_time('F Y'); ?></span></h1><?php  } elseif(is_tag()){ /*no header tag archives*/ } else { ?><h1 itemprop="name"><span><?php  single_tag_title(); ?></span></h1><?php  } ?>
+				<?php  if (is_date()) { ?><h1 class="title" itemprop="name">Month Archive: <span class="color"><?php  the_time('F Y'); ?></span></h1><?php  } elseif(is_tag()){ /*no header tag archives*/ } else { ?><h1 itemprop="name"><span><?php post_type_archive_title(); ?></span></h1><?php  } ?>
 			<?php } ?>
 			<?php $size = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
 			<div class="image-inner <?php if( !has_post_thumbnail() ) echo ' no-img'; else echo 'alignleft'; ?>"><?php the_post_thumbnail('medium', array('itemprop' => 'image', 'alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></div>
