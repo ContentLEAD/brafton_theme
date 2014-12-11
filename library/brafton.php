@@ -1667,7 +1667,7 @@ function blog_tagbar() {
 		
 		//display "all" tag- "selected" on hub pages and unselected on single.php
 
-		echo '<a href="' . get_site_url() . '/new-blog' . '">';
+		echo '<a href="' . get_site_url() . '/blog' . '">';
 		
 		if ( is_page() ) {
 			echo '<div class="selected all-tag tag-image"></div>';
