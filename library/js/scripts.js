@@ -297,7 +297,7 @@ jQuery(document).ready(function($) {
     //ui effects for executive leadership page
     $(".exec_info_onclick").hide();
     $(".exec_onclick_shadow").hide();
-    $(".exec_container").click(function() {
+    $(".exec_outer_container").click(function() {
         $(this).next(".exec_info_onclick").fadeIn(400);
         $(".exec_onclick_shadow").show();
     });
