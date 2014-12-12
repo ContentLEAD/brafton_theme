@@ -5,24 +5,16 @@
 				<div id="inner-content" class="wrap cf">
 
 						<div id="main" class="m-all t-all d-all cf" role="main">
-
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-
-								<header class="article-header">
-
-									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+							 <section class="entry-content m-all t-all d-all cf" itemprop="articleBody">
+									<h1 class="page-title" itemprop="headline"><?php post_type_archive_title(); ?></h1>
 
 									<?php if( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 
 									<?php brafton_share( 'top' ); ?>
 
-								</header> <?php // end article header ?>
-
-								<section class="entry-content cf" itemprop="articleBody">
-
 											<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-												<div class="d-1of3 t-1of3 m-all exec_container">
-													<?php the_post_thumbnail(); ?>
+												<article class="d-1of4 t-1of3 m-all exec_container">
+													<?php the_post_thumbnail( 'full' ); ?>
 													<div class="exec_info">
 														<div class="exec_name"><?php the_title(); ?></div>
 														<div class="exec_summary">
@@ -32,7 +24,7 @@
 															<span class="seemore">Read More...</span>
 														</div>
 													</div>
-												</div>
+												</article>
 												<div class="exec_info_onclick">
 													<div class="exec_summary_onclick">
 														<div class="exec_title_onclick">
@@ -49,27 +41,10 @@
 													</div>
 												</div>
 
-											<?php $i++;
-																			wp_link_pages( array(
-											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-											'after'       => '</div>',
-											'link_before' => '<span>',
-											'link_after'  => '</span>',
-										) );
-									?>
-								</section> <?php // end article section ?>
+									<?php //No comments 
+									//comments_template(); ?>
 
-								<footer class="article-footer cf">
-
-								</footer>
-
-								<?php 
-								//No comments on the standard page template
-								//comments_template(); ?>
-
-							</article>
-
-							<?php endwhile; else : ?>
+									<?php endwhile; else : ?>
 
 									<article id="post-not-found" class="hentry cf">
 										<header class="article-header">
@@ -85,7 +60,9 @@
 
 							<?php endif; ?>
 
-						</div>
+						</section>
+
+					</div>
 
 				</div>
 
