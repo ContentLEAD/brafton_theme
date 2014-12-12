@@ -1,71 +1,65 @@
-.executive_page .threecol {
+.exec_container {
 	position: relative;
-}
 
-.executive_page .threecol img {
-	position: relative;
-	z-index: 2;
-}
+	img {
+		position: relative;
+		z-index: 2;
+		margin-bottom: 0 !important;
+	}
 
-.executive_page .threecol .exec_info {
-	position: absolute;
-	z-index: 3;
-	background: #fff;
-	color: #000;
-	padding: 20px;
-	left: 0;
-	bottom: 6px;
-	opacity: 0.8;
-	width: 100%;
-	max-width: 350px;
+	.exec_info {
+		position: absolute;
+		z-index: 3;
+		background: $white;
+		color: $black;
+		padding: 20px;
+		left: 0;
+		bottom: 6px;
+		opacity: 0.8;
+		width: 100%;
+		max-width: 350px;
+		@include transition(background 0.2s);
 
-	transition: background 0.2s;
-	-webkit-transition: background 0.2s;
-}
+		&:before {
+			content: "";
+			position: absolute;
+			border-left: 18px solid transparent;
+			border-right: 18px solid transparent;
+			top: 0;
+			left: 10%;
+			margin-left: -10px;
+			border-bottom: 20px solid $white;
+			margin-top: -19px;
+			z-index: 1;
+			@include transition(border-bottom 0.2s);
+		}
 
-.executive_page .threecol .exec_info:before {
-	content: "";
-	position: absolute;
-	border-left: 18px solid transparent;
-	border-right: 18px solid transparent;
-	top: 0;
-	left: 10%;
-	margin-left: -10px;
-	border-bottom: 20px solid #fff;
-	margin-top: -19px;
-	z-index: 1;
-	transition: border-bottom 0.2s;
-	-webkit-transition: border-bottom 0.2s;
-}
+		&:hover {
+			background: $green;
+			cursor: pointer;
 
-.executive_page .threecol .exec_info:hover {
-	background: rgb(141,192,29);
-	cursor: pointer;
-}
+			&:before {
+				border-bottom: 20px solid $green;
+			}
+		}
+	}
 
-.executive_page .threecol .exec_info:hover:before {
-	border-bottom: 20px solid rgb(141,192,29);
-}
+	.exec_name {
+		text-transform: uppercase;
+		font-weight: 100;
+		font-size: 1.5em;
+	}
 
-.executive_page .threecol .exec_name {
-	text-transform: uppercase;
-	font-weight: 100;
-	font-size: 1.5em;
-}
-
-.executive_page .threecol .exec_summary {
-
-}
-
-.executive_page .threecol .seemore {
-	font-weight: bold;
-	text-transform: uppercase;
+	.seemore {
+		font-weight: bold;
+		text-transform: uppercase;
+	}
 }
 
 /*popup css*/
 .exec_onclick_shadow {
 	z-index: 9997;
-	background: #000;
+	background: $black;
 	opacity: 0.6;
 	position: fixed;
 	width: 100%;
@@ -80,7 +74,7 @@
 	left: 50%;
 	width: 700px;
 	height: 400px;
-	background: #fff;
+	background: $white;
 	color: #333;
 	margin: -200px 0 0 -350px;
 }
@@ -113,8 +107,8 @@
 .executive_page .exec_title_onclick {
 	position: relative;
 	z-index: 3;
-	background: rgb(141,192,29);
-	color: #000;
+	background: $green;
+	color: $black;
 	padding: 20px;
 	left: 0;
 	top: 0;
@@ -131,7 +125,7 @@
 	top: 100%;
 	left: 48%;
 	margin-left: -10px;
-	border-top: 20px solid rgb(141,192,29);
+	border-top: 20px solid $green;
 	margin-top: -5px;
 	z-index: 1;
 }
@@ -167,7 +161,7 @@
 		width: 90%;
 		max-height: 400px;
 		overflow: scroll;
-		background: #fff;
+		background: $white;
 		color: #333;
 		margin: 0;
 	}

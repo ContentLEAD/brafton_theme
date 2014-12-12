@@ -1502,14 +1502,16 @@ Position must be relative!
 .bottomexamples {
   background-image: url(/wp-content/themes/brafton/library/images/case-study-images/bottomexamples.png);
 }
-.executive_page .threecol {
+.exec_container {
   position: relative;
+  /*popup css*/
 }
-.executive_page .threecol img {
+.exec_container img {
   position: relative;
   z-index: 2;
+  margin-bottom: 0 !important;
 }
-.executive_page .threecol .exec_info {
+.exec_container .exec_info {
   position: absolute;
   z-index: 3;
   background: #fff;
@@ -1520,10 +1522,16 @@ Position must be relative!
   opacity: 0.8;
   width: 100%;
   max-width: 350px;
-  transition: background 0.2s;
   -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+  /*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+  /* @include css-gradient(#dfdfdf,#f8f8f8); */
 }
-.executive_page .threecol .exec_info:before {
+.exec_container .exec_info:before {
   content: "";
   position: absolute;
   border-left: 18px solid transparent;
@@ -1534,25 +1542,30 @@ Position must be relative!
   border-bottom: 20px solid #fff;
   margin-top: -19px;
   z-index: 1;
-  transition: border-bottom 0.2s;
   -webkit-transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s;
+  /*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+  /* @include css-gradient(#dfdfdf,#f8f8f8); */
 }
-.executive_page .threecol .exec_info:hover {
+.exec_container .exec_info:hover {
   background: #8dc01d;
   cursor: pointer;
 }
-.executive_page .threecol .exec_info:hover:before {
+.exec_container .exec_info:hover:before {
   border-bottom: 20px solid #8dc01d;
 }
-.executive_page .threecol .exec_name {
+.exec_container .exec_name {
   text-transform: uppercase;
   font-weight: 100;
   font-size: 1.5em;
 }
-.executive_page .threecol .seemore {
+.exec_container .seemore {
   font-weight: bold;
   text-transform: uppercase;
-  /*popup css*/
 }
 .exec_onclick_shadow {
   z-index: 9997;

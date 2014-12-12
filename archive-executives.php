@@ -13,15 +13,17 @@
 									<?php brafton_share( 'top' ); ?>
 
 											<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-												<article class="d-1of4 t-1of3 m-all exec_container">
-													<?php the_post_thumbnail( 'full' ); ?>
-													<div class="exec_info">
-														<div class="exec_name"><?php the_title(); ?></div>
-														<div class="exec_summary">
-															<?php $summary = get_post_meta( $post->ID, 'exec_summary', true); 
-																echo $summary;
-															?>
-															<span class="seemore">Read More...</span>
+												<article class="d-1of4 t-1of3 m-all">
+													<div class="exec_container">
+														<?php the_post_thumbnail( 'full' ); ?>
+														<div class="exec_info">
+															<div class="exec_name"><?php the_title(); ?></div>
+															<div class="exec_summary">
+																<?php $summary = get_post_meta( $post->ID, 'exec_summary', true); 
+																	echo $summary;
+																?>
+																<span class="seemore">Read More...</span>
+															</div>
 														</div>
 													</div>
 												</article>
