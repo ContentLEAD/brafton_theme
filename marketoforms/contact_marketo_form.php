@@ -168,43 +168,37 @@ var mktFormLanguage = 'English'
   <form class="lpeRegForm formNotEmpty" method="post" enctype="application/x-www-form-urlencoded" action="http://fuel.brafton.com/index.php/leadCapture/save" id="mktForm_1012" name="mktForm_1012">
     <div class="left-col">
       <div class='mktFormReq mktField f-row'>
-        <label class="cell-left">First Name:</label>
         <span class='mktInput wpcf7-form-control-wrap'>
-          <input class='mktFormText mktFormString mktFReq cell-right req' name="FirstName" id="FirstName" type='text' value="<?php echo $_COOKIE['FirstName']; ?>"  maxlength='255' tabIndex='1' size="40" />
+          <input class='mktFormText mktFormString mktFReq cell-right req' placeholder="First Name" name="FirstName" id="FirstName" type='text' value="<?php echo $_COOKIE['FirstName']; ?>"  maxlength='255' tabIndex='1' size="40" />
           <span class='mktFormMsg'></span>
         </span>
       </div><!--mike comment-->
       <div class='mktFormReq mktField f-row'>
-        <label class="cell-left">Last Name:</label>
         <span class='mktInput wpcf7-form-control-wrap'>
-          <input class='mktFormText mktFormString mktFReq cell-right req' name="LastName" id="LastName" type='text' value="<?php echo $_COOKIE['LastName']; ?>"  maxlength='255' tabIndex='2' size="40" />
+          <input class='mktFormText mktFormString mktFReq cell-right req' placeholder="Last Name" name="LastName" id="LastName" type='text' value="<?php echo $_COOKIE['LastName']; ?>"  maxlength='255' tabIndex='2' size="40" />
           <span class='mktFormMsg'></span>
         </span>
       </div>
       <div class="mktField f-row">
-        <label for="email-contact" class="cell-left">Email</label>
         <span class="mktInput wpcf7-form-control-wrap">
-          <input class="mktFormText mktFormEmail mktFReq cell-right req" name="Email" id="Email" type='text' value="<?php echo $_COOKIE['Email']; ?>"  maxlength='255' tabIndex='3' size="40" />
+          <input class="mktFormText mktFormEmail mktFReq cell-right req" placeholder="Email" name="Email" id="Email" type='text' value="<?php echo $_COOKIE['Email']; ?>"  maxlength='255' tabIndex='3' size="40" />
         </span>
       </div>
       <div class="mktField f-row">
-        <label for="phone-contact" class="cell-left">Phone</label>
         <span class="mktInput wpcf7-form-control-wrap">
-          <input class="mktFormText mktFormPhone cell-right" name="Phone" id="Phone" type='text' value="<?php echo $_COOKIE['Phone']; ?>"  maxlength='255' tabIndex='4' size="40" />
+          <input class="mktFormText mktFormPhone cell-right" placeholder="Phone" name="Phone" id="Phone" type='text' value="<?php echo $_COOKIE['Phone']; ?>"  maxlength='255' tabIndex='4' size="40" />
           <span class='mktFormMsg'></span>
         </span>
       </div>
       <div class="mktFormReq mktField f-row">
-        <label for="company-contact" class="cell-left">Company</label>
         <span class="mktInput wpcf7-form-control-wrap">
-          <input class="mktFormText mktFormString mktFReq cell-right req" name="Company" id="Company" type='text' value="<?php echo $_COOKIE['Company']; ?>"  maxlength='255' tabIndex='5' size="40" />
+          <input class="mktFormText mktFormString mktFReq cell-right req" placholder= "Company" name="Company" id="Company" type='text' value="<?php echo $_COOKIE['Company']; ?>"  maxlength='255' tabIndex='5' size="40" />
           <span class='mktFormMsg'></span>
         </span>
       </div>
       <div class="mktFormReq mktField f-row">
-        <label for="website-contact" class="cell-left">Website</label>
         <span class="mktInput wpcf7-form-control-wrap">
-          <input class="mktFormText mktFormUrl mktFReq cell-right req" name="Website" id="Website" type='text' value="<?php echo $_COOKIE['Website']; ?>"  maxlength='255' tabIndex='6' size="40" />
+          <input class="mktFormText mktFormUrl mktFReq cell-right req" placeholder="Website" name="Website" id="Website" type='text' value="<?php echo $_COOKIE['Website']; ?>"  maxlength='255' tabIndex='6' size="40" />
           <span class='mktFormMsg'></span>
         </span>
       </div>
