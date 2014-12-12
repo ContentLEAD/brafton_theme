@@ -55,6 +55,12 @@ function getEmailInvalidMessage(domElement, label) {
   del_cookie("Registered"); //make sure user isn't considered "registered" if form validation failes
   return "Please enter a valid email address";
 }
+
+ function trackConv(google_conversion_id,google_conversion_label) {
+         var image = new Image(1,1); 
+         image.src = "http://www.googleadservices.com/pagead/conversion/"+google_conversion_id+"/?label="+google_conversion_label+"&script=0";  
+       } 
+
 </script>
 
 <!-- Jquery for fancy things!-->
@@ -144,7 +150,7 @@ var mktFormLanguage = 'English'
       </div>
     </div>
 		
-		<div id='mktFrmButtons f-row'>
+		<div id='mktFrmButtons f-row' onclick="trackConv(1040008800,'Id1kCPym1FcQ4Iz17wM');">
       <!--<button id='mktFrmSubmit' class="wpcf7-submit button" type="button"  onclick='formSubmit(document.getElementById("mktForm_1249")); return false;' >Submit</button>-->
       <!--<input id='mktFrmSubmit' type='submit' style="width: auto; overflow: visible; padding-left: .25em; padding-right: .25em;" value='Submit' name='submitButton' onclick='formSubmit(document.getElementById("mktForm_1249")); return false;' />-->
       <input id='mktFrmSubmit' type='submit' class="wpcf7-submit button" value='Download Now' name='submitButton' onclick='formSubmit(document.getElementById("mktForm_1249")); return false;' />
@@ -196,13 +202,9 @@ function setCookies() {
 function formSubmit(elt) {
   setCookies();
   var theURL = document.URL;
-  _gaq.push(['_set','hitCallback',function() {
-
-    return Mkto.formSubmit(elt);
-
-  }]);
  
-  _gaq.push(['_trackEvent', 'Resource', 'Download', '<?php echo curPageURL(); ?>' ]);
+  ga('send', 'event', 'Resource', 'Download', '<?php echo curPageURL(); ?>');
+  return Mkto.formSubmit(elt);
 }
 
 function formReset(elt) {

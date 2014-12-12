@@ -96,7 +96,7 @@ var profiling = {
 };
 var mktFormLanguage = 'English'
 </script>
-<script type="text/javascript"> function mktoGetForm() {return document.getElementById('mktForm_1106'); }</script>
+<script type="text/javascript"> function mktoGetForm() {return document.getElementById('mktForm_1367'); }</script>
 <style>
 .wpcf7-form-control-wrap {
   width: 68%;
@@ -104,7 +104,7 @@ var mktFormLanguage = 'English'
 </style>
 <div class="down">Download the Guide</div>
 <div class="wpcf7">
-<form class="lpeRegForm formNotEmpty" method="post" enctype="application/x-www-form-urlencoded" action="http://fuel.brafton.com/index.php/leadCapture/save" id="mktForm_1106" name="mktForm_1106">
+<form class="lpeRegForm formNotEmpty" method="post" enctype="application/x-www-form-urlencoded" action="http://fuel.brafton.com/index.php/leadCapture/save" id="mktForm_1367" name="mktForm_1367">
 	<div class='mktLblLeft left-col'>
 		<div class='mktFormReq mktField f-row'>
       <label class="cell-left">First Name:</label>
@@ -145,10 +145,10 @@ var mktFormLanguage = 'English'
     </div>
 		
 		<div id='mktFrmButtons f-row'>
-      <!--<button id='mktFrmSubmit' class="wpcf7-submit button" type="button"  onclick='formSubmit(document.getElementById("mktForm_1106")); return false;' >Submit</button>-->
-      <!--<input id='mktFrmSubmit' type='submit' style="width: auto; overflow: visible; padding-left: .25em; padding-right: .25em;" value='Submit' name='submitButton' onclick='formSubmit(document.getElementById("mktForm_1106")); return false;' />-->
-      <input id='mktFrmSubmit' type='submit' class="wpcf7-submit button" value='Download Now' name='submitButton' onclick='formSubmit(document.getElementById("mktForm_1106")); return false;' />
-      <input style='display: none;' id='mktFrmReset' type='reset' value='Clear' name='resetButton' onclick='formReset(document.getElementById("mktForm_1106")); return false;' />
+      <!--<button id='mktFrmSubmit' class="wpcf7-submit button" type="button"  onclick='formSubmit(document.getElementById("mktForm_1367")); return false;' >Submit</button>-->
+      <!--<input id='mktFrmSubmit' type='submit' style="width: auto; overflow: visible; padding-left: .25em; padding-right: .25em;" value='Submit' name='submitButton' onclick='formSubmit(document.getElementById("mktForm_1367")); return false;' />-->
+      <input id='mktFrmSubmit' type='submit' class="wpcf7-submit button" value='Download Now' name='submitButton' onclick='formSubmit(document.getElementById("mktForm_1367")); return false;' />
+      <input style='display: none;' id='mktFrmReset' type='reset' value='Clear' name='resetButton' onclick='formReset(document.getElementById("mktForm_1367")); return false;' />
     </div>
   </div>
   <span style="display:none;"><input type="text" name="_marketo_comments" value="" /></span>
@@ -159,9 +159,9 @@ var mktFormLanguage = 'English'
 	<input type="hidden" name="cr" value="" />
 	<input type="hidden" name="searchstr" value="" />
 	<input type="hidden" name="lpurl" value="http://fuel.brafton.com/Bridge-Download-Resource-Fueling-FB--Twitter-with-Custom-News.html" />
-	<input type="hidden" name="formid" value="1106" />
-  <input type="hidden" name="returnURL" value= "http://fuel.brafton.com/rs/brafton/images/eBook_03.17.2014_SemanticSearch.pdf?aliId=22963808" />
-  <input type="hidden" name="retURL" value="http://fuel.brafton.com/rs/brafton/images/eBook_03.17.2014_SemanticSearch.pdf?aliId=22963808" />
+	<input type="hidden" name="formid" value="1367" />
+  <input type="hidden" name="returnURL" value= "http://fuel.brafton.com/rs/brafton/images/eBook_11.2014_ContentforSocial.pdf" />
+  <input type="hidden" name="retURL" value="http://fuel.brafton.com/rs/brafton/images/eBook_11.2014_ContentforSocial.pdf" />
 	<input type="hidden" name="returnLPId" value="-1" />
 	<input type="hidden" name="_mkt_disp" value="return" />
   <input type="hidden" name="_mkt_trk" value="" />
@@ -207,5 +207,5 @@ function formReset(elt) {
 </script>
 
 <script type="text/javascript" src="https://ssl-munchkin.marketo.net/js/munchkin.js"></script>
-<script>mktoMunchkin('447-XFF-352', {customName: 'SpeakingGooglesDownload', wsInfo: 'j1RR'});</script>
+<script>mktoMunchkin('447-XFF-352', {customName: 'ContentAuthorshipDownload', wsInfo: 'j1RR'});</script>
 <!-- <script>Munchkin.init('447-XFF-352');</script> -->

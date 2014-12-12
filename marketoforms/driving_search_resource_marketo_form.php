@@ -196,13 +196,8 @@ function setCookies() {
 function formSubmit(elt) {
   setCookies();
   var theURL = document.URL;
-  _gaq.push(['_set','hitCallback',function() {
-
-    return Mkto.formSubmit(elt);
-
-  }]);
- 
-  _gaq.push(['_trackEvent', 'Resource', 'Download', '<?php echo curPageURL(); ?>' ]);
+  ga('send', 'event', 'Resource', 'Download', '<?php echo curPageURL(); ?>');
+  return Mkto.formSubmit(elt);
 }
 
 function formReset(elt) {
