@@ -1469,3 +1469,18 @@ Legacy style classes...  :(
 	font-size: 1.5em;
 	text-transform: uppercase;
 }
+
+.pdflink {
+	text-decoration: none;
+
+	.text {
+		padding: 0.5em;
+		font-size: 1.5em;
+		margin-bottom: 1em;
+		color: $white;
+		text-align: center;
+		text-transform: uppercase;
+		background: $green;
+		letter-spacing: 2px;
+	}
+}
