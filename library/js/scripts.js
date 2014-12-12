@@ -278,13 +278,13 @@ jQuery(document).ready(function($) {
     };
 
     //Put title div ABOVE featured image in mobile view
-    window.onresize = function() {
+   /* window.onresize = function() {
         var wd = $(window).width();
         console.log(wd);
         if( wd < 480 ) {
             $('#topinfo').insertBefore('.image-inner');
         }
-    };
+    };*/
 
 
     //lightbox popup marketo form for blog and single post pages...
@@ -292,6 +292,20 @@ jQuery(document).ready(function($) {
     $(".leadscon").click(function(){
         MktoForms2.loadForm("//app-sj04.marketo.com", "447-XFF-352", 1337, function (form){MktoForms2.lightbox(form).show();});
         console.log("test");
+    });
+
+    //ui effects for executive leadership page
+    $(".exec_info_onclick").hide();
+    $(".exec_onclick_shadow").hide();
+    $(".exec_container").click(function() {
+        $(this).next(".exec_info_onclick").fadeIn(400);
+        $(".exec_onclick_shadow").show();
+    });
+
+    //exit
+    $(".exec_exit").click( function() {
+        $(this).parents(".exec_info_onclick").hide();
+        $(".exec_onclick_shadow").hide();
     });
 
 
