@@ -20,14 +20,8 @@
 
 								<section class="entry-content cf" itemprop="articleBody">
 
-											<?php $i = 1; ?>
-
 											<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-												<?php if($i == 4) { ?>
-												<div class="d-1of3 t-1of3 m-all exec_container last">
-												<?php } else { ?>
 												<div class="d-1of3 t-1of3 m-all exec_container">
-												<?php } ?>
 													<?php the_post_thumbnail(); ?>
 													<div class="exec_info">
 														<div class="exec_name"><?php the_title(); ?></div>
