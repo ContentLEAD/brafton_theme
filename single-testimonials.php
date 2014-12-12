@@ -21,36 +21,21 @@
 								</header> <?php // end article header ?>
 
 								<section class="entry-content cf" itemprop="articleBody">
-
 									<?php
-									
 										$before_text = html_entity_decode( get_post_meta( $post->ID, 'downloadables_top_text', true ) );
 										$product_id = get_post_meta( $post->ID, 'digioh_product_id', true );
 										$account_id = 1252;
 
 									?>
 
-									<p class="downloadable-before"><?php echo $before_text; ?></p>
-
-
-									<?php $img = get_post_meta(get_the_ID(), 'wp_custom_attachment', true); 
-
-									if( $img ) { ?>
-
-										<a class="pdflink" href="<?php echo $img['url']; ?>"> <div class="text">Download the Case Study (PDF)</div></a>
-
-									<?php } //end img if statement ?>
+										<p class="downloadable-before"><?php echo $before_text; ?></p>
 
 									<?php
 
-										// the content (pretty self explanatory huh)
-										the_content();
+										the_content(); 
 
-									if( $img ) { ?>
+									?>
 
-										<a class="pdflink" href="<?php echo $img['url']; ?>"> <div class="text">Download the Case Study (PDF)</div></a>
-
-									<?php } //end img if statement ?>
 								</section> <?php // end article section ?>
 
 								<footer class="article-footer cf">
