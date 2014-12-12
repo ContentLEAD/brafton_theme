@@ -186,7 +186,7 @@ BLOG-Landing Page
 SIDEBARS & ASIDES
 *********************/}.sidebar{margin-top:2.2em;}.widgettitle{border-bottom:2px solid #444;margin-bottom:0.75em;}.widget{padding:0 10px;margin:1em 0;/* links widget */}.widget ul li{margin-bottom:0.75em;}.widget ul li a{/* deep nesting */}.widget ul li ul{margin-top:0.75em;padding-left:1em;}.widget_links ul li a{/* meta widget */}.widget_meta ul li a{/* pages widget */}.widget_pages ul li a{/* recent-posts widget */}.widget_recent_entries ul li a{/* archives widget */}.widget_archive option{/* tag-cloud widget */}.widget_tag_cloud a:before{/* calendar widget */}#wp-calendar #prev a{/* category widget */}.widget_categories .level-3{/* recent-comments widget */}.widget_recent_comments{/* search widget */}.screen-reader-text{/* text widget */}.textwidget p{/*********************
 FOOTER STYLES
-*********************//*
+*********************/}.bottom-case-cta{display:block;/*
 you'll probably need to do quite a bit
 of overriding here if you styled them for
 mobile. Make sure to double check these!

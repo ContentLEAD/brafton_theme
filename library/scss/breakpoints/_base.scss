@@ -1292,7 +1292,7 @@ SIDEBARS & ASIDES
 	}
 
 	#testi {
-		height: 480px;
+		height: 510px;
 		overflow: hidden;
 		clear: both;
 		margin-top: -81px;
@@ -1304,6 +1304,14 @@ SIDEBARS & ASIDES
 	.widget {
 
 		list-style-type: none;
+
+		h4 {
+			text-align: center;
+			margin-bottom: 1em;
+			font-size: 1.4em;
+			font-weight: 100;
+			text-transform: uppercase;
+		}
 
 		.search-icon {
 		    height: 31px;
@@ -1386,6 +1394,10 @@ FOOTER STYLES
 	clear: both;
 	background-color: $black;
 	color: $light-gray;
+}
+
+.bottom-case-cta {
+	display: none;
 }
 
 	/*
