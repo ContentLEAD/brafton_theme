@@ -284,7 +284,7 @@ function setCookies() {
 
   //finally, add a unique cookie indicating the user has registered
   
-  document.cookie = "Registered1=" + document.URL + expires;
+  document.cookie = "Registered1=" + window.location.href.split('?')[0] + expires;
 
   //add a cookie with user's name, to allow referencing the database for whether they're registered or not
   document.cookie = "Name=" + document.getElementById('FirstName').value + document.getElementById('LastName').value + expires;

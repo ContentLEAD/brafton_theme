@@ -50,10 +50,7 @@ function curPageURL() {
 
 <style>
 
-#mktFrmSubmit{
-    color: #FFFFFF !important;
-	/*font-size:13px;*/
-	}
+
 
 div.buttonSubmit:hover input {
 	background: #8DC01D;

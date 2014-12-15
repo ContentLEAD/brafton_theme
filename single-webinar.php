@@ -9,8 +9,9 @@ $registered = false; //assume user has not signed up for webinar
 
 $current_page = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-if( $_COOKIE[ 'Registered1' ] == $current_page) {
-	//Don't worry, this column is UNIQUE- multiple visits will not result in multiple DB entries...
+$url = strtok($current_page,'?'); 
+
+if( $url == $_COOKIE[ 'Registered1' ]) {
 	$the_ID = get_the_ID();
 	$success = $wpdb->insert(
 		'brftn_registrations',
@@ -20,8 +21,6 @@ if( $_COOKIE[ 'Registered1' ] == $current_page) {
 			'post_title' => get_the_title( $the_ID )
 		)
 	);
-
-	setcookie("Registered1","clear",1,'/');
 } 
 
 
