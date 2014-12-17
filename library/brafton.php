@@ -1553,18 +1553,13 @@ function save_post_meta_boxes( $post_id) {
   
         }  
           
-
-
 }
 
 
 
 
 
-
-
-
-  add_action( 'load-post.php', 'meta_boxes_setup' );
+add_action( 'load-post.php', 'meta_boxes_setup' );
 add_action( 'load-post-new.php', 'meta_boxes_setup' );
 
 // start ajax filter
@@ -1697,20 +1692,9 @@ add_action( 'admin_head', 'add_admin_javascript');
 function subcategory_links() {
 
 	$cats = get_the_category();
-
 	foreach($cats as $cat) {
 		$description = $cat->category_description;
-
-		if( in_category( array('48','196') ) ) {
-
-				$link = "/content-marketing-archive";
-				echo '<a href="' . get_site_url() . $link . '"><div class="subcategory-image ' . $description . '"></div></a>';
-
-		} elseif ( in_category( array('50','203') ) ) {
-
-				$link = "/seo-archive";
-				echo '<a href="' . get_site_url() . $link . '"><div class="subcategory-image ' . $description . '"></div></a>';
-		} //etc., for rest of categories*/
+		echo '<a href="' .$description. '-archive"><div class="subcategory-image ' . $description . '"></div></a>';
 	}
 }
 
@@ -1807,26 +1791,6 @@ function sidebar_tag_images() {
 			echo '<div class="sidebar-tag-image '. $slug . '"></div>';
 			echo '</a>';
   		}
-	}
-}
-
-function sidebar_category_images() {
-	$sub_cats = get_categories( 'parent=25' );
-	foreach($sub_cats as $cat) {
-		$description = $cat->category_description;
-		$name = $cat->name;
-		$id = $cat->term_id;
-
-		if( $id == 48 ) {
-
-				$link = "/content-marketing-archive";
-
-		} elseif ( $id == 50 ) {
-
-				$link = "/seo-archive";
-		} //etc., for rest of categories
-
-		echo '<div class="subcat-container"><div class="subcategory-image-sidebar ' . $description . '-sidebar"></div><div class="sidebar-cat-titles"><a href="' . get_site_url() . $link . '">' . $name . '</a></div></div>';
 	}
 }
 
