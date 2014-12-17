@@ -253,8 +253,6 @@ BLOG-Landing Page
 }
 
 .bottom-cta {
-	background: url(../images/blog-images/footerbackground.png) no-repeat;
-	background-size: 100%;
 	height: 64px;
 	margin-top: 75px;
 	overflow: visible;
@@ -269,29 +267,29 @@ BLOG-Landing Page
 .ourlatestfooter,
 .leadscon,
 .askamarketer {
-	width: 252px;
-	height: 139px;
+	width: 250px;
+	height: 162px;
 	display: inline-block;
-	margin-top: -50px;
+	margin-top: -70px;
 	background-size: 100% !important;
 	margin-left: 20px;
 
 	&:hover {
-		background-position: 0px -140px;
+		background-position: 0px -163px;
 		cursor: pointer;
 	}
 }
 
 .ourlatestfooter {
-	background: url(../images/blog-images/ourlatestfooter.png) no-repeat;
+	background: url(../images/blog-images/ourlatestfooter.jpg) no-repeat;
 }
 
 .leadscon {
-	background: url(../images/blog-images/leadscon.png) no-repeat;
+	background: url(../images/blog-images/leadscon.jpg) no-repeat;
 }
 
 .askamarketer {
-	background: url(../images/blog-images/askamarketer.png) no-repeat;
+	background: url(../images/blog-images/askamarketer.jpg) no-repeat;
 }
 
 .bottom-cta-container {
@@ -452,3 +450,40 @@ mobile. Make sure to double check these!
 	}
 } /* end .footer-links */
 
+/*For tags on blog and tag archives...*/
+
+.tagbar {
+	background: rgba(0, 0, 0, 0.6);
+	background-size: 100%;
+	margin-bottom: -5px;
+	height: 2.5em;
+
+	.selected.tag {
+		background: $green;
+		color: $black;
+		font-weight: bold;
+		opacity: 0.8;
+	}
+
+	.tag {
+		display: inline-block;
+		padding: 1.3em .7%;
+		color: $white;
+		font-size: 0.6em;
+		font-weight: bold;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+
+		@include transition(all 0.2s);
+
+		&:hover{
+			background: $green;
+			color: $black;
+			opacity: 0.8;
+		}
+	}
+
+	.taglink {
+		text-decoration: none;
+	}
+}

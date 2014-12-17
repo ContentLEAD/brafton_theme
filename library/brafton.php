@@ -1721,13 +1721,13 @@ function blog_tagbar() {
 		
 		//display "all" tag- "selected" on hub pages and unselected on single.php
 
-		echo '<a href="' . get_site_url() . '/blog' . '">';
+		echo '<a class="taglink" href="' . get_site_url() . '/blog' . '">';
 		
-		if ( is_page() ) {
-			echo '<div class="selected all-tag tag-image"></div>';
+		if ( is_category() ) {
+			echo '<div class="selected tag">All</div>';
 		} else {
 
-			echo '<div class="all-tag tag-image"></div>';
+			echo '<div class="tag">All</div>';
 		}	
 
 		echo '</a>';
@@ -1738,21 +1738,19 @@ function blog_tagbar() {
 
 		    foreach($tags as $tag) {
 		  	
-			    $tagid = $tag->term_id;
+			    $name= $tag->name;
 
 			    $slug = $tag->slug;
-
-			    $description = tag_description($tagid);
 
 			    echo '<a href="' . get_site_url() . '/tag/' . $slug . '">';
 
 			    if( has_term( $tagid, 'post_tag') && is_single() ) {
 
-			    	echo '<div class="selected tag-image '. $slug . '"></div>';
+			    	echo '<div class="selected tag">' . $name . '</div>';
 
 				} else {
 
-					echo '<div class="tag-image '. $slug . '"></div>';
+					echo '<div class="tag">' . $name . '</div>';
 				}
 
 				echo '</a>';
@@ -1768,19 +1766,19 @@ function blog_tagbar() {
 	  		
 	  		foreach($tags as $tag) {
 		  	
-			    $tagid = $tag->term_id;
+			    $name= $tag->name;
 
 			    $slug = $tag->slug;
 
-			    echo '<a href="' . get_site_url() . '/tag/' . $slug . '">';
+			    echo '<a class="taglink" href="' . get_site_url() . '/tag/' . $slug . '">';
 
-			    if( $queried_slug == $slug ) {
+			    if( has_term( $tagid, 'post_tag') && is_single() ) {
 
-			    	echo '<div class="selected tag-image '. $slug . '"></div>';
+			    	echo '<div class="selected tag">' . $name . '</div>';
 
 				} else {
 
-					echo '<div class="tag-image '. $slug . '"></div>';
+					echo '<div class="tag">' . $name . '</div>';
 				}
 
 				echo '</a>';
@@ -1805,7 +1803,7 @@ function sidebar_tag_images() {
 
 		    $description = tag_description($tagid);
 
-		    echo '<a href="' . get_site_url() . '/tag/' . $slug . '">';
+		    echo '<a class="taglink" href="' . get_site_url() . '/tag/' . $slug . '">';
 			echo '<div class="sidebar-tag-image '. $slug . '"></div>';
 			echo '</a>';
   		}

@@ -1,13 +1,16 @@
-<?php get_header(); ?>
-<?php
-//ini_set("display_errors", 1);
-//error_reporting(E_ALL | E_STRICT);
+<?php get_header();
+
+/*************************************************
+Authentication gateway to view webinar**********
+**************************************************/
 
 $registered = false; //assume user has not signed up for webinar
 
 //ONLY enter this page to the db if they haven't registered on this page before...
 
 $current_page = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+//parse url in case link was sent from Marketo link
 
 $url = strtok($current_page,'?'); 
 
@@ -38,110 +41,110 @@ if ( $_COOKIE[ 'Name' ] ) {
 	}
 }
 
-$daUrl = curPageURL2();
+ ?>
 
-function brafton_webinar_share( $location ){
-	$services = array( 'linkedin', 'twitter', 'facebook', 'gplus', 'pinterest', 'stumbleupon' );
+			<div id="content">
 
-	echo "<div class='share icons $location small cf'>";
-	foreach( $services as $network )
-		echo "<a data-service='$network' href='" . curPageURL2() . "'></a>";
+				<div id="inner-content" class="wrap cf">
 
-	echo '</div>';
-}
-function curPageURL2() {
-	$url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-	//var_dump($url);
-	$parts = parse_url($url);
-	$str = $parts['scheme'].'://'.$parts['host'].$parts['path'];
-	return $str;
-}
-?>
-<article id="glossary-term" class="twelvecol row">
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<header>
-		<h1 itemprop="name"><?php the_title(); ?></h1>
-	</header>
-	<div id="topmeta" class="twelvecol row">
-		<div id="topinfo"><?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?></div>
-	</div>
-	<div class="twelvecol row">
-		<div id="body" class="eightcol">
-			<?php //echo curPageURL2(); ?>
-			<?php //echo "The cookie is " . $_COOKIE[ $daUrl ]; ?>
-			<?php if( has_term( 'webinars', 'event-type', get_the_ID() ) || has_term( 'pre-webinar', 'event-type', get_the_ID() ) ) { ?>
-					<?php //if ( $_GET['signedup'] != 'true' ) { ?>
-					<?php //if( $_COOKIE[ 'Registered' ] != "true" ) { ?>
-					<?php if( $registered != true ) { ?>
-							<?php brafton_webinar_share( 'top' ); ?>
-							<h3><strong>Sign Up on the Right to View this Webinar</strong></h3>
-							<!--<div style="font-size: 16px;">
-								<p>
-									<strong>Presenters:</strong> <?php echo get_post_meta( get_the_ID(), 'presenter', true ); ?>
-									<br />
-									<strong>Running time:</strong> <?php echo get_post_meta( get_the_ID(), 'run_time', true ); ?>
-								</p>
-							</div>-->
-						<?php }else{ ?>
-							<?php brafton_webinar_share( 'top' ); ?>
-					
-						<?php } ?>
-					
-					<?php
-						//if( $_COOKIE[ 'Registered' ] == "true" ) {
-						if( $registered == true ) {
-						//if( $_GET['signedup'] == 'true') {
-							$sublime_text = get_post_meta( get_the_ID(), 'sublime_vid_shortcode', true );
-							if ( $sublime_text )
-								echo do_shortcode( $sublime_text );
-							else
-								echo get_post_meta( get_the_ID(), 'embed_code', true );
-						}else if ( has_term( 'webinars', 'event-type', get_the_ID() ) || has_term( 'pre-webinar', 'event-type', get_the_ID() )) {
-							echo "<span id='webinar-preview'>";
-							the_post_thumbnail();
-							echo "</span>";
-						}else{
-							the_post_thumbnail();
-						}
-					?>
-			
-					<?php the_content(); ?>
-					<!-- <h5>Related Content</h5>
-					<blockquote><?php //related_posts(); ?></blockquote> -->
-				<?php }else if( has_term( 'twitter-chats', 'event-type', get_the_ID() ) || has_term( 'pre-chat', 'event-type', get_the_ID() ) ) {
-					brafton_webinar_share( 'top' );
-					echo '<span class="twitter-event-img">';
-					the_post_thumbnail();
-					echo '</span>';
-					the_content();
-				} ?>
-		</div>
-		<div id="sidebar" class="fourcol last">
-			<aside>
-				<?php //if( $_GET['signedup'] != 'true' ) { ?>
-				<?php //if( $_COOKIE[ 'Registered' ] != "true" ) { ?>
-				<?php if( $registered != true ) { ?>
-				<div id="CTA">
-					<?php if( has_term( 'webinars', 'event-type', get_the_ID() ) || has_term( 'pre-webinar', 'event-type', get_the_ID() )) {
-						echo '<h4 class="dark">Sign up to view this webinar!';
-						
-						echo'</h4>';
-						get_template_part('marketoforms/webinar_marketo_form');
-					} else if ( has_term( 'twitter-chats', 'event-type', get_the_ID() ) || has_term( 'pre-chat', 'event-type', get_the_ID() ) ) { 
-						echo '<iframe src="http://fuel.brafton.com/BRTwitteriFrame.html" width=375 height=675></iframe>';
-					} ?>
+						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+
+							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+								<header class="article-header">
+
+									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+
+									<?php if( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
+
+								</header> <?php // end article header ?>
+
+								<section class="entry-content cf" itemprop="articleBody">
+
+										<div class="d-5of7 t-2of3 m-all">
+
+											<?php if( has_term( 'webinars', 'event-type', get_the_ID() ) || has_term( 'pre-webinar', 'event-type', get_the_ID() ) ) { ?>
+													<?php if( $registered != true ) { ?>
+															<?php brafton_share( 'top' ); ?>
+															<h3><strong>Sign Up on the Right to View this Webinar</strong></h3>
+
+													<?php }else{ ?>
+															<?php brafton_share( 'top' ); ?>
+													
+														<?php } ?>
+													
+													<?php
+
+														if( $registered == true ) {
+															$sublime_text = get_post_meta( get_the_ID(), 'sublime_vid_shortcode', true );
+															if ( $sublime_text )
+																echo do_shortcode( $sublime_text );
+															else
+																echo get_post_meta( get_the_ID(), 'embed_code', true );
+														}else if ( has_term( 'webinars', 'event-type', get_the_ID() ) || has_term( 'pre-webinar', 'event-type', get_the_ID() )) {
+															echo "<span id='webinar-preview'>";
+															the_post_thumbnail();
+															echo "</span>";
+														}else{
+															the_post_thumbnail();
+														}
+													?>
+											
+													<?php the_content(); ?>
+												<?php }else if( has_term( 'twitter-chats', 'event-type', get_the_ID() ) || has_term( 'pre-chat', 'event-type', get_the_ID() ) ) {
+													brafton_share( 'top' );
+													echo '<span class="twitter-event-img">';
+													the_post_thumbnail();
+													echo '</span>';
+													the_content();
+												} ?>
+										</div>
+								</section> <?php // end article section ?>
+
+								<footer class="article-footer cf">
+
+								</footer>
+
+								<?php 
+								//No comments on the standard page template
+								//comments_template(); ?>
+
+							</article>
+
+							<?php endwhile; else : ?>
+
+									<article id="post-not-found" class="hentry cf">
+										<header class="article-header">
+											<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
+										</header>
+										<section class="entry-content">
+											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
+										</section>
+										<footer class="article-footer">
+												<p><?php _e( 'This is the error message in the page.php template.', 'bonestheme' ); ?></p>
+										</footer>
+									</article>
+
+							<?php endif; ?>
+
+						</div>
+
+						<div class="sidebar d-2of7 t-1of3 m-all">
+							<?php if( has_term( 'webinars', 'event-type', get_the_ID() ) || has_term( 'pre-webinar', 'event-type', get_the_ID() )) {
+								echo '<h4 class="dark">Sign up to view this webinar!';
+								
+								echo'</h4>';
+								get_template_part('marketoforms/webinar_marketo_form');
+							} else if ( has_term( 'twitter-chats', 'event-type', get_the_ID() ) || has_term( 'pre-chat', 'event-type', get_the_ID() ) ) { 
+								echo '<iframe src="http://fuel.brafton.com/BRTwitteriFrame.html" width=375 height=675></iframe>';
+							} ?>
+						</div>
+
+
 				</div>
-				<?php } else { ?>
-					<ul>
-					<?php if ( !function_exists( "dynamic_sidebar" ) || !dynamic_sidebar( "Archive Sidebar" ) ) : ?>
-						<p>Add Widgets to the Page Sidebar</p>
-					<?php endif; ?>
-					</ul>
-				<?php } ?>
-			</aside>
-		</div>
-	</div>
-	<?php endwhile; endif; ?>
-</article><!-- End #glossary-term -->
+
+			</div>
 
 <?php get_footer(); ?>

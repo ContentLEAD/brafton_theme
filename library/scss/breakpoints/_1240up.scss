@@ -1,6 +1,6 @@
 /******************************************************************
-Site Name: 
-Author: 
+Site Name: Brafton
+Author: Mike DeWitt
 
 Stylesheet: Super Large Monitor Stylesheet
 
@@ -9,3 +9,9 @@ on larger screens.
 
 ******************************************************************/
 
+.tagbar {
+	.tag {
+		padding: 0.82em 2%;
+		font-size: 0.8em;
+	}
+}
