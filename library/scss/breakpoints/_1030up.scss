@@ -14,6 +14,30 @@ be seen on the Desktop.
 	}
 }
 
+.featured-post {
+	#topinfo {
+		.meta-wrapper {
+			display: inline-block;
+			left: 22%;
+		}
+	}
+}
+
+.secondary-blog {
+	#topinfo {
+		width: 60%;
+
+		.author,
+		.meta-wrapper {
+			display: inline-block;
+		}
+	}
+}
+
+.arrow_to_infinity {
+	height: 60px;
+}
+
 .wrap {
   width: 95%;
 }

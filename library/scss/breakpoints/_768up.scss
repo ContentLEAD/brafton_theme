@@ -67,21 +67,34 @@ BLOG-Landing Page
 		color: $black;
 		width: 100%;
 		float: left;
-		font-weight: 400;
+		font-weight: 100;
+		text-transform: uppercase;
+		letter-spacing: 1px;
 		display: block;
 		padding-bottom: 0px;
 		margin: 0.25em 2em;
 	}
 
-	h3 {
-		font-size: 1.75em;
+	h2 {
+		font-size: 2em;
 	}
+
 
 	.image-inner {
 		margin: 1em 1em 0 5em;
-		width: 30%;
+		width: 22%;
 	}
 
+	#topinfo {
+		.meta-wrapper,
+		.author {
+			display: inline-block;
+		}
+
+		.meta-wrapper {
+			left: 28%;
+		}
+	}
 }
 
 .blog_header {
@@ -115,19 +128,23 @@ BLOG-Landing Page
 	article {
 		margin-bottom: 1em;
 	}
+
+	h2 {
+		font-size: 1.25em;
+	}
+
+	#topinfo {
+		width: 50%;
+	}
+
 }
+
 
 #topinfo {
 
 	position: relative;
 	width: 60%;
 	float: left;
-
-	.author,
-	.subcategory,
-	.readtime {
-		display: inline-block;
-	}
 
 	a {
 		text-decoration: none;
@@ -140,8 +157,13 @@ BLOG-Landing Page
 		margin-right: 40px;
 		right: 0;
 
+		span {
+			font-size: 0.8em;
+			text-transform: uppercase;
+		}
+
 		img {
-			max-width: 110px;
+			width: 100px;
 		}
 		.user {
 			display: block;
@@ -153,9 +175,17 @@ BLOG-Landing Page
 		float: left;
 	}
 
+	.meta-wrapper {
+		float: left;
+		position: absolute;
+		bottom: 8px;
+		left: 28%;
+	}
+
 	.readtime {
-		padding: 1em;
-		background: $light-grey;
+		margin-right: 1em;
+		padding: 10px;  /*in px to match exactly with the subcat sprite */
+		background: darken($light-grey, 7%);
 
 		img {
 			width: 35px;
@@ -163,11 +193,18 @@ BLOG-Landing Page
 			float: left;
 		}
 
+		.read_number {
+			font-size: 2.2em;
+			font-weight: 600;
+			display: inline;
+		}
+
 		span {
 			float: left;
-			margin-top: 18px;
-			font-size: 18px;
-			font-weight: 800;
+			font-size: 0.8em;
+			text-transform: uppercase;
+			margin-left: 1em;
+			line-height: 16px;
 		}
 	}
 }
