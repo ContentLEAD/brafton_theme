@@ -38,16 +38,16 @@
 					</div>
 					<div class="subcategory">
 						<?php subcategory_links(); ?>
-					</div>		
-					<div class="readtime">
-						<img src="/wp-content/themes/b3/blog-images/time.png"/>
-						<span><?php echo readtime(); ?></span>
-					</div>			
+					</div>
+					<?php if( !is_post_type_archive('downloadables') ) { ?>		
+						<div class="readtime">
+							<img src="/wp-content/themes/b3/blog-images/time.png"/>
+							<span><?php echo readtime(); ?></span>
+						</div>	
+					<?php } ?>		
 			</div>
 		</header>
-		<?php if( $i > 0 ) { ?>
 		<div class="arrow_to_infinity"></div>
-		<?php } ?>
 	</article>
 
 	<?php if( $i == 0 ) { 

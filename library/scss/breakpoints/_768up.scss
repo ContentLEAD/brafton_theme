@@ -51,9 +51,7 @@ BLOG-Landing Page
 ****************************/
 
 .tagbar,
-.author-cat-time-container,
-.scrolly,
- {
+.scrolly {
 	display: block;
 }
 
@@ -96,6 +94,8 @@ BLOG-Landing Page
 
 .title_info_container {
 	padding-bottom: 10px;
+	width: 100%;
+	display: inline-block;
 }
 
 .image-inner {
@@ -110,23 +110,24 @@ BLOG-Landing Page
 	}
 }
 
+
 .secondary-blog {
 	article {
 		margin-bottom: 1em;
 	}
 }
 
-.title_info_container {
-	width: 100%;
-	display: inline-block;
-}
-
-
 #topinfo {
 
 	position: relative;
 	width: 60%;
 	float: left;
+
+	.author,
+	.subcategory,
+	.readtime {
+		display: inline-block;
+	}
 
 	a {
 		text-decoration: none;
@@ -140,7 +141,7 @@ BLOG-Landing Page
 		right: 0;
 
 		img {
-			max-width: 78px
+			max-width: 110px;
 		}
 		.user {
 			display: block;
@@ -148,8 +149,26 @@ BLOG-Landing Page
 		}
 	}  
 	
-	.subcategory {
+	.subcategory, .readtime {
 		float: left;
+	}
+
+	.readtime {
+		padding: 1em;
+		background: $light-grey;
+
+		img {
+			width: 35px;
+			display: inline-block;
+			float: left;
+		}
+
+		span {
+			float: left;
+			margin-top: 18px;
+			font-size: 18px;
+			font-weight: 800;
+		}
 	}
 }
 
@@ -180,30 +199,6 @@ BLOG-Landing Page
 		}
 
 	}
-
-	.readtime img {
-		width: 60px;
-		display: inline-block;
-		float: left;
-	}
-
-	.readtime span {
-		float: left;
-		margin-top: 18px;
-		font-size: 18px;
-		font-weight: 800;
-	}
-
-
-	#body {
-		width: 60%;
-		margin-left: 60px;
-
-		.share {
-			display: none;
-		}
-	}
-
 
 
 /*Footer stuff*/
@@ -331,95 +326,6 @@ SIDEBARS & ASIDES
 		}
 	}
 
-
-	/* links widget */
-	.widget_links {}
-	.widget_links ul {}
-	.widget_links ul li {}
-	.widget_links ul li a {}
-
-	/* meta widget */
-	.widget_meta {}
-	.widget_meta ul {}
-	.widget_meta ul li {}
-	.widget_meta ul li a {}
-
-	/* pages widget */
-	.widget_pages {}
-	.widget_pages ul {}
-	.widget_pages ul li {}
-	.widget_pages ul li a {}
-
-	/* recent-posts widget */
-	.widget_recent_entries {}
-	.widget_recent_entries ul {}
-	.widget_recent_entries ul li {}
-	.widget_recent_entries ul li a {}
-
-	/* archives widget */
-	.widget_archive {}
-	.widget_archive ul {}
-	.widget_archive ul li {}
-	.widget_archive ul li a {}
-	.widget_archive select {}
-	.widget_archive option {}
-
-	/* tag-cloud widget */
-	.widget_links {}
-	.widget_links li:after {}
-	.widget_links li:before {}
-	.widget_tag_cloud {}
-	.widget_tag_cloud a {}
-	.widget_tag_cloud a:after {}
-	.widget_tag_cloud a:before {}
-
-	/* calendar widget */
-	.widget_calendar {}
-	#calendar_wrap {}
-	#calendar_wrap th {}
-	#calendar_wrap td {}
-	#wp-calendar tr td {}
-	#wp-calendar caption {}
-	#wp-calendar a {}
-	#wp-calendar #today {}
-	#wp-calendar #prev {}
-	#wp-calendar #next {}
-	#wp-calendar #next a {}
-	#wp-calendar #prev a {}
-
-	/* category widget */
-	.widget_categories {}
-	.widget_categories ul {}
-	.widget_categories ul li {}
-	.widget_categories ul ul.children {}
-	.widget_categories a {}
-	.widget_categories select{}
-	.widget_categories select#cat {}
-	.widget_categories select.postform {}
-	.widget_categories option {}
-	.widget_categories .level-0 {}
-	.widget_categories .level-1 {}
-	.widget_categories .level-2 {}
-	.widget_categories .level-3 {}
-
-	/* recent-comments widget */
-	.recentcomments {}
-	#recentcomments {}
-	#recentcomments li {}
-	#recentcomments li a {}
-	.widget_recent_comments {}
-
-	/* search widget */
-	#searchform {}
-	.widget_search {}
-	.screen-reader-text {}
-
-	/* text widget */
-	.textwidget {}
-	.widget_text {}
-	.textwidget p {}
-
-
 /*********************
 FOOTER STYLES
 *********************/
@@ -428,26 +334,6 @@ FOOTER STYLES
 	display: block;
 }
 
-/*
-you'll probably need to do quite a bit
-of overriding here if you styled them for
-mobile. Make sure to double check these!
-*/
-.footer-links {
-	ul {
-		li {
-			a {
-				&:hover {}
-			}
-			/*
-			be careful with the depth of your menus.
-			it's very rare to have multi-depth menus in
-			the footer.
-			*/
-			ul {}
-		}
-	}
-} /* end .footer-links */
 
 /*For tags on blog and tag archives...*/
 

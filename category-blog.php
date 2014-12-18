@@ -97,7 +97,7 @@ $cat_posts->query_vars[ 'paged' ] > 1 ? $current = $cat_posts->query_vars[ 'page
 							<span><?php echo readtime(); //see brafton.php ?></span>
 						</div>			
 				</div>
-			<?php if( $i != 0 ) { ?><div class="arrow_to_infinity"></div> <?php } ?>
+			<div class="arrow_to_infinity"></div>
 		</article>
 
 		<?php if( $i == 0 ) {
