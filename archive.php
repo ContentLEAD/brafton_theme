@@ -25,7 +25,7 @@
 			<div class="image-inner <?php if( !has_post_thumbnail() ) echo ' no-img'; else echo 'alignleft'; ?>"><?php the_post_thumbnail('medium', array('itemprop' => 'image', 'alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></div>
 			<div id="topinfo">
 				<div class="title_info_container">
-				<h3 itemprop="name headline"><a href=<?php echo '"' . get_permalink() . '"'?>><?php the_title(); ?></a></h3>
+				<h2 itemprop="name headline"><a href=<?php echo '"' . get_permalink() . '"'?>><?php the_title(); ?></a></h2>
 				</div>
 					<div class="author">
 						<a href="<?php echo $author['url']; ?>" class="user"><?php echo get_avatar($author['ID']); ?></a>
@@ -36,15 +36,17 @@
 							<?php endif; ?>
 						</span>
 					</div>
-					<div class="subcategory">
-						<?php subcategory_links(); ?>
-					</div>
-					<?php if( !is_post_type_archive('downloadables') ) { ?>		
-						<div class="readtime">
-							<img src="/wp-content/themes/b3/blog-images/time.png"/>
-							<span><?php echo readtime(); ?></span>
+					<div class="meta-wrapper">
+						<?php if( is_post_type_archive( 'downloadables' ) ) { ?>
+							<div class="readtime">
+								<img src="/wp-content/themes/brafton/library/images/blog-images/time.png"/>
+								<span><?php echo readtime(); //see brafton.php ?></span>
+							</div>
+						<?php } ?>	
+						<div class="subcategory">
+							<?php subcategory_links(); ?>
 						</div>	
-					<?php } ?>		
+					</div>	
 			</div>
 		</header>
 		<div class="arrow_to_infinity"></div>

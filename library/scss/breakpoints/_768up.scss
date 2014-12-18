@@ -378,7 +378,7 @@ FOOTER STYLES
 	background: rgba(0, 0, 0, 0.6);
 	background-size: 100%;
 	margin-bottom: -5px;
-	height: 2.5em;
+	height: 45px;
 
 	.selected.tag {
 		background: $green;
@@ -389,7 +389,7 @@ FOOTER STYLES
 
 	.tag {
 		display: inline-block;
-		padding: 1.3em .7%;
+		padding: 10px .7%;
 		color: $white;
 		font-size: 0.6em;
 		font-weight: bold;
