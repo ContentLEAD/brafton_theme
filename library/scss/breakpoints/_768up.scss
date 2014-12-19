@@ -55,108 +55,44 @@ BLOG-Landing Page
 	display: block;
 }
 
-
-.featured-post {
-	min-height: 315px;
-	background: url(../images/blog-images/headerbackground.png) no-repeat;
+.tagbar {
+	background: rgba(0, 0, 0, 0.6);
 	background-size: 100%;
-	margin-bottom: 2em;
+	margin-bottom: -5px;
+	height: 40px;
 
-	h1 {
-		background: none;
+	.selected.tag {
+		background: $green;
 		color: $black;
-		width: 100%;
-		float: left;
-		font-weight: 100;
-		text-transform: uppercase;
+		font-weight: bold;
+		opacity: 0.8;
+	}
+
+	.tag {
+		display: inline-block;
+		padding: 10px .7%;
+		color: $white;
+		font-size: 0.6em;
+		font-weight: bold;
 		letter-spacing: 1px;
-		display: block;
-		padding-bottom: 0px;
-		margin: 0.25em 2em;
-	}
+		text-transform: uppercase;
 
-	h2 {
-		font-size: 2em;
-	}
+		@include transition(all 0.2s);
 
-
-	.image-inner {
-		margin: 1em 1em 0 5em;
-		width: 22%;
-	}
-
-	#topinfo {
-		.meta-wrapper,
-		.author {
-			display: inline-block;
+		&:hover{
+			background: $green;
+			color: $black;
+			opacity: 0.8;
 		}
 	}
-}
 
-.blog_header {
-
-	@extend .featured-post;
-
-	h1 {
-		margin: 0.25em 1em;
+	.taglink {
+		text-decoration: none;
 	}
 }
 
-.title_info_container {
-	padding-bottom: 10px;
-	width: 100%;
-	display: inline-block;
-}
-
-.image-inner {
-	margin: 1em 1em 0 5em;
-	width: 25%;
-	display: inline-block;
-	float: left;
-
-	img {
-		max-width: 100%;
-		height: auto;
-	}
-}
-
-
-.secondary-blog {
-	article {
-		margin-bottom: 1em;
-	}
-
-	h2 {
-		font-size: 1.25em;
-	}
-
-	#topinfo {
-		width: 50%;
-
-		.readtime {
-
-			img {
-				width: 25px;
-			}
-
-			.read_number {
-				font-size: 1.5em;
-				font-weight: 600;
-				display: inline;
-			}
-
-			span {
-				font-size: 0.6em;
-				line-height: 12px;
-			}
-		}
-
-		.meta-wrapper {
-			bottom: 13px;
-		}
-	}
-}
-
+/*#topinfo- container for an individual post.  Shared by both
+the featured post and the remaining posts....*/
 
 #topinfo {
 
@@ -225,6 +161,112 @@ BLOG-Landing Page
 		}
 	}
 }
+
+/*some special considerations for the featured post*/
+
+
+.featured-post {
+	min-height: 315px;
+	background: url(../images/blog-images/headerbackground.png) no-repeat;
+	background-size: 100%;
+	margin-bottom: 2em;
+
+	h1 {
+		background: none;
+		color: $black;
+		width: 100%;
+		float: left;
+		font-weight: 100;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		display: block;
+		padding-bottom: 0px;
+		margin: 0.25em 2em;
+	}
+
+	h2 {
+		font-size: 2em;
+	}
+
+
+	.image-inner {
+		margin: 1em 1em 0 5em;
+		width: 22%;
+	}
+
+	#topinfo {
+		.meta-wrapper,
+		.author {
+			display: inline-block;
+		}
+	}
+}
+
+.blog_header {
+
+	@extend .featured-post;
+
+	h1 {
+		margin: 0.25em 1em;
+	}
+}
+
+.title_info_container {
+	padding-bottom: 10px;
+	width: 100%;
+	display: inline-block;
+}
+
+.image-inner {
+	margin: 1em 1em 0 5em;
+	width: 25%;
+	display: inline-block;
+	float: left;
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+/*Some special considerations for the secondary blog area*/
+
+.secondary-blog {
+	article {
+		margin-bottom: 1em;
+	}
+
+	h2 {
+		font-size: 1.25em;
+	}
+
+	#topinfo {
+		width: 50%;
+
+		.readtime {
+
+			img {
+				width: 25px;
+			}
+
+			.read_number {
+				font-size: 1.5em;
+				font-weight: 600;
+				display: inline;
+			}
+
+			span {
+				font-size: 0.6em;
+				line-height: 12px;
+			}
+		}
+
+		.meta-wrapper {
+			bottom: 13px;
+		}
+	}
+}
+
 
 
 
@@ -383,46 +425,3 @@ SIDEBARS & ASIDES
 /*********************
 FOOTER STYLES
 *********************/
-
-.bottom-case-cta {
-	display: block;
-}
-
-
-/*For tags on blog and tag archives...*/
-
-.tagbar {
-	background: rgba(0, 0, 0, 0.6);
-	background-size: 100%;
-	margin-bottom: -5px;
-	height: 40px;
-
-	.selected.tag {
-		background: $green;
-		color: $black;
-		font-weight: bold;
-		opacity: 0.8;
-	}
-
-	.tag {
-		display: inline-block;
-		padding: 10px .7%;
-		color: $white;
-		font-size: 0.6em;
-		font-weight: bold;
-		letter-spacing: 1px;
-		text-transform: uppercase;
-
-		@include transition(all 0.2s);
-
-		&:hover{
-			background: $green;
-			color: $black;
-			opacity: 0.8;
-		}
-	}
-
-	.taglink {
-		text-decoration: none;
-	}
-}
