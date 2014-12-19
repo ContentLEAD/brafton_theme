@@ -1701,6 +1701,7 @@ function subcategory_links() {
 function blog_tagbar() {
 
 	$tags = get_tags( 'order=DESC&hide_empty=0&exclude=202,204,205' );
+	
 	if ($tags) {
 		
 		//display "all" tag- "selected" on hub pages and unselected on single.php
@@ -1725,6 +1726,8 @@ function blog_tagbar() {
 			    $name= $tag->name;
 
 			    $slug = $tag->slug;
+
+			    $tagid = $tag->term_id;
 
 			    echo '<a href="' . get_site_url() . '/tag/' . $slug . '">';
 
@@ -1756,7 +1759,7 @@ function blog_tagbar() {
 
 			    echo '<a class="taglink" href="' . get_site_url() . '/tag/' . $slug . '">';
 
-			    if( has_term( $tagid, 'post_tag') && is_single() ) {
+			    if( $queried_slug == $slug ) {
 
 			    	echo '<div class="selected tag">' . $name . '</div>';
 
