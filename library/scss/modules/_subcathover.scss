@@ -4,21 +4,35 @@
 	=================================================================
 	=================================================================*/
 
-	.subcategory-image {
-		height: 80px;
-		width: 56px;
-		background-position: 0px 0px;
+	/*slightly bigger for the featured post*/
+	.featured-post {
+		.subcategory-image {
+			height: 80px;
+			width: 56px;
+			background-position: 0px 0px;
+
+			&:hover {
+				background-position: 0 -82px;
+			}
+		}
 	}
 
-	/*content-marketing*/
+	.secondary-blog {
+		.subcategory-image {
+			height: 63px;
+			width: 45px;
+			background-position: 0px 0px;
+
+			&:hover {
+				background-position: 0 -66px;
+			}
+		}
+	}
+
 
 	@mixin subcat($background) {
 		background: $background;
 		background-size: 100%;
-
-		&:hover {
-			background-position: 0 -82px;
-		}
 	}
 
 	.subcategory {

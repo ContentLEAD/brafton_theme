@@ -90,14 +90,11 @@ BLOG-Landing Page
 		.author {
 			display: inline-block;
 		}
-
-		.meta-wrapper {
-			left: 28%;
-		}
 	}
 }
 
 .blog_header {
+
 	@extend .featured-post;
 
 	h1 {
@@ -135,8 +132,29 @@ BLOG-Landing Page
 
 	#topinfo {
 		width: 50%;
-	}
 
+		.readtime {
+
+			img {
+				width: 25px;
+			}
+
+			.read_number {
+				font-size: 1.5em;
+				font-weight: 600;
+				display: inline;
+			}
+
+			span {
+				font-size: 0.6em;
+				line-height: 12px;
+			}
+		}
+
+		.meta-wrapper {
+			bottom: 13px;
+		}
+	}
 }
 
 
@@ -154,7 +172,7 @@ BLOG-Landing Page
 		float: left;
 		position: relative;
 		top: 0;
-		margin-right: 40px;
+		margin-right: 8px;
 		right: 0;
 
 		span {
@@ -179,11 +197,10 @@ BLOG-Landing Page
 		float: left;
 		position: absolute;
 		bottom: 8px;
-		left: 28%;
 	}
 
 	.readtime {
-		margin-right: 1em;
+		margin-right: 8px;
 		padding: 10px;  /*in px to match exactly with the subcat sprite */
 		background: darken($light-grey, 7%);
 
@@ -378,7 +395,7 @@ FOOTER STYLES
 	background: rgba(0, 0, 0, 0.6);
 	background-size: 100%;
 	margin-bottom: -5px;
-	height: 45px;
+	height: 40px;
 
 	.selected.tag {
 		background: $green;
