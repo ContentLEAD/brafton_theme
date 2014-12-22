@@ -29,6 +29,26 @@
 		}
 	}
 
+	.sidebar {
+		.subcategory {
+			width: 100%;
+			display: block;
+			float: left;
+		}
+
+		.subcategory-image {
+			display: block;
+			margin: 1em auto;
+			height: 63px;
+			width: 45px;
+			background-position: 0px 0px;
+
+			&:hover {
+				background-position: 0 -66px;
+			}
+		}
+	}
+
 
 	@mixin subcat($background) {
 		background: $background;
@@ -43,10 +63,33 @@
 			@include subcat(url(../images/blog-images/subcategory_thumbs/contentmarketing.png) no-repeat)
 		}
 
+		/*contentwriting*/
+
+		.contentwriting {
+			@include subcat(url(../images/blog-images/subcategory_thumbs/contentwriting.png) no-repeat)
+		}
+
+		/*contentanalytics*/
+
+		.contentanalytics {
+			@include subcat(url(../images/blog-images/subcategory_thumbs/contentanalytics.png) no-repeat)
+		}
 
 		/*seo*/
 
 		.seo {
 			@include subcat(url(../images/blog-images/subcategory_thumbs/seo.png) no-repeat)
+		}
+
+		/*videomarketing*/
+
+		.videomarketing {
+			@include subcat(url(../images/blog-images/subcategory_thumbs/videomarketing.png) no-repeat)
+		}
+
+		/*socialmedia*/
+
+		.socialmedia {
+			@include subcat(url(../images/blog-images/subcategory_thumbs/socialmedia.png) no-repeat)
 		}
 	}

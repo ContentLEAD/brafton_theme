@@ -1699,10 +1699,11 @@ function subcategory_links() {
 }
 
 function subcategory_sidebar_links() {
-	$cats = get_categories();
+	$cats = array("seo", "content-marketing", "contentwriting", "contentanalytics", "videomarketing", "socialmedia" );
 	foreach($cats as $cat) {
-		$description = $cat->category_description;
-		echo '<a href="/' .$description. '-archive"><div class="subcategory-image ' . $description . '"></div></a>';
+		echo '<div class="d-1of3 t-1of3 m-1of3">';
+			echo '<a href="/' .$cat. '-archive"><div class="subcategory-image ' . $cat . '"></div></a>';
+		echo '</div>';
 	}
 }
 
