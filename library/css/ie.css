@@ -178,7 +178,7 @@ do they need tweaking?
 LAYOUT & GRID STYLES
 *********************/}.home .rev_slider_wrapper{display:block !important;}.wrap{width:95%;/*********************
 HEADER STYLES
-*********************/}#logo{/*********************
+*********************/}.graphical-header{display:block;width:100%;}.graphical-header img{max-width:100%;}.mobile-graphical-header{display:none;}#logo{/*********************
 NAVIGATION STYLES
 *********************//***************************
 BLOG-Landing Page

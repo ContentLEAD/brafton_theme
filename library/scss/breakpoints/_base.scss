@@ -500,6 +500,16 @@ HEADER STYLES
 		}
 	}
 
+/*Hide massive graphical headers on mobile- reveal in 768px stylesheet*/
+
+.graphical-header {
+	display: none;
+}
+
+.mobile-graphical-header {
+	display: block;
+}
+
 /*********************
 NAVIGATION STYLES
 *********************/

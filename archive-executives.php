@@ -2,13 +2,17 @@
 
 			<div id="content">
 
+				<div class="graphical-header">
+					<img src="/wp-content/themes/brafton/library/images/page-headers/executives.png"/>
+				</div>
+
 				<div id="inner-content" class="wrap cf">
 
 						<div id="main" class="m-all t-all d-all cf" role="main">
 							 <section class="entry-content m-all t-all d-all cf" itemprop="articleBody">
-									<h1 class="page-title" itemprop="headline"><?php post_type_archive_title(); ?></h1>
+									<h1 class="page-title mobile-graphical-header" itemprop="headline"><?php post_type_archive_title(); ?></h1>
 
-									<?php if( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
+									<?php //if( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 
 									<?php brafton_share( 'top' ); ?>
 

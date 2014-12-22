@@ -36,6 +36,19 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 
+.graphical-header {
+	display: block;
+	width: 100%;
+
+	img {
+		max-width: 100%;
+	}
+}
+
+.mobile-graphical-header {
+	display: none;
+}
+
 .header {}
 
 	#logo {}

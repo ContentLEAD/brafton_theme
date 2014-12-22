@@ -395,7 +395,7 @@ H1, H2, H3, H4, H5 STYLES
 	http://css-tricks.com/watch-your-font-weight/
 	*//* removing text decoration from all headline links */font-weight:500;}h1 a,.h1 a,h2 a,.h2 a,h3 a,.h3 a,h4 a,.h4 a,h5 a,.h5 a{text-decoration:none;}h1,.h1{font-size:2.5em;line-height:1.333em;}h2,.h2{font-size:1.75em;line-height:1.4em;margin-bottom:0.375em;}h3,.h3{font-size:1.125em;}h4,.h4{font-size:1.1em;font-weight:700;}h5,.h5{font-size:0.846em;line-height:2.09em;text-transform:uppercase;letter-spacing:2px;/*********************
 HEADER STYLES
-*********************/}.header{background-color:#000;}#logo{display:block;float:left;width:275px;/*********************
+*********************/}.header{background-color:#000;}#logo{display:block;float:left;width:275px;/*Hide massive graphical headers on mobile- reveal in 768px stylesheet*/}#logo img{width:75%;}#logo a{color:#fff;}.graphical-header{display:none;}.mobile-graphical-header{display:block;/*********************
 NAVIGATION STYLES
 *********************//*
 all navs have a .nav class applied via
@@ -403,7 +403,7 @@ the wp_menu function; this is so we can
 easily write one group of styles for
 the navs on the site so our css is cleaner
 and more scalable.
-*/}#logo img{width:75%;}#logo a{color:#fff;}#nav-toggle{position:absolute;right:-20px;top:3px;}#nav-toggle span{cursor:pointer;border-radius:1px;height:5px;width:35px;top:30px;background:white;position:absolute;display:block;content:'';}#nav-toggle span:after,#nav-toggle span:before{cursor:pointer;border-radius:1px;height:5px;width:35px;background:white;position:absolute;display:block;content:'';}#nav-toggle span:before{top:-10px;}#nav-toggle span:after{bottom:-10px;}#nav-toggle:focus{border:none;}nav{float:left;width:100%;}.nav{border-bottom:0;margin:0;/* end .nav *//*********************
+*/}#nav-toggle{position:absolute;right:-20px;top:3px;}#nav-toggle span{cursor:pointer;border-radius:1px;height:5px;width:35px;top:30px;background:white;position:absolute;display:block;content:'';}#nav-toggle span:after,#nav-toggle span:before{cursor:pointer;border-radius:1px;height:5px;width:35px;background:white;position:absolute;display:block;content:'';}#nav-toggle span:before{top:-10px;}#nav-toggle span:after{bottom:-10px;}#nav-toggle:focus{border:none;}nav{float:left;width:100%;}.nav{border-bottom:0;margin:0;/* end .nav *//*********************
 MARKETO FORMS
 **********************/}.nav li{/* end .menu li */}.nav li a{display:block;font-size:1.5em;color:#fff;text-decoration:none;text-transform:uppercase;/*
 			remember this is for mobile ONLY, so there's no need
@@ -494,7 +494,7 @@ you can add resource intensive styles.
 LAYOUT & GRID STYLES
 *********************/}.home .rev_slider_wrapper{display:block !important;}.wrap{width:95%;/*********************
 HEADER STYLES
-*********************/}#logo{/*********************
+*********************/}.graphical-header{display:block;width:100%;}.graphical-header img{max-width:100%;}.mobile-graphical-header{display:none;}#logo{/*********************
 NAVIGATION STYLES
 *********************//***************************
 BLOG-Landing Page
