@@ -167,20 +167,43 @@ style a page via class
 } 
 
 .arrow_to_infinity {
-	width: 75%;
+	width: 100%;
 	display: block;
 	height: 40px;
-	margin-left: 5em;
 	float: left;
 	opacity: 0.5;
 	background: url(../images/blog-images/sidebar_arrow_to_infinity.png) no-repeat;
 	background-size: 100%;
 }
 
-
 .featured-post {
-	.arrow_to_infinity {
-		width: 66%;
+	h1 {
+		text-align: center;
+	}
+}
+
+.image-inner {
+	img {
+		display: block;
+		margin: auto;
+	}
+}
+
+.title_info_container {
+	text-align: center;
+}
+
+
+.single {
+	.single-twit {
+		position: relative;
+		display: block;
+		width: 100%;
+		top: auto;
+
+		img {
+			max-width: 100%;
+		}
 	}
 }
 

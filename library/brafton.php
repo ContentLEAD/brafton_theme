@@ -1699,7 +1699,7 @@ function subcategory_links() {
 }
 
 function subcategory_sidebar_links() {
-	$cats = array("seo", "content-marketing", "contentwriting", "contentanalytics", "videomarketing", "socialmedia" );
+	$cats = array("seo", "content-marketing", "contentwriting", "contentanalytics", "videomarketing", "videos", "graphics", "socialmedia" );
 	foreach($cats as $cat) {
 		echo '<div class="d-1of3 t-1of3 m-1of3">';
 			echo '<a href="/' .$cat. '-archive"><div class="subcategory-image ' . $cat . '"></div></a>';

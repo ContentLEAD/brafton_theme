@@ -85,7 +85,7 @@
 										<?php comments_template(); ?>
 									</div>
 							</section>
-						<div class="sidebar d-1of3 last">
+						<div class="sidebar d-1of3 t-1of3 m-all">
 							<?php if ( !function_exists( "dynamic_sidebar" ) || !dynamic_sidebar( "Single Sidebar" ) ) : ?>
 								<p>Add Widgets to the Post Sidebar</p>
 							<?php endif; ?>

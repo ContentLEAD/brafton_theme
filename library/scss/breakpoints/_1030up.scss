@@ -8,9 +8,31 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
+
+
+
+/*fixed navbar ONLY on blog page*/
+
+.category-blog {
+	.header {
+		position: fixed;
+		z-index: 11000;
+	}
+
+	#archive {
+		margin-top: 70px;
+	}
+}
+
 .tagbar {
 	.tag {
-		padding: 1.3em 2%;
+		padding: 13px 2%;
+	}
+}
+
+.featured-post {
+	.image-inner {
+		width: 22%;
 	}
 }
 
@@ -22,6 +44,7 @@ be seen on the Desktop.
 		.meta-wrapper {
 			display: inline-block;
 		}
+
 	}
 }
 
@@ -177,4 +200,35 @@ nav {
 	position: absolute;
 	right: 0;
 	top: 15%;
+}
+
+/*Special considerations for twits*/
+
+.tagged-twit {
+
+	#topinfo {
+		width: 95%;
+		min-height: 225px;
+	}
+
+	.single-twit {
+		position: absolute;
+		width: 55%;
+		left: 5%;
+		top: 200px;
+
+		img {
+			width: 100%;
+			max-width: 750px;
+		}
+	}
+
+	.author-cat-time-container {
+		float: right;
+		width: 33%;
+	}
+
+	 .entry-content {
+		margin-top: 20%;
+	}
 }

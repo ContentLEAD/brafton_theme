@@ -265,13 +265,14 @@ jQuery(document).ready(function($) {
             if ( $window.scrollTop() < pos ) {
                 $this.css({
                     position: 'relative',
-                    top: 0
+                    top: 0,
+                    width: '420px'
                 });
             } else {
                 $this.css({
                     position: 'fixed',
                     top: '25px',
-                    width: '350px'
+                    width: '420px'
                 });
             }
         });

@@ -58,7 +58,7 @@ BLOG-Landing Page
 .tagbar {
 	background: rgba(0, 0, 0, 0.6);
 	background-size: 100%;
-	height: 40px;
+	height: auto;
 
 	.selected.tag {
 		background: $green;
@@ -69,7 +69,7 @@ BLOG-Landing Page
 
 	.tag {
 		display: inline-block;
-		padding: 10px .7%;
+		padding: 13px .7%;
 		color: $white;
 		font-size: 0.6em;
 		font-weight: bold;
@@ -104,6 +104,14 @@ BLOG-Landing Page
 		margin-top: 20px;
 	}
 }
+
+.arrow_to_infinity {
+	width: 100%;
+	display: block;
+	height: 40px;
+	margin-left: 5em;
+}
+
 
 /*#topinfo- container for an individual post.  Shared by both
 the featured post and the remaining posts....*/
@@ -147,6 +155,7 @@ the featured post and the remaining posts....*/
 		float: left;
 		position: absolute;
 		bottom: 8px;
+		left: 115px;
 	}
 
 	.readtime {
@@ -185,6 +194,10 @@ the featured post and the remaining posts....*/
 	background-size: 100%;
 	margin-bottom: 2em;
 
+	.arrow_to_infinity {
+		width: 66%;
+	}
+
 	h1 {
 		background: none;
 		color: $black;
@@ -196,6 +209,7 @@ the featured post and the remaining posts....*/
 		display: block;
 		padding-bottom: 0px;
 		margin: 0.25em 2em;
+		text-align: left;
 	}
 
 	h2 {
@@ -205,7 +219,7 @@ the featured post and the remaining posts....*/
 
 	.image-inner {
 		margin: 1em 1em 0 5em;
-		width: 22%;
+		width: 37%;
 	}
 
 	#topinfo {
@@ -213,8 +227,13 @@ the featured post and the remaining posts....*/
 		.author {
 			display: inline-block;
 		}
+
+		.meta-wrapper {
+			left: 117px;
+		}
 	}
 }
+
 
 .blog_header {
 
@@ -229,6 +248,7 @@ the featured post and the remaining posts....*/
 	padding-bottom: 10px;
 	width: 100%;
 	display: inline-block;
+	text-align: left;
 }
 
 .image-inner {
@@ -248,6 +268,10 @@ the featured post and the remaining posts....*/
 .secondary-blog {
 	article {
 		margin-bottom: 1em;
+	}
+
+	.arrow_to_infinity {
+		width: 66%;
 	}
 
 	h2 {
@@ -276,7 +300,16 @@ the featured post and the remaining posts....*/
 		}
 
 		.meta-wrapper {
+			left: 115px;
 			bottom: 13px;
+		}
+	}
+}
+
+.single {
+	.featured-post {
+		h1 {
+			font-size: 2em;
 		}
 	}
 }
@@ -296,16 +329,22 @@ the featured post and the remaining posts....*/
 		.single-twit {
 			position: absolute;
 			width: 55%;
-			top: -210px;
+			left: 5%;
+			top: 200px;
+
+			img {
+				width: 100%;
+				max-width: 750px;
+			}
 		}
 
 		.author-cat-time-container {
 			float: right;
-			width: 40%;
+			width: 33%;
 		}
 
-		 #body {
-			margin-top: 230px;
+		 .entry-content {
+			margin-top: 13%;
 		}
 
 	}

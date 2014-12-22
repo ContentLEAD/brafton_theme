@@ -87,6 +87,18 @@
 			@include subcat(url(../images/blog-images/subcategory_thumbs/videomarketing.png) no-repeat)
 		}
 
+		/*graphics*/
+
+		.graphics {
+			@include subcat(url(../images/blog-images/subcategory_thumbs/graphics.png) no-repeat)
+		}
+		
+		/*videos*/
+
+		.videos {
+			@include subcat(url(../images/blog-images/subcategory_thumbs/videos.png) no-repeat)
+		}
+
 		/*socialmedia*/
 
 		.socialmedia {
