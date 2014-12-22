@@ -90,13 +90,28 @@ BLOG-Landing Page
 	}
 }
 
+.sidebar_tags {
+	@extend .tagbar;
+	background: $white;
+
+	.tag {
+		background: $off-black;
+		opacity: 0.8;
+		font-size: 0.55em !important;
+		border: 2px solid $off-black;
+		border-style: ridge;
+		margin-right: 10px;
+		margin-top: 20px;
+	}
+}
+
 /*#topinfo- container for an individual post.  Shared by both
 the featured post and the remaining posts....*/
 
 #topinfo {
 
 	position: relative;
-	width: 60%;
+	width: 45%;
 	float: left;
 
 	a {

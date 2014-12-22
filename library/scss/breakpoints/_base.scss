@@ -1178,6 +1178,13 @@ SIDEBARS & ASIDES
 		clear: both;
 		margin-top: -81px;
 	}
+
+	.blog-hub-sidebar-feature {
+		&.downloadables {
+			max-height: 275px;
+			overflow: hidden;
+		}
+	}
 }
 
 	.widgettitle {}

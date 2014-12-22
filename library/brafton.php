@@ -1694,7 +1694,15 @@ function subcategory_links() {
 	$cats = get_the_category();
 	foreach($cats as $cat) {
 		$description = $cat->category_description;
-		echo '<a href="' .$description. '-archive"><div class="subcategory-image ' . $description . '"></div></a>';
+		echo '<a href="/' .$description. '-archive"><div class="subcategory-image ' . $description . '"></div></a>';
+	}
+}
+
+function subcategory_sidebar_links() {
+	$cats = get_categories();
+	foreach($cats as $cat) {
+		$description = $cat->category_description;
+		echo '<a href="/' .$description. '-archive"><div class="subcategory-image ' . $description . '"></div></a>';
 	}
 }
 
@@ -1775,23 +1783,17 @@ function blog_tagbar() {
 }
 
 function sidebar_tag_images() {
-		$tags = get_tags( 'hide_empty=0&exclude=202,204,205' );
+
+	$tags = get_tags( 'hide_empty=0&exclude=202,204,205&order=DESC' );
+
 	if ($tags) {
 
-		/*echo '<a href="' . get_site_url() . '/new-blog' . '">';
-		echo '<img class="all-tag" src="/wp-content/themes/b3/blog-images/tags/all.png"/>';	
-		echo '</a>';*/
-
 	    foreach($tags as $tag) {
-	  	
-		    $tagid = $tag->term_id;
-
+	  		$name= $tag->name;
 		    $slug = $tag->slug;
 
-		    $description = tag_description($tagid);
-
-		    echo '<a class="taglink" href="' . get_site_url() . '/tag/' . $slug . '">';
-			echo '<div class="sidebar-tag-image '. $slug . '"></div>';
+		    echo '<a class="taglink" href="/tag/' . $slug . '">';
+			echo '<div class="tag">' . $name . '</div>';
 			echo '</a>';
   		}
 	}
@@ -1814,7 +1816,7 @@ function blog_hub_sidebar_features( $content_type ) {
 
 	while( $sidebar_posts->have_posts() ) : $sidebar_posts->the_post();
 		echo '<a href="' . get_permalink() . '">';
-			echo '<div class="blog-hub-sidebar-feature">';
+			echo '<div class="blog-hub-sidebar-feature '. $content_type .'">';
 				the_post_thumbnail();
 			echo '</div>';
 		echo '</a>';
