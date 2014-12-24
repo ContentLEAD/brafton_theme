@@ -309,5 +309,15 @@ jQuery(document).ready(function($) {
     });
 
 
+    //ui effects for support page
+
+    $('.support-link-container').hide();
+
+    $('.support-cta').click(function() {
+        $(this).hide();
+        $('.support-link-container').fadeIn(400);
+    });
+
+
 
 }); /* end of as page load scripts */

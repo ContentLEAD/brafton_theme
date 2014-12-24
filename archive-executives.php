@@ -12,9 +12,9 @@
 							 <section class="entry-content m-all t-all d-all cf" itemprop="articleBody">
 									<h1 class="page-title mobile-graphical-header" itemprop="headline"><?php post_type_archive_title(); ?></h1>
 
-									<?php //if( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
+									<?php if( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 
-									<?php brafton_share( 'top' ); ?>
+									<?php //brafton_share( 'top' ); ?>
 
 											<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 												<article class="d-1of4 t-1of3 m-all exec_outer_container">

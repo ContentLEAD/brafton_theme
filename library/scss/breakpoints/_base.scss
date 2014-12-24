@@ -244,9 +244,18 @@ style a page via class
 }  
 
 .post-type-archive-support {
+
+	header {
+		h1 {
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+	}
 	#actions {
 		a {
+			width: 100%;
 			padding: 0.5em;
+			text-align: center;
 			text-decoration: none;
 			font-size: 1em;
 			border-radius: 5px;
@@ -257,22 +266,41 @@ style a page via class
 		font-weight: bold;
 	}
 
-	.floatlink {
-		background: $gold;
-		display: inline-block;
-		zoom: 1;
-		padding: 5px 0;
-		width: 145px;
-		text-align: center;
-		font-size: 0.85em;
+	#menu-support {
+		padding-left: 12px;
+		border-left: 2px solid $black;
+
+		li {
+
+			a {
+				text-decoration: none;
+				font-weight: bold;
+				text-transform: uppercase;
+				padding: 10px;
+				letter-spacing: 2px;
+				border-radius: 3px;
+
+				@include transition(all 0.2s);
+
+				&:hover {
+					background: $black;
+					color: $white;
+				}
+			}
+		}
 	}
 
-	.feature {
-		width: auto;
-		float: none;
-		display: inline-block;
+	.support-ul {
+		ul {
+			padding-left: 10px;
+		}
 	}
 }  
+
+.single-support {
+	@extend .post-type-archive-support;
+
+}
 
 .post-type-archive-infographic {
 
@@ -567,94 +595,99 @@ nav {
 	float: left;
 	width: 100%;
 }
-.nav {
-	border-bottom: 0;
-	margin: 0;
 
-	li {
+.header {
 
-		a {
-			display: block;
-			font-size: 1.5em;
-			color: $white;
-			text-decoration: none;
-			text-transform: uppercase;
-			padding: 0.5em;
+	.nav {
+		border-bottom: 0;
+		margin: 0;
+
+		li {
+
+			a {
+				display: block;
+				font-size: 1.5em;
+				color: $white;
+				text-decoration: none;
+				text-transform: uppercase;
+				padding: 0.5em;
+
+				/*
+				remember this is for mobile ONLY, so there's no need
+				to even declare hover styles here, you can do it in
+				the style.scss file where it's relevant. We want to
+				keep this file as small as possible!
+				*/
+				&:hover, &:focus {
+					text-decoration: none;
+				}
+			}
+
+			&:first-child {}
+
+			&:last-child {}
 
 			/*
-			remember this is for mobile ONLY, so there's no need
-			to even declare hover styles here, you can do it in
-			the style.scss file where it's relevant. We want to
-			keep this file as small as possible!
+			so you really have to rethink your dropdowns for mobile.
+			you don't want to have it expand too much because the
+			screen is so small. How you manage your menu should
+			depend on the project. Here's some great info on it:
+			http://www.alistapart.com/articles/organizing-mobile/
 			*/
-			&:hover, &:focus {
-				text-decoration: none;
-			}
-		}
+			ul.sub-menu,
+			ul.children {
 
-		&:first-child {}
+				li {
 
-		&:last-child {}
+					a {
+						padding-left: 75px;
 
-		/*
-		so you really have to rethink your dropdowns for mobile.
-		you don't want to have it expand too much because the
-		screen is so small. How you manage your menu should
-		depend on the project. Here's some great info on it:
-		http://www.alistapart.com/articles/organizing-mobile/
-		*/
-		ul.sub-menu,
-		ul.children {
+						&:hover,
+						&:focus {
+							color: $white;
+						}
 
-			li {
+						&:link {}
 
-				a {
-					padding-left: 75px;
-
-					&:hover,
-					&:focus {
-						color: $white;
 					}
 
-					&:link {}
+					&:first-child {}
+
+					&:last-child {}
 
 				}
 
-				&:first-child {}
-
-				&:last-child {}
-
 			}
 
-		}
+		} /* end .menu li */
 
-	} /* end .menu li */
+		li.highlight {
+			a {
+				background: #8dc01d;
+				color: #000;
+				font-weight: bold;
+				font-size: 1.5em;
 
-	li.highlight {
-		a {
-			background: #8dc01d;
-			color: #000;
-			font-weight: bold;
-			font-size: 1.5em;
+				@include transition(all 0.3s);
 
-			@include transition(all 0.3s);
-
-			&:hover {
-				color: $white;
+				&:hover {
+					color: $white;
+				}
 			}
 		}
-	}
 
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current_page_ancestor {
+		/* highlight current page */
+		li.current-menu-item,
+		li.current_page_item,
+		li.current_page_ancestor {
 
-		a {}
+			a {}
 
-	}  /* end current highlighters */
+		}  /* end current highlighters */
 
-} /* end .nav */
+	} /* end .nav */
+
+} /*end .header*/
 
 
 /*********************
@@ -692,6 +725,12 @@ form .req {
 	font-size: 0.9em;
 	margin-bottom: 0.5em;
 	width: 100%;
+}
+
+/*Support pages-Hide CMS bar on mobile devices*/
+
+.support-cms-bar {
+	display: none;
 }
 
 /*********************
@@ -1315,6 +1354,10 @@ FOOTER STYLES
 	clear: both;
 	background-color: $black;
 	color: $light-gray;
+
+	#top-footer {
+		display: none;
+	}
 }
 
 .bottom-case-cta {

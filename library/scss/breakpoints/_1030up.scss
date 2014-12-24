@@ -68,130 +68,134 @@ nav {
 	width: auto;
 }
 
-.nav {
-	float: right;
-	border: 0;
-	ul {
-		background:$white;
-		margin-top:0;
-	}
-	li {
-		float: left;
-		position: relative;
+.header {
 
-		a {
-			border-bottom: 0;
-			display: block;
-			font-size: 0.75em;
-			color: $white;
-			text-decoration: none;
-			text-transform: uppercase;
-			padding: 2.1em;
-			letter-spacing: 1px;
+	.nav {
+		float: right;
+		border: 0;
+		ul {
+			background:$white;
+			margin-top:0;
+		}
+		li {
+			float: left;
+			position: relative;
 
-			/*
-			you can use hover styles here even though this size
-			has the possibility of being a mobile device.
-			*/
-			&:hover, &:focus {
+			a {
+				border-bottom: 0;
+				display: block;
+				font-size: 0.75em;
 				color: $white;
 				text-decoration: none;
-			}
-		}
-
-		&:first-child {}
-		&:last-child {}
-
-		/*
-		plan your menus and drop-downs wisely.
-		*/
-		ul.sub-menu,
-		ul.children {
-			background: #fff;
-			margin-top: 0;
-			border: 0;
-			position: absolute;
-			visibility: hidden;
-			z-index: 8999;
-
-
-
-			li {
-
-				a {
-					background: $black;
-					color: $white;
-					padding-left: 10px;
-					//border: 2px solid $black !important;
-					display: block;
-					width: 180px;
-					padding: 0.75em;
-
-					@include transition(background 0.2s);
-
-					&:hover,
-					&:focus {
-						opacity: 0.8;
-					}
-
-
-					&:link {}
-				}
-
-				&:first-child {}
-
-				&:last-child {
-
-					a {
-						border-bottom: 0;
-					}
-				}
+				text-transform: uppercase;
+				padding: 2.1em;
+				letter-spacing: 1px;
 
 				/*
-				if you need to go deeper, go nuts
-				just remember deeper menus suck
-				for usability. k, bai.
+				you can use hover styles here even though this size
+				has the possibility of being a mobile device.
 				*/
-				ul {
-					top:0;
-					left:100%;
+				&:hover, &:focus {
+					color: $white;
+					text-decoration: none;
 				}
 			}
 
-			/* highlight sub-menu current page */
-			li.current-menu-item,
-			li.current_page_item,
-			li.current_page_ancestor {
-				a {}
+			&:first-child {}
+			&:last-child {}
+
+			/*
+			plan your menus and drop-downs wisely.
+			*/
+			ul.sub-menu,
+			ul.children {
+				background: #fff;
+				margin-top: 0;
+				border: 0;
+				position: absolute;
+				visibility: hidden;
+				z-index: 8999;
+
+
+
+				li {
+
+					a {
+						background: $black;
+						color: $white;
+						padding-left: 10px;
+						//border: 2px solid $black !important;
+						display: block;
+						width: 180px;
+						padding: 0.75em;
+
+						@include transition(background 0.2s);
+
+						&:hover,
+						&:focus {
+							opacity: 0.8;
+						}
+
+
+						&:link {}
+					}
+
+					&:first-child {}
+
+					&:last-child {
+
+						a {
+							border-bottom: 0;
+						}
+					}
+
+					/*
+					if you need to go deeper, go nuts
+					just remember deeper menus suck
+					for usability. k, bai.
+					*/
+					ul {
+						top:0;
+						left:100%;
+					}
+				}
+
+				/* highlight sub-menu current page */
+				li.current-menu-item,
+				li.current_page_item,
+				li.current_page_ancestor {
+					a {}
+				}
+			}
+
+			/* showing sub-menus */
+			&:hover > ul {
+				top: auto;
+				visibility:visible;
+			}
+
+		} /* end .menu ul li */
+
+		li.highlight {
+			a {
+				background: $green;
+				color: $black;
+				font-weight: bold;
+				font-size: 0.9em;
+				padding: 1.75em;
 			}
 		}
 
-		/* showing sub-menus */
-		&:hover > ul {
-			top: auto;
-			visibility:visible;
-		}
+		/* highlight current page */
+		li.current-menu-item,
+		li.current_page_item,
+		li.current_page_ancestor {
+			a {}
+		}  /* end current highlighters */
 
-	} /* end .menu ul li */
+	} /* end .nav */
 
-	li.highlight {
-		a {
-			background: $green;
-			color: $black;
-			font-weight: bold;
-			font-size: 0.9em;
-			padding: 1.75em;
-		}
-	}
-
-	/* highlight current page */
-	li.current-menu-item,
-	li.current_page_item,
-	li.current_page_ancestor {
-		a {}
-	}  /* end current highlighters */
-
-} /* end .nav */
+}/*end .header*/
 
 
 /*Bring up the sidebar on the blog hub page on larger devices...*/
@@ -230,5 +234,120 @@ nav {
 
 	 .entry-content {
 		margin-top: 20%;
+	}
+}
+
+/*Styles for support page cms bar */
+
+/*************
+Support page styles
+**************/
+.support-cms-bar {
+	display: block;
+	height: auto;
+	width: 100%;
+	float: left;
+	background: rgba(0,0,0,0.8);
+	text-transform: uppercase;
+
+	.support-link-container {
+		display: none;
+	}
+
+	.support-cta {
+		margin-right: 1em;
+
+		.get-help,
+		.choose-cms {
+
+			display: inline-block;
+			color: $white;
+			text-transform: uppercase;
+			font-weight: bold;
+			letter-spacing: 2px;
+			padding: 10px 10px;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		.get-help {
+			background: $green;
+			color: $black;
+		}
+	}
+
+	ul {
+		text-align: left;
+		display: inline;
+		margin: 0;
+		padding: 0;
+		font-weight: bold;
+		letter-spacing: 2px;
+		list-style: none;
+		-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+		-moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+
+		li {
+			display: inline-block;
+			font-size: 14px;
+			margin-right: -4px;
+			position: relative;
+			padding: 6px 19.5px;
+			cursor: pointer;
+			@include transition(all 0.2s);
+
+			a {
+				color: $white;
+				text-decoration: none;
+			}
+
+			&:hover {
+				background: $green;
+				color: $black;
+
+				ul {
+					display: block;
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+
+			ul {
+				padding: 0;
+				position: absolute;
+				top: 33px;
+				left: 0;
+				width: 150px;
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				box-shadow: none;
+				display: none;
+				opacity: 0;
+				visibility: hidden;
+				@include transition(opacity 0.2s);
+
+					li { 
+						background: rgba(0,0,0,0.8);
+						display: block; 
+						text-shadow: 0 -1px 0 #000;
+
+						@include transition(all 0.2s);
+
+						&:hover {
+							background: $green;
+
+						}
+
+						a {
+							&:hover {
+								color: $black;
+							}
+						}
+				}
+			}
+		}
 	}
 }

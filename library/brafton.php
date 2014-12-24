@@ -392,7 +392,7 @@ function create_post_types() {
 		)
 	);
 
-		register_post_type( 'case_studies',
+	register_post_type( 'case_studies',
 		array(
 			'labels' => array(
 				'name' => __( 'Case Studies' ),
@@ -434,7 +434,7 @@ function create_post_types() {
 		array(
 			'labels' => array(
 				'name' => __( 'Executives' ),
-				'singular_name' => __( 'Executive' ),
+				'singular_name' => __( 'Executives' ),
 				'all_items' => __( 'View Executives' ),
 				'add_new' => __( 'Add New Executive')
 			),
