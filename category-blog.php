@@ -11,7 +11,7 @@ $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
 //remember to add cat=25,19 query back in!!!
 
-$cat_posts = new WP_Query( 'posts_per_page=10&paged=' . $paged );
+$cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 
 //Pagination code================================================
 

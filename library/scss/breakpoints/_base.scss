@@ -245,6 +245,28 @@ style a page via class
 
 .post-type-archive-support {
 
+	#main {
+		min-height: 600px;
+	}
+
+	.article-header {
+		display: block;
+		width: 100%;
+	}
+
+	.feature {
+		margin-top: 1em;
+		background: none;
+		font-size: 1em;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		border-left: 2px solid $black;
+
+		p {
+			margin: 0 !important;
+		}
+	}
+
 	header {
 		h1 {
 			text-transform: uppercase;
@@ -264,6 +286,9 @@ style a page via class
 
 	h3 {
 		font-weight: bold;
+		font-size: 1.5em;
+		text-transform: uppercase;
+		letter-spacing: 2px;
 	}
 
 	#menu-support {
@@ -291,8 +316,29 @@ style a page via class
 	}
 
 	.support-ul {
+		/*indent submenus*/
 		ul {
-			padding-left: 10px;
+			padding-left: 50px;
+		}
+
+		li {
+
+			a {
+				text-decoration: none;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	table {
+		td {
+			padding: 8px;
+			border: 1px solid $black;
 		}
 	}
 }  

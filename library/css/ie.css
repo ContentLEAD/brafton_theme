@@ -210,7 +210,7 @@ Support page styles
 CSS3 GRADIENTS
 Be careful with these since they can
 really slow down your CSS. Don't overdo it.
-*********************//* @include css-gradient(#dfdfdf,#f8f8f8); */}.support-cms-bar ul li a{color:#fff;text-decoration:none;}.support-cms-bar ul li:hover{background:#8dc01d;color:#000;}.support-cms-bar ul li:hover ul{display:block;opacity:1;visibility:visible;}.support-cms-bar ul li ul{padding:0;position:absolute;top:33px;left:0;width:150px;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;display:none;opacity:0;visibility:hidden;-webkit-transition:opacity 0.2s;transition:opacity 0.2s;/*********************
+*********************//* @include css-gradient(#dfdfdf,#f8f8f8); */}.support-cms-bar ul li a{color:#fff;text-decoration:none;}.support-cms-bar ul li:hover{background:#8dc01d;color:#000;}.support-cms-bar ul li:hover ul{display:block;opacity:1;visibility:visible;}.support-cms-bar ul li ul{z-index:9999;padding:0;position:absolute;top:33px;left:0;width:150px;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;display:none;opacity:0;visibility:hidden;-webkit-transition:opacity 0.2s;transition:opacity 0.2s;/*********************
 CSS3 GRADIENTS
 Be careful with these since they can
 really slow down your CSS. Don't overdo it.
