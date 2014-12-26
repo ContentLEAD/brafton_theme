@@ -237,6 +237,23 @@ nav {
 	}
 }
 
+
+/*top footer fixes*/
+
+.footer {
+	#top-footer {
+		.footer-cta-container {
+			.footer-contact-us {
+				right: 90px;
+
+				a {
+					padding: 25px 40px;
+				}
+			}
+		}
+	}
+}
+
 /*Styles for support page cms bar */
 
 /*************

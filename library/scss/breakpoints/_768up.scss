@@ -540,5 +540,89 @@ FOOTER STYLES
 				}
 			}
 		}
+
+		.footer-cta-container{
+
+			margin: 2em 0;
+			text-align: center;
+			position: relative;
+
+			.footer-contact-us {
+				position: absolute;
+				right: 30px;
+				bottom: 40px;
+
+				a {
+					padding: 15px 10px;
+					border-radius: 2px;
+					background: $black;
+					color: $green;
+					font-weight: bold;
+					letter-spacing: 2px;
+					text-decoration: none;
+
+					@include transition(all 0.2s);
+
+					&:hover {
+						color: $black;
+						background: $green;
+					}
+				}
+			}
+
+			.follow-us {
+				text-align: center;
+				letter-spacing: 2px;
+				font-weight: 600;
+				font-size: 1.25em;
+				display: block;
+				width: 155px;
+				margin: auto;
+				background: #333;
+			}
+
+			.footer-social-icons {
+				height: 70px;
+				display: inline-block;
+				border-bottom: 2px solid lighten(#333, 8%);
+
+				.cube {
+					float: left;
+					height: 45px;
+					width: 45px;
+					margin: 5px;
+					background: url(/wp-content/themes/brafton/library/images/footer_social_sprite.png);
+					background-size: 390px 45px;
+					
+					&.footer-linkedin {
+						background-position: 331px 0px;
+					}				
+
+					&.footer-facebook {
+						background-position: 216px 0px;
+					}				
+
+					&.footer-gplus {
+						background-position: 160px 0px;
+					}				
+
+					&.footer-pinterest {
+						background-position: 273px 0px;
+					}				
+
+					&.footer-youtube {
+						background-position: 101px 0px;
+					}
+
+					&.footer-rss {
+						background-position: 47px 0px;
+					}
+
+					&:hover {
+						opacity: 0.8;
+					}
+				}
+			}
+		}
 	}
 }
