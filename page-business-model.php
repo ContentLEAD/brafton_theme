@@ -11,6 +11,8 @@ get_header(); ?>
 					<img src="<?php echo $header_img; ?>">
 				</div>
 
+				<?php brafton_share( 'top' ); ?>
+
 				<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
 				<div class="business_model_container">

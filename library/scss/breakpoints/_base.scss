@@ -489,7 +489,7 @@ BUSINESS MODEL LANDING PAGE TEMPLATE
 		}
 
 		.content_container {
-			padding: 3em 10em;
+			padding: 3em 0;
 		}
 
 		h2 {
@@ -499,6 +499,9 @@ BUSINESS MODEL LANDING PAGE TEMPLATE
 
 		.content_body {
 			text-align: justify;
+			width: 85%;
+			margin: auto;
+			display: block;
 		}
 	}
 
