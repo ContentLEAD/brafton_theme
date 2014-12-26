@@ -1,5 +1,5 @@
 			<footer class="footer d-all t-all m-all" role="contentinfo">
-				<?php if( is_post_type_archive( 'executives' ) ) { ?>
+				<?php if( is_post_type_archive( 'executives' ) || is_page(73683) ) { ?>
 					<div id="top-footer">
 						<nav role="navigation">
 							<?php wp_nav_menu(array(

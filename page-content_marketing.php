@@ -1,86 +1,84 @@
 <?php 
 /*
-**Template Name: Content Maketing
+**Template Name: Business Model Landing Page
 */
 
 get_header(); ?>
 
 			<div id="content">
+				<div class="graphical-header">
+					<?php $header_img = get_field( 'header_image_src' ); ?>
+					<img src="<?php echo $header_img; ?>">
+				</div>
 
-				<div id="inner-content" class="wrap cf">
+				<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
-						<div id="main" class="m-all t-all d-all cf" role="main">
+				<div class="business_model_container">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<div class="business_section what_is">
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+						<div class="content_container wrap">
+							<h2><strong>What</strong> is <?php the_title(); ?></h2>
+							<div class="content_body">
+								<?php $what = get_field( 'what_is_content' ); 
 
-								<header class="article-header">
+								echo $what;
 
-									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
-
-									<?php if( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
-
-									<?php brafton_share( 'top' ); ?>
-
-								</header> <?php // end article header ?>
-
-								<section class="entry-content cf" itemprop="articleBody">
-
-									<?php
-										// the content (pretty self explanatory huh)
-										the_content();
-
-										/*
-										 * Link Pages is used in case you have posts that are set to break into
-										 * multiple pages. You can remove this if you don't plan on doing that.
-										 *
-										 * Also, breaking content up into multiple pages is a horrible experience,
-										 * so don't do it. While there are SOME edge cases where this is useful, it's
-										 * mostly used for people to get more ad views. It's up to you but if you want
-										 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-										 *
-										 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-										 *
-										*/
-										wp_link_pages( array(
-											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-											'after'       => '</div>',
-											'link_before' => '<span>',
-											'link_after'  => '</span>',
-										) );
-									?>
-								</section> <?php // end article section ?>
-
-								<footer class="article-footer cf">
-
-								</footer>
-
-								<?php 
-								//No comments on the standard page template
-								//comments_template(); ?>
-
-							</article>
-
-							<?php endwhile; else : ?>
-
-									<article id="post-not-found" class="hentry cf">
-										<header class="article-header">
-											<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-										</header>
-										<section class="entry-content">
-											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the page.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
-
-							<?php endif; ?>
-
+								?>
+							</div>
 						</div>
 
+					</div>
+
+					<div class="business_section why_you_need">
+
+						<div class="content_container wrap">
+							<h2><strong>Why</strong> you need <?php the_title(); ?></h2>
+							<div class="content_body">
+								<?php $why = get_field( 'why_you_need_content' ); 
+
+								echo $why;
+
+								?>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="business_section how_it_works">
+
+						<div class="content_container wrap">
+							<h2><strong>How</strong> <?php the_title(); ?> works</h2>
+							<div class="content_body">
+								<?php $how = get_field( 'how_it_works' ); 
+
+								echo $how;
+
+								?>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="business_section learn_more">
+
+						<div class="content_container wrap">
+							<h2><strong>Learn more</strong> about real results</h2>
+							<div class="content_body">
+								<?php $learn = get_field( 'learn_more' ); 
+
+								echo $learn;
+
+								?>
+							</div>
+						</div>
+
+					</div>
+
+
 				</div>
+
+				<?php endwhile; endif; ?>
 
 			</div>
 

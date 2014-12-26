@@ -470,6 +470,40 @@ style a page via class
 	}
 }
 
+
+/*********************
+BUSINESS MODEL LANDING PAGE TEMPLATE
+*********************/
+
+.business_model_container {
+
+	.business_section {
+		width: 100%;
+
+		&.why_you_need {
+			background: darken($light-grey, 5%);
+		}
+
+		&.learn_more {
+			background: lighten($green, 30%);
+		}
+
+		.content_container {
+			padding: 3em 10em;
+		}
+
+		h2 {
+			text-transform: uppercase;
+			text-align: center;
+		}
+
+		.content_body {
+			text-align: justify;
+		}
+	}
+
+}
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
