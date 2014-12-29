@@ -16,10 +16,11 @@ get_header(); ?>
 
 				<div class="services_container">
 
-					<div class="services_section brafton_offers">
+					<div class="business_section brafton_offers">
 
 						<div class="content_container wrap">
 							<div class="content_body">
+								<strong>Brafton Offers</strong>
 								<?php $offer = get_field( 'brafton_offers' ); 
 
 								echo $offer;
@@ -30,13 +31,30 @@ get_header(); ?>
 
 					</div>
 
-					<div class="services_section link_graphics">
+					<div class="business_section link_graphics">
+						<div class="link_graphics_inner">
 
-						<!-- grpahics go here-->
+								<?php
+
+								//WP query for all children of business model
+								//get permalinks and set the sprite as featured image
+								//then add case studies manually for 9th item
+
+									for($i=0; $i<9; $i++) { ?>
+
+									<div class="d-1of3 t-1of3 m-all img_container"></div>
+
+								<?php
+
+									}
+
+								?>
+
+						</div>
 
 					</div>
 
-					<div class="services_section our_marketing_services">
+					<div class="business_section our_marketing_services">
 
 						<div class="content_container wrap">
 							<h2>Our Marketing <strong>Services</strong></h2>
@@ -51,11 +69,27 @@ get_header(); ?>
 
 					</div>
 
-					<div class="services_section learn_more">
+					<div class="business_section learn_more">
 
 						<div class="content_container wrap">
 							<h2><strong>Learn more</strong> about real results</h2>
-							<div class="content_body">
+							<div class="cta_image d-1of2 t-1of3 m-all">
+								<?php 
+
+									$link = get_field( 'cta_link' );
+									$image = get_field( 'client_cta' );
+
+									$src = $image['url'];
+
+								?>
+
+								<a href="<?php echo $link; ?>">
+									<img src="<?php echo $src; ?>"/>
+								</a>
+
+
+							</div>
+							<div class="learn_more_text d-1of2 t-1of3 m-all">
 								<?php $learn = get_field( 'learn_more' ); 
 
 								echo $learn;

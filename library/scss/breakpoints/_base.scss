@@ -499,11 +499,59 @@ BUSINESS MODEL LANDING PAGE TEMPLATE
 			text-align: center;
 		}
 
+		.content_container {
+			float: left;
+		}
+
 		.content_body {
 			text-align: justify;
 			width: 85%;
 			margin: auto;
 			display: block;
+		}
+	}
+}
+
+/*and for the marketing services page...*/
+
+.services_container {
+
+	@extend .business_model_container;
+
+	.business_section {
+
+		&.brafton_offers {
+
+			strong {
+				text-transform: uppercase;
+
+			}
+		}
+
+		&.link_graphics{
+			background: darken($light-grey, 5%);
+
+			.link_graphics_inner {
+
+				width: 75%;
+				display: block;
+				margin: auto;
+
+				.img_container {
+					height: 300px;
+					border: 1px solid black;
+				}
+			}
+		}
+
+		&.learn_more {
+			float: left;
+
+			img {
+				width: 300px;
+				display: block;
+				margin: auto;
+			}
 		}
 	}
 }
