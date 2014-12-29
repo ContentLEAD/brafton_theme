@@ -284,7 +284,7 @@ style a page via class
 		}
 	}
 
-	h3 {
+	h2, h3 {
 		font-weight: bold;
 		font-size: 1.5em;
 		text-transform: uppercase;
@@ -471,6 +471,8 @@ style a page via class
 }
 
 
+
+
 /*********************
 BUSINESS MODEL LANDING PAGE TEMPLATE
 *********************/
@@ -504,7 +506,46 @@ BUSINESS MODEL LANDING PAGE TEMPLATE
 			display: block;
 		}
 	}
+}
 
+.fixed-page-footer {
+	z-index: 9999;
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: rgba(255, 255, 255, 0.7);
+
+	.contact_us {
+
+		margin-left: 100px;
+
+		a {
+			text-transform: uppercase;
+			text-decoration: none;
+			font-size: 1.5em;
+			background: $green;
+			color: $off-black;
+			float: left;
+			padding: 8px;
+
+			@include transition(all 0.2s);
+
+			&:hover {
+				background: $off-black;
+				color: $green;
+			}
+		}
+
+		.conversation {
+			padding: 13px;
+			font-size: 1.2em;
+			margin-left: 5px;
+			display: inline-block;
+			float: left;
+		}
+	}
 }
 
 /*********************
@@ -1036,15 +1077,8 @@ PAGE NAVI STYLES
 }
 	.pagination{
     text-align: center;
-
-    ul {
-      display: inline-block;
-      background-color: $white;
-      white-space: nowrap;
-      padding: 0;
-      clear: both;
-      border-radius: 3px;
-    }
+    margin: 0 auto;
+    width: 50%;
 
     li {
       padding: 0;
@@ -1338,6 +1372,22 @@ SIDEBARS & ASIDES
 		&.downloadables {
 			max-height: 275px;
 			overflow: hidden;
+		}
+	}
+
+	.ourlatestfooter {
+
+		background: url(../images/blog-images/ourlatestfooter.jpg) no-repeat;
+		width: 420px;
+		height: 272px;
+		display: inline-block;
+		margin-top: 0;
+		margin-left: 0;
+		background-size: 100% !important;
+
+		&:hover {
+			background-position: 0px -272px;
+			cursor: pointer;
 		}
 	}
 }

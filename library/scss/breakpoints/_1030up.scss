@@ -49,7 +49,8 @@ be seen on the Desktop.
 }
 
 .arrow_to_infinity {
-	height: 60px;
+	height: 35px;
+	margin-top: 20px;
 }
 
 .wrap {
@@ -203,7 +204,15 @@ nav {
 .blog_sidebar {
 	position: absolute;
 	right: 0;
-	top: 15%;
+	top: 20%;
+}
+
+/*Special considerations for single blog posts*/
+
+.single {
+	#topinfo {
+		width: 66%;
+	}
 }
 
 /*Special considerations for twits*/
@@ -213,13 +222,14 @@ nav {
 	#topinfo {
 		width: 95%;
 		min-height: 225px;
+		margin-top: 60px;
 	}
 
 	.single-twit {
 		position: absolute;
 		width: 55%;
 		left: 5%;
-		top: 200px;
+		top: 280px;
 
 		img {
 			width: 100%;
@@ -233,7 +243,7 @@ nav {
 	}
 
 	 .entry-content {
-		margin-top: 20%;
+		margin-top: 300px;
 	}
 }
 

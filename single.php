@@ -28,15 +28,6 @@
 						<h1 itemprop="name headline"><?php the_title(); ?></h1>
 						</div>
 						<div class="author-cat-time-container">
-							<div class="author">
-								<a href="<?php echo $author['url']; ?>" class="user"><?php echo get_avatar($author['ID']); ?></a>
-								<span>by <?php if(get_the_author() != 'Editorial') : ?>
-									<a href="<?php echo $author['url']; ?>" title="Learn more about: <?php echo $author['name']; ?>" rel="author"><?php echo $author['name']; ?></a>
-									<?php else: ?>
-									Brafton Editorial
-									<?php endif; ?>
-								</span>
-							</div>
 							<div class="meta-wrapper">
 								<div class="readtime">
 									<img src="/wp-content/themes/brafton/library/images/blog-images/time.png"/>

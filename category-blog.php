@@ -63,6 +63,7 @@ $cat_posts->query_vars[ 'paged' ] > 1 ? $current = $cat_posts->query_vars[ 'page
     <?php } elseif( $i == 1 ) {  //second article starts a new d-2of3 section, in a wrapper for padding... ?>
     <div class="wrap">
     	<section class="d-5of7 t-2of3 m-all secondary-blog">
+    		<div class="arrow_to_infinity featured"></div>
 			<article class="d-all">
 	<?php } elseif ($i > 1 ) { //and the rest of the articles will just be wrapped in article tag, not in a new section ?>
 			<article class="d-all">
@@ -99,7 +100,9 @@ $cat_posts->query_vars[ 'paged' ] > 1 ? $current = $cat_posts->query_vars[ 'page
 							</div>	
 						</div>		
 				</div>
-			<div class="arrow_to_infinity"></div>
+			<?php if($i > 0) { ?>
+				<div class="arrow_to_infinity"></div>
+			<?php } ?>
 		</article>
 
 		<?php if( $i == 0 ) {

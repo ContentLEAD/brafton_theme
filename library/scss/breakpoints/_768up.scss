@@ -204,6 +204,8 @@ the featured post and the remaining posts....*/
 	}
 }
 
+
+
 /*some special considerations for the featured post*/
 
 
@@ -273,6 +275,8 @@ the featured post and the remaining posts....*/
 .image-inner {
 	margin: 1em 1em 0 5em;
 	width: 25%;
+	max-height: 340px;
+	overflow: hidden;
 	display: inline-block;
 	float: left;
 
@@ -285,12 +289,18 @@ the featured post and the remaining posts....*/
 /*Some special considerations for the secondary blog area*/
 
 .secondary-blog {
+	margin-bottom: 5em;
+
 	article {
 		margin-bottom: 1em;
 	}
 
 	.arrow_to_infinity {
 		width: 66%;
+
+		&.featured {
+			width: 100%;
+		}
 	}
 
 	h2 {
@@ -325,11 +335,27 @@ the featured post and the remaining posts....*/
 	}
 }
 
+/*And some special considerations just for single blog posts*/
+
 .single {
 	.featured-post {
 		h1 {
 			font-size: 2em;
 		}
+	}
+
+	#topinfo {
+		width: 45%;
+		margin-top: 60px;
+		height: 160px;
+
+		.meta-wrapper {
+			position: relative;
+		}
+	}
+
+	.arrow_to_infinity {
+		margin-left: 0;
 	}
 }
 
@@ -343,6 +369,7 @@ the featured post and the remaining posts....*/
 		#topinfo {
 			width: 95%;
 			min-height: 225px;
+			margin-top: 0px;
 		}
 
 		.single-twit {
