@@ -36,19 +36,41 @@ get_header(); ?>
 
 								<?php
 
-								//WP query for all children of business model
-								//get permalinks and set the sprite as featured image
-								//then add case studies manually for 9th item
+								$pages = get_pages("child_of=4233&exclude=4236");
 
-									for($i=0; $i<9; $i++) { ?>
 
-									<div class="d-1of3 t-1of3 m-all img_container"></div>
+								foreach($pages as $page) { ?>
+
+								<div class="d-1of3 t-1of3 m-all img_container">
+
+									<a href="<?php echo get_page_link($page->ID); ?>">
+
+										<?php $class = $page->post_name; ?>
+
+										<div class="<?php echo $class; ?> sprite"></div>
+
+									</a>
+
+								</div>
+
 
 								<?php
 
 									}
 
-								?>
+									//then, manually add client examples link...
+
+								 ?>
+
+
+
+
+								<div class="d-1of3 t-1of3 m-all img_container">
+
+									<div class="client-examples sprite"></div>
+
+								</div>
+		
 
 						</div>
 

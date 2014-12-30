@@ -488,6 +488,10 @@ BUSINESS MODEL LANDING PAGE TEMPLATE
 
 		&.learn_more {
 			background: lighten($green, 30%);
+
+			.content_container {
+				float: left;
+			}
 		}
 
 		.content_container {
@@ -499,9 +503,6 @@ BUSINESS MODEL LANDING PAGE TEMPLATE
 			text-align: center;
 		}
 
-		.content_container {
-			float: left;
-		}
 
 		.content_body {
 			text-align: justify;
@@ -533,13 +534,64 @@ BUSINESS MODEL LANDING PAGE TEMPLATE
 
 			.link_graphics_inner {
 
-				width: 75%;
+				width: 66%;
 				display: block;
 				margin: auto;
 
 				.img_container {
-					height: 300px;
-					border: 1px solid black;
+					overflow: hidden;
+					padding-bottom: 0.75em;
+
+					.sprite {
+
+						width: 100%;
+						height: 0;
+						padding-bottom: 99%;
+						background-position:0 0;
+						background-size: 100%;
+						display: block;
+
+
+						&:hover {
+							background-position: 0 100%;
+						}
+					}
+
+					.analytics {
+						background-image: url('/wp-content/themes/brafton/library/images/marketingservices/analytics.png');
+					}
+
+					.content-marketing {
+						background-image: url('/wp-content/themes/brafton/library/images/marketingservices/content.png');
+					}
+
+					.infographic-marketing {
+						background-image: url('/wp-content/themes/brafton/library/images/marketingservices/graphics.png');
+					}
+
+					.news-content-marketing {
+						background-image: url('/wp-content/themes/brafton/library/images/marketingservices/email.png');
+					}
+
+					.search-engine-optimization {
+						background-image: url('/wp-content/themes/brafton/library/images/marketingservices/seo.png');
+					}
+
+					.social-media-marketing {
+						background-image: url('/wp-content/themes/brafton/library/images/marketingservices/socialmedia.png');
+					}
+
+					.the-editorial-brief {
+						background-image: url('/wp-content/themes/brafton/library/images/marketingservices/writing.png');
+					}
+
+					.video-marketing {
+						background-image: url('/wp-content/themes/brafton/library/images/marketingservices/video.png');
+					}
+
+					.client-examples {
+						background-image: url('/wp-content/themes/brafton/library/images/marketingservices/clients.png');
+					}
 				}
 			}
 		}
