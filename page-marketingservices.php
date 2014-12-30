@@ -7,7 +7,8 @@ get_header(); ?>
 
 			<div id="content">
 				<div class="graphical-header">
-					<img src="/wp-content/themes/brafton/library/images/page-headers/marketingservices.png">
+					<img src="/wp-content/themes/brafton/library/images/page-headers/blank_header.png">
+					<h1>Our Marketing <strong>Services</strong></h1>
 				</div>
 
 				<?php brafton_share( 'top' ); ?>

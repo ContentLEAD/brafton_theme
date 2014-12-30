@@ -37,11 +37,20 @@ HEADER STYLES
 *********************/
 
 .graphical-header {
-	display: block;
 	width: 100%;
 
 	img {
+		display: block;
 		width: 100%;
+	}
+
+	h1 {
+		position: absolute;
+		top: 20%;
+		background: rgba($green, 0.8);
+		padding: 25px 100px;
+		width: 90%;
+		text-align: left;
 	}
 }
 

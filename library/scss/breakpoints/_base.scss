@@ -531,12 +531,14 @@ BUSINESS MODEL LANDING PAGE TEMPLATE
 
 		&.link_graphics{
 			background: darken($light-grey, 5%);
+			float: left;
 
 			.link_graphics_inner {
 
 				width: 66%;
 				display: block;
 				margin: auto;
+				padding-top: 0.75em;
 
 				.img_container {
 					overflow: hidden;
@@ -755,7 +757,35 @@ HEADER STYLES
 /*Hide massive graphical headers on mobile- reveal in 768px stylesheet*/
 
 .graphical-header {
-	display: none;
+	img {
+		display: none;
+	}
+
+	h1 {
+		position: relative;
+		display: block;
+		background: rgba($green, 0.8);
+		padding: 25px;
+		text-align: center;
+		width: 100%;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		float: left;
+		margin-top: 0;
+		font-size: 3.25em;
+
+		&:after {
+			content: "";
+			position: absolute;
+			border-bottom: 18px solid transparent;
+			border-top: 18px solid transparent;
+			top: 33%;
+			right: 0;
+			margin-left: -10px;
+			border-right: 20px solid white;
+			z-index: 1000;
+		}
+	}
 }
 
 .mobile-graphical-header {
