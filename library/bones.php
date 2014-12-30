@@ -165,6 +165,10 @@ function bones_scripts_and_styles() {
 
 		wp_enqueue_style( 'responsive-nav', get_stylesheet_directory_uri() . '/library/css/responsive-nav.css');
 
+		//Fixed-to-scroll jQuery plugin
+
+		wp_enqueue_script('fixed-scroll', get_stylesheet_directory_uri() . '/library/js/libs/jquery-scrolltofixed-min.js', array('jquery'), '1.1', false);
+
 		//Wacky images css
 
 		wp_enqueue_style( 'wacky-images', get_stylesheet_directory_uri() . '/library/css/wacky-images-style.css');

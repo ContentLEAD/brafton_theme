@@ -287,6 +287,16 @@ jQuery(document).ready(function($) {
         }
     };*/
 
+    //Scroll to fixed 
+
+
+    $(".fixed-page-footer").scrollToFixed( {
+        bottom:0,
+        limit: $(".fixed-page-footer").offset().top 
+    });
+
+
+
 
     //lightbox popup marketo form for blog and single post pages...
 
