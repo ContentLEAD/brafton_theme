@@ -764,6 +764,7 @@ HEADER STYLES
 /*Hide massive graphical headers on mobile- reveal in 768px stylesheet*/
 
 .graphical-header {
+
 	img {
 		display: none;
 	}
@@ -779,9 +780,9 @@ HEADER STYLES
 		text-transform: uppercase;
 		float: left;
 		margin-top: 0;
-		font-size: 3.25em;
+		font-size: 2.25em;
 
-		&:after {
+		/*&:after {
 			content: "";
 			position: absolute;
 			border-bottom: 18px solid transparent;
@@ -791,12 +792,8 @@ HEADER STYLES
 			margin-left: -10px;
 			border-right: 20px solid white;
 			z-index: 1000;
-		}
+		}*/
 	}
-}
-
-.mobile-graphical-header {
-	display: block;
 }
 
 /*********************

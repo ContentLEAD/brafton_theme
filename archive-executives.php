@@ -3,14 +3,15 @@
 			<div id="content">
 
 				<div class="graphical-header">
-					<img src="/wp-content/themes/brafton/library/images/page-headers/executives.png"/>
+					<img src="/wp-content/themes/brafton/library/images/page-headers/blank_header.png">
+					<h1>Our <strong>Executive</strong> Leadership</h1>
 				</div>
 
 				<div id="inner-content" class="wrap cf">
 
 						<div id="main" class="m-all t-all d-all cf" role="main">
 							 <section class="entry-content m-all t-all d-all cf" itemprop="articleBody">
-									<h1 class="page-title mobile-graphical-header" itemprop="headline"><?php post_type_archive_title(); ?></h1>
+
 
 									<?php if( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
 
@@ -75,6 +76,12 @@
 			<div class="exec_onclick_shadow">
 			</div>
 
+			</div>
+
+			<div class="fixed-page-footer">
+				<div class="contact_us">
+					<a href="/contact">Contact Us</a>
+				</div>
 			</div>
 
 
