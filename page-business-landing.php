@@ -7,8 +7,21 @@ get_header(); ?>
 
 			<div id="content">
 				<div class="graphical-header">
-					<?php $header_img = get_field( 'header_image_src' ); ?>
-					<img src="<?php echo $header_img; ?>">
+					<img src="/wp-content/themes/brafton/library/images/page-headers/blank_header.png">
+					
+					<?php 
+
+						$header = get_field( "h1" ); 
+
+						$pieces = explode(' ', $header);
+
+						$last_word = array_pop($pieces);
+
+						$first_words = implode(' ', $pieces);
+
+					?>
+
+					<h1><?php echo $first_words; ?> <strong><?php echo $last_word; ?></strong></h1>
 				</div>
 
 				<?php brafton_share( 'top' ); ?>
