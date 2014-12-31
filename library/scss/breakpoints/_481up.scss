@@ -26,14 +26,12 @@ them in here, they won't work.
 /*********************
 NAVIGATION STYLES
 *********************/
-#logo {
+.logo {
 
-	margin: 0.25em 0.5em;
-
-	img {
-		width: 250px;
-	}
+	margin: 0em 0.5em;
 }
+
+
 #nav-toggle {
   float: right;
 }

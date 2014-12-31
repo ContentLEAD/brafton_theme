@@ -737,16 +737,23 @@ HEADER STYLES
 *********************/
 
 .header {
-	background-color: #000;
+	background-color: $black;
 }
 
-	#logo {
-		display: block;
+.mobile_logo {
+	display: block;
+	width: 55px;
+}
+
+.full_logo {
+	display: none;
+	width: 275px;
+}
+	.logo {
 		float: left;
-		width: 275px;
 
 		img {
-			width: 75%;
+			width: 100%;
 		}
 
 		a {
