@@ -212,6 +212,14 @@ nav {
 .single {
 	#topinfo {
 		width: 66%;
+		margin-top: 40px;
+	}
+
+	.blog_header,
+	.featured-post {
+		h1 {
+			font-size: 2.75em;
+		}
 	}
 }
 
@@ -222,14 +230,14 @@ nav {
 	#topinfo {
 		width: 95%;
 		min-height: 225px;
-		margin-top: 60px;
+		margin-top: 40px;
 	}
 
 	.single-twit {
 		position: absolute;
 		width: 55%;
 		left: 5%;
-		top: 280px;
+		top: 245px;
 
 		img {
 			width: 100%;

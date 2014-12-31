@@ -349,13 +349,14 @@ the featured post and the remaining posts....*/
 .single {
 	.featured-post {
 		h1 {
-			font-size: 2em;
+			font-size: 1.75em;
+			text-transform: none;
 		}
 	}
 
 	#topinfo {
 		width: 45%;
-		margin-top: 60px;
+		margin-top: 10px;
 		height: 160px;
 
 		.meta-wrapper {
@@ -415,7 +416,7 @@ the featured post and the remaining posts....*/
 	margin: 0 !important;
 
 	.bio {
-		background: url(../images/blog-images/authorbackground.png);
+		background: rgba($green, 0.4);
 	}
 
 	.icons {

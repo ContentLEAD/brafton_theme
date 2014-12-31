@@ -58,15 +58,26 @@
 									<footer class="meta">
 										<?php if(get_the_author() != 'Editorial') { ?>
 										<div class="boilerplate">
-											<table><td class="author_avatar_container" style="background:#000"><a href="<?php echo $author['url']; ?>" class="user"><?php echo get_avatar($author['ID']); ?></a></td><td class="bio"><?php echo $author['description']; ?></td></table>
-											<a href="<?php echo $author['url']; ?>" title="View <?php echo $author['name']; ?>'s Profile" class="authorprofile"><img src="/wp-content/themes/b3/blog-images/auth_profile.png"/></a>
-											<div class="icons small">
-											<?php if( $author['linkedin'] ) echo "<a href='".$author['linkedin']."' class='cube linkedin'></a>"; ?> 
-											<?php if( $author['twitter'] ) echo "<a href='http://www.twitter.com/".$author['twitter']."' class='cube twitter'></a>"; ?> 
-											<?php if( $author['facebook'] ) echo "<a href='http://www.facebook.com/".$author['facebook']."' class='cube facebook'></a>"; ?> 
-											<?php if( $author['googleplus_id'] ) echo "<a href='https://plus.google.com/".$author['googleplus_id']."?rel=author' class='cube gplus'></a>"; ?></div>
-										</div>
-										<hr />
+											<div class="bio">
+												<div class="author_avatar_container">
+													<a href="<?php echo $author['url']; ?>" class="user"><?php echo get_avatar($author['ID']); ?></a>
+												</div>
+												<div class="description">
+													<?php echo $author['description']; ?>
+												</div>
+											</div>
+
+											<div class="author_meta">
+
+												<a href="<?php echo $author['url']; ?>" title="View <?php echo $author['name']; ?>'s Profile" class="authorprofile"><img src="/wp-content/themes/b3/blog-images/auth_profile.png"/></a>
+												<div class="icons small">
+													<?php if( $author['linkedin'] ) echo "<a href='".$author['linkedin']."' class='cube linkedin'></a>"; ?> 
+													<?php if( $author['twitter'] ) echo "<a href='http://www.twitter.com/".$author['twitter']."' class='cube twitter'></a>"; ?> 
+													<?php if( $author['facebook'] ) echo "<a href='http://www.facebook.com/".$author['facebook']."' class='cube facebook'></a>"; ?> 
+													<?php if( $author['googleplus_id'] ) echo "<a href='https://plus.google.com/".$author['googleplus_id']."?rel=author' class='cube gplus'></a>"; ?></div>
+												</div>
+
+											</div>
 									<?php } ?>
 									</footer>
 									<?php do_action('after_post_content'); ?>

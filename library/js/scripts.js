@@ -265,14 +265,12 @@ jQuery(document).ready(function($) {
             if ( $window.scrollTop() < pos ) {
                 $this.css({
                     position: 'relative',
-                    top: 0,
-                    width: '420px'
+                    top: 0
                 });
             } else {
                 $this.css({
                     position: 'fixed',
-                    top: '25px',
-                    width: '420px'
+                    top: '25px'
                 });
             }
         });
@@ -289,11 +287,14 @@ jQuery(document).ready(function($) {
 
     //Scroll to fixed 
 
+    if($(".fixed-page-footer").length) {
 
-    $(".fixed-page-footer").scrollToFixed( {
-        bottom:0,
-        limit: $(".fixed-page-footer").offset().top 
-    });
+        $(".fixed-page-footer").scrollToFixed( {
+            bottom:0,
+            limit: $(".fixed-page-footer").offset().top 
+        });
+
+    }
 
 
 

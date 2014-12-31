@@ -1125,6 +1125,31 @@ POSTS & CONTENT STYLES
 				}
 			}
 
+			.boilerplate {
+				.bio {
+					overflow: hidden;
+
+					.description {
+						padding: 10px;
+					}
+				}
+
+				.author_avatar_container {
+					padding: 0;
+					width: 80px;
+					float: left;
+					margin-right: 10px;
+
+					img {
+						margin-bottom: 0;
+					}
+				}
+
+				.author_meta {
+					margin-top: 10px;
+				}
+			}
+
 			blockquote {
 				margin: 0 0 1.5em 0.75em;
 				padding: 0 0 0 0.75em;
@@ -1506,15 +1531,16 @@ SIDEBARS & ASIDES
 	.ourlatestfooter {
 
 		background: url(../images/blog-images/ourlatestfooter.jpg) no-repeat;
-		width: 420px;
-		height: 272px;
-		display: inline-block;
-		margin-top: 0;
-		margin-left: 0;
+		background-position: 0 0;
+		height: 0;
+		width: 100%;
+		padding-bottom: 64%;
+		display: block;
 		background-size: 100% !important;
+		margin-left: 0;
 
 		&:hover {
-			background-position: 0px -272px;
+			background-position: 0 100%;
 			cursor: pointer;
 		}
 	}
