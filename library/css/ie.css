@@ -180,7 +180,7 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/}.graphical-header{width:100%;}.graphical-header img{display:block;width:100%;}.graphical-header h1{position:absolute;top:160px;background:rgba(141, 192, 29, 0.8);padding:25px 100px;width:90%;text-align:left;}.mobile-graphical-header{display:none;}.post-type-archive-executives{/*********************
 NAVIGATION STYLES
-*********************//*move from mobile menu to desktop menu...*/}.post-type-archive-executives #crumbs{margin-bottom:1em;}nav{float:right;width:auto;}.header{/*end .header*//***************************
+*********************//*move from mobile menu to desktop menu...*/}.post-type-archive-executives #crumbs{margin-bottom:1em;}.mobile_logo{display:block;}.full_logo{display:none;}nav{float:right;width:auto;}.header{/*end .header*//***************************
 BLOG-Landing Page
 ****************************/}.header .nav{float:right;border:0;/* end .nav */}.header .nav ul{background:#fff;margin-top:0;}.header .nav li{float:left;position:relative;/* end .menu ul li */}.header .nav li a{border-bottom:0;display:block;font-size:0.65em;color:#fff;text-decoration:none;text-transform:uppercase;padding:2.1em;/*
 				you can use hover styles here even though this size

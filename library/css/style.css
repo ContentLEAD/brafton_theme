@@ -405,7 +405,7 @@ H1, H2, H3, H4, H5 STYLES
 	http://css-tricks.com/watch-your-font-weight/
 	*//* removing text decoration from all headline links */font-weight:500;}h1 a,.h1 a,h2 a,.h2 a,h3 a,.h3 a,h4 a,.h4 a,h5 a,.h5 a{text-decoration:none;}h1,.h1{font-size:2.5em;line-height:1.333em;}h2,.h2{font-size:1.75em;line-height:1.4em;margin-bottom:0.375em;}h3,.h3{font-size:1.125em;}h4,.h4{font-size:1.1em;font-weight:700;}h5,.h5{font-size:0.846em;line-height:2.09em;text-transform:uppercase;letter-spacing:2px;/*********************
 HEADER STYLES
-*********************/}.header{background-color:#000;}.mobile_logo{display:block;width:55px;}.full_logo{display:none;width:275px;}.logo{float:left;/*Hide massive graphical headers on mobile- reveal in 768px stylesheet*/}.logo img{width:100%;}.logo a{color:#fff;}.graphical-header img{display:none;}.graphical-header h1{position:relative;display:block;background:rgba(141, 192, 29, 0.8);padding:25px;text-align:center;width:100%;letter-spacing:2px;text-transform:uppercase;float:left;margin-top:0;font-size:3.25em;}.graphical-header h1:after{content:"";position:absolute;border-bottom:18px solid transparent;border-top:18px solid transparent;top:33%;right:0;margin-left:-10px;border-right:20px solid white;z-index:1000;}.mobile-graphical-header{display:block;/*********************
+*********************/}.header{background-color:#000;}.mobile_logo{display:none;width:55px;}.full_logo{display:block;width:275px;}.logo{float:left;/*Hide massive graphical headers on mobile- reveal in 768px stylesheet*/}.logo img{width:100%;}.logo a{color:#fff;}.graphical-header img{display:none;}.graphical-header h1{position:relative;display:block;background:rgba(141, 192, 29, 0.8);padding:25px;text-align:center;width:100%;letter-spacing:2px;text-transform:uppercase;float:left;margin-top:0;font-size:3.25em;}.graphical-header h1:after{content:"";position:absolute;border-bottom:18px solid transparent;border-top:18px solid transparent;top:33%;right:0;margin-left:-10px;border-right:20px solid white;z-index:1000;}.mobile-graphical-header{display:block;/*********************
 NAVIGATION STYLES
 *********************//*
 all navs have a .nav class applied via
@@ -506,7 +506,7 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/}.graphical-header{width:100%;}.graphical-header img{display:block;width:100%;}.graphical-header h1{position:absolute;top:160px;background:rgba(141, 192, 29, 0.8);padding:25px 100px;width:90%;text-align:left;}.mobile-graphical-header{display:none;}.post-type-archive-executives{/*********************
 NAVIGATION STYLES
-*********************//*move from mobile menu to desktop menu...*/}.post-type-archive-executives #crumbs{margin-bottom:1em;}nav{float:right;width:auto;}.header{/*end .header*//***************************
+*********************//*move from mobile menu to desktop menu...*/}.post-type-archive-executives #crumbs{margin-bottom:1em;}.mobile_logo{display:block;}.full_logo{display:none;}nav{float:right;width:auto;}.header{/*end .header*//***************************
 BLOG-Landing Page
 ****************************/}.header .nav{float:right;border:0;/* end .nav */}.header .nav ul{background:#fff;margin-top:0;}.header .nav li{float:left;position:relative;/* end .menu ul li */}.header .nav li a{border-bottom:0;display:block;font-size:0.65em;color:#fff;text-decoration:none;text-transform:uppercase;padding:2.1em;/*
 				you can use hover styles here even though this size
