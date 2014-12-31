@@ -87,7 +87,6 @@ get_header(); ?>
 			<div class="fixed-page-footer">
 				<div class="contact_us">
 					<a href="/contact">Contact Us</a>
-					<div class="conversation">for a conversation</div>
 				</div>
 			</div>
 

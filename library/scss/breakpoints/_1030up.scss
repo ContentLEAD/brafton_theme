@@ -269,6 +269,19 @@ nav {
 				}
 			}
 		}
+
+		nav {
+
+			ul.sub-menu,
+			ul.children {
+				
+				li {
+
+					display: block;
+
+				}
+			}
+		}
 	}
 }
 

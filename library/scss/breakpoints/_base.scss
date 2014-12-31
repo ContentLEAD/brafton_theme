@@ -616,10 +616,12 @@ BUSINESS MODEL LANDING PAGE TEMPLATE
 	display: block;
 	background: rgba(255, 255, 255, 0.7);
 	float: left;
+	text-align: center;
 
 	.contact_us {
 
-		margin-left: 100px;
+		display: inline-block;
+		margin: auto;
 
 		a {
 			text-transform: uppercase;
