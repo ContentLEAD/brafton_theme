@@ -474,6 +474,7 @@ style a page via class
 BRAFTON MISSION PAGE TEMPLATE 
 *********************/
 
+.page-template-page-content-writers-php,
 .page-template-page-mission-php {
 	.graphical-header {
 		h1 {
@@ -538,52 +539,67 @@ BRAFTON MISSION PAGE TEMPLATE
 
 
 /*********************
-BUSINESS MODEL LANDING PAGE TEMPLATE
+GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 *********************/
 
-.business_model_container {
+.gray_body {
+	background: darken($light-grey, 5%);
+	float: left;
+}
 
-	.business_section {
-		width: 100%;
-
-		&.why_you_need {
-			background: darken($light-grey, 5%);
-		}
-
-		&.learn_more {
-			background: lighten($green, 30%);
-
-			.content_container {
-				float: left;
-			}
-		}
-
-		.content_container {
-			padding: 3em 0;
-		}
-
-		h2 {
-			text-transform: uppercase;
-			text-align: center;
-		}
+.green_body {
+	background: lighten($green, 30%);
+	float: left;
+}
 
 
-		.content_body {
-			text-align: justify;
-			width: 85%;
-			margin: auto;
+.template_section {
+	width: 100%;
+	float: left;
+
+	.content_container {
+		padding: 3em 0;
+	}
+
+	&.learn_more {
+		float: left;
+	}
+
+
+	h2 {
+		text-transform: uppercase;
+		text-align: center;
+		margin-top: 0;
+	}
+
+
+	.content_body {
+		text-align: justify;
+		width: 85%;
+		margin: auto;
+		display: block;
+	}
+
+	&.learn_more {
+		float: left;
+		padding-bottom: 2em;
+
+		img {
+			width: 300px;
+			max-width: 100%;
 			display: block;
+			margin: auto;
 		}
 	}
 }
+
 
 /*and for the marketing services page...*/
 
 .services_container {
 
-	@extend .business_model_container;
 
-	.business_section {
+	.template_section {
 
 		&.brafton_offers {
 
@@ -594,7 +610,6 @@ BUSINESS MODEL LANDING PAGE TEMPLATE
 		}
 
 		&.link_graphics{
-			background: darken($light-grey, 5%);
 			float: left;
 
 			.link_graphics_inner {
@@ -659,16 +674,6 @@ BUSINESS MODEL LANDING PAGE TEMPLATE
 						background-image: url('/wp-content/themes/brafton/library/images/marketingservices/clients.png');
 					}
 				}
-			}
-		}
-
-		&.learn_more {
-			float: left;
-
-			img {
-				width: 300px;
-				display: block;
-				margin: auto;
 			}
 		}
 	}
@@ -1117,23 +1122,6 @@ POSTS & CONTENT STYLES
 		.post-id {}         /* post by id (i.e. post-3) */
 		.post {}            /* general post style */
 		.page {
-			.mission-statement {
-				h3 {
-					margin: 0.75em;
-					font-size: 1.65em;
-				}
-				ul {
-					list-style-type: disc;
-					padding: 2em;
-				}
-				div {
-					float: left;
-				}
-
-				p {
-					margin-bottom: 0;
-				}
-			}
 		}
 
 		/* post meta */

@@ -113,7 +113,7 @@ get_header(); ?>
 
 
 								</div>
-								<div class="learn_more_text d-1of2 t-1of3 m-all">
+								<div class="learn_more_text d-1of2 t-1of2 m-all">
 									<?php $learn = get_field( 'learn_more' ); 
 
 									echo $learn;

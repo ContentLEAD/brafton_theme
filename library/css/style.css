@@ -1846,14 +1846,14 @@ BRAFTON MISSION PAGE TEMPLATE
   .page .feature {
     text-align: center; }
 
-.page-template-page-mission-php .graphical-header h1 {
+.page-template-page-content-writers-php .graphical-header h1, .page-template-page-mission-php .graphical-header h1 {
   color: #fff;
   letter-spacing: 20px; }
 
 .mission_container {
   width: 100%;
   /*********************
-BUSINESS MODEL LANDING PAGE TEMPLATE
+GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 *********************/ }
   .mission_container img {
     width: 100%; }
@@ -1885,73 +1885,79 @@ BUSINESS MODEL LANDING PAGE TEMPLATE
       display: inline;
       font-size: 1.25em; }
 
-.business_model_container, .services_container {
+.gray_body {
+  background: #e4e4e6;
+  float: left; }
+
+.green_body {
+  background: #ceed89;
+  float: left; }
+
+.template_section {
+  width: 100%;
+  float: left;
   /*and for the marketing services page...*/ }
-  .business_model_container .business_section, .services_container .business_section {
-    width: 100%; }
-  .business_model_container .business_section.why_you_need, .services_container .business_section.why_you_need {
-    background: #e4e4e6; }
-  .business_model_container .business_section.learn_more, .services_container .business_section.learn_more {
-    background: #ceed89; }
-    .business_model_container .business_section.learn_more .content_container, .services_container .business_section.learn_more .content_container {
-      float: left; }
-  .business_model_container .business_section .content_container, .services_container .business_section .content_container {
+  .template_section .content_container {
     padding: 3em 0; }
-  .business_model_container .business_section h2, .services_container .business_section h2 {
+  .template_section.learn_more {
+    float: left; }
+  .template_section h2 {
     text-transform: uppercase;
-    text-align: center; }
-  .business_model_container .business_section .content_body, .services_container .business_section .content_body {
+    text-align: center;
+    margin-top: 0; }
+  .template_section .content_body {
     text-align: justify;
     width: 85%;
     margin: auto;
     display: block; }
+  .template_section.learn_more {
+    float: left;
+    padding-bottom: 2em; }
+  .template_section.learn_more img {
+    width: 300px;
+    max-width: 100%;
+    display: block;
+    margin: auto; }
 
-.services_container .business_section.brafton_offers strong {
+.services_container .template_section.brafton_offers strong {
   text-transform: uppercase; }
-  .services_container .business_section.link_graphics {
-    background: #e4e4e6;
+  .services_container .template_section.link_graphics {
     float: left; }
-    .services_container .business_section.link_graphics .link_graphics_inner {
+    .services_container .template_section.link_graphics .link_graphics_inner {
       width: 66%;
       display: block;
       margin: auto;
       padding-top: 0.75em; }
-    .services_container .business_section.link_graphics .link_graphics_inner .img_container {
+    .services_container .template_section.link_graphics .link_graphics_inner .img_container {
       overflow: hidden;
       padding-bottom: 0.75em; }
-      .services_container .business_section.link_graphics .link_graphics_inner .img_container .sprite {
+      .services_container .template_section.link_graphics .link_graphics_inner .img_container .sprite {
         width: 100%;
         height: 0;
         padding-bottom: 99%;
         background-position: 0 0;
         background-size: 100%;
         display: block; }
-        .services_container .business_section.link_graphics .link_graphics_inner .img_container .sprite:hover {
+        .services_container .template_section.link_graphics .link_graphics_inner .img_container .sprite:hover {
           background-position: 0 100%; }
-      .services_container .business_section.link_graphics .link_graphics_inner .img_container .analytics {
+      .services_container .template_section.link_graphics .link_graphics_inner .img_container .analytics {
         background-image: url('/wp-content/themes/brafton/library/images/marketingservices/analytics.png'); }
-      .services_container .business_section.link_graphics .link_graphics_inner .img_container .content-marketing {
+      .services_container .template_section.link_graphics .link_graphics_inner .img_container .content-marketing {
         background-image: url('/wp-content/themes/brafton/library/images/marketingservices/content.png'); }
-      .services_container .business_section.link_graphics .link_graphics_inner .img_container .infographic-marketing {
+      .services_container .template_section.link_graphics .link_graphics_inner .img_container .infographic-marketing {
         background-image: url('/wp-content/themes/brafton/library/images/marketingservices/graphics.png'); }
-      .services_container .business_section.link_graphics .link_graphics_inner .img_container .news-content-marketing {
+      .services_container .template_section.link_graphics .link_graphics_inner .img_container .news-content-marketing {
         background-image: url('/wp-content/themes/brafton/library/images/marketingservices/email.png'); }
-      .services_container .business_section.link_graphics .link_graphics_inner .img_container .search-engine-optimization {
+      .services_container .template_section.link_graphics .link_graphics_inner .img_container .search-engine-optimization {
         background-image: url('/wp-content/themes/brafton/library/images/marketingservices/seo.png'); }
-      .services_container .business_section.link_graphics .link_graphics_inner .img_container .social-media-marketing {
+      .services_container .template_section.link_graphics .link_graphics_inner .img_container .social-media-marketing {
         background-image: url('/wp-content/themes/brafton/library/images/marketingservices/socialmedia.png'); }
-      .services_container .business_section.link_graphics .link_graphics_inner .img_container .the-editorial-brief {
+      .services_container .template_section.link_graphics .link_graphics_inner .img_container .the-editorial-brief {
         background-image: url('/wp-content/themes/brafton/library/images/marketingservices/writing.png'); }
-      .services_container .business_section.link_graphics .link_graphics_inner .img_container .video-marketing {
+      .services_container .template_section.link_graphics .link_graphics_inner .img_container .video-marketing {
         background-image: url('/wp-content/themes/brafton/library/images/marketingservices/video.png'); }
-      .services_container .business_section.link_graphics .link_graphics_inner .img_container .client-examples {
+      .services_container .template_section.link_graphics .link_graphics_inner .img_container .client-examples {
         background-image: url('/wp-content/themes/brafton/library/images/marketingservices/clients.png'); }
-  .services_container .business_section.learn_more {
-    float: left; }
-    .services_container .business_section.learn_more img {
-      width: 300px;
-      display: block;
-      margin: auto; }
 
 .fixed-page-footer {
   height: 50px;
@@ -2266,16 +2272,6 @@ PAGE NAVI STYLES
     /* general post style */ }
   #content .page {
     /* post meta */ }
-  #content .page .mission-statement h3 {
-    margin: 0.75em;
-    font-size: 1.65em; }
-    #content .page .mission-statement ul {
-      list-style-type: disc;
-      padding: 2em; }
-    #content .page .mission-statement div {
-      float: left; }
-    #content .page .mission-statement p {
-      margin-bottom: 0; }
   #content .byline {
     color: #9fa6b4;
     font-style: italic;
@@ -3162,13 +3158,13 @@ the featured post and the remaining posts....*/ }
       /*********************
 BUSINESS MODEL LANDING PAGE TEMPLATE
 *********************/ }
-    .business_model_container, .services_container {
+    .business_model_container {
       /*********************
 SIDEBARS & ASIDES
 *********************/ }
-      .business_model_container .business_section, .services_container .business_section {
+      .business_model_container .business_section {
         display: block; }
-        .business_model_container .business_section .content_container, .services_container .business_section .content_container {
+        .business_model_container .business_section .content_container {
           padding: 3em 10em; }
     .sidebar {
       margin-top: 2.2em; }

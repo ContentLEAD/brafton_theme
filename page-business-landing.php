@@ -30,7 +30,7 @@ get_header(); ?>
 
 				<div class="business_model_container">
 
-					<div class="business_section what_is">
+					<div class="template_section what_is">
 
 						<div class="content_container wrap">
 							<h2><strong>What</strong> is <?php the_title(); ?></h2>
@@ -45,7 +45,7 @@ get_header(); ?>
 
 					</div>
 
-					<div class="business_section why_you_need">
+					<div class="template_section why_you_need gray_body">
 
 						<div class="content_container wrap">
 							<h2><strong>Why</strong> you need <?php the_title(); ?></h2>
@@ -60,7 +60,7 @@ get_header(); ?>
 
 					</div>
 
-					<div class="business_section how_it_works">
+					<div class="template_section how_it_works">
 
 						<div class="content_container wrap">
 							<h2><strong>How</strong> <?php the_title(); ?> works</h2>
@@ -75,7 +75,7 @@ get_header(); ?>
 
 					</div>
 
-					<div class="business_section learn_more">
+					<div class="template_section learn_more green_body">
 
 						<div class="content_container wrap">
 							<h2><strong>Learn more</strong> about real results</h2>
