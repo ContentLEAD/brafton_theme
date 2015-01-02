@@ -929,7 +929,7 @@ really slow down your CSS. Don't overdo it.
     font-size: 2.75em; }
 
 .tagged-twit {
-  /*top footer fixes*/ }
+  /*Title on mission page*/ }
   .tagged-twit #topinfo {
     width: 95%;
     min-height: 225px;
@@ -947,6 +947,11 @@ really slow down your CSS. Don't overdo it.
     width: 33%; }
   .tagged-twit .entry-content {
     margin-top: 300px; }
+
+.page-template-page-mission-php {
+  /*top footer fixes*/ }
+  .page-template-page-mission-php .graphical-header h1 {
+    font-size: 4em; }
 
 .footer {
   /*Styles for support page cms bar */

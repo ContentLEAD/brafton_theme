@@ -146,7 +146,6 @@ function bones_theme_customizer($wp_customize) {
 
 add_action( 'customize_register', 'bones_theme_customizer' );
 
-//And here begins the functions fun from Brafton.com
 
 
 

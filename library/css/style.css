@@ -1841,10 +1841,49 @@ really slow down your CSS. Don't overdo it.
 
 .page {
   /*********************
-BUSINESS MODEL LANDING PAGE TEMPLATE
+BRAFTON MISSION PAGE TEMPLATE 
 *********************/ }
   .page .feature {
     text-align: center; }
+
+.page-template-page-mission-php .graphical-header h1 {
+  color: #fff;
+  letter-spacing: 20px; }
+
+.mission_container {
+  width: 100%;
+  /*********************
+BUSINESS MODEL LANDING PAGE TEMPLATE
+*********************/ }
+  .mission_container img {
+    width: 100%; }
+  .mission_container .mission_row .subhead {
+    text-align: center;
+    font-size: 2em;
+    padding: 1em; }
+  .mission_container .mission_row .copy {
+    padding: 2em; }
+    .mission_container .mission_row .copy h2 {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 0;
+      font-size: 2.25em; }
+    .mission_container .mission_row .copy p {
+      font-size: 1.25em; }
+    .mission_container .mission_row .copy .item {
+      display: block;
+      width: 100%;
+      float: left;
+      margin-bottom: 1.25em; }
+    .mission_container .mission_row .copy .item .big {
+      font-size: 2.25em;
+      display: inline;
+      margin-right: 12px;
+      text-transform: uppercase;
+      letter-spacing: 3px; }
+    .mission_container .mission_row .copy .item .text {
+      display: inline;
+      font-size: 1.25em; }
 
 .business_model_container, .services_container {
   /*and for the marketing services page...*/ }
@@ -3314,7 +3353,7 @@ This is for the larger monitors and possibly full screen viewers.
       .single .blog_header h1, .single .featured-post h1, .single .blog_header h1 {
         font-size: 2.75em; }
     .tagged-twit {
-      /*top footer fixes*/ }
+      /*Title on mission page*/ }
       .tagged-twit #topinfo {
         width: 95%;
         min-height: 225px;
@@ -3332,6 +3371,10 @@ This is for the larger monitors and possibly full screen viewers.
         width: 33%; }
       .tagged-twit .entry-content {
         margin-top: 300px; }
+    .page-template-page-mission-php {
+      /*top footer fixes*/ }
+      .page-template-page-mission-php .graphical-header h1 {
+        font-size: 4em; }
     .footer {
       /*Styles for support page cms bar */
       /*************
