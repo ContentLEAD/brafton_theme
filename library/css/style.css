@@ -1910,6 +1910,43 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
     width: 85%;
     margin: auto;
     display: block; }
+  .template_section .content_body .testimonial_inner {
+    border-top: 16px solid #666;
+    text-align: center;
+    padding: 0.5em 2em;
+    margin-bottom: 1.5em;
+    background: #e4e4e6; }
+    .template_section .content_body .testimonial_inner p {
+      border-bottom: 1px solid #999;
+      padding-bottom: 1.5em;
+      font-size: 0.9em; }
+    .template_section .content_body .testimonial_inner .author {
+      font-size: 0.7em; }
+    .template_section .content_body .testimonial_inner img {
+      width: 100%;
+      padding: 1em; }
+  .template_section .content_body .reasons_inner {
+    padding: 2em;
+    margin-bottom: 2em;
+    background: #fff;
+    float: left; }
+    .template_section .content_body .reasons_inner img {
+      margin-right: 1.5em;
+      margin-bottom: 1.5em;
+      float: left; }
+  .template_section .content_body .team_inner {
+    display: inline-block;
+    text-align: center; }
+    .template_section .content_body .team_inner h4 {
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+    .template_section .content_body .team_inner .button {
+      width: 140px;
+      margin: 3em auto;
+      padding: 0.5em;
+      font-size: 0.6em;
+      text-decoration: none;
+      text-align: center; }
   .template_section.learn_more {
     float: left;
     padding-bottom: 2em; }
@@ -1918,6 +1955,30 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
     max-width: 100%;
     display: block;
     margin: auto; }
+  .template_section.learn_more .client_cta {
+    display: block;
+    margin-top: 1em;
+    padding: 0.3em;
+    width: 325px;
+    font-size: 1.2em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    background: #000;
+    color: #8dc01d;
+    border-radius: 2px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    /*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+    /* @include css-gradient(#dfdfdf,#f8f8f8); */ }
+    .template_section.learn_more .client_cta:hover {
+      background: #8dc01d;
+      color: #000; }
 
 .services_container .template_section.brafton_offers strong {
   text-transform: uppercase; }

@@ -15,23 +15,36 @@ get_header(); ?>
 
 				<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
-					<div class="template_section who">
+				<div class="template_section every_word">
 
 						<div class="content_container wrap">
-							<h2><strong>Who</strong> are Brafton's writers?</h2>
+							<h2><strong>Every word counts.</strong></h2>
+							<h2>Our writers deliver results</h2>
 							<div class="content_body">
+								<?php 
 
+									$word = get_field( 'every_word'); 
+
+									echo $word;
+
+								?>
 							</div>
 						</div>
 
 					</div>
 
-					<div class="template_section reasons gray_body">
+					<div class="template_section gray_body who">
 
 						<div class="content_container wrap">
-							<h2><strong>Here's 3 resons why</strong> you'll golf clap for our writers</h2>
+							<h2><strong>Who</strong> are Brafton's writers?</h2>
 							<div class="content_body">
+								<?php 
 
+									$who = get_field( 'who_are'); 
+
+									echo $who;
+
+								?>
 							</div>
 						</div>
 
@@ -42,7 +55,89 @@ get_header(); ?>
 						<div class="content_container wrap">
 							<h2><strong>The buzz</strong> on our content writers</h2>
 							<div class="content_body">
+								<?php for($i=1; $i<=4; $i++) { ?>
 
+									<div class="d-1of4 t-1of4 m-1of2 testimonial">
+										<div class="testimonial_inner">
+											<p>
+												<?php echo get_field( 'testimonial_' . $i ); ?>
+											</p>
+
+											<div class="author">
+												<?php echo get_field( 'author_' . $i ); ?> 
+											</div>
+
+											<?php $src = get_field( 'testimonial_' . $i . '_image' )['url']; ?>
+
+											<img src="<?php echo $src; ?>"/> 
+												
+
+										</div>
+
+									</div>
+
+								<?php } //end for loop ?>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="template_section reasons gray_body">
+
+						<div class="content_container wrap">
+							<h2><strong>Here's 3 resons why</strong> you'll golf clap for our writers</h2>
+							<div class="content_body">
+								
+								<?php for ($i=1; $i<=3; $i++) { ?>
+
+									<div class="reasons_inner">
+
+										<?php echo get_field( 'reason_' . $i ); ?>
+
+									</div>
+
+								<?php } //end for loop ?>
+
+							</div>
+						</div>
+
+					</div>
+
+					<div class="template_section team">
+
+						<div class="content_container wrap">
+							<h2><strong>Meet</strong> the team</h2>
+							<div class="content_body">
+								<?php
+
+									$posts = get_posts( 'include=73046' );
+									//be sure to add the rest of the posts when pushing to production...
+
+									foreach($posts as $post) {
+										setup_postdata( $post );
+
+										switch ($post->ID) {
+											case 73046:
+												$title = 'Our day-to-day';
+												break;
+											
+											default:
+												$title = '';
+												break;
+										}
+
+										?>
+
+										<div class="d-1of4 t-1of4 m-all team_inner">
+											<h4><strong><?php echo $title; ?></strong></h4>
+											<?php echo get_the_post_thumbnail( $post->ID ); ?>
+											<a class="button" href="<?php the_permalink(); ?>">Learn More</a>
+										</div>
+
+								<?php } //end foreach loop 
+
+									wp_reset_postdata();
+								?>
 							</div>
 						</div>
 
@@ -70,12 +165,13 @@ get_header(); ?>
 
 
 								</div>
-								<div class="learn_more_text d-1of2 t-1of2 m-all">
+								<div class="learn_more_text d-1of2 t-2of3 m-all">
 									<?php $learn = get_field( 'learn_more' ); 
 
 									echo $learn;
 
 									?>
+									<a class="client_cta" href="/case-studies">More Client Examples</a>
 								</div>
 
 							</div>

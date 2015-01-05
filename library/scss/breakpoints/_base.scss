@@ -578,6 +578,61 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 		width: 85%;
 		margin: auto;
 		display: block;
+
+		.testimonial_inner {
+			border-top: 16px solid lighten($off-black, 20%);
+			text-align: center;
+			padding: 0.5em 2em;
+			margin-bottom: 1.5em;
+			background: darken($light-grey, 5%);
+
+			p {
+				border-bottom: 1px solid lighten($off-black, 40%);
+				padding-bottom: 1.5em;
+				font-size: 0.9em;
+			}
+
+			.author {
+				font-size: 0.7em;
+			}
+
+			img {
+				width: 100%;
+				padding: 1em;
+			}
+		}
+
+		.reasons_inner {
+			padding: 2em;
+			margin-bottom: 2em;
+			background: $white;
+			float: left;
+
+			img {
+				margin-right: 1.5em;
+				margin-bottom: 1.5em;
+				float: left;
+			}
+		}
+
+		.team_inner {
+			display: inline-block;
+			text-align: center;
+
+			h4 {
+				text-transform: uppercase;
+				letter-spacing: 2px;
+			}
+
+			.button {
+				width: 140px;
+				margin: 3em auto;
+				padding: 0.5em;
+				font-size: 0.6em;
+				text-decoration: none;
+				text-align: center;
+			}
+		}
 	}
 
 	&.learn_more {
@@ -589,6 +644,28 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 			max-width: 100%;
 			display: block;
 			margin: auto;
+		}
+
+		.client_cta {
+			display: block;
+			margin-top: 1em;
+			padding: 0.3em;
+			width: 325px;
+			font-size: 1.2em;
+			letter-spacing: 3px;
+			text-transform: uppercase;
+			text-decoration: none;
+			text-align: center;
+			background: $black;
+			color: $green;
+			border-radius: 2px;
+
+			@include transition(all 0.2s);
+
+			&:hover {
+				background: $green;
+				color: $black;
+			}
 		}
 	}
 }
