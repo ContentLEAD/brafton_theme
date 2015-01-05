@@ -807,6 +807,8 @@ HEADER STYLES
 
 .header {
 	background-color: $black;
+	width: 100%;
+	margin-bottom: -10px;
 }
 
 .mobile_logo {
@@ -816,7 +818,7 @@ HEADER STYLES
 
 .full_logo {
 	display: block;
-	width: 275px;
+	width: 220px;
 }
 	.logo {
 		float: left;
@@ -1040,6 +1042,10 @@ MARKETO FORMS
 	}
 }
 
+.buttonSubmit {
+	height: 100px;
+}
+
 form .req {
 	border-left: 2px solid red;
 }
@@ -1047,7 +1053,6 @@ form .req {
 .feature {
 	padding: 0.75em;
 	background: $gold;
-	float: left;
 	font-weight: 600;
 	font-size: 0.9em;
 	margin-bottom: 0.5em;
@@ -1570,13 +1575,11 @@ SIDEBARS & ASIDES
 .sidebar {
 	img {
 		max-width: 100%;
+		width: 100%;
 	}
 
 	#testi {
-		height: 510px;
-		overflow: hidden;
-		clear: both;
-		margin-top: -81px;
+		display: none;
 	}
 
 	.blog-hub-sidebar-feature {
@@ -1620,6 +1623,7 @@ SIDEBARS & ASIDES
 
 		.search-icon {
 		    height: 31px;
+		    width: 31px;
 		}
 
 		#search-query {
@@ -1709,8 +1713,11 @@ FOOTER STYLES
 	display: none;
 }
 
-video {
+video,
+.sublime {
 	max-width: 100%;
+	/*firefox on mac fix*/
+	width: 100%;
 }
 
 #crumbs {

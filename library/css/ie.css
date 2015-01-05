@@ -345,7 +345,7 @@ HEADER STYLES
     width: 100%; }
   .graphical-header h1 {
     position: absolute;
-    top: 160px;
+    top: 150px;
     background: rgba(141, 192, 29, 0.8);
     padding: 25px 100px;
     width: 90%;
@@ -756,9 +756,8 @@ SIDEBARS & ASIDES
 .widget {
   padding: 0 10px;
   margin: 1em 0;
-  /*********************
-FOOTER STYLES
-*********************/ }
+  /*careers sidebar*/
+  /*side bar on careers page*/ }
   .widget ul li {
     margin-bottom: 0.75em; }
     .widget ul li a {
@@ -766,6 +765,21 @@ FOOTER STYLES
     .widget ul li ul {
       margin-top: 0.75em;
       padding-left: 1em; }
+
+.sidebar {
+  /*********************
+FOOTER STYLES
+*********************/ }
+  .sidebar #testi {
+    display: block;
+    height: 0;
+    padding-bottom: 150%;
+    overflow: hidden;
+    clear: both;
+    margin-top: -81px; }
+    .sidebar #testi .quote img {
+      width: auto;
+      height: auto; }
 
 .footer #top-footer {
   width: 100%;
@@ -896,6 +910,9 @@ really slow down your CSS. Don't overdo it.
   /*and increase font-size on larger devices*/ }
   .logo img {
     width: 92%; }
+
+.full_logo {
+  width: 275px; }
 
 .header {
   /*end .header*/ }

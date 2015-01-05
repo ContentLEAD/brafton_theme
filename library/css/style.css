@@ -2056,7 +2056,9 @@ HEADER STYLES
 *********************/ }
 
 .header {
-  background-color: #000; }
+  background-color: #000;
+  width: 100%;
+  margin-bottom: -10px; }
 
 .mobile_logo {
   display: none;
@@ -2064,7 +2066,7 @@ HEADER STYLES
 
 .full_logo {
   display: block;
-  width: 275px; }
+  width: 220px; }
 
 .logo {
   float: left;
@@ -2215,13 +2217,15 @@ really slow down your CSS. Don't overdo it.
   .mktField .mktFormText {
     width: 70%; }
 
+.buttonSubmit {
+  height: 100px; }
+
 form .req {
   border-left: 2px solid red; }
 
 .feature {
   padding: 0.75em;
   background: rgba(250, 219, 94, 0.7);
-  float: left;
   font-weight: 600;
   font-size: 0.9em;
   margin-bottom: 0.5em;
@@ -2541,12 +2545,10 @@ SIDEBARS & ASIDES
 *********************/ }
 
 .sidebar img {
-  max-width: 100%; }
+  max-width: 100%;
+  width: 100%; }
   .sidebar #testi {
-    height: 510px;
-    overflow: hidden;
-    clear: both;
-    margin-top: -81px; }
+    display: none; }
   .sidebar .blog-hub-sidebar-feature.downloadables {
     max-height: 275px;
     overflow: hidden; }
@@ -2572,7 +2574,8 @@ SIDEBARS & ASIDES
     font-weight: 100;
     text-transform: uppercase; }
   .widget .search-icon {
-    height: 31px; }
+    height: 31px;
+    width: 31px; }
   .widget #search-query {
     width: 66%;
     float: left;
@@ -2622,8 +2625,10 @@ FOOTER STYLES
 .bottom-case-cta {
   display: none; }
 
-video {
-  max-width: 100%; }
+video, .sublime {
+  /*firefox on mac fix*/
+  max-width: 100%;
+  width: 100%; }
 
 #crumbs {
   text-transform: uppercase;
@@ -2796,7 +2801,7 @@ HEADER STYLES
         width: 100%; }
       .graphical-header h1 {
         position: absolute;
-        top: 160px;
+        top: 150px;
         background: rgba(141, 192, 29, 0.8);
         padding: 25px 100px;
         width: 90%;
@@ -3174,9 +3179,8 @@ SIDEBARS & ASIDES
     .widget {
       padding: 0 10px;
       margin: 1em 0;
-      /*********************
-FOOTER STYLES
-*********************/ }
+      /*careers sidebar*/
+      /*side bar on careers page*/ }
       .widget ul li {
         margin-bottom: 0.75em; }
         .widget ul li a {
@@ -3184,6 +3188,20 @@ FOOTER STYLES
         .widget ul li ul {
           margin-top: 0.75em;
           padding-left: 1em; }
+    .sidebar {
+      /*********************
+FOOTER STYLES
+*********************/ }
+      .sidebar #testi {
+        display: block;
+        height: 0;
+        padding-bottom: 150%;
+        overflow: hidden;
+        clear: both;
+        margin-top: -81px; }
+        .sidebar #testi .quote img {
+          width: auto;
+          height: auto; }
     .footer #top-footer {
       width: 100%;
       float: left;
@@ -3321,6 +3339,8 @@ This is for the larger monitors and possibly full screen viewers.
       /*and increase font-size on larger devices*/ }
       .logo img {
         width: 92%; }
+    .full_logo {
+      width: 275px; }
     .header {
       /*end .header*/ }
       .header .nav {

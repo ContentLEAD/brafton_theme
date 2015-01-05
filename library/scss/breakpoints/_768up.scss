@@ -48,7 +48,7 @@ HEADER STYLES
 
 	h1 {
 		position: absolute;
-		top: 160px;
+		top: 150px;
 		background: rgba($green, 0.8);
 		padding: 25px 100px;
 		width: 90%;
@@ -687,6 +687,28 @@ SIDEBARS & ASIDES
 			}
 		}
 	}
+
+/*careers sidebar*/
+
+/*side bar on careers page*/
+
+.sidebar {
+	#testi {
+		display: block;
+		height: 0;
+		padding-bottom: 150%;
+		overflow: hidden;
+		clear: both;
+		margin-top: -81px;
+
+		.quote {
+			img {
+				width: auto;
+				height: auto;
+			}
+		}
+	}
+}
 
 /*********************
 FOOTER STYLES
