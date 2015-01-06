@@ -2,42 +2,6 @@
 
 get_header(); 
 
-$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-
-
-//Pagination code================================================
-
-$cat_posts->query_vars[ 'paged' ] > 1 ? $current = $cat_posts->query_vars[ 'paged' ] : $current = 1;
-
-        //set the "paginate_links" array to do what we would like it it. Check the codex for examples http://codex.wordpress.org/Function_Reference/paginate_links
-        $args = array(
-            'base' => @add_query_arg( 'paged', '%#%' ),
-            //'format' => '',
-            'showall' => false,
-            'prev_next' => true,
-            'end_size' => 0,
-            'mid_size' => 3,
-            'total' => $cat_posts->max_num_pages,
-            'current' => $current,
-            'type' => 'array'
-     	);
-
-    //build the paging links
-    if ( $wp_rewrite->using_permalinks() )
-        $args[ 'base' ] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'page/%#%/', 'paged' );
-
-    //more paging links
-    if ( !empty( $cat_posts->query_vars[ 's' ] ) )
-        $args[ 'add_args' ] = array( 's' => get_query_var( 's' ) );
-
-    $pagination = paginate_links($args);
-
-    //Unset total number from the array
-    unset( $pagination[count($pagination)-2] );
-
-
- //Then begin the blog html structure...
-
 ?>
 
 
@@ -94,13 +58,7 @@ $cat_posts->query_vars[ 'paged' ] > 1 ? $current = $cat_posts->query_vars[ 'page
 
 		<?php $i++; ?>
 		<?php endwhile; endif; ?>
-			<ul class="pagination">
-				<?php foreach($pagination as $pag) {
-					echo '<li>';
-					echo $pag;
-					echo '</li>';
-				} ?>
-			</ul>
+			<?php _paginate(); //see Brafton.php ?>
 		</section><!--this closes the d-2of3 section after the last article-->
 	</div>
 	<?php wp_reset_query(); ?>

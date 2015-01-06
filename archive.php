@@ -61,7 +61,8 @@
     endif;
 
     ?>
-		<?php  _paginate(); ?>
+		<?php  _paginate(); //See Brafton.php ?>
+	
 	</section><!--this closes the eightcol section after the last article-->
 	<div class="d-2of7 t-1of3 m-all sidebar">
 		<aside>

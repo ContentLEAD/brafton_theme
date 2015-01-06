@@ -345,7 +345,6 @@ style a page via class
 
 .single-support {
 	@extend .post-type-archive-support;
-
 }
 
 .post-type-archive-infographic {
@@ -423,11 +422,14 @@ style a page via class
 			margin-right: 1em;
 			text-transform: uppercase;
 			text-decoration: none;
-			color: $black;
-			padding: 0.85em;
+			color: #000;
+			padding: 0.5em;
 			font-size: 0.8em;
 			font-weight: bold;
 			letter-spacing: 2px;
+			float: left;
+			width: 125px;
+			text-align: center;
 		}
 	}
 }
@@ -885,7 +887,7 @@ HEADER STYLES
 .header {
 	background-color: $black;
 	width: 100%;
-	margin-bottom: -10px;
+	margin-bottom: -7px;
 }
 
 .mobile_logo {
@@ -921,7 +923,7 @@ HEADER STYLES
 		position: relative;
 		display: block;
 		background: rgba($green, 0.8);
-		padding: 25px;
+		padding: 20px;
 		text-align: center;
 		width: 100%;
 		letter-spacing: 2px;

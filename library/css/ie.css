@@ -338,7 +338,7 @@ HEADER STYLES
 
 .graphical-header {
   width: 100%;
-  max-height: 260px;
+  max-height: 225px;
   overflow: hidden; }
   .graphical-header img {
     display: block;
@@ -929,7 +929,7 @@ really slow down your CSS. Don't overdo it.
 .graphical-header {
   /*Bring up the sidebar on the blog hub page on larger devices...*/ }
   .graphical-header h1 {
-    font-size: 3.25em; }
+    font-size: 2.85em; }
 
 .blog_sidebar {
   position: absolute;

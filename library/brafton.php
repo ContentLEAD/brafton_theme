@@ -843,36 +843,61 @@ add_action( 'after_setup_theme', 'set_wp_test_cookie', 101 );*/
 
 
 // Pagination Function
-function _paginate(){
+function _paginate( $query ) {
 	
 	wp_reset_query();
 
 	global $wp_query, $wp_rewrite;
+	
+	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
-	$current = ($wp_query->query_vars['paged'] > 1) ? $wp_query->query_vars['paged'] : 1;
+	//If a custom query is passed, use that instead of the global
 
-	//echo '<h1>' . print_r($wp_query->query_vars['paged']) . '</h1>';
-
-	$pagination = array(
-		'total' => $wp_query->max_num_pages,
-		'current' => $current,
-		'type' => 'plain'
-	);
-
-	if( $wp_rewrite->using_permalinks() )
-		$pagination['base'] = user_trailingslashit( 
-			trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'page/%#%/', 'paged' 
-		);
-
-		$pagination_string = implode(', ', $pagination); 
-		$pagination_array = array_keys($pagination);
-		$pagination_keys_string = implode(', ', $pagination_array);
+	if( $query ) {
+		$wp_query = $query;
+	}
 
 
-		
-	$paging = paginate_links( $pagination );
-	if( $paging )
-		echo "<div id='pagination'>$paging</div>";
+	//Pagination code================================================
+
+	$wp_query->query_vars[ 'paged' ] > 1 ? $current = $wp_query->query_vars[ 'paged' ] : $current = 1;
+
+        //set the "paginate_links" array to do what we would like it it. Check the codex for examples http://codex.wordpress.org/Function_Reference/paginate_links
+        $args = array(
+            'base' => @add_query_arg( 'paged', '%#%' ),
+            //'format' => '',
+            'showall' => false,
+            'prev_next' => true,
+            'end_size' => 0,
+            'mid_size' => 3,
+            'total' => $wp_query->max_num_pages,
+            'current' => $current,
+            'type' => 'array'
+     	);
+
+    //build the paging links
+    if ( $wp_rewrite->using_permalinks() )
+        $args[ 'base' ] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'page/%#%/', 'paged' );
+
+    //more paging links
+    if ( !empty( $wp_query->query_vars[ 's' ] ) )
+        $args[ 'add_args' ] = array( 's' => get_query_var( 's' ) );
+
+    $pagination = paginate_links($args);
+
+    //Unset total number from the array
+    unset( $pagination[count($pagination)-2] );
+
+    //echo
+
+    echo '<ul class="pagination">';
+			 foreach($pagination as $pag) {
+					echo '<li>';
+					echo $pag;
+					echo '</li>';
+				} 
+	echo '</ul>';
+
 
 }
 
