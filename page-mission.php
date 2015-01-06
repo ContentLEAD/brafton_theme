@@ -9,7 +9,7 @@ get_header(); ?>
 				<div class="graphical-header">
 					<img src="/wp-content/themes/brafton/library/images/page-headers/blank_header.png">
 
-					<h1>Our Mission</h1>
+					<h1>Our <strong>Mission</strong></h1>
 				</div>
 
 				<div class="objectives mission_container">

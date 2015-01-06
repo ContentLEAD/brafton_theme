@@ -8,7 +8,7 @@ get_header(); ?>
 			<div id="content">
 				<div class="graphical-header">
 					<img src="/wp-content/themes/brafton/library/images/page-headers/blank_header.png">
-					<h1>Content Writers</h1>
+					<h1>Content <strong>Writers</strong></h1>
 				</div>
 
 				<?php brafton_share( 'top' ); ?>
@@ -57,7 +57,7 @@ get_header(); ?>
 							<div class="content_body">
 								<?php for($i=1; $i<=4; $i++) { ?>
 
-									<div class="d-1of4 t-1of4 m-1of2 testimonial">
+									<div class="d-1of4 t-1of2 m-all testimonial">
 										<div class="testimonial_inner">
 											<p>
 												<?php echo get_field( 'testimonial_' . $i ); ?>
@@ -69,7 +69,9 @@ get_header(); ?>
 
 											<?php $src = get_field( 'testimonial_' . $i . '_image' )['url']; ?>
 
-											<img src="<?php echo $src; ?>"/> 
+											<div class="company_logo">
+												<img src="<?php echo $src; ?>"/> 
+											</div>
 												
 
 										</div>
@@ -181,6 +183,12 @@ get_header(); ?>
 
 				<?php endwhile; endif; ?>
 
+			</div>
+
+			<div class="fixed-page-footer">
+				<div class="contact_us">
+					<a href="/contact">Contact Us</a>
+				</div>
 			</div>
 
 <?php get_footer(); ?>

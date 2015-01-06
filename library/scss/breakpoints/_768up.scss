@@ -67,6 +67,20 @@ HEADER STYLES
 }
 
 
+/*Content writers page*/
+
+
+.template_section {
+	.content_body {
+		.reasons_inner {
+			img {
+				display: inline-block;
+				float: left;
+			}
+		}
+	}
+}
+
 /**********************
 NAVIGATION STYLES
 *********************/

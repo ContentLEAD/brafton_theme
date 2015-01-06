@@ -355,12 +355,18 @@ HEADER STYLES
   display: none; }
 
 .post-type-archive-executives {
+  /*Content writers page*/ }
+  .post-type-archive-executives #crumbs {
+    margin-bottom: 1em; }
+
+.template_section {
   /**********************
 NAVIGATION STYLES
 *********************/
   /*move from mobile menu to desktop menu...*/ }
-  .post-type-archive-executives #crumbs {
-    margin-bottom: 1em; }
+  .template_section .content_body .reasons_inner img {
+    display: inline-block;
+    float: left; }
 
 .mobile_logo {
   display: block; }
@@ -946,7 +952,7 @@ really slow down your CSS. Don't overdo it.
     font-size: 2.75em; }
 
 .tagged-twit {
-  /*Title on mission page*/ }
+  /*top footer fixes*/ }
   .tagged-twit #topinfo {
     width: 95%;
     min-height: 225px;
@@ -964,11 +970,6 @@ really slow down your CSS. Don't overdo it.
     width: 33%; }
   .tagged-twit .entry-content {
     margin-top: 300px; }
-
-.page-template-page-mission-php {
-  /*top footer fixes*/ }
-  .page-template-page-mission-php .graphical-header h1 {
-    font-size: 4em; }
 
 .footer {
   /*Styles for support page cms bar */

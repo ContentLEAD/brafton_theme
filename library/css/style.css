@@ -1849,10 +1849,6 @@ BRAFTON MISSION PAGE TEMPLATE
   .page .feature {
     text-align: center; }
 
-.page-template-page-content-writers-php .graphical-header h1, .page-template-page-mission-php .graphical-header h1 {
-  color: #fff;
-  letter-spacing: 20px; }
-
 .mission_container {
   width: 100%;
   /*********************
@@ -1862,7 +1858,7 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
     width: 100%; }
   .mission_container .mission_row .subhead {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 1em; }
   .mission_container .mission_row .copy {
     padding: 2em; }
@@ -1925,8 +1921,10 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
       font-size: 0.9em; }
     .template_section .content_body .testimonial_inner .author {
       font-size: 0.7em; }
-    .template_section .content_body .testimonial_inner img {
-      width: 100%;
+    .template_section .content_body .testimonial_inner .company_logo {
+      height: 90px; }
+    .template_section .content_body .testimonial_inner .company_logo img {
+      width: 220px;
       padding: 1em; }
   .template_section .content_body .reasons_inner {
     padding: 2em;
@@ -1936,7 +1934,7 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
     .template_section .content_body .reasons_inner img {
       margin-right: 1.5em;
       margin-bottom: 1.5em;
-      float: left; }
+      display: block; }
   .template_section .content_body .team_inner {
     display: inline-block;
     text-align: center; }
@@ -1950,6 +1948,9 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
       font-size: 0.6em;
       text-decoration: none;
       text-align: center; }
+  .template_section.who .content_body img {
+    display: block;
+    margin: auto; }
   .template_section.learn_more {
     float: left;
     padding-bottom: 2em; }
@@ -2160,7 +2161,7 @@ and more scalable.
     padding: 20px;
     text-align: center;
     width: 100%;
-    letter-spacing: 2px;
+    letter-spacing: 8px;
     text-transform: uppercase;
     float: left;
     margin-top: 0;
@@ -2873,12 +2874,17 @@ HEADER STYLES
     .mobile-graphical-header {
       display: none; }
     .post-type-archive-executives {
+      /*Content writers page*/ }
+      .post-type-archive-executives #crumbs {
+        margin-bottom: 1em; }
+    .template_section {
       /**********************
 NAVIGATION STYLES
 *********************/
       /*move from mobile menu to desktop menu...*/ }
-      .post-type-archive-executives #crumbs {
-        margin-bottom: 1em; }
+      .template_section .content_body .reasons_inner img {
+        display: inline-block;
+        float: left; }
     .mobile_logo {
       display: block; }
     .full_logo {
@@ -3433,7 +3439,7 @@ This is for the larger monitors and possibly full screen viewers.
       .single .blog_header h1, .single .featured-post h1, .single .blog_header h1 {
         font-size: 2.75em; }
     .tagged-twit {
-      /*Title on mission page*/ }
+      /*top footer fixes*/ }
       .tagged-twit #topinfo {
         width: 95%;
         min-height: 225px;
@@ -3451,10 +3457,6 @@ This is for the larger monitors and possibly full screen viewers.
         width: 33%; }
       .tagged-twit .entry-content {
         margin-top: 300px; }
-    .page-template-page-mission-php {
-      /*top footer fixes*/ }
-      .page-template-page-mission-php .graphical-header h1 {
-        font-size: 4em; }
     .footer {
       /*Styles for support page cms bar */
       /*************
