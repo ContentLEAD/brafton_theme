@@ -996,7 +996,7 @@ really slow down your CSS. Don't overdo it.
 .single {
   /*Special considerations for twits*/ }
   .single #topinfo {
-    width: 66%;
+    width: 60%;
     margin-top: 40px; }
   .single .blog_header h1, .single .featured-post h1, .single .blog_header h1 {
     font-size: 2.75em; }
@@ -1006,7 +1006,7 @@ really slow down your CSS. Don't overdo it.
   .tagged-twit #topinfo {
     width: 95%;
     min-height: 225px;
-    margin-top: 40px; }
+    margin-top: 25px; }
   .tagged-twit .single-twit {
     position: absolute;
     width: 55%;

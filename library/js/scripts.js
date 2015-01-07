@@ -229,6 +229,13 @@ jQuery(document).ready(function($) {
         }
     }, ]);
 
+
+    //Hide social icons in mobile view when the menu is selected
+
+    $("#nav-toggle").click( function() {
+        $(".share.icons").hide();
+    });
+
     //slider on the careers sidebar...
     $("#testi img").load(function() {
         var divwidth = $("#testi img").width();
