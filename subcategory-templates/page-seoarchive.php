@@ -95,7 +95,7 @@ $cat_posts = new WP_Query( 'cat=50,203&posts_per_page=10&paged=' . $paged );
 		<a href="http://www.brafton.com/resources/reduce-reuse-recycle-repurpose-get-content"><div class="ourlatestfooter">
 		</div></a>
 
-		<div class="leadscon">
+		<div class="marketzine">
 		</div>
 
 		<div class="askamarketer">

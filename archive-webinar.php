@@ -77,7 +77,7 @@ get_header();
 		<a href="http://www.brafton.com/resources/reduce-reuse-recycle-repurpose-get-content"><div class="ourlatestfooter">
 		</div></a>
 
-		<div class="leadscon">
+		<div class="marketzine">
 		</div>
 
 		<div class="askamarketer">
@@ -88,7 +88,7 @@ get_header();
 <div class="blog_popup">
 	<div class="blog_popup_inner">
 		<h2>Get the <strong>Content Marketzine</strong></h2>
-		<?php echo do_shortcode( '[contact-form-7 id="54255" title="Newsletter Signup"]'); ?>
+		<?php echo do_shortcode( '[contact-form-7 id="54255" title="Newsletter Signup"]' ); ?>
 	</div>
 	<div class="blog_popup_exit">X</div>
 

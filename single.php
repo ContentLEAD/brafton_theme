@@ -103,7 +103,7 @@
 			<a href="http://www.brafton.com/resources/reduce-reuse-recycle-repurpose-get-content"><div class="ourlatestfooter">
 			</div></a>
 
-			<div class="leadscon">
+			<div class="marketzine">
 			</div>
 
 			<div class="askamarketer">

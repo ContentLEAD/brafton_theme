@@ -717,22 +717,22 @@ the featured post and the remaining posts....*/ }
 #comments h1 {
   margin-bottom: 20px; }
 
-.ourlatestfooter, .leadscon, .askamarketer {
+.ourlatestfooter, .marketzine, .askamarketer {
   width: 250px;
   height: 162px;
   display: inline-block;
   margin-top: -70px;
   background-size: 100% !important;
   margin-left: 20px; }
-  .ourlatestfooter:hover, .leadscon:hover, .askamarketer:hover {
+  .ourlatestfooter:hover, .marketzine:hover, .askamarketer:hover {
     background-position: 0px -163px;
     cursor: pointer; }
 
 .ourlatestfooter {
   background: url(../images/blog-images/ourlatestfooter.jpg) no-repeat; }
 
-.leadscon {
-  background: url(../images/blog-images/leadscon.jpg) no-repeat; }
+.marketzine {
+  background: url(../images/blog-images/marketzine.jpg) no-repeat; }
 
 .askamarketer {
   background: url(../images/blog-images/askamarketer.jpg) no-repeat; }

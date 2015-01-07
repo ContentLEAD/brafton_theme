@@ -323,7 +323,7 @@ jQuery(document).ready(function($) {
     $(".blog_popup").hide();
     $(".blog_popup_shadow").hide();
 
-    $(".leadscon").click(function() {
+    $(".marketzine").click(function() {
         $(".blog_popup").fadeIn(400);
         $(".blog_popup_shadow").show();
     });
