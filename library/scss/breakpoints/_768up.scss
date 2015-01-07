@@ -661,7 +661,7 @@ the featured post and the remaining posts....*/
 
 /*popup css*/
 
-.blog_popup_shadow {
+.popup_form_shadow {
 	z-index: 9997;
 	background: $black;
 	opacity: 0.6;
@@ -672,19 +672,19 @@ the featured post and the remaining posts....*/
 	left: 0;
 }
 
-.blog_popup {
+.popup_form {
 	display: inline-block;
 	position: fixed;
 	z-index: 9998;
 	top: 50%;
 	left: 50%;
 	width: 460px;
-	background: $white;
+	background: rgba($white, 0.9);
 	color: $off-black;
 	margin: -185px 0 0 -230px;
 	padding: 0 2em;
 	border: 5px solid $white;
-	border-style: ridge;
+	border-style: outset;
 
 	h2 {
 		text-transform: uppercase;
@@ -704,9 +704,27 @@ the featured post and the remaining posts....*/
 	.wpcf7-response-output {
 		margin-top: 0 !important;
 	}
+
+	&.landing_page_popup {
+		margin: -285px 0 0 -230px;
+
+		h2 {
+			text-transform: uppercase;
+			text-align: center;
+			font-weight: 100;
+		}
+
+		.button {
+			width: 100%;
+		}
+
+		input[type="text"] {
+			padding: 14px 12px;
+		}
+	}
 }
 
-.blog_popup_exit {
+.popup_form_exit {
 	z-index: 9999;
 	color: $off-black;
 	padding: 5px;

@@ -46,7 +46,7 @@ textarea,
   border-radius: 3px;
   vertical-align: middle;
   box-shadow: none;
-  border: 2px solid $light-grey;
+  border: 2px solid darken($light-grey, 10%);
   border-style: inset;
   background-color: $light-grey;
   border-radius: 3px;

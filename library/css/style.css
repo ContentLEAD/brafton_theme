@@ -1104,7 +1104,7 @@ input[type="text"], input[type="password"], input[type="datetime"], input[type="
   border-radius: 3px;
   vertical-align: middle;
   box-shadow: none;
-  border: 2px solid #f1f1f2;
+  border: 2px solid #d7d7d9;
   border-style: inset;
   background-color: #f1f1f2;
   border-radius: 3px;
@@ -2037,14 +2037,12 @@ LAYOUT & GRID STYLES
 *********************/ }
   .fixed-page-footer .contact_us {
     display: inline-block;
-    margin: auto; }
-  .fixed-page-footer .contact_us a {
+    margin: auto;
     text-transform: uppercase;
     text-decoration: none;
     font-size: 1.5em;
     background: #8dc01d;
     color: #333;
-    float: left;
     padding: 8px;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
@@ -2054,10 +2052,11 @@ Be careful with these since they can
 really slow down your CSS. Don't overdo it.
 *********************/
     /* @include css-gradient(#dfdfdf,#f8f8f8); */ }
-    .fixed-page-footer .contact_us a:hover {
-      background: #333;
-      color: #8dc01d; }
-  .fixed-page-footer .contact_us .conversation {
+  .fixed-page-footer .contact_us:hover {
+    background: #333;
+    color: #8dc01d;
+    cursor: pointer; }
+  .fixed-page-footer .conversation {
     padding: 13px;
     font-size: 1.2em;
     margin-left: 5px;
@@ -2065,7 +2064,7 @@ really slow down your CSS. Don't overdo it.
     float: left; }
 
 .wrap {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   /*********************
 LINK STYLES
@@ -2688,7 +2687,7 @@ FOOTER STYLES
   .footer #top-footer {
     display: none; }
 
-.bottom-case-cta, .blog_popup {
+.bottom-case-cta, .popup_form {
   display: none; }
 
 video, .sublime {
@@ -3235,7 +3234,7 @@ the featured post and the remaining posts....*/ }
       margin: auto;
       /*Popup footer form*/
       /*popup css*/ }
-    .blog_popup_shadow {
+    .popup_form_shadow {
       z-index: 9997;
       background: #000;
       opacity: 0.6;
@@ -3244,31 +3243,41 @@ the featured post and the remaining posts....*/ }
       height: 100%;
       top: 0;
       left: 0; }
-    .blog_popup {
+    .popup_form {
       display: inline-block;
       position: fixed;
       z-index: 9998;
       top: 50%;
       left: 50%;
       width: 460px;
-      background: #fff;
+      background: rgba(255, 255, 255, 0.9);
       color: #333;
       margin: -185px 0 0 -230px;
       padding: 0 2em;
       border: 5px solid #fff;
-      border-style: ridge; }
-      .blog_popup h2 {
+      border-style: outset; }
+      .popup_form h2 {
         text-transform: uppercase;
         font-size: 1.5em; }
-      .blog_popup .f-row {
+      .popup_form .f-row {
         margin-top: 1.25em; }
-      .blog_popup .button {
+      .popup_form .button {
         display: inline-block;
         margin-top: 1em;
         margin-bottom: 2em; }
-      .blog_popup .wpcf7-response-output {
+      .popup_form .wpcf7-response-output {
         margin-top: 0 !important; }
-    .blog_popup_exit {
+      .popup_form.landing_page_popup {
+        margin: -285px 0 0 -230px; }
+        .popup_form.landing_page_popup h2 {
+          text-transform: uppercase;
+          text-align: center;
+          font-weight: 100; }
+        .popup_form.landing_page_popup .button {
+          width: 100%; }
+        .popup_form.landing_page_popup input[type="text"] {
+          padding: 14px 12px; }
+    .popup_form_exit {
       z-index: 9999;
       color: #333;
       padding: 5px;
@@ -3279,7 +3288,7 @@ the featured post and the remaining posts....*/ }
       /*********************
 BUSINESS MODEL LANDING PAGE TEMPLATE
 *********************/ }
-      .blog_popup_exit:hover {
+      .popup_form_exit:hover {
         cursor: pointer; }
     .business_model_container {
       /*********************

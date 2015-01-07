@@ -744,7 +744,7 @@ the featured post and the remaining posts....*/ }
   /*Popup footer form*/
   /*popup css*/ }
 
-.blog_popup_shadow {
+.popup_form_shadow {
   z-index: 9997;
   background: #000;
   opacity: 0.6;
@@ -754,32 +754,42 @@ the featured post and the remaining posts....*/ }
   top: 0;
   left: 0; }
 
-.blog_popup {
+.popup_form {
   display: inline-block;
   position: fixed;
   z-index: 9998;
   top: 50%;
   left: 50%;
   width: 460px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
   color: #333;
   margin: -185px 0 0 -230px;
   padding: 0 2em;
   border: 5px solid #fff;
-  border-style: ridge; }
-  .blog_popup h2 {
+  border-style: outset; }
+  .popup_form h2 {
     text-transform: uppercase;
     font-size: 1.5em; }
-  .blog_popup .f-row {
+  .popup_form .f-row {
     margin-top: 1.25em; }
-  .blog_popup .button {
+  .popup_form .button {
     display: inline-block;
     margin-top: 1em;
     margin-bottom: 2em; }
-  .blog_popup .wpcf7-response-output {
+  .popup_form .wpcf7-response-output {
     margin-top: 0 !important; }
+  .popup_form.landing_page_popup {
+    margin: -285px 0 0 -230px; }
+    .popup_form.landing_page_popup h2 {
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 100; }
+    .popup_form.landing_page_popup .button {
+      width: 100%; }
+    .popup_form.landing_page_popup input[type="text"] {
+      padding: 14px 12px; }
 
-.blog_popup_exit {
+.popup_form_exit {
   z-index: 9999;
   color: #333;
   padding: 5px;
@@ -790,7 +800,7 @@ the featured post and the remaining posts....*/ }
   /*********************
 BUSINESS MODEL LANDING PAGE TEMPLATE
 *********************/ }
-  .blog_popup_exit:hover {
+  .popup_form_exit:hover {
     cursor: pointer; }
 
 .business_model_container {

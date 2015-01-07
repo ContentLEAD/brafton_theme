@@ -233,7 +233,8 @@ jQuery(document).ready(function($) {
     //Hide social icons in mobile view when the menu is selected
 
     $("#nav-toggle").click( function() {
-        $(".share.icons").hide();
+        $(".share").hide();
+        return false;
     });
 
     //slider on the careers sidebar...
@@ -327,24 +328,29 @@ jQuery(document).ready(function($) {
     });
 
     //And a similar effect for the blog popup form...
-    $(".blog_popup").hide();
-    $(".blog_popup_shadow").hide();
+    $(".popup_form").hide();
+    $(".popup_form_shadow").hide();
 
     $(".marketzine").click(function() {
-        $(".blog_popup").fadeIn(400);
-        $(".blog_popup_shadow").show();
+        $(".popup_form").fadeIn(400);
+        $(".popup_form_shadow").show();
     });
 
-    $(".blog_popup_exit").click(function() {
-        $(".blog_popup").hide();
-        $(".blog_popup_shadow").hide();
+    $(".fixed-page-footer .contact_us").click(function() {
+        $(".popup_form").fadeIn(400);
+        $(".popup_form_shadow").show();
+    });
+
+    $(".popup_form_exit").click(function() {
+        $(".popup_form").hide();
+        $(".popup_form_shadow").hide();
     });
 
     //Close popup on successful form submission
 
-     function blog_popup_hide() {
-        $(".blog_popup").hide();
-        $(".blog_popup_shadow").hide();
+     function popup_form_hide() {
+        $(".popup_form").hide();
+        $(".popup_form_shadow").hide();
         console.log("I passed");
     }
 

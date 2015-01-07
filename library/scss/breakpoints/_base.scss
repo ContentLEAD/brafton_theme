@@ -778,33 +778,31 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 	.contact_us {
 
 		display: inline-block;
-		margin: auto;
+		margin: auto;	
+		text-transform: uppercase;
+		text-decoration: none;
+		font-size: 1.5em;
+		background: $green;
+		color: $off-black;
+		padding: 8px;
 
-		a {
-			text-transform: uppercase;
-			text-decoration: none;
-			font-size: 1.5em;
-			background: $green;
-			color: $off-black;
-			float: left;
-			padding: 8px;
-
-			@include transition(all 0.2s);
+		@include transition(all 0.2s);
 
 			&:hover {
 				background: $off-black;
 				color: $green;
+				cursor: pointer;
 			}
 		}
 
-		.conversation {
-			padding: 13px;
-			font-size: 1.2em;
-			margin-left: 5px;
-			display: inline-block;
-			float: left;
-		}
+	.conversation {
+		padding: 13px;
+		font-size: 1.2em;
+		margin-left: 5px;
+		display: inline-block;
+		float: left;
 	}
+
 }
 
 /*********************
@@ -812,7 +810,7 @@ LAYOUT & GRID STYLES
 *********************/
 
 .wrap {
-	width: 95%;
+	width: 90%;
 	margin: 0 auto;
 }
 
@@ -1798,7 +1796,7 @@ FOOTER STYLES
 }
 
 .bottom-case-cta,
-.blog_popup {
+.popup_form {
 	display: none;
 }
 

@@ -113,16 +113,16 @@
 
 <!--This is the popup form that goes along with the "Like what you read" CTA-->
 
-<div class="blog_popup">
-	<div class="blog_popup_inner">
+<div class="popup_form">
+	<div class="popup_form_inner">
 		<h2>Get the <strong>Content Marketzine</strong></h2>
 		<?php echo do_shortcode( '[contact-form-7 id="54255" title="Newsletter Signup"]'); ?>
 	</div>
-	<div class="blog_popup_exit">X</div>
+	<div class="popup_form_exit">X</div>
 
 </div>
 
-<div class="blog_popup_shadow">
+<div class="popup_form_shadow">
 </div>
 
 <script src="//app-sj04.marketo.com/js/forms2/js/forms2.js"></script>

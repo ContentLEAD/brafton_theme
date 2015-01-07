@@ -65,7 +65,6 @@ function curPageURL() {
 <!--Mike comment-->
 <!-- Jquery for fancy things!-->
 
-<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js?ver=1.8.2'></script>
 <script>
     // to make fancy buttons.  Uses noConflict just in case
      var $jQ = jQuery.noConflict();
