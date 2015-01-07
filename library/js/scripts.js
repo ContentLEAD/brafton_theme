@@ -319,6 +319,28 @@ jQuery(document).ready(function($) {
         $(".exec_onclick_shadow").hide();
     });
 
+    //And a similar effect for the blog popup form...
+    $(".blog_popup").hide();
+    $(".blog_popup_shadow").hide();
+
+    $(".leadscon").click(function() {
+        $(".blog_popup").fadeIn(400);
+        $(".blog_popup_shadow").show();
+    });
+
+    $(".blog_popup_exit").click(function() {
+        $(".blog_popup").hide();
+        $(".blog_popup_shadow").hide();
+    });
+
+    //Close popup on successful form submission
+
+     function blog_popup_hide() {
+        $(".blog_popup").hide();
+        $(".blog_popup_shadow").hide();
+        console.log("I passed");
+    }
+
 
     //ui effects for support page
 
@@ -332,3 +354,4 @@ jQuery(document).ready(function($) {
 
 
 }); /* end of as page load scripts */
+

@@ -571,6 +571,11 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 		margin: auto;
 		display: block;
 
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
 		.testimonial_inner {
 			border-top: 16px solid lighten($off-black, 20%);
 			text-align: center;
@@ -606,9 +611,7 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 			float: left;
 
 			img {
-				margin-right: 1.5em;
-				margin-bottom: 1.5em;
-				display: block
+				display: none;
 			}
 		}
 
@@ -658,8 +661,8 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 			display: block;
 			margin-top: 1em;
 			padding: 0.3em;
-			width: 325px;
-			font-size: 1.2em;
+			width: 285px;
+			font-size: 1em;
 			letter-spacing: 3px;
 			text-transform: uppercase;
 			text-decoration: none;

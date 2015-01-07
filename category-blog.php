@@ -102,7 +102,25 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 		<div class="askamarketer">
 		</div>
 	</div>
-</div>	
+</div>
+
+
+<!--This is the popup form that goes along with the "Like what you read" CTA-->
+
+<div class="blog_popup">
+	<div class="blog_popup_inner">
+		<h2>Get the <strong>Content Marketzine</strong></h2>
+		<?php echo do_shortcode( '[contact-form-7 id="54255" title="Newsletter Signup"]'); ?>
+	</div>
+	<div class="blog_popup_exit">X</div>
+
+</div>
+
+<div class="blog_popup_shadow">
+</div>
+
+
+<!--End Popup form-->	
 
 <script src="//app-sj04.marketo.com/js/forms2/js/forms2.js"></script>
 <form id="mktoForm_1337"></form>

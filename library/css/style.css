@@ -1909,6 +1909,9 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
     width: 85%;
     margin: auto;
     display: block; }
+  .template_section .content_body img {
+    max-width: 100%;
+    height: auto; }
   .template_section .content_body .testimonial_inner {
     border-top: 16px solid #666;
     text-align: center;
@@ -1932,9 +1935,7 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
     background: #fff;
     float: left; }
     .template_section .content_body .reasons_inner img {
-      margin-right: 1.5em;
-      margin-bottom: 1.5em;
-      display: block; }
+      display: none; }
   .template_section .content_body .team_inner {
     display: inline-block;
     text-align: center; }
@@ -1963,8 +1964,8 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
     display: block;
     margin-top: 1em;
     padding: 0.3em;
-    width: 325px;
-    font-size: 1.2em;
+    width: 285px;
+    font-size: 1em;
     letter-spacing: 3px;
     text-transform: uppercase;
     text-decoration: none;
@@ -2884,7 +2885,9 @@ NAVIGATION STYLES
       /*move from mobile menu to desktop menu...*/ }
       .template_section .content_body .reasons_inner img {
         display: inline-block;
-        float: left; }
+        float: left;
+        margin-right: 1.5em;
+        margin-bottom: 1.5em; }
     .mobile_logo {
       display: block; }
     .full_logo {
@@ -2996,7 +2999,7 @@ really slow down your CSS. Don't overdo it.
         color: #fff;
         font-size: 0.6em;
         font-weight: bold;
-        letter-spacing: 1px;
+        letter-spacing: 0.75px;
         text-transform: uppercase;
         -webkit-transition: all 0.2s;
         transition: all 0.2s;
@@ -3230,9 +3233,54 @@ the featured post and the remaining posts....*/ }
       width: 825px;
       display: block;
       margin: auto;
+      /*Popup footer form*/
+      /*popup css*/ }
+    .blog_popup_shadow {
+      z-index: 9997;
+      background: #000;
+      opacity: 0.6;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0; }
+    .blog_popup {
+      display: inline-block;
+      position: fixed;
+      z-index: 9998;
+      top: 50%;
+      left: 50%;
+      width: 460px;
+      background: #fff;
+      color: #333;
+      margin: -185px 0 0 -230px;
+      padding: 0 2em;
+      border: 5px solid #fff;
+      border-style: ridge; }
+      .blog_popup h2 {
+        text-transform: uppercase;
+        font-size: 1.5em; }
+      .blog_popup .f-row {
+        margin-top: 1.25em; }
+      .blog_popup .button {
+        display: inline-block;
+        margin-top: 1em;
+        margin-bottom: 2em; }
+      .blog_popup .wpcf7-response-output {
+        margin-top: 0 !important; }
+    .blog_popup_exit {
+      z-index: 9999;
+      color: #333;
+      padding: 5px;
+      font-size: 18px;
+      position: absolute;
+      right: 5px;
+      top: 5px;
       /*********************
 BUSINESS MODEL LANDING PAGE TEMPLATE
 *********************/ }
+      .blog_popup_exit:hover {
+        cursor: pointer; }
     .business_model_container {
       /*********************
 SIDEBARS & ASIDES

@@ -52,7 +52,7 @@
 					<?php } ?>
 
 					<div id="inner-content" class="wrap cf">
-						<section class="entry-content d-2of3 t-2of3 m-all cf" itemprop="articleBody">
+						<section class="entry-content d-3of4 t-3of4 m-all cf" itemprop="articleBody">
 								<?php the_content(); ?>
 									<?php if( function_exists( 'brafton_share' )) brafton_share( 'bottom' ); ?>
 									<footer class="meta">
@@ -87,7 +87,7 @@
 										<?php comments_template(); ?>
 									</div>
 							</section>
-						<div class="sidebar d-1of3 t-1of3 m-all">
+						<div class="sidebar d-1of4 t-1of4 m-all">
 							<?php if ( !function_exists( "dynamic_sidebar" ) || !dynamic_sidebar( "Single Sidebar" ) ) : ?>
 								<p>Add Widgets to the Post Sidebar</p>
 							<?php endif; ?>
@@ -103,15 +103,27 @@
 			<a href="http://www.brafton.com/resources/reduce-reuse-recycle-repurpose-get-content"><div class="ourlatestfooter">
 			</div></a>
 
-			<a href="http://www.brafton.com/news/connect-brafton-leadscon-new-york-aug-14-15-leadscon"><div class="leadscon">
-			</div></a>
+			<div class="leadscon">
+			</div>
 
 			<div class="askamarketer">
 			</div>
 		</div>
 	</div>	
 
+<!--This is the popup form that goes along with the "Like what you read" CTA-->
 
+<div class="blog_popup">
+	<div class="blog_popup_inner">
+		<h2>Get the <strong>Content Marketzine</strong></h2>
+		<?php echo do_shortcode( '[contact-form-7 id="54255" title="Newsletter Signup"]'); ?>
+	</div>
+	<div class="blog_popup_exit">X</div>
+
+</div>
+
+<div class="blog_popup_shadow">
+</div>
 
 <script src="//app-sj04.marketo.com/js/forms2/js/forms2.js"></script>
 <form id="mktoForm_1337"></form>

@@ -76,6 +76,8 @@ HEADER STYLES
 			img {
 				display: inline-block;
 				float: left;
+				margin-right: 1.5em;
+				margin-bottom: 1.5em;
 			}
 		}
 	}
@@ -258,7 +260,7 @@ BLOG-Landing Page
 		color: $white;
 		font-size: 0.6em;
 		font-weight: bold;
-		letter-spacing: 1px;
+		letter-spacing: 0.75px;
 		text-transform: uppercase;
 
 		@include transition(all 0.2s);
@@ -652,6 +654,70 @@ the featured post and the remaining posts....*/
 	width: 825px;
 	display: block;
 	margin: auto;
+}
+
+
+/*Popup footer form*/
+
+/*popup css*/
+
+.blog_popup_shadow {
+	z-index: 9997;
+	background: $black;
+	opacity: 0.6;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.blog_popup {
+	display: inline-block;
+	position: fixed;
+	z-index: 9998;
+	top: 50%;
+	left: 50%;
+	width: 460px;
+	background: $white;
+	color: $off-black;
+	margin: -185px 0 0 -230px;
+	padding: 0 2em;
+	border: 5px solid $white;
+	border-style: ridge;
+
+	h2 {
+		text-transform: uppercase;
+		font-size: 1.5em;
+	}
+
+	.f-row {
+		margin-top: 1.25em;
+	}
+
+	.button {
+		display: inline-block;
+		margin-top: 1em;
+		margin-bottom: 2em;
+	}
+
+	.wpcf7-response-output {
+		margin-top: 0 !important;
+	}
+}
+
+.blog_popup_exit {
+	z-index: 9999;
+	color: $off-black;
+	padding: 5px;
+	font-size: 18px;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 /*********************

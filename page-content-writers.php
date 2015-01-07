@@ -87,12 +87,12 @@ get_header(); ?>
 					<div class="template_section reasons gray_body">
 
 						<div class="content_container wrap">
-							<h2><strong>Here's 3 resons why</strong> you'll golf clap for our writers</h2>
+							<h2><strong>Here's 3 reasons why</strong> you'll golf clap for our writers</h2>
 							<div class="content_body">
 								
 								<?php for ($i=1; $i<=3; $i++) { ?>
 
-									<div class="reasons_inner">
+									<div class="reasons_inner d-all t-all m-all">
 
 										<?php echo get_field( 'reason_' . $i ); ?>
 
