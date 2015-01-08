@@ -1039,14 +1039,13 @@ really slow down your CSS. Don't overdo it.
   background: #e6efc2; }
 
 .button {
-  border: none;
   border-radius: 0;
-  background-color: #83b31b;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#97cd1f), to(#83b31b));
-  background-image: -webkit-linear-gradient(top, #97cd1f, #83b31b);
-  background-image: -moz-linear-gradient(top, #97cd1f, #83b31b);
-  background-image: -o-linear-gradient(top, #97cd1f, #83b31b);
-  background-image: linear-gradient(to bottom, #97cd1f, #83b31b);
+  background-color: #94c91e;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#a9e030), to(#94c91e));
+  background-image: -webkit-linear-gradient(top, #a9e030, #94c91e);
+  background-image: -moz-linear-gradient(top, #a9e030, #94c91e);
+  background-image: -o-linear-gradient(top, #a9e030, #94c91e);
+  background-image: linear-gradient(to bottom, #a9e030, #94c91e);
   /*********************
 BOX SIZING
 *********************/
@@ -1069,32 +1068,20 @@ probably best not to use it. I mean, were you going to anyway? */
   border-radius: 3px;
   max-width: 320px;
   box-shadow: 0px 4px 5px 0px #bcbcc1;
-  -webkit-box-shadow: 0px 4px 5px 0px #bcbcc1;
-  /*
-An example button.
-You can use this example if you want. Just replace all the variables
-and it will create a button dependant on those variables.
-*/ }
+  -webkit-box-shadow: 0px 4px 5px 0px #bcbcc1; }
   .button:hover {
-    background-color: #97cd1f;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#83b31b), to(#97cd1f));
-    background-image: -webkit-linear-gradient(top, #83b31b, #97cd1f);
-    background-image: -moz-linear-gradient(top, #83b31b, #97cd1f);
-    background-image: -o-linear-gradient(top, #83b31b, #97cd1f);
-    background-image: linear-gradient(to bottom, #83b31b, #97cd1f);
+    background-color: #a9e030;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#94c91e), to(#a9e030));
+    background-image: -webkit-linear-gradient(top, #94c91e, #a9e030);
+    background-image: -moz-linear-gradient(top, #94c91e, #a9e030);
+    background-image: -o-linear-gradient(top, #94c91e, #a9e030);
+    background-image: linear-gradient(to bottom, #94c91e, #a9e030);
     /*********************
 BOX SIZING
 *********************/
     /* @include box-sizing(border-box); */
     /* NOTE: value of "padding-box" is only supported in Gecko. So
 probably best not to use it. I mean, were you going to anyway? */ }
-
-.blue-btn, .comment-reply-link, #submit {
-  background-color: #2980b9; }
-  .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
-    background-color: #2574a8; }
-  .blue-btn:active, .comment-reply-link:active, #submit:active {
-    background-color: #2472a4; }
 
 input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], select, textarea, .field {
   display: block;
@@ -3253,9 +3240,8 @@ the featured post and the remaining posts....*/ }
       .popup_form .f-row {
         margin-top: 1.25em; }
       .popup_form .button {
-        display: inline-block;
         margin-top: 1em;
-        margin-bottom: 2em; }
+        margin-bottom: 1em; }
       .popup_form .wpcf7-response-output {
         margin-top: 0 !important; }
       .popup_form.landing_page_popup {

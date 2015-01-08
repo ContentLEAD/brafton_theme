@@ -23,16 +23,6 @@ function curPageURL() {
 ?>
 
 
-<style>
-
-
-
-div.buttonSubmit:hover input {
-	background: #8DC01D;
-	}
-
-</style>
-
 <!-- SYSTEM JAVASCRIPT - DO NOT EDIT -->
 <script type="text/javascript">
 function fieldValidate(field) {
