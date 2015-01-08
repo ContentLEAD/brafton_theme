@@ -365,6 +365,24 @@ jQuery(document).ready(function($) {
     });
 
 
+    //Scrolly nav for support page
+
+    $(".jumper").on("click", function( e ) {
+
+        e.preventDefault();
+
+        $("body, html").animate({ 
+            scrollTop: $( $(this).attr('href') ).offset().top 
+        }, 500);
+
+    });
+
+    $("a[href='#top']").click(function() {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+
+
 
 }); /* end of as page load scripts */
 

@@ -291,45 +291,35 @@ style a page via class
 		letter-spacing: 2px;
 	}
 
-	#menu-support {
-		padding-left: 12px;
-		border-left: 2px solid $black;
-
-		li {
-
-			a {
-				text-decoration: none;
-				font-weight: bold;
-				text-transform: uppercase;
-				padding: 10px;
-				letter-spacing: 2px;
-				border-radius: 3px;
-
-				@include transition(all 0.2s);
-
-				&:hover {
-					background: $black;
-					color: $white;
-				}
-			}
-		}
-	}
 
 	.support-ul {
-		/*indent submenus*/
+		position: fixed;
+		top: 170px;
+		right: 140px;
+
 		ul {
 			padding-left: 50px;
 		}
 
 		li {
+			margin-bottom: 15px;
+			padding-left: 5px;
+
+			&:hover {
+				border-left: 1px solid $black;
+				padding-left: 4px;
+			}
 
 			a {
 				text-decoration: none;
 				text-transform: uppercase;
 				letter-spacing: 1px;
+				padding-left: 5px;
+				font-weight: bold;
+				letter-spacing: 2px;
 
 				&:hover {
-					text-decoration: underline;
+					
 				}
 			}
 		}
@@ -1118,7 +1108,7 @@ MARKETO FORMS
 		padding: 0.5em 0;
 		text-align: right;
 		font-size: 0.85em;
-		width: 25%;
+		width: 20%;
 		float: left;
 		display: inline-block;
 	}

@@ -1064,9 +1064,10 @@ probably best not to use it. I mean, were you going to anyway? */
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
   display: block;
   margin: auto;
-  width: 40%;
+  width: 100%;
   padding: 0.5em;
   border-radius: 3px;
+  max-width: 320px;
   box-shadow: 0px 4px 5px 0px #bcbcc1;
   -webkit-box-shadow: 0px 4px 5px 0px #bcbcc1;
   /*
@@ -1731,38 +1732,28 @@ style a page via class
     font-size: 1.5em;
     text-transform: uppercase;
     letter-spacing: 2px; }
-  .post-type-archive-support #menu-support, .single-support #menu-support {
-    padding-left: 12px;
-    border-left: 2px solid #000; }
-  .post-type-archive-support #menu-support li a, .single-support #menu-support li a {
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 10px;
-    letter-spacing: 2px;
-    border-radius: 3px;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-    /*********************
-CSS3 GRADIENTS
-Be careful with these since they can
-really slow down your CSS. Don't overdo it.
-*********************/
-    /* @include css-gradient(#dfdfdf,#f8f8f8); */ }
-    .post-type-archive-support #menu-support li a:hover, .single-support #menu-support li a:hover {
-      background: #000;
-      color: #fff; }
+  .post-type-archive-support .support-ul, .single-support .support-ul {
+    position: fixed;
+    top: 170px;
+    right: 140px; }
   .post-type-archive-support .support-ul ul, .single-support .support-ul ul {
     padding-left: 50px; }
-  .post-type-archive-support .support-ul li a, .single-support .support-ul li a {
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px; }
-    .post-type-archive-support .support-ul li a:hover, .single-support .support-ul li a:hover {
-      text-decoration: underline; }
-  .post-type-archive-support table td, .single-support table td {
-    padding: 8px;
-    border: 1px solid #000; }
+  .post-type-archive-support .support-ul li, .single-support .support-ul li {
+    margin-bottom: 15px;
+    padding-left: 5px; }
+    .post-type-archive-support .support-ul li:hover, .single-support .support-ul li:hover {
+      border-left: 1px solid #000;
+      padding-left: 4px; }
+    .post-type-archive-support .support-ul li a, .single-support .support-ul li a {
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding-left: 5px;
+      font-weight: bold;
+      letter-spacing: 2px; }
+      .post-type-archive-support table td, .single-support table td {
+        padding: 8px;
+        border: 1px solid #000; }
 
 .post-type-archive-infographic article {
   height: 380px;
@@ -1874,15 +1865,15 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
       width: 100%;
       float: left;
       margin-bottom: 1.25em; }
-    .mission_container .mission_row .copy .item .big {
-      font-size: 2.25em;
-      display: inline;
-      margin-right: 12px;
-      text-transform: uppercase;
-      letter-spacing: 3px; }
-    .mission_container .mission_row .copy .item .text {
-      display: inline;
-      font-size: 1.25em; }
+      .mission_container .mission_row .copy .item .big {
+        font-size: 2.25em;
+        display: inline;
+        margin-right: 12px;
+        text-transform: uppercase;
+        letter-spacing: 3px; }
+      .mission_container .mission_row .copy .item .text {
+        display: inline;
+        font-size: 1.25em; }
 
 .gray_body {
   background: #e4e4e6;
@@ -1926,9 +1917,9 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
       font-size: 0.7em; }
     .template_section .content_body .testimonial_inner .company_logo {
       height: 90px; }
-    .template_section .content_body .testimonial_inner .company_logo img {
-      width: 220px;
-      padding: 1em; }
+      .template_section .content_body .testimonial_inner .company_logo img {
+        width: 220px;
+        padding: 1em; }
   .template_section .content_body .reasons_inner {
     padding: 2em;
     margin-bottom: 2em;
@@ -1994,36 +1985,36 @@ really slow down your CSS. Don't overdo it.
       display: block;
       margin: auto;
       padding-top: 0.75em; }
-    .services_container .template_section.link_graphics .link_graphics_inner .img_container {
-      overflow: hidden;
-      padding-bottom: 0.75em; }
-      .services_container .template_section.link_graphics .link_graphics_inner .img_container .sprite {
-        width: 100%;
-        height: 0;
-        padding-bottom: 99%;
-        background-position: 0 0;
-        background-size: 100%;
-        display: block; }
-        .services_container .template_section.link_graphics .link_graphics_inner .img_container .sprite:hover {
-          background-position: 0 100%; }
-      .services_container .template_section.link_graphics .link_graphics_inner .img_container .analytics {
-        background-image: url('/wp-content/themes/brafton/library/images/marketingservices/analytics.png'); }
-      .services_container .template_section.link_graphics .link_graphics_inner .img_container .content-marketing {
-        background-image: url('/wp-content/themes/brafton/library/images/marketingservices/content.png'); }
-      .services_container .template_section.link_graphics .link_graphics_inner .img_container .infographic-marketing {
-        background-image: url('/wp-content/themes/brafton/library/images/marketingservices/graphics.png'); }
-      .services_container .template_section.link_graphics .link_graphics_inner .img_container .news-content-marketing {
-        background-image: url('/wp-content/themes/brafton/library/images/marketingservices/email.png'); }
-      .services_container .template_section.link_graphics .link_graphics_inner .img_container .search-engine-optimization {
-        background-image: url('/wp-content/themes/brafton/library/images/marketingservices/seo.png'); }
-      .services_container .template_section.link_graphics .link_graphics_inner .img_container .social-media-marketing {
-        background-image: url('/wp-content/themes/brafton/library/images/marketingservices/socialmedia.png'); }
-      .services_container .template_section.link_graphics .link_graphics_inner .img_container .the-editorial-brief {
-        background-image: url('/wp-content/themes/brafton/library/images/marketingservices/writing.png'); }
-      .services_container .template_section.link_graphics .link_graphics_inner .img_container .video-marketing {
-        background-image: url('/wp-content/themes/brafton/library/images/marketingservices/video.png'); }
-      .services_container .template_section.link_graphics .link_graphics_inner .img_container .client-examples {
-        background-image: url('/wp-content/themes/brafton/library/images/marketingservices/clients.png'); }
+      .services_container .template_section.link_graphics .link_graphics_inner .img_container {
+        overflow: hidden;
+        padding-bottom: 0.75em; }
+        .services_container .template_section.link_graphics .link_graphics_inner .img_container .sprite {
+          width: 100%;
+          height: 0;
+          padding-bottom: 99%;
+          background-position: 0 0;
+          background-size: 100%;
+          display: block; }
+          .services_container .template_section.link_graphics .link_graphics_inner .img_container .sprite:hover {
+            background-position: 0 100%; }
+        .services_container .template_section.link_graphics .link_graphics_inner .img_container .analytics {
+          background-image: url('/wp-content/themes/brafton/library/images/marketingservices/analytics.png'); }
+        .services_container .template_section.link_graphics .link_graphics_inner .img_container .content-marketing {
+          background-image: url('/wp-content/themes/brafton/library/images/marketingservices/content.png'); }
+        .services_container .template_section.link_graphics .link_graphics_inner .img_container .infographic-marketing {
+          background-image: url('/wp-content/themes/brafton/library/images/marketingservices/graphics.png'); }
+        .services_container .template_section.link_graphics .link_graphics_inner .img_container .news-content-marketing {
+          background-image: url('/wp-content/themes/brafton/library/images/marketingservices/email.png'); }
+        .services_container .template_section.link_graphics .link_graphics_inner .img_container .search-engine-optimization {
+          background-image: url('/wp-content/themes/brafton/library/images/marketingservices/seo.png'); }
+        .services_container .template_section.link_graphics .link_graphics_inner .img_container .social-media-marketing {
+          background-image: url('/wp-content/themes/brafton/library/images/marketingservices/socialmedia.png'); }
+        .services_container .template_section.link_graphics .link_graphics_inner .img_container .the-editorial-brief {
+          background-image: url('/wp-content/themes/brafton/library/images/marketingservices/writing.png'); }
+        .services_container .template_section.link_graphics .link_graphics_inner .img_container .video-marketing {
+          background-image: url('/wp-content/themes/brafton/library/images/marketingservices/video.png'); }
+        .services_container .template_section.link_graphics .link_graphics_inner .img_container .client-examples {
+          background-image: url('/wp-content/themes/brafton/library/images/marketingservices/clients.png'); }
 
 .fixed-page-footer {
   height: 50px;
@@ -2236,8 +2227,8 @@ MARKETO FORMS
 				keep this file as small as possible!
 				*/
       padding: 0.5em; }
-    .header .nav li a:hover, .header .nav li a:focus {
-      text-decoration: none; }
+      .header .nav li a:hover, .header .nav li a:focus {
+        text-decoration: none; }
     .header .nav li:last-child {
       /*
 			so you really have to rethink your dropdowns for mobile.
@@ -2265,8 +2256,8 @@ Be careful with these since they can
 really slow down your CSS. Don't overdo it.
 *********************/
       /* @include css-gradient(#dfdfdf,#f8f8f8); */ }
-    .header .nav li.highlight a:hover {
-      color: #fff; }
+      .header .nav li.highlight a:hover {
+        color: #fff; }
   .header .nav li.current-menu-item, .header .nav li.current_page_item, .header .nav li.current_page_ancestor {
     /* end current highlighters */ }
     .mktField {
@@ -2276,7 +2267,7 @@ really slow down your CSS. Don't overdo it.
     padding: 0.5em 0;
     text-align: right;
     font-size: 0.85em;
-    width: 25%;
+    width: 20%;
     float: left;
     display: inline-block; }
   .mktField .mktFormText {
@@ -3496,7 +3487,7 @@ This is for the larger monitors and possibly full screen viewers.
       .single .blog_header h1, .single .featured-post h1, .single .blog_header h1 {
         font-size: 2.75em; }
     .tagged-twit {
-      /*top footer fixes*/ }
+      /*Sidebar*/ }
       .tagged-twit #topinfo {
         width: 95%;
         min-height: 225px;
@@ -3514,6 +3505,10 @@ This is for the larger monitors and possibly full screen viewers.
         width: 33%; }
       .tagged-twit .entry-content {
         margin-top: 300px; }
+    .widget {
+      /*top footer fixes*/ }
+      .widget #search-query {
+        width: 64%; }
     .footer {
       /*Styles for support page cms bar */
       /*************

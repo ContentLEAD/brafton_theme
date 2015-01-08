@@ -81,7 +81,7 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 		</section><!--this closes the d-2of3 section after the last article-->
 	</div>
 	<?php wp_reset_query(); ?>
-	<div class="d-1of4 t-1of3 m-all sidebar blog_sidebar">
+	<div class="d-1of5 t-1of3 m-all sidebar blog_sidebar">
 		<aside>
 			<ul>
 				<?php dynamic_sidebar( "New Blog Sidebar" ); ?>
