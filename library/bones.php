@@ -167,7 +167,7 @@ function bones_scripts_and_styles() {
 
 		//Fixed-to-scroll jQuery plugin
 
-		wp_enqueue_script('fixed-scroll', get_stylesheet_directory_uri() . '/library/js/libs/jquery-scrolltofixed-min.js', array('jquery'), '1.1', false);
+		wp_enqueue_script('fixed-scroll', get_stylesheet_directory_uri() . '/library/js/libs/jquery-scrolltofixed-min.js', array('jquery'), '1.1', true);
 
 		//Wacky images css
 
@@ -181,8 +181,8 @@ function bones_scripts_and_styles() {
 		//Case studies js
 
 		if( is_post_type_archive('case_studies') ) {
-			wp_enqueue_script('jcarousel', get_stylesheet_directory_uri() . '/library/js/libs/jquery.jcarousel.js', array('jquery'));
-			wp_enqueue_script('case_studies', get_stylesheet_directory_uri() . '/library/js/case_studies.js', array('jcarousel'));
+			wp_enqueue_script('jcarousel', get_stylesheet_directory_uri() . '/library/js/libs/jquery.jcarousel.js', array('jquery'), '1.0', true);
+			wp_enqueue_script('case_studies', get_stylesheet_directory_uri() . '/library/js/case_studies.js', array('jcarousel'), '1.0', true);
 		}
 	}
 }
