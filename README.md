@@ -1,7 +1,7 @@
 Brafton.com Developer’s Guide - Winter 2014-15
 By Michael DeWitt
 
-The brafton wordpress theme may look a bit different that a typical theme.  It uses a couple of advanced features that may take a short bit of time and patience to learn, but will make life SO much easier for you as a developer…
+The brafton wordpress theme may look a bit different than a typical theme.  It uses a couple of advanced features that may take a short bit of time and patience to learn, but will make life SO much easier for you as a developer…
 
 Table of contents:
 
@@ -11,13 +11,15 @@ Table of contents:
 
 3.  Javascript
 
-4.  Version control.
+4.  Plugin Dependencies
+
+5.  Version control.
 
 ========================
 1. Styles
 ========================
 
-First off, this theme uses modular Sass to control the styles.  All the Sass files are located within the library/scss directory.  If you are not familiar with Sass, it is an awesome way to write clean and reproducible code using variables, functions, etc. just like you would in a programming language. The Bones theme which I based this all off has great commenting- open up a few of the Sass files and follow the links in the comments…
+First off, this theme uses modular Sass to control the styles.  All the Sass files are located within the library/scss directory.  If you are not familiar with Sass, it is an awesome way to write clean and reproducible CSS using variables, functions, etc. just like you would in a programming language. The Bones theme which I based this all off has great commenting- open up a few of the Sass files and follow the links in the comments…
 
 For a large project like this, the various stylesheets are broken up into several different folders and files:
 
@@ -57,7 +59,20 @@ Please, please do not drop extended jQuery in the page templates.  Add all scrip
 Any JS libraries (responsive nav, for example) live in the library/js/libs directory.  Enqueue any new libraries in the library/bones.php file.
 
 ==================================
-4.  Version Control
+4.  Plugin Dependencies
+==================================
+Major components of the theme rely on a few select plugins:
+
+-WP-SCSS (for Sass compilation)
+-Revolution Slider (Homepage Slider)
+-Advanced Custom Fields (For a few of the page templates, and everyone likes it so much it will be used more and more...)
+
+For efficiency:
+
+-Better WordPress Minify
+
+==================================
+5.  Version Control
 ==================================
 
 The root theme directory is a git repository.  I highly reccomend documenting all changes...
