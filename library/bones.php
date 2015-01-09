@@ -310,6 +310,31 @@ function bones_excerpt_more($more) {
 	return '...  <a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __( 'Read ', 'bonestheme' ) . get_the_title($post->ID).'">'. __( 'Read more &raquo;', 'bonestheme' ) .'</a>';
 }
 
+//Bold first or last word of subtitles, to be used in conjunction with ACF
+
+function bold_last_word($field) {
+	
+	$pieces = explode(' ', $field);
+
+	$last_word = array_pop($pieces);
+
+	$first_words = implode(' ', $pieces);
+
+	echo $first_words . ' <strong>' . $last_word . '</strong>';
+}
+
+function bold_first_word($field) {
+	
+	$pieces = explode(' ', $field);
+
+	$first_word = array_shift($pieces);
+
+	$last_words = implode(' ', $pieces);
+
+	echo '<strong>' .$first_word . ' </strong>' . $last_words;
+}
+
+
 
 
 ?>
