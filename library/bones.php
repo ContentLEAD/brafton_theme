@@ -178,6 +178,12 @@ function bones_scripts_and_styles() {
 
 		wp_enqueue_script('sharrrejs', get_stylesheet_directory_uri() . '/library/js/libs/jquery.sharrre.min.js', array('jquery'), '1.1', false);
 
+		//Case studies js
+
+		if( is_post_type_archive('case_studies') ) {
+			wp_enqueue_script('jcarousel', get_stylesheet_directory_uri() . '/library/js/libs/jquery.jcarousel.js', array('jquery'));
+			wp_enqueue_script('case_studies', get_stylesheet_directory_uri() . '/library/js/case_studies.js', array('jcarousel'));
+		}
 	}
 }
 
