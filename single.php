@@ -43,10 +43,15 @@
 				<?php if( function_exists( 'brafton_share' ) ) brafton_share( 'top' ); ?>
 				<div class="d-all row">
 
-					<?php if( $video_shortcode ) { 
-						echo do_shortcode( $video_shortcode );
+					<?php if( $video_shortcode ) { ?>
+						<div class="single-twit-or-video video">
+							<?php
+								echo /*do_shortcode(*/ $video_shortcode /*)*/;
+							?>
+						</div>
+					<?php
 					} elseif( $twit_src ) { ?>
-						<div class="single-twit">
+						<div class="single-twit-or-video twit">
 							<?php echo $twit_src; ?>
 						</div>
 					<?php } ?>

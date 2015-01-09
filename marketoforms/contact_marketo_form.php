@@ -50,12 +50,6 @@ function curPageURL() {
 
 <style>
 
-
-
-div.buttonSubmit:hover input {
-	background: #8DC01D;
-	}
-
 .page-id-4238 .feature {
   display: none !important;
 }

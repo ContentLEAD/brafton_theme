@@ -9,15 +9,13 @@ to IE, we're going to use SASS to create an easily readable css file.
 Here, we import all the styles the standard stylesheet gets, only
 without the media queries. No need to worry about editing anything!
 
-******************************************************************/
-/******************************************************************
+******************************************************************//******************************************************************
 IMPORTS & DEPENDENCIES
 Remember, all the BASE styles are called already since IE can
 read those. Below, we need to import only the stuff IE can't
 understand (what's inside the media queries). We also need to
 import the mixins file so SASS can understand the variables.
-******************************************************************/
-/******************************************************************
+******************************************************************//******************************************************************
 Site Name:
 Author:
 
@@ -28,20 +26,15 @@ base values, and defaults. We want to make sure this file ONLY
 contains variables that way our files don't get all messy.
 No one likes a mess.
 
-******************************************************************/
-/*********************
+******************************************************************//*********************
 COLORS
 Need help w/ choosing your colors? Try this site out:
 http://0to255.com/
-*********************/
-/*CORE BRAFTON COLORS*/
-/*End core brafton colors...*/
-/*
+*********************//*CORE BRAFTON COLORS*//*End core brafton colors...*//*
 Here's a great tutorial on how to
 use color variables properly:
 http://sachagreif.com/sass-color-variables/
-*/
-/******************************************************************
+*//******************************************************************
 Site Name:Brafton.com
 Author: Michael DeWitt
 
@@ -56,19 +49,15 @@ http://trentwalton.com/2012/06/19/fluid-type/
 http://ia.net/blog/responsive-typography-the-basics/
 http://alistapart.com/column/responsive-typography-is-a-physical-discipline
 
-******************************************************************/
-/*********************
+******************************************************************//*********************
 FONT FACE (IN YOUR FACE)
-*********************/
-/*
+*********************//*
  i imported this one in the functions file so bones would look sweet.
  don't forget to remove it for your site.
-*/
-/*
+*//*
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
-*/
-/******************************************************************
+*//******************************************************************
 Site Name:
 Author:
 
@@ -88,17 +77,14 @@ http://sachagreif.com/useful-sass-mixins/
 http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
 http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
 
-******************************************************************/
-/*********************
+******************************************************************//*********************
 TRANSITION
-*********************/
-/*
+*********************//*
 I totally rewrote this to be cleaner and easier to use.
 You'll need to be using Sass 3.2+ for these to work.
 Thanks to @anthonyshort for the inspiration on these.
 USAGE: @include transition(all 0.2s ease-in-out);
-*/
-/******************************************************************
+*//******************************************************************
 Site Name:
 Author:
 
@@ -111,8 +97,7 @@ media queries, let's just add some styles that serves a fixed grid.
 Again, if you want to roll your own, just remove this junk and put
 whatever you use in here.
 
-******************************************************************/
-/******************************************************************
+******************************************************************//******************************************************************
 Site Name:
 Author:
 
@@ -127,17 +112,14 @@ A word of warning. This size COULD be a larger mobile device,
 so you still want to keep it pretty light and simply expand
 upon your base.scss styles.
 
-******************************************************************/
-/*
+******************************************************************//*
 IMPORTANT NOTE ABOUT SASS 3.3 & UP
 You can't use @extend within media queries
 anymore, so just be aware that if you drop
 them in here, they won't work.
-*/
-/*********************
+*//*********************
 NAVIGATION STYLES
-*********************/
-/******************************************************************
+*********************//******************************************************************
 Site Name:Brafton
 Author:Michael DeWitt
 
@@ -149,22 +131,17 @@ So you can start working with more styles, background images,
 and other resources. You'll also notice the grid starts to
 come into play. Have fun!
 
-******************************************************************/
-/*********************
+******************************************************************//*********************
 GENERAL STYLES
-*********************/
-/*unveil the slidr starting in tablet view...*/
-/*
+*********************//*unveil the slidr starting in tablet view...*//*
 you can call the larger styles if you want, but there's really no need
-*/
-/******************************************************************
+*//******************************************************************
 ADDITIONAL IE FIXES
 These fixes are now ONLY seen by IE, so you don't have to worry
 about using prefixes, although it's best practice. For more info
 on using Modernizr classes, check out this link:
 http://www.modernizr.com/docs/
-******************************************************************/
-/*
+******************************************************************//*
 For example, you can use something like:
 
 .no-textshadow .class { ... }
@@ -176,8 +153,7 @@ header.php file to see what they are:
 
 .lt-ie8 .class { ... }
 
-*/
-/******************************************************************
+*//******************************************************************
 Site Name:Brafton
 Author: Michael DeWitt
 
@@ -186,960 +162,66 @@ Stylesheet: Desktop Stylsheet
 This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
-******************************************************************/
-/*fixed navbar ONLY on blog page*/
-@font-face {
-  font-family: 'Proxima Nova';
-  /* IE6-8 Fix */
-  src: url('../fonts/ProximaNova-Reg-webfont.eot');
-  src: url('../fonts/ProximaNova-Reg-webfont.eot?') format('eot'), local('Proxima Nova Regular'), local('ProximaNova-Reg_0'), url('../fonts/ProximaNova-Reg-webfont.woff') format('woff');
-  font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Proxima Nova';
-  /* IE6-8 Fix */
-  src: url('../fonts/ProximaNova-RegIt-webfont.eot');
-  src: url('../fonts/ProximaNova-RegIt-webfont.eot?') format('eot'), local('Proxima Nova Regular'), local('ProximaNova-Reg_0'), url('../fonts/ProximaNova-RegIt-webfont.woff') format('woff');
-  font-weight: 400;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Proxima Nova';
-  /* IE6-8 Fix */
-  src: url('../fonts/ProximaNova-Sbold-webfont.eot');
-  src: url('../fonts/ProximaNova-Sbold-webfont.eot?') format('eot'), local('Proxima Nova Semibold'), local('ProximaNova-Sbold'), url('../fonts/ProximaNova-Sbold-webfont.woff') format('woff');
-  font-weight: 600;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Proxima Nova';
-  /* IE6-8 Fix */
-  src: url('../fonts/ProximaNova-SboldIt-webfont.eot');
-  src: url('../fonts/ProximaNova-SboldIt-webfont.eot?') format('eot'), local('Proxima Nova Semibold'), local('ProximaNova-SboldIt'), url('../fonts/ProximaNova-SboldIt-webfont.woff') format('woff');
-  font-weight: 600;
-  font-style: italic; }
-
-@font-face {
-  font-family: 'Proxima Nova';
-  /* IE6-8 Fix */
-  src: url('../fonts/ProximaNova-Bold-webfont.eot');
-  src: url('../fonts/ProximaNova-Bold-webfont.eot?') format('eot'), local('Proxima Nova Bold'), local('ProximaNova-Bold'), url('../fonts/ProximaNova-Bold-webfont.woff') format('woff');
-  font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Proxima Nova';
-  /* IE6-8 Fix */
-  src: url('../fonts/ProximaNova-BoldIt-webfont.eot');
-  src: url('../fonts/ProximaNova-BoldIt-webfont.eot?') format('eot'), local('Proxima Nova Bold'), local('ProximaNova-Bold'), url('../fonts/ProximaNova-BoldIt-webfont.woff') format('woff');
-  font-weight: 700;
-  font-style: italic;
-  /*
+******************************************************************//*fixed navbar ONLY on blog page*/@font-face{font-family:'Proxima Nova';/* IE6-8 Fix */src:url('../fonts/ProximaNova-Reg-webfont.eot');src:url('../fonts/ProximaNova-Reg-webfont.eot?') format('eot'), local('Proxima Nova Regular'), local('ProximaNova-Reg_0'), url('../fonts/ProximaNova-Reg-webfont.woff') format('woff');font-weight:400;font-style:normal;}@font-face{font-family:'Proxima Nova';/* IE6-8 Fix */src:url('../fonts/ProximaNova-RegIt-webfont.eot');src:url('../fonts/ProximaNova-RegIt-webfont.eot?') format('eot'), local('Proxima Nova Regular'), local('ProximaNova-Reg_0'), url('../fonts/ProximaNova-RegIt-webfont.woff') format('woff');font-weight:400;font-style:italic;}@font-face{font-family:'Proxima Nova';/* IE6-8 Fix */src:url('../fonts/ProximaNova-Sbold-webfont.eot');src:url('../fonts/ProximaNova-Sbold-webfont.eot?') format('eot'), local('Proxima Nova Semibold'), local('ProximaNova-Sbold'), url('../fonts/ProximaNova-Sbold-webfont.woff') format('woff');font-weight:600;font-style:normal;}@font-face{font-family:'Proxima Nova';/* IE6-8 Fix */src:url('../fonts/ProximaNova-SboldIt-webfont.eot');src:url('../fonts/ProximaNova-SboldIt-webfont.eot?') format('eot'), local('Proxima Nova Semibold'), local('ProximaNova-SboldIt'), url('../fonts/ProximaNova-SboldIt-webfont.woff') format('woff');font-weight:600;font-style:italic;}@font-face{font-family:'Proxima Nova';/* IE6-8 Fix */src:url('../fonts/ProximaNova-Bold-webfont.eot');src:url('../fonts/ProximaNova-Bold-webfont.eot?') format('eot'), local('Proxima Nova Bold'), local('ProximaNova-Bold'), url('../fonts/ProximaNova-Bold-webfont.woff') format('woff');font-weight:700;font-style:normal;}@font-face{font-family:'Proxima Nova';/* IE6-8 Fix */src:url('../fonts/ProximaNova-BoldIt-webfont.eot');src:url('../fonts/ProximaNova-BoldIt-webfont.eot?') format('eot'), local('Proxima Nova Bold'), local('ProximaNova-Bold'), url('../fonts/ProximaNova-BoldIt-webfont.woff') format('woff');font-weight:700;font-style:italic;/*
 The following is based of Typebase:
 https://github.com/devinhunt/typebase.css
 I've edited it a bit, but it's a nice starting point.
-*/ }
-
-p {
-  -ms-word-break: break-all;
-  -ms-word-wrap: break-all;
-  word-break: break-word;
-  word-break: break-word;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
-  -webkit-hyphenate-before: 2;
-  -webkit-hyphenate-after: 3;
-  hyphenate-lines: 3;
-  -webkit-font-feature-settings: "liga", "dlig";
-  -moz-font-feature-settings: "liga=1, dlig=1";
-  -ms-font-feature-settings: "liga", "dlig";
-  -o-font-feature-settings: "liga", "dlig";
-  font-feature-settings: "liga", "dlig";
-  /*Other custom font classes...*/ }
-
-.grey {
-  color: grey; }
-
-.big-font {
-  font-size: 3.2em;
-  line-height: 1; }
-
-.extra-big-font {
-  font-size: 7em;
-  line-height: 1.5; }
-
-.med-font {
-  font-size: 2.1em; }
-
-.text-bold {
-  font-weight: 700; }
-
-.logo {
-  margin: 0em 0.5em; }
-
-#nav-toggle {
-  float: right;
-  /*Contact page Marketo Form
-******************************/ }
-
-.page-template-page-contact-php {
-  /*********************
+*/}p{-ms-word-break:break-all;-ms-word-wrap:break-all;word-break:break-word;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;-webkit-hyphenate-before:2;-webkit-hyphenate-after:3;hyphenate-lines:3;-webkit-font-feature-settings:"liga", "dlig";-moz-font-feature-settings:"liga=1, dlig=1";-ms-font-feature-settings:"liga", "dlig";-o-font-feature-settings:"liga", "dlig";font-feature-settings:"liga", "dlig";/*Other custom font classes...*/}.grey{color:grey;}.big-font{font-size:3.2em;line-height:1;}.extra-big-font{font-size:7em;line-height:1.5;}.med-font{font-size:2.1em;}.text-bold{font-weight:700;}.logo{margin:0em 0.5em;}#nav-toggle{float:right;/*Contact page Marketo Form
+******************************/}.page-template-page-contact-php{/*********************
 POSTS & CONTENT STYLES
-*********************/
-  /* entry content */ }
-  .page-template-page-contact-php .left-col {
-    width: 50%;
-    float: left; }
-  .page-template-page-contact-php .right-col {
-    width: 49%;
-    float: left; }
-    .page-template-page-contact-php .right-col textarea {
-      margin-bottom: 2em; }
-
-.entry-content {
-  /* end .entry-content */
-  /*********************
+*********************//* entry content */}.page-template-page-contact-php .left-col{width:50%;float:left;}.page-template-page-contact-php .right-col{width:49%;float:left;}.page-template-page-contact-php .right-col textarea{margin-bottom:2em;}.entry-content{/* end .entry-content *//*********************
 FOOTER STYLES
-*********************/
-  /*
+*********************//*
 check your menus here. do they look good?
 do they need tweaking?
-*/ }
-  .entry-content .alignleft, .entry-content img.alignleft {
-    margin-right: 1.5em;
-    display: inline;
-    float: left; }
-  .entry-content .alignright, .entry-content img.alignright {
-    margin-left: 1.5em;
-    display: inline;
-    float: right; }
-  .entry-content .aligncenter, .entry-content img.aligncenter {
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-    clear: both; }
-
-.footer-links {
-  /* end .footer-links */ }
-  .home {
-    /*********************
+*/}.entry-content .alignleft,.entry-content img.alignleft{margin-right:1.5em;display:inline;float:left;}.entry-content .alignright,.entry-content img.alignright{margin-left:1.5em;display:inline;float:right;}.entry-content .aligncenter,.entry-content img.aligncenter{margin-right:auto;margin-left:auto;display:block;clear:both;}.footer-links{/* end .footer-links */}.home{/*********************
 LAYOUT & GRID STYLES
-*********************/ }
-  .home .rev_slider_wrapper {
-    display: block !important; }
-
-.wrap {
-  width: 95%;
-  /*********************
+*********************/}.home .rev_slider_wrapper{display:block !important;}.wrap{width:95%;/*********************
 HEADER STYLES
-*********************/ }
-
-.graphical-header {
-  width: 100%;
-  max-height: 225px;
-  overflow: hidden; }
-  .graphical-header img {
-    display: block;
-    width: 100%; }
-  .graphical-header h1 {
-    position: absolute;
-    top: 150px;
-    background: rgba(141, 192, 29, 0.8);
-    padding: 25px 100px;
-    width: 90%;
-    text-align: left; }
-
-.mobile-graphical-header {
-  display: none; }
-
-.post-type-archive-executives {
-  /*Content writers page*/ }
-  .post-type-archive-executives #crumbs {
-    margin-bottom: 1em; }
-
-.template_section {
-  /**********************
+*********************/}.graphical-header{width:100%;max-height:225px;overflow:hidden;}.graphical-header img{display:block;width:100%;}.graphical-header h1{position:absolute;top:150px;background:rgba(141, 192, 29, 0.8);padding:25px 100px;width:90%;text-align:left;}.mobile-graphical-header{display:none;}.post-type-archive-executives{/*Content writers page*/}.post-type-archive-executives #crumbs{margin-bottom:1em;}.template_section{/**********************
 NAVIGATION STYLES
-*********************/
-  /*move from mobile menu to desktop menu...*/ }
-  .template_section .content_body .reasons_inner img {
-    display: inline-block;
-    float: left;
-    margin-right: 1.5em;
-    margin-bottom: 1.5em; }
-
-.mobile_logo {
-  display: block; }
-
-.full_logo {
-  display: none; }
-
-nav {
-  float: right;
-  width: auto; }
-
-.header {
-  /*end .header*/
-  /***************************
+*********************//*move from mobile menu to desktop menu...*/}.template_section .content_body .reasons_inner img{display:inline-block;float:left;margin-right:1.5em;margin-bottom:1.5em;}.mobile_logo{display:block;}.full_logo{display:none;}nav{float:right;width:auto;}.header{/*end .header*//***************************
 BLOG-Landing Page
-****************************/ }
-  .header .nav {
-    float: right;
-    border: 0;
-    /* end .nav */ }
-    .header .nav ul {
-      background: #fff;
-      margin-top: 0; }
-    .header .nav li {
-      float: left;
-      position: relative;
-      /* end .menu ul li */ }
-      .header .nav li a {
-        border-bottom: 0;
-        display: block;
-        font-size: 0.65em;
-        color: #fff;
-        text-decoration: none;
-        text-transform: uppercase;
-        padding: 2.1em;
-        /*
+****************************/}.header .nav{float:right;border:0;/* end .nav */}.header .nav ul{background:#fff;margin-top:0;}.header .nav li{float:left;position:relative;/* end .menu ul li */}.header .nav li a{border-bottom:0;display:block;font-size:0.65em;color:#fff;text-decoration:none;text-transform:uppercase;padding:2.19em;/*
 				you can use hover styles here even though this size
 				has the possibility of being a mobile device.
-				*/
-        letter-spacing: 1px; }
-        .header .nav li a:hover, .header .nav li a:focus {
-          color: #fff;
-          text-decoration: none; }
-      .header .nav li:last-child {
-        /*
+				*/letter-spacing:1px;}.header .nav li a:hover,.header .nav li a:focus{color:#fff;text-decoration:none;}.header .nav li:last-child{/*
 			plan your menus and drop-downs wisely.
-			*/ }
-      .header .nav li ul.sub-menu, .header .nav li ul.children {
-        background: #fff;
-        margin-top: 0;
-        border: 0;
-        position: absolute;
-        visibility: hidden;
-        z-index: 8999;
-        /* showing sub-menus */ }
-        .header .nav li ul.sub-menu li, .header .nav li ul.children li {
-          /* highlight sub-menu current page */ }
-          .header .nav li ul.sub-menu li a, .header .nav li ul.children li a {
-            background: #000;
-            color: #fff;
-            padding-left: 10px;
-            display: block;
-            width: 180px;
-            padding: 0.75em;
-            -webkit-transition: background 0.2s;
-            transition: background 0.2s;
-            /*********************
+			*/}.header .nav li ul.sub-menu,.header .nav li ul.children{background:#fff;margin-top:0;border:0;position:absolute;visibility:hidden;z-index:8999;/* showing sub-menus */}.header .nav li ul.sub-menu li,.header .nav li ul.children li{/* highlight sub-menu current page */}.header .nav li ul.sub-menu li a,.header .nav li ul.children li a{background:#000;color:#fff;padding-left:10px;display:block;width:180px;padding:0.75em;-webkit-transition:background 0.2s;transition:background 0.2s;/*********************
 CSS3 GRADIENTS
 Be careful with these since they can
 really slow down your CSS. Don't overdo it.
-*********************/
-            /* @include css-gradient(#dfdfdf,#f8f8f8); */ }
-            .header .nav li ul.sub-menu li a:hover, .header .nav li ul.children li a:hover, .header .nav li ul.sub-menu li a:focus, .header .nav li ul.children li a:focus {
-              opacity: 0.8; }
-            .header .nav li ul.sub-menu li:last-child, .header .nav li ul.children li:last-child {
-              /*
+*********************//* @include css-gradient(#dfdfdf,#f8f8f8); */}.header .nav li ul.sub-menu li a:hover,.header .nav li ul.children li a:hover,.header .nav li ul.sub-menu li a:focus,.header .nav li ul.children li a:focus{opacity:0.8;}.header .nav li ul.sub-menu li:last-child,.header .nav li ul.children li:last-child{/*
 					if you need to go deeper, go nuts
 					just remember deeper menus suck
 					for usability. k, bai.
-					*/ }
-            .header .nav li ul.sub-menu li:last-child a, .header .nav li ul.children li:last-child a {
-              border-bottom: 0; }
-          .header .nav li ul.sub-menu li ul, .header .nav li ul.children li ul {
-            top: 0;
-            left: 100%; }
-        .header .nav li:hover > ul {
-          top: auto;
-          visibility: visible; }
-    .header .nav li.highlight {
-      /* highlight current page */ }
-      .header .nav li.highlight a {
-        background: #8dc01d;
-        color: #000;
-        font-weight: bold;
-        font-size: 0.9em;
-        padding: 1.45em; }
-    .header .nav li.current-menu-item, .header .nav li.current_page_item, .header .nav li.current_page_ancestor {
-      /* end current highlighters */ }
-      .tagbar, .sidebar_tags, .scrolly {
-        display: block; }
-
-.tagbar, .sidebar_tags {
-  background: rgba(0, 0, 0, 0.6);
-  background-size: 100%;
-  height: auto; }
-  .tagbar .selected.tag, .sidebar_tags .selected.tag {
-    background: #8dc01d;
-    color: #000;
-    font-weight: bold;
-    opacity: 0.8; }
-  .tagbar .tag, .sidebar_tags .tag {
-    display: inline-block;
-    padding: 13px 0.7%;
-    color: #fff;
-    font-size: 0.6em;
-    font-weight: bold;
-    letter-spacing: 0.75px;
-    text-transform: uppercase;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-    /*********************
+					*/}.header .nav li ul.sub-menu li:last-child a,.header .nav li ul.children li:last-child a{border-bottom:0;}.header .nav li ul.sub-menu li ul,.header .nav li ul.children li ul{top:0;left:100%;}.header .nav li:hover > ul{top:auto;visibility:visible;}.header .nav li.highlight{/* highlight current page */}.header .nav li.highlight a{background:#8dc01d;color:#000;font-weight:bold;font-size:0.9em;padding:1.45em;}.header .nav li.current-menu-item,.header .nav li.current_page_item,.header .nav li.current_page_ancestor{/* end current highlighters */}.tagbar,.sidebar_tags,.scrolly{display:block;}.tagbar,.sidebar_tags{background:rgba(0, 0, 0, 0.6);background-size:100%;height:auto;}.tagbar .selected.tag,.sidebar_tags .selected.tag{background:#8dc01d;color:#000;font-weight:bold;opacity:0.8;}.tagbar .tag,.sidebar_tags .tag{display:inline-block;padding:13px 0.7%;color:#fff;font-size:0.6em;font-weight:bold;letter-spacing:0.75px;text-transform:uppercase;-webkit-transition:all 0.2s;transition:all 0.2s;/*********************
 CSS3 GRADIENTS
 Be careful with these since they can
 really slow down your CSS. Don't overdo it.
-*********************/
-    /* @include css-gradient(#dfdfdf,#f8f8f8); */ }
-    .tagbar .tag:hover, .sidebar_tags .tag:hover {
-      background: #8dc01d;
-      color: #000;
-      opacity: 0.8; }
-  .tagbar .taglink, .sidebar_tags .taglink {
-    text-decoration: none; }
-
-.sidebar_tags {
-  background: #fff; }
-  .sidebar_tags .tag {
-    background: #333;
-    opacity: 0.8;
-    font-size: 0.55em !important;
-    border: 2px solid #333;
-    border-style: ridge;
-    margin-right: 10px;
-    margin-top: 20px; }
-
-.arrow_to_infinity {
-  width: 100%;
-  display: block;
-  height: 40px;
-  margin-left: 5em;
-  /*#topinfo- container for an individual post.  Shared by both
-the featured post and the remaining posts....*/ }
-
-#topinfo {
-  position: relative;
-  width: 45%;
-  float: left;
-  /*some special considerations for the featured post*/ }
-  #topinfo a {
-    text-decoration: none; }
-  #topinfo .author {
-    float: left;
-    position: relative;
-    top: 0;
-    margin-right: 8px;
-    right: 0; }
-    #topinfo .author span {
-      font-size: 0.8em;
-      text-transform: uppercase; }
-    #topinfo .author img {
-      width: 100px; }
-    #topinfo .author .user {
-      display: block;
-      text-align: center; }
-  #topinfo .subcategory, #topinfo .readtime {
-    float: left; }
-  #topinfo .meta-wrapper {
-    float: left;
-    position: absolute;
-    bottom: 8px;
-    left: 115px; }
-  #topinfo .readtime {
-    margin-right: 8px;
-    /*in px to match exactly with the subcat sprite */
-    padding: 10px;
-    background: #dedee1; }
-    #topinfo .readtime img {
-      width: 35px;
-      display: inline-block;
-      float: left; }
-    #topinfo .readtime .read_number {
-      font-size: 2.2em;
-      font-weight: 600;
-      display: inline; }
-    #topinfo .readtime span {
-      float: left;
-      font-size: 0.8em;
-      text-transform: uppercase;
-      margin-left: 1em;
-      line-height: 16px; }
-
-.featured-post, .blog_header {
-  min-height: 315px;
-  background: url(../images/blog-images/headerbackground.png) no-repeat;
-  background-size: 100%;
-  margin-bottom: 2em; }
-  .featured-post .arrow_to_infinity, .blog_header .arrow_to_infinity {
-    width: 66%; }
-  .featured-post h1, .blog_header h1 {
-    background: none;
-    color: #000;
-    width: 100%;
-    float: left;
-    font-weight: 100;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: block;
-    padding-bottom: 0px;
-    margin: 0.25em 2em;
-    text-align: left; }
-  .featured-post h2, .blog_header h2 {
-    font-size: 2em; }
-  .featured-post .image-inner, .blog_header .image-inner {
-    margin: 1em 1em 0 5em;
-    width: 37%; }
-  .featured-post #topinfo .meta-wrapper, .blog_header #topinfo .meta-wrapper, .featured-post #topinfo .author, .blog_header #topinfo .author {
-    display: inline-block; }
-    .featured-post #topinfo .meta-wrapper, .blog_header #topinfo .meta-wrapper {
-      left: 117px; }
-
-.blog_header h1 {
-  margin: 0.25em 1em; }
-
-.title_info_container {
-  padding-bottom: 10px;
-  width: 100%;
-  display: inline-block;
-  text-align: left; }
-
-.image-inner {
-  margin: 1em 1em 0 5em;
-  width: 25%;
-  max-height: 340px;
-  overflow: hidden;
-  display: inline-block;
-  float: left;
-  /*Some special considerations for the secondary blog area*/ }
-  .image-inner img {
-    max-width: 100%;
-    height: auto; }
-
-.secondary-blog {
-  margin-bottom: 5em;
-  /*And some special considerations just for single blog posts*/ }
-  .secondary-blog article {
-    margin-bottom: 1em; }
-  .secondary-blog .arrow_to_infinity {
-    width: 66%; }
-    .secondary-blog .arrow_to_infinity.featured {
-      width: 100%; }
-  .secondary-blog h2 {
-    font-size: 1.25em; }
-  .secondary-blog #topinfo {
-    width: 50%; }
-    .secondary-blog #topinfo .readtime img {
-      width: 25px; }
-      .secondary-blog #topinfo .readtime .read_number {
-        font-size: 1.5em;
-        font-weight: 600;
-        display: inline; }
-      .secondary-blog #topinfo .readtime span {
-        font-size: 0.6em;
-        line-height: 12px; }
-    .secondary-blog #topinfo .meta-wrapper {
-      left: 115px;
-      bottom: 13px; }
-
-.single {
-  /*special css for twits and videos*/ }
-  .single .featured-post h1, .single .blog_header h1 {
-    font-size: 1.75em;
-    text-transform: none; }
-  .single #topinfo {
-    width: 45%;
-    margin-top: 10px;
-    height: 160px; }
-    .single #topinfo .meta-wrapper {
-      position: relative; }
-  .single .arrow_to_infinity {
-    margin-left: 0; }
-
-.tagged-twit {
-  /*Footer stuff*/ }
-  .tagged-twit #topinfo {
-    width: 95%;
-    min-height: 225px;
-    margin-top: 0px; }
-  .tagged-twit .single-twit {
-    position: absolute;
-    width: 55%;
-    left: 5%;
-    top: 200px; }
-    .tagged-twit .single-twit img {
-      width: 100%;
-      max-width: 750px; }
-  .tagged-twit .author-cat-time-container {
-    float: right;
-    width: 33%; }
-  .tagged-twit .entry-content {
-    margin-top: 13%; }
-
-.tag_thumbnails img {
-  width: 94px; }
-
-.boilerplate {
-  margin: 0 !important; }
-  .boilerplate .bio {
-    background: rgba(141, 192, 29, 0.4); }
-  .boilerplate .icons {
-    float: left;
-    margin-top: 9px; }
-
-.authorprofile {
-  background: none !important;
-  float: left !important; }
-  .authorprofile img {
-    width: 70px;
-    float: left; }
-
-.single hr, .archive hr {
-  border: none; }
-
-.single .arrow_to_infinity {
-  background: url(../images/blog-images/arrow_to_infinity.png) no-repeat;
-  width: 100%;
-  display: block;
-  height: 34px;
-  background-size: 100%;
-  margin-bottom: -15px; }
-
-.bottom-cta {
-  height: 64px;
-  margin-top: 75px;
-  overflow: visible;
-  margin-bottom: 35px; }
-
-#comments h1 {
-  margin-bottom: 20px; }
-
-.ourlatestfooter, .marketzine, .askamarketer {
-  width: 250px;
-  height: 162px;
-  display: inline-block;
-  margin-top: -70px;
-  background-size: 100% !important;
-  margin-left: 20px; }
-  .ourlatestfooter:hover, .marketzine:hover, .askamarketer:hover {
-    background-position: 0px -163px;
-    cursor: pointer; }
-
-.ourlatestfooter {
-  background: url(../images/blog-images/ourlatestfooter.jpg) no-repeat; }
-
-.marketzine {
-  background: url(../images/blog-images/marketzine.jpg) no-repeat; }
-
-.askamarketer {
-  background: url(../images/blog-images/askamarketer.jpg) no-repeat; }
-
-.bottom-cta-container {
-  width: 825px;
-  display: block;
-  margin: auto;
-  /*Popup footer form*/
-  /*popup css*/ }
-
-.popup_form_shadow {
-  z-index: 9997;
-  background: #000;
-  opacity: 0.6;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0; }
-
-.popup_form {
-  display: inline-block;
-  position: fixed;
-  z-index: 9998;
-  top: 50%;
-  left: 50%;
-  width: 460px;
-  background: rgba(255, 255, 255, 0.9);
-  color: #333;
-  margin: -185px 0 0 -230px;
-  padding: 0 2em;
-  border: 5px solid #fff;
-  border-style: outset; }
-  .popup_form h2 {
-    text-transform: uppercase;
-    font-size: 1.5em; }
-  .popup_form .f-row {
-    margin-top: 1.25em; }
-  .popup_form .button {
-    margin-top: 1em;
-    margin-bottom: 1em; }
-  .popup_form .wpcf7-response-output {
-    margin-top: 0 !important; }
-  .popup_form.landing_page_popup {
-    margin: -285px 0 0 -230px; }
-    .popup_form.landing_page_popup h2 {
-      text-transform: uppercase;
-      text-align: center;
-      font-weight: 100; }
-    .popup_form.landing_page_popup .button {
-      width: 100%; }
-    .popup_form.landing_page_popup input[type="text"] {
-      padding: 14px 12px; }
-
-.popup_form_exit {
-  z-index: 9999;
-  color: #333;
-  padding: 5px;
-  font-size: 18px;
-  position: absolute;
-  right: 5px;
-  top: 5px;
-  /*********************
+*********************//* @include css-gradient(#dfdfdf,#f8f8f8); */}.tagbar .tag:hover,.sidebar_tags .tag:hover{background:#8dc01d;color:#000;opacity:0.8;}.tagbar .taglink,.sidebar_tags .taglink{text-decoration:none;}.sidebar_tags{background:#fff;}.sidebar_tags .tag{background:#333;opacity:0.8;font-size:0.55em !important;border:2px solid #333;border-style:ridge;margin-right:10px;margin-top:20px;}.arrow_to_infinity{width:100%;display:block;height:40px;margin-left:5em;/*#topinfo- container for an individual post.  Shared by both
+the featured post and the remaining posts....*/}#topinfo{position:relative;width:45%;float:left;/*some special considerations for the featured post*/}#topinfo a{text-decoration:none;}#topinfo .author{float:left;position:relative;top:0;margin-right:8px;right:0;}#topinfo .author span{font-size:0.8em;text-transform:uppercase;}#topinfo .author img{width:100px;}#topinfo .author .user{display:block;text-align:center;}#topinfo .subcategory,#topinfo .readtime{float:left;}#topinfo .meta-wrapper{float:left;position:absolute;bottom:8px;left:115px;}#topinfo .readtime{margin-right:8px;/*in px to match exactly with the subcat sprite */padding:10px;background:#dedee1;}#topinfo .readtime img{width:35px;display:inline-block;float:left;}#topinfo .readtime .read_number{font-size:2.2em;font-weight:600;display:inline;}#topinfo .readtime span{float:left;font-size:0.8em;text-transform:uppercase;margin-left:1em;line-height:16px;}.featured-post,.blog_header{min-height:315px;background:url(../images/blog-images/headerbackground.png) no-repeat;background-size:100%;margin-bottom:2em;}.featured-post .arrow_to_infinity,.blog_header .arrow_to_infinity{width:66%;}.featured-post h1,.blog_header h1{background:none;color:#000;width:100%;float:left;font-weight:100;text-transform:uppercase;letter-spacing:1px;display:block;padding-bottom:0px;margin:0.25em 2em;text-align:left;}.featured-post h2,.blog_header h2{font-size:2em;}.featured-post .image-inner,.blog_header .image-inner{margin:1em 1em 0 5em;width:37%;}.featured-post #topinfo .meta-wrapper,.blog_header #topinfo .meta-wrapper,.featured-post #topinfo .author,.blog_header #topinfo .author{display:inline-block;}.featured-post #topinfo .meta-wrapper,.blog_header #topinfo .meta-wrapper{left:117px;}.blog_header h1{margin:0.25em 1em;}.title_info_container{padding-bottom:10px;width:100%;display:inline-block;text-align:left;}.image-inner{margin:1em 1em 0 5em;width:25%;max-height:340px;overflow:hidden;display:inline-block;float:left;/*Some special considerations for the secondary blog area*/}.image-inner img{max-width:100%;height:auto;}.secondary-blog{margin-bottom:5em;/*And some special considerations just for single blog posts*/}.secondary-blog article{margin-bottom:1em;}.secondary-blog .arrow_to_infinity{width:66%;}.secondary-blog .arrow_to_infinity.featured{width:100%;}.secondary-blog h2{font-size:1.25em;}.secondary-blog #topinfo{width:50%;}.secondary-blog #topinfo .readtime img{width:25px;}.secondary-blog #topinfo .readtime .read_number{font-size:1.5em;font-weight:600;display:inline;}.secondary-blog #topinfo .readtime span{font-size:0.6em;line-height:12px;}.secondary-blog #topinfo .meta-wrapper{left:115px;bottom:13px;}.single{/*special css for twits and videos*/}.single .featured-post h1,.single .blog_header h1{font-size:1.75em;text-transform:none;}.single #topinfo{width:45%;margin-top:10px;height:160px;}.single #topinfo .meta-wrapper{position:relative;}.single .arrow_to_infinity{margin-left:0;}.tagged-twit,.tagged-videos{/*Footer stuff*/}.tagged-twit #topinfo,.tagged-videos #topinfo{width:95%;min-height:225px;margin-top:0px;}.tagged-twit .single-twit-or-video,.tagged-videos .single-twit-or-video{position:absolute;width:55%;left:5%;top:200px;}.tagged-twit .single-twit-or-video img,.tagged-videos .single-twit-or-video img{width:100%;max-width:750px;/*placeholder for the youtube demo*/}.tagged-twit .single-twit-or-video iframe,.tagged-videos .single-twit-or-video iframe{width:100%;}.tagged-twit .author-cat-time-container,.tagged-videos .author-cat-time-container{float:right;width:33%;}.tagged-twit .entry-content,.tagged-videos .entry-content{margin-top:13%;}.tag_thumbnails img{width:94px;}.boilerplate{margin:0 !important;}.boilerplate .bio{background:rgba(141, 192, 29, 0.4);}.boilerplate .icons{float:left;margin-top:9px;}.authorprofile{background:none !important;float:left !important;}.authorprofile img{width:70px;float:left;}.single hr,.archive hr{border:none;}.single .arrow_to_infinity{background:url(../images/blog-images/arrow_to_infinity.png) no-repeat;width:100%;display:block;height:34px;background-size:100%;margin-bottom:-15px;}.bottom-cta{height:64px;margin-top:75px;overflow:visible;margin-bottom:35px;}#comments h1{margin-bottom:20px;}.ourlatestfooter,.marketzine,.askamarketer{width:250px;height:162px;display:inline-block;margin-top:-70px;background-size:100% !important;margin-left:20px;}.ourlatestfooter:hover,.marketzine:hover,.askamarketer:hover{background-position:0px -163px;cursor:pointer;}.ourlatestfooter{background:url(../images/blog-images/ourlatestfooter.jpg) no-repeat;}.marketzine{background:url(../images/blog-images/marketzine.jpg) no-repeat;}.askamarketer{background:url(../images/blog-images/askamarketer.jpg) no-repeat;}.bottom-cta-container{width:825px;display:block;margin:auto;/*Popup footer form*//*popup css*/}.popup_form_shadow{z-index:9997;background:#000;opacity:0.6;position:fixed;width:100%;height:100%;top:0;left:0;}.popup_form{display:inline-block;position:fixed;z-index:9998;top:50%;left:50%;width:460px;background:rgba(255, 255, 255, 0.9);color:#333;margin:-185px 0 0 -230px;padding:0 2em;border:5px solid #fff;border-style:outset;}.popup_form h2{text-transform:uppercase;font-size:1.5em;}.popup_form .f-row{margin-top:1.25em;}.popup_form .button{margin-top:1em;margin-bottom:1em;}.popup_form .wpcf7-response-output{margin-top:0 !important;}.popup_form.landing_page_popup{margin:-285px 0 0 -230px;}.popup_form.landing_page_popup h2{text-transform:uppercase;text-align:center;font-weight:100;}.popup_form.landing_page_popup .button{width:100%;}.popup_form.landing_page_popup input[type="text"]{padding:14px 12px;}.popup_form_exit{z-index:9999;color:#333;padding:5px;font-size:18px;position:absolute;right:5px;top:5px;/*********************
 BUSINESS MODEL LANDING PAGE TEMPLATE
-*********************/ }
-  .popup_form_exit:hover {
-    cursor: pointer; }
-
-.business_model_container {
-  /*********************
+*********************/}.popup_form_exit:hover{cursor:pointer;}.business_model_container{/*********************
 SIDEBARS & ASIDES
-*********************/ }
-  .business_model_container .business_section {
-    display: block; }
-    .business_model_container .business_section .content_container {
-      padding: 3em 10em; }
-
-.sidebar {
-  margin-top: 2.2em; }
-
-.widgettitle {
-  border-bottom: 2px solid #444;
-  margin-bottom: 0.75em; }
-
-.widget {
-  padding: 0 10px;
-  margin: 1em 0;
-  /*careers sidebar*/
-  /*side bar on careers page*/ }
-  .widget ul li {
-    margin-bottom: 0.75em; }
-    .widget ul li a {
-      /* deep nesting */ }
-    .widget ul li ul {
-      margin-top: 0.75em;
-      padding-left: 1em; }
-
-.sidebar {
-  /*********************
+*********************/}.business_model_container .business_section{display:block;}.business_model_container .business_section .content_container{padding:3em 10em;}.sidebar{margin-top:2.2em;}.widgettitle{border-bottom:2px solid #444;margin-bottom:0.75em;}.widget{padding:0 10px;margin:1em 0;/*careers sidebar*//*side bar on careers page*/}.widget ul li{margin-bottom:0.75em;}.widget ul li a{/* deep nesting */}.widget ul li ul{margin-top:0.75em;padding-left:1em;}.sidebar{/*********************
 FOOTER STYLES
-*********************/ }
-  .sidebar #testi {
-    display: block;
-    height: 0;
-    padding-bottom: 150%;
-    overflow: hidden;
-    clear: both;
-    margin-top: -81px; }
-    .sidebar #testi .quote img {
-      width: auto;
-      height: auto; }
-
-.footer #top-footer {
-  width: 100%;
-  float: left;
-  background: #333;
-  display: block; }
-  .footer #top-footer nav {
-    width: 100%;
-    text-align: center; }
-  .footer #top-footer nav ul {
-    width: 92%;
-    display: inline-block; }
-    .footer #top-footer nav ul li {
-      float: left;
-      text-transform: uppercase;
-      display: inline-block;
-      font-size: 1.2em;
-      width: 24.99%;
-      text-align: left;
-      padding-left: 75px; }
-      .footer #top-footer nav ul li a {
-        color: #fff;
-        text-decoration: none; }
-  .footer #top-footer nav ul.sub-menu, .footer #top-footer nav ul.children {
-    margin-top: 0; }
-    .footer #top-footer nav ul.sub-menu li, .footer #top-footer nav ul.children li {
-      padding-left: 0;
-      width: 100%;
-      height: 35px;
-      display: none; }
-      .footer #top-footer nav ul.sub-menu li a, .footer #top-footer nav ul.children li a {
-        font-size: 0.5em; }
-  .footer #top-footer .footer-cta-container {
-    margin: 0.5em 0;
-    text-align: center;
-    position: relative; }
-  .footer #top-footer .footer-cta-container .footer-contact-us {
-    position: absolute;
-    right: 30px;
-    bottom: 40px; }
-    .footer #top-footer .footer-cta-container .footer-contact-us a {
-      padding: 15px 10px;
-      border-radius: 2px;
-      background: #000;
-      color: #8dc01d;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-decoration: none;
-      -webkit-transition: all 0.2s;
-      transition: all 0.2s;
-      /*********************
+*********************/}.sidebar #testi{display:block;height:0;padding-bottom:150%;overflow:hidden;clear:both;margin-top:-81px;}.sidebar #testi .quote img{width:auto;height:auto;}.footer #top-footer{width:100%;float:left;background:#333;display:block;}.footer #top-footer nav{width:100%;text-align:center;}.footer #top-footer nav ul{width:92%;display:inline-block;}.footer #top-footer nav ul li{float:left;text-transform:uppercase;display:inline-block;font-size:1.2em;width:24.99%;text-align:left;padding-left:75px;}.footer #top-footer nav ul li a{color:#fff;text-decoration:none;}.footer #top-footer nav ul.sub-menu,.footer #top-footer nav ul.children{margin-top:0;}.footer #top-footer nav ul.sub-menu li,.footer #top-footer nav ul.children li{padding-left:0;width:100%;height:35px;display:none;}.footer #top-footer nav ul.sub-menu li a,.footer #top-footer nav ul.children li a{font-size:0.5em;}.footer #top-footer .footer-cta-container{margin:0.5em 0;text-align:center;position:relative;}.footer #top-footer .footer-cta-container .footer-contact-us{position:absolute;right:30px;bottom:40px;}.footer #top-footer .footer-cta-container .footer-contact-us a{padding:15px 10px;border-radius:2px;background:#000;color:#8dc01d;font-weight:bold;letter-spacing:2px;text-decoration:none;-webkit-transition:all 0.2s;transition:all 0.2s;/*********************
 CSS3 GRADIENTS
 Be careful with these since they can
 really slow down your CSS. Don't overdo it.
-*********************/
-      /* @include css-gradient(#dfdfdf,#f8f8f8); */ }
-      .footer #top-footer .footer-cta-container .footer-contact-us a:hover {
-        color: #000;
-        background: #8dc01d; }
-  .footer #top-footer .footer-cta-container .follow-us {
-    text-align: center;
-    letter-spacing: 2px;
-    font-weight: 600;
-    font-size: 1.25em;
-    display: block;
-    width: 155px;
-    margin: auto;
-    background: #333; }
-  .footer #top-footer .footer-cta-container .footer-social-icons {
-    height: 70px;
-    display: inline-block;
-    border-bottom: 2px solid #474747; }
-    .footer #top-footer .footer-cta-container .footer-social-icons .cube {
-      float: left;
-      height: 45px;
-      width: 45px;
-      margin: 5px;
-      background: url(/wp-content/themes/brafton/library/images/footer_social_sprite.png);
-      background-size: 390px 45px; }
-      .footer #top-footer .footer-cta-container .footer-social-icons .cube.footer-linkedin {
-        background-position: 331px 0px; }
-      .footer #top-footer .footer-cta-container .footer-social-icons .cube.footer-facebook {
-        background-position: 216px 0px; }
-      .footer #top-footer .footer-cta-container .footer-social-icons .cube.footer-gplus {
-        background-position: 160px 0px; }
-      .footer #top-footer .footer-cta-container .footer-social-icons .cube.footer-pinterest {
-        background-position: 273px 0px; }
-      .footer #top-footer .footer-cta-container .footer-social-icons .cube.footer-youtube {
-        background-position: 101px 0px; }
-      .footer #top-footer .footer-cta-container .footer-social-icons .cube.footer-rss {
-        background-position: 47px 0px; }
-      .footer #top-footer .footer-cta-container .footer-social-icons .cube:hover {
-        opacity: 0.7; }
-
-.category-blog .header {
-  position: fixed;
-  z-index: 11000; }
-  .category-blog #archive {
-    margin-top: 70px; }
-
-.tagbar .tag, .sidebar_tags .tag {
-  padding: 13px 2%; }
-
-.featured-post .image-inner, .blog_header .image-inner {
-  width: 22%; }
-
-.secondary-blog #topinfo {
-  width: 60%; }
-  .secondary-blog #topinfo .author, .secondary-blog #topinfo .meta-wrapper {
-    display: inline-block; }
-
-.arrow_to_infinity {
-  height: 35px;
-  margin-top: 20px; }
-
-.wrap {
-  width: 95%;
-  /*Switch out logos at this screen size*/ }
-
-.mobile_logo {
-  display: none; }
-
-.full_logo {
-  display: inline-block; }
-
-.logo {
-  margin: 0.25em 0.5em;
-  /*and increase font-size on larger devices*/ }
-  .logo img {
-    width: 92%; }
-
-.full_logo {
-  width: 275px; }
-
-.header {
-  /*end .header*/ }
-  .header .nav {
-    /* end .nav */ }
-  .header .nav li {
-    float: left;
-    position: relative; }
-  .header .nav li a {
-    font-size: 0.75em; }
-  .header .nav li.highlight a {
-    padding: 1.75em; }
-
-.graphical-header {
-  /*Bring up the sidebar on the blog hub page on larger devices...*/ }
-  .graphical-header h1 {
-    font-size: 2.85em; }
-
-.blog_sidebar {
-  position: absolute;
-  right: 0;
-  top: 20%;
-  /*Special considerations for single blog posts*/ }
-
-.single {
-  /*Special considerations for twits*/ }
-  .single #topinfo {
-    width: 60%;
-    margin-top: 40px; }
-  .single .blog_header h1, .single .featured-post h1, .single .blog_header h1 {
-    font-size: 2.75em; }
-
-.tagged-twit {
-  /*Sidebar*/ }
-  .tagged-twit #topinfo {
-    width: 95%;
-    min-height: 225px;
-    margin-top: 25px; }
-  .tagged-twit .single-twit {
-    position: absolute;
-    width: 55%;
-    left: 5%;
-    top: 245px; }
-  .tagged-twit .single-twit img {
-    width: 100%;
-    max-width: 750px; }
-  .tagged-twit .author-cat-time-container {
-    float: right;
-    width: 33%; }
-  .tagged-twit .entry-content {
-    margin-top: 300px; }
-
-.widget {
-  /*top footer fixes*/ }
-  .widget #search-query {
-    width: 64%; }
-
-.footer {
-  /*Styles for support page cms bar */
-  /*************
+*********************//* @include css-gradient(#dfdfdf,#f8f8f8); */}.footer #top-footer .footer-cta-container .footer-contact-us a:hover{color:#000;background:#8dc01d;}.footer #top-footer .footer-cta-container .follow-us{text-align:center;letter-spacing:2px;font-weight:600;font-size:1.25em;display:block;width:155px;margin:auto;background:#333;}.footer #top-footer .footer-cta-container .footer-social-icons{height:70px;display:inline-block;border-bottom:2px solid #474747;}.footer #top-footer .footer-cta-container .footer-social-icons .cube{float:left;height:45px;width:45px;margin:5px;background:url(/wp-content/themes/brafton/library/images/footer_social_sprite.png);background-size:390px 45px;}.footer #top-footer .footer-cta-container .footer-social-icons .cube.footer-linkedin{background-position:331px 0px;}.footer #top-footer .footer-cta-container .footer-social-icons .cube.footer-facebook{background-position:216px 0px;}.footer #top-footer .footer-cta-container .footer-social-icons .cube.footer-gplus{background-position:160px 0px;}.footer #top-footer .footer-cta-container .footer-social-icons .cube.footer-pinterest{background-position:273px 0px;}.footer #top-footer .footer-cta-container .footer-social-icons .cube.footer-youtube{background-position:101px 0px;}.footer #top-footer .footer-cta-container .footer-social-icons .cube.footer-rss{background-position:47px 0px;}.footer #top-footer .footer-cta-container .footer-social-icons .cube:hover{opacity:0.7;}.category-blog .header{position:fixed;z-index:11000;}.category-blog #archive{margin-top:70px;}.tagbar .tag,.sidebar_tags .tag{padding:13px 2%;}.featured-post .image-inner,.blog_header .image-inner{width:22%;}.secondary-blog #topinfo{width:60%;}.secondary-blog #topinfo .author,.secondary-blog #topinfo .meta-wrapper{display:inline-block;}.arrow_to_infinity{height:35px;margin-top:20px;}.wrap{width:95%;/*Switch out logos at this screen size*/}.mobile_logo{display:none;}.full_logo{display:inline-block;}.logo{margin:0.25em 0.5em;/*and increase font-size on larger devices*/}.logo img{width:92%;}.full_logo{width:275px;}.header{/*end .header*/}.header .nav{/* end .nav */}.header .nav li{float:left;position:relative;}.header .nav li a{font-size:0.75em;}.header .nav li.highlight a{padding:1.75em;}.graphical-header{/*Bring up the sidebar on the blog hub page on larger devices...*/}.graphical-header h1{font-size:2.85em;}.blog_sidebar{position:absolute;right:0;top:20%;/*Special considerations for single blog posts*/}.single{/*Special considerations for twits*/}.single #topinfo{width:60%;margin-top:40px;}.single .blog_header h1,.single .featured-post h1,.single .blog_header h1{font-size:2.75em;}.tagged-twit,.tagged-videos{/*Sidebar*/}.tagged-twit #topinfo,.tagged-videos #topinfo{width:95%;min-height:225px;margin-top:25px;}.tagged-twit .single-twit-or-video,.tagged-videos .single-twit-or-video{position:absolute;width:55%;left:5%;top:245px;}.tagged-twit .single-twit-or-video img,.tagged-videos .single-twit-or-video img{width:100%;max-width:750px;}.tagged-twit .single-twit-or-video.video,.tagged-videos .single-twit-or-video.video{/*placeholder for youtube demo*/height:66%;}.tagged-twit .single-twit-or-video.video iframe,.tagged-videos .single-twit-or-video.video iframe{height:100%;width:100%;max-width:725px;max-height:470px;}.tagged-twit .author-cat-time-container,.tagged-videos .author-cat-time-container{float:right;width:33%;}.tagged-twit .entry-content,.tagged-videos .entry-content{margin-top:300px;}.widget{/*top footer fixes*/}.widget #search-query{width:64%;}.footer{/*Styles for support page cms bar *//*************
 Support page styles
-**************/ }
-  .footer #top-footer .footer-cta-container .footer-contact-us {
-    right: 90px; }
-    .footer #top-footer .footer-cta-container .footer-contact-us a {
-      padding: 25px 40px; }
-  .footer #top-footer nav ul.sub-menu li, .footer #top-footer nav ul.children li {
-    display: block; }
-
-.support-cms-bar {
-  display: block;
-  height: auto;
-  width: 100%;
-  float: left;
-  background: rgba(0, 0, 0, 0.8);
-  text-transform: uppercase; }
-  .support-cms-bar .support-link-container {
-    display: none; }
-  .support-cms-bar .support-cta {
-    margin-right: 1em; }
-  .support-cms-bar .support-cta .get-help, .support-cms-bar .support-cta .choose-cms {
-    display: inline-block;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 2px;
-    padding: 10px 10px; }
-  .support-cms-bar .support-cta .get-help:hover, .support-cms-bar .support-cta .choose-cms:hover {
-    cursor: pointer; }
-  .support-cms-bar .support-cta .get-help {
-    background: #8dc01d;
-    color: #000; }
-  .support-cms-bar ul {
-    text-align: left;
-    display: inline;
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-    letter-spacing: 2px;
-    list-style: none;
-    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15); }
-  .support-cms-bar ul li {
-    display: inline-block;
-    font-size: 14px;
-    margin-right: -4px;
-    position: relative;
-    padding: 6px 19.5px;
-    cursor: pointer;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-    /*********************
+**************/}.footer #top-footer .footer-cta-container .footer-contact-us{right:90px;}.footer #top-footer .footer-cta-container .footer-contact-us a{padding:25px 40px;}.footer #top-footer nav ul.sub-menu li,.footer #top-footer nav ul.children li{display:block;}.support-cms-bar{display:block;height:auto;width:100%;float:left;background:rgba(0, 0, 0, 0.8);text-transform:uppercase;}.support-cms-bar .support-link-container{display:none;}.support-cms-bar .support-cta{margin-right:1em;}.support-cms-bar .support-cta .get-help,.support-cms-bar .support-cta .choose-cms{display:inline-block;color:#fff;text-transform:uppercase;font-weight:bold;letter-spacing:2px;padding:10px 10px;}.support-cms-bar .support-cta .get-help:hover,.support-cms-bar .support-cta .choose-cms:hover{cursor:pointer;}.support-cms-bar .support-cta .get-help{background:#8dc01d;color:#000;}.support-cms-bar ul{text-align:left;display:inline;margin:0;padding:0;font-weight:bold;letter-spacing:2px;list-style:none;-webkit-box-shadow:0 0 5px rgba(0, 0, 0, 0.15);-moz-box-shadow:0 0 5px rgba(0, 0, 0, 0.15);box-shadow:0 0 5px rgba(0, 0, 0, 0.15);}.support-cms-bar ul li{display:inline-block;font-size:14px;margin-right:-4px;position:relative;padding:6px 19.5px;cursor:pointer;-webkit-transition:all 0.2s;transition:all 0.2s;/*********************
 CSS3 GRADIENTS
 Be careful with these since they can
 really slow down your CSS. Don't overdo it.
-*********************/
-    /* @include css-gradient(#dfdfdf,#f8f8f8); */ }
-  .support-cms-bar ul li a {
-    color: #fff;
-    text-decoration: none; }
-  .support-cms-bar ul li:hover {
-    background: #8dc01d;
-    color: #000; }
-    .support-cms-bar ul li:hover ul {
-      display: block;
-      opacity: 1;
-      visibility: visible; }
-  .support-cms-bar ul li ul {
-    z-index: 9999;
-    padding: 0;
-    position: absolute;
-    top: 33px;
-    left: 0;
-    width: 150px;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: opacity 0.2s;
-    transition: opacity 0.2s;
-    /*********************
+*********************//* @include css-gradient(#dfdfdf,#f8f8f8); */}.support-cms-bar ul li a{color:#fff;text-decoration:none;}.support-cms-bar ul li:hover{background:#8dc01d;color:#000;}.support-cms-bar ul li:hover ul{display:block;opacity:1;visibility:visible;}.support-cms-bar ul li ul{z-index:9999;padding:0;position:absolute;top:33px;left:0;width:150px;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;display:none;opacity:0;visibility:hidden;-webkit-transition:opacity 0.2s;transition:opacity 0.2s;/*********************
 CSS3 GRADIENTS
 Be careful with these since they can
 really slow down your CSS. Don't overdo it.
-*********************/
-    /* @include css-gradient(#dfdfdf,#f8f8f8); */ }
-    .support-cms-bar ul li ul li {
-      background: rgba(0, 0, 0, 0.8);
-      display: block;
-      text-shadow: 0 -1px 0 #000;
-      -webkit-transition: all 0.2s;
-      transition: all 0.2s;
-      /*********************
+*********************//* @include css-gradient(#dfdfdf,#f8f8f8); */}.support-cms-bar ul li ul li{background:rgba(0, 0, 0, 0.8);display:block;text-shadow:0 -1px 0 #000;-webkit-transition:all 0.2s;transition:all 0.2s;/*********************
 CSS3 GRADIENTS
 Be careful with these since they can
 really slow down your CSS. Don't overdo it.
-*********************/
-      /* @include css-gradient(#dfdfdf,#f8f8f8); */ }
-      .support-cms-bar ul li ul li:hover {
-        background: #8dc01d; }
-      .support-cms-bar ul li ul li a:hover {
-        color: #000; }
+*********************//* @include css-gradient(#dfdfdf,#f8f8f8); */}.support-cms-bar ul li ul li:hover{background:#8dc01d;}.support-cms-bar ul li ul li a:hover{color:#000;}

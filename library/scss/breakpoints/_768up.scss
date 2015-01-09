@@ -124,7 +124,7 @@ nav {
 				color: $white;
 				text-decoration: none;
 				text-transform: uppercase;
-				padding: 2.1em;
+				padding: 2.19em;
 				letter-spacing: 1px;
 
 				/*
@@ -533,7 +533,7 @@ the featured post and the remaining posts....*/
 
 /*special css for twits and videos*/
 
-	.tagged-twit {
+	.tagged-twit, .tagged-videos {
 
 		#topinfo {
 			width: 95%;
@@ -541,7 +541,7 @@ the featured post and the remaining posts....*/
 			margin-top: 0px;
 		}
 
-		.single-twit {
+		.single-twit-or-video {
 			position: absolute;
 			width: 55%;
 			left: 5%;
@@ -550,6 +550,11 @@ the featured post and the remaining posts....*/
 			img {
 				width: 100%;
 				max-width: 750px;
+			}
+
+			/*placeholder for the youtube demo*/
+			iframe {
+				width: 100%;
 			}
 		}
 
