@@ -33,7 +33,7 @@ get_header(); ?>
 					<div class="template_section what_is">
 
 						<div class="content_container wrap">
-							<h2><strong>What</strong> is <?php the_title(); ?></h2>
+							<h2><?php echo get_field('subhead_1'); ?></h2>
 							<div class="content_body">
 								<?php $what = get_field( 'what_is_content' ); 
 
@@ -48,7 +48,7 @@ get_header(); ?>
 					<div class="template_section why_you_need gray_body">
 
 						<div class="content_container wrap">
-							<h2><strong>Why</strong> you need <?php the_title(); ?></h2>
+							<h2><?php echo get_field('subhead_2'); ?></h2>
 							<div class="content_body">
 								<?php $why = get_field( 'why_you_need_content' ); 
 
@@ -63,7 +63,7 @@ get_header(); ?>
 					<div class="template_section how_it_works">
 
 						<div class="content_container wrap">
-							<h2><strong>How</strong> <?php the_title(); ?> works</h2>
+							<h2><?php echo get_field('subhead_3'); ?></h2>
 							<div class="content_body">
 								<?php $how = get_field( 'how_it_works' ); 
 
@@ -78,7 +78,7 @@ get_header(); ?>
 					<div class="template_section learn_more green_body">
 
 						<div class="content_container wrap">
-							<h2><strong>Learn more</strong> about real results</h2>
+							<h2><?php echo get_field('learn_more_subhead'); ?></h2>
 							<div class="content_body">
 								<?php $learn = get_field( 'learn_more' ); 
 
