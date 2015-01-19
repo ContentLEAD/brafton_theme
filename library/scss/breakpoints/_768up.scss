@@ -21,8 +21,24 @@ GENERAL STYLES
 .home {
 	.rev_slider_wrapper {
 		display: block !important;
+
+		.tp-bullets {
+			&.tp-thumbs {
+				margin-top: 0 !important;
+
+				&.navbar {
+					background-color: $off-black;
+					padding: 0;
+				}
+
+				&.bullet {
+					opacity: 0.3 !important;
+				}
+			}
+		}
 	}
 }
+
 
 /*********************
 LAYOUT & GRID STYLES
