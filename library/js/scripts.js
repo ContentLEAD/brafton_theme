@@ -383,6 +383,10 @@ jQuery(document).ready(function($) {
     });
 
 
+    //Add jQuery UI tabs to blog sidebar
+
+    $( "#tabs" ).tabs();
+
 
 }); /* end of as page load scripts */
 

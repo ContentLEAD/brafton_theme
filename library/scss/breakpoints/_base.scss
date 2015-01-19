@@ -1655,8 +1655,33 @@ SIDEBARS & ASIDES
 
 	.blog-hub-sidebar-feature {
 		&.downloadables {
-			max-height: 275px;
+			max-height: 175px;
 			overflow: hidden;
+		}
+	}
+
+	#tabs {
+		ul {
+			margin-bottom: 0;
+			li {
+				display: inline-block;
+				width: 49%;
+				text-align: center;
+				text-transform: uppercase;
+				font-size: 0.8em;
+				font-weight: bold;
+				padding-bottom: 5px;
+
+				&.ui-tabs-active {
+					border-bottom: 2px solid $black;
+				}
+
+				a {
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
 		}
 	}
 
@@ -1720,10 +1745,10 @@ SIDEBARS & ASIDES
 				}
 			}
 
-			h3 {
+			h4 {
 				text-transform: uppercase;
 				text-align: center;
-				font-size: 1.65em;
+				font-size: 1.15em;
 				margin: 0;
 			}
 
