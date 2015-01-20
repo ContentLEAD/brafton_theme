@@ -752,42 +752,9 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 	}
 }
 
+
 .fixed-page-footer {
-	height: 50px;
-	width: 100%;
-	display: block;
-	background: rgba(255, 255, 255, 0.7);
-	float: left;
-	text-align: center;
-
-	.contact_us {
-
-		display: inline-block;
-		margin: auto;	
-		text-transform: uppercase;
-		text-decoration: none;
-		font-size: 1.5em;
-		background: $green;
-		color: $off-black;
-		padding: 8px;
-
-		@include transition(all 0.2s);
-
-			&:hover {
-				background: $off-black;
-				color: $green;
-				cursor: pointer;
-			}
-		}
-
-	.conversation {
-		padding: 13px;
-		font-size: 1.2em;
-		margin-left: 5px;
-		display: inline-block;
-		float: left;
-	}
-
+	display: none;
 }
 
 /*********************

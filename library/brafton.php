@@ -1698,9 +1698,9 @@ function readtime() {
 	$mins = round($wordcount/250, 0, PHP_ROUND_HALF_UP);
 
 	if( $mins == 0 || $mins == 1 ) {
-		return '<div class="read_number">1 </div> min <div>to read</div>';
+		return '<div class="read_number">1 </div> min <div class="to_read">to read</div>';
 	} else {
-		return '<div class="read_number">' . $mins . " </div> mins <div>to read</div>";
+		return '<div class="read_number">' . $mins . ' </div> mins <div class="to_read">to read</div>';
 	}
 }
 
