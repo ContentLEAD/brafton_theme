@@ -1,6 +1,17 @@
 <?php get_header(); ?>
 
 <?php putRevSlider( "home" ) ?>
+<!--<div class="services-slider-nav">
+	<ul class="services-list">
+		<li class="d-1of5 t-1of5 m-all">News</li>
+		<li>Website Content</li>
+		<li>SEO</li>
+		<li>Social Marketing</li>
+		<li>Analytics</li>
+	</ul>
+</div>-->
+
+
 <div id="content">
 <div class="wrap cf">
 <div id="home-secondary" class="m-all row">
