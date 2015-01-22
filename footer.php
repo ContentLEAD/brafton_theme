@@ -1,5 +1,5 @@
 			<footer class="footer d-all t-all m-all" role="contentinfo">
-				<?php if( is_post_type_archive( 'executives' ) || is_page(73683) || is_page(4233) || is_page(59438) || is_page(4231) || is_page(53375) ) { ?>
+				<?php //if( is_post_type_archive( 'executives' ) || is_page(73683) || is_page(4233) || is_page(59438) || is_page(4231) || is_page(53375) ) { ?>
 					
 
 
@@ -35,15 +35,12 @@
 								<a rel="nofollow" href="http://old.brafton.com/feed " class="cube footer-rss" title="Subscribe to Brafton's RSS feed"></a>
 								<div class="follow-us">FOLLOW US</div>
 							</div>
-							<div class="footer-contact-us">
-								<a href="/contact">CONTACT US</a>
-							</div>
 						</div>
 
 
 					</div>
 
-				<?php } ?>
+				<?php //} ?>
 
 				<div id="inner-footer" class="wrap cf">
 

@@ -44,6 +44,82 @@ style a page via class
 
 	/*below the slider*/
 
+	.content_container {
+		.item {
+			margin: 2em 1em;
+			padding: 1em;
+
+			.service_title {
+				text-transform: uppercase;
+				font-weight: bold;
+				margin-right: 5px;
+
+			}
+
+			/*icon sprites*/
+
+			.sprite_container {
+				overflow: hidden;
+				padding-bottom: 0.75em;
+				display: inline-block;
+				float: left;
+
+				.sprite {
+					width: 75px;
+					height: 0;
+					padding-bottom: 75%;
+					background-position:0 0;
+					background-size: 100%;
+					display: block;
+					margin-right: 1.5em;
+
+
+					&:hover {
+						background-position: 0 100%;
+					}
+				}
+
+				.Writing {
+					background-image: url('/wp-content/themes/brafton/library/images/homepage/content_writing.png');
+				}
+
+				
+				.Video {
+					background-image: url('/wp-content/themes/brafton/library/images/homepage/video.png');
+				}
+
+				
+				.Social {
+					background-image: url('/wp-content/themes/brafton/library/images/homepage/social_media.png');
+				}
+
+				
+				.Graphics {
+					background-image: url('/wp-content/themes/brafton/library/images/homepage/graphics.png');
+				}
+
+				
+				.Marketing {
+					background-image: url('/wp-content/themes/brafton/library/images/homepage/content_marketing.png');
+				}
+
+				.SEO {
+					background-image: url('/wp-content/themes/brafton/library/images/homepage/seo.png');
+				}
+
+				
+				.Analytics {
+					background-image: url('/wp-content/themes/brafton/library/images/homepage/analytics.png');
+				}
+
+				
+				.Email {
+					background-image: url('/wp-content/themes/brafton/library/images/homepage/email.png');
+				}
+			}
+		}
+	}
+
 	.sidebar_arrow_to_infinity {
 		width: 100%;
 		height: 30px;
@@ -51,36 +127,6 @@ style a page via class
 		opacity: 0.5;
 		background: url(../images/blog-images/sidebar_arrow_to_infinity.png) no-repeat;
 		background-size: 100%;
-	}
-
-	.icons { line-height: 0; }
-
-
-	#home-social .icons a {
-    border-radius: 50%;
-	
-	}
-	.icons {
-	    border-bottom: 0;
-	}
-
-
-	.search-icon {
-	    height: 31px;
-	}
-
-	#search-query {
-		width: 66%;
-		float: left;
-		border: 2px solid $light-grey;
-	}
-
-	#search-submit {
-	    padding: 0;
-	    line-height: 0;
-	    border: 0;
-	    background: $white;
-	    float: left;
 	}
 
 	.latest_homepage_headlines {
@@ -113,6 +159,8 @@ style a page via class
 	    float: left;
 	    margin: 10px 0px;
 	    font-size: 16px;
+	    height: 140px;
+	    overflow: hidden;
 
 	    img {
 		    float: left;
@@ -551,7 +599,6 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 
 
 	.content_body {
-		text-align: justify;
 		width: 66%;
 		margin: auto;
 		display: block;

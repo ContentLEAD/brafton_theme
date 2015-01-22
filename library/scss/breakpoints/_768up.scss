@@ -773,7 +773,7 @@ the featured post and the remaining posts....*/
 }
 
 .fixed-page-footer {
-	height: 40px;
+	height: 37px;
 	width: 100%;
 	display: block;
 	background: rgba(255, 255, 255, 0.7);
@@ -789,10 +789,12 @@ the featured post and the remaining posts....*/
 		display: inline-block;
 		text-transform: uppercase;
 		text-decoration: none;
-		font-size: 1em;
+		font-size: 0.9em;
+		font-weight: bold;
+		letter-spacing: 3px;
 		background: $green;
 		color: $off-black;
-		padding: 8px;
+		padding: 8px 16px;
 
 		@include transition(all 0.2s);
 
@@ -810,7 +812,9 @@ the featured post and the remaining posts....*/
 		width: auto;	
 		text-transform: uppercase;
 		text-decoration: none;
-		font-size: 1em;
+		font-size: 0.9em;
+		font-weight: bold;
+		letter-spacing: 3px;
 		background: $green;
 		color: $off-black;
 		padding: 8px;
@@ -931,6 +935,7 @@ FOOTER STYLES
 					width: 24.99%;
 					text-align: left;
 					padding-left: 75px;
+					padding-top: 25px;
 
 					a {
 						color: $white;
@@ -944,7 +949,7 @@ FOOTER STYLES
 				margin-top: 0;
 
 				li {
-					padding-left: 0;
+					padding: 0;
 					width: 100%;
 					height: 35px;
 					display: none;

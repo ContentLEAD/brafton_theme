@@ -1,49 +1,81 @@
-<?php get_header(); ?>
+<?php 
+/*
+**Template Name: Homepage Template
+*/
+
+get_header(); ?>
 
 <?php putRevSlider( "home" ) ?>
-<!--<div class="services-slider-nav">
-	<ul class="services-list">
-		<li class="d-1of5 t-1of5 m-all">News</li>
-		<li>Website Content</li>
-		<li>SEO</li>
-		<li>Social Marketing</li>
-		<li>Analytics</li>
-	</ul>
-</div>-->
+
+			<div id="content">
+
+				<div class="homepage_container">
+
+					<div class="template_section welcome">
+
+						<div class="content_container wrap">
+							<h2><strong>Welcome</strong> to Brafton</h2>
+							<div class="content_body">
+
+							</div>
+						</div>
+
+					</div>
+
+					<div class="template_section clients gray_body">
 
 
-<div id="content">
-<div class="wrap cf">
-<div id="home-secondary" class="m-all row">
-	<div id="home-news" class="m-all d-1of3 t-1of3 widget-area cf">
-		<aside>
-			<ul>
-				<?php if ( !function_exists( "dynamic_sidebar" ) || !dynamic_sidebar( "Home News" ) ) : ?>
-					<p>Add Widgets to the Home News Area</p>
-				<?php endif; ?>
-			</ul>
-		</aside>
-	</div>
-	<div id="home-social" class="m-all d-1of3 t-1of3">
-		<aside>
-			<ul>
-				<?php if ( !function_exists( "dynamic_sidebar" ) || !dynamic_sidebar( "Home Social" ) ) : ?>
-					<p>Add Widgets to the Home Social Area</p>
-				<?php endif; ?>
-			</ul>
-		</aside>
-	</div>
-	<div id="home-subscribe" class="m-all d-1of3 t-1of3 last">
-		<aside>
-			<ul>
-			
-					<?php dynamic_sidebar( 'Home Subscribe' ); ?>
-		
-			</ul>
-		</aside>
-	</div>
-</div><!-- End #home-secondary -->
-</div>
-</div>
+					</div>
+
+					<div class="template_section latest_blogs">
+
+						<div class="content_container wrap">
+							<h2>Our Latest <strong>Blogs</strong></h2>
+							<div class="content_body">
+
+							</div>
+						</div>
+
+					</div>
+
+					<div class="template_section learn_more green_body">
+
+						<div class="content_container wrap">
+							<h2><strong>Learn more</strong> about real results</h2>
+							<div class="content_body">
+								<div class="cta_image d-1of2 t-1of3 m-all">
+									<?php 
+
+										$link = get_field( 'cta_link' );
+										$image = get_field( 'client_cta' );
+
+										$src = $image['url'];
+
+									?>
+
+									<a href="<?php echo $link; ?>">
+										<img src="<?php echo $src; ?>"/>
+									</a>
+
+
+								</div>
+								<div class="learn_more_text d-1of2 t-2of3 m-all">
+									<?php $learn = get_field( 'learn_more' ); 
+
+									echo $learn;
+
+									?>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+
+				</div>
+
+
+			</div>
+
 
 <?php get_footer(); ?>
