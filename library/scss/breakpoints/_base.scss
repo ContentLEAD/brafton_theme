@@ -44,77 +44,89 @@ style a page via class
 
 	/*below the slider*/
 
-	.content_container {
-		.item {
-			margin: 2em 1em;
-			padding: 1em;
+	.template_section{
 
-			.service_title {
-				text-transform: uppercase;
-				font-weight: bold;
-				margin-right: 5px;
+		.content_container {
 
-			}
+			.content_body {
+				width: 100%;
+				
+				.item {
+					margin: 2em 1em;
+					padding: 1em;
 
-			/*icon sprites*/
+					.service_title {
+						text-transform: uppercase;
+						font-weight: bold;
+						margin-right: 5px;
 
-			.sprite_container {
-				overflow: hidden;
-				padding-bottom: 0.75em;
-				display: inline-block;
-				float: left;
-
-				.sprite {
-					width: 75px;
-					height: 0;
-					padding-bottom: 75%;
-					background-position:0 0;
-					background-size: 100%;
-					display: block;
-					margin-right: 1.5em;
-
-
-					&:hover {
-						background-position: 0 100%;
 					}
-				}
 
-				.Writing {
-					background-image: url('/wp-content/themes/brafton/library/images/homepage/content_writing.png');
-				}
+					.text {
+						text-align: left;
+					}
 
-				
-				.Video {
-					background-image: url('/wp-content/themes/brafton/library/images/homepage/video.png');
-				}
+					/*icon sprites*/
 
-				
-				.Social {
-					background-image: url('/wp-content/themes/brafton/library/images/homepage/social_media.png');
-				}
+					.sprite_container {
+						overflow: hidden;
+						padding-bottom: 0.75em;
+						display: inline-block;
+						float: left;
 
-				
-				.Graphics {
-					background-image: url('/wp-content/themes/brafton/library/images/homepage/graphics.png');
-				}
+						.sprite {
+							width: 75px;
+							height: 0;
+							padding-bottom: 75%;
+							background-position:0 0;
+							background-size: 100%;
+							display: block;
+							margin-right: 1.5em;
 
-				
-				.Marketing {
-					background-image: url('/wp-content/themes/brafton/library/images/homepage/content_marketing.png');
-				}
 
-				.SEO {
-					background-image: url('/wp-content/themes/brafton/library/images/homepage/seo.png');
-				}
+							&:hover {
+								background-position: 0 100%;
+							}
+						}
 
-				
-				.Analytics {
-					background-image: url('/wp-content/themes/brafton/library/images/homepage/analytics.png');
-				}
+						.Writing {
+							background-image: url('/wp-content/themes/brafton/library/images/homepage/content_writing.png');
+						}
 
-				
-				.Email {
-					background-image: url('/wp-content/themes/brafton/library/images/homepage/email.png');
+						
+						.Video {
+							background-image: url('/wp-content/themes/brafton/library/images/homepage/video.png');
+						}
+
+						
+						.Social {
+							background-image: url('/wp-content/themes/brafton/library/images/homepage/social_media.png');
+						}
+
+						
+						.Graphics {
+							background-image: url('/wp-content/themes/brafton/library/images/homepage/graphics.png');
+						}
+
+						
+						.Marketing {
+							background-image: url('/wp-content/themes/brafton/library/images/homepage/content_marketing.png');
+						}
+
+						.SEO {
+							background-image: url('/wp-content/themes/brafton/library/images/homepage/seo.png');
+						}
+
+						
+						.Analytics {
+							background-image: url('/wp-content/themes/brafton/library/images/homepage/analytics.png');
+						}
+
+						
+						.Email {
+							background-image: url('/wp-content/themes/brafton/library/images/homepage/email.png');
+						}
+					}
 				}
 			}
 		}
@@ -699,15 +711,15 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 			text-transform: uppercase;
 			text-decoration: none;
 			text-align: center;
-			background: $black;
-			color: $green;
-			border-radius: 2px;
+			color: $off-black;
+			border: 2px solid $off-black;
+			border-radius: 25px;
 
 			@include transition(all 0.2s);
 
 			&:hover {
-				background: $green;
-				color: $black;
+				background: $off-black;
+				color: $white;
 			}
 		}
 	}
