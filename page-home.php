@@ -21,20 +21,34 @@ get_header(); ?>
 
 								<?php
 
-								for($i=1; $i<=8; $i++) {
+								$pages = get_pages("child_of=4233&exclude=4236");
 
-									$object = get_field_object( 'service_' . $i );
+								$i = 0;
+
+								foreach($pages as $page) { 
+
+									/*The field name corresponds with the slug of the page to be
+									linked to, so we can have access to both the attributes of the 
+									custom field and also permalink*/
+
+									$slug = $page->post_name;
+
+									$object = get_field_object( $slug );
+
+									//var_dump( $object );
 
 									//Start a new column after 4 services
 
-									if( $i==5) { ?>
+									if( $i==4) { ?>
 										</div>
 										<div class="copy d-1of2 t-1of2 m-all">
 									<?php } ?>
 
 									<div class="item">
 										<div class="sprite_container">
-											<div class="<?php echo $object["label"] ?> sprite"></div>
+											<a href="<?php echo get_page_link($page->ID); ?>">
+												<div class="<?php echo $object["label"] ?> sprite"></div>
+											</a>
 										</div>
 										<div class="copy_inner">
 											<div class="service_title"><?php echo $object["label"] ?></div>
@@ -43,7 +57,12 @@ get_header(); ?>
 											</div>
 										</div>
 									</div>
-								<?php } //end for loop ?>
+								
+								<?php 
+
+									$i++;
+
+								} //end for loop ?>
 
 							</div>
 						</div>
@@ -184,6 +203,8 @@ get_header(); ?>
 									echo $learn;
 
 									?>
+
+									<a class="client_cta" href="/case-studies">More Client Examples</a>
 								</div>
 							</div>
 						</div>
