@@ -128,7 +128,7 @@ jQuery(document).ready(function($) {
     //sharrre buttons...
     //CHANGE load: and urlCurl FROM OLD TO WWW WHEN MIGRATING!!!
     Modernizr.load([{
-        load: 'http://old.brafton.com/wp-content/themes/brafton/library/js/libs/jquery.sharrre.min.js',
+        load: 'http://www.brafton.com/wp-content/themes/brafton/library/js/libs/jquery.sharrre.min.js',
         complete: function() {
             var template = '<div class="count">{total}</div>';
             var url = 'http://www.brafton.com/' + window.location.pathname;
@@ -194,7 +194,7 @@ jQuery(document).ready(function($) {
                 title: title,
                 template: '<div class="cube gplus"></div>' + template,
                 url: url,
-                urlCurl: 'http://old.brafton.com/wp-content/themes/brafton/library/php/sharrre.php'
+                urlCurl: 'http://www.brafton.com/wp-content/themes/brafton/library/php/sharrre.php'
             });
             $('a[data-service="pinterest"]').sharrre({
                 click: function(api, options) {
@@ -209,7 +209,7 @@ jQuery(document).ready(function($) {
                 title: title,
                 template: '<div class="cube pinterest"></div>' + template,
                 url: url,
-                urlCurl: 'http://old.brafton.com/wp-content/themes/brafton/library/php/sharrre.php'
+                urlCurl: 'http://www.brafton.com/wp-content/themes/brafton/library/php/sharrre.php'
             });
             $('a[data-service="stumbleupon"]').sharrre({
                 click: function(api, options) {
@@ -224,7 +224,7 @@ jQuery(document).ready(function($) {
                 title: title,
                 template: '<div class="cube stumbleupon"></div>' + template,
                 url: url,
-                urlCurl: 'http://old.brafton.com/wp-content/themes/brafton/library/php/sharrre.php'
+                urlCurl: 'http://www.brafton.com/wp-content/themes/brafton/library/php/sharrre.php'
             });
         }
     }, ]);
