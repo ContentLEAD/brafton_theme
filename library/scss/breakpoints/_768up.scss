@@ -36,6 +36,20 @@ GENERAL STYLES
 				}
 			}
 		}
+
+		.slider_button {
+			font-size: 14px !important;
+			z-index: 99999;
+			display: inline;
+
+			&.demo {
+
+			}
+
+			&.service {
+
+			}
+		}
 	}
 
 	.template_section{
@@ -43,7 +57,7 @@ GENERAL STYLES
 		.content_container {
 
 			.content_body {
-				width: 66%;
+				width: 75%;
 
 			}
 		}

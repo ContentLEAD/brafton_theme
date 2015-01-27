@@ -50,3 +50,41 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   }
 
 }
+
+
+.outline_button {
+  display: block;
+  margin-top: 1em;
+  padding: 2em;
+  font-size: 1em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: $off-black !important;
+  border: 3px solid $off-black;
+  border-radius: 5px;
+  opacity: 0.9;
+
+  @include transition(all 0.2s);
+
+  &:hover {
+    background-color: $off-black;
+    color: $white !important;
+  }
+}
+
+.outline_button_green {
+  @extend .outline_button;
+
+  border: 3px solid $green;
+  color: $green !important;
+
+  @include transition(all 0.2s);
+
+  &:hover {
+    background-color: $green;
+    color: $white !important;
+  }
+
+}
