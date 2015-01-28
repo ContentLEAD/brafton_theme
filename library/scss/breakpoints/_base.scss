@@ -44,9 +44,24 @@ style a page via class
 
 	/*below the slider*/
 
+	.slider-subnav {
+		display: none;
+	}
+
 	.template_section{
 
+
 		.content_container {
+			&.welcome {
+				padding: 2em 0;
+				h1 {
+					font-size: 3em;
+					letter-spacing: 6px;
+					text-align: center;
+					text-transform: uppercase;
+					margin: 0;
+				}
+			}
 
 			.content_body {
 				width: 100%;
@@ -1733,6 +1748,7 @@ SIDEBARS & ASIDES
 	img {
 		max-width: 100%;
 		width: 100%;
+		height: auto;
 	}
 
 	#testi {
@@ -1773,7 +1789,7 @@ SIDEBARS & ASIDES
 
 	.ourlatestfooter {
 
-		background: url(../images/blog-images/ourlatestfooter.jpg) no-repeat;
+		background: url(../images/blog-images/ourlatestfooter.png) no-repeat;
 		background-position: 0 0;
 		height: 0;
 		width: 100%;

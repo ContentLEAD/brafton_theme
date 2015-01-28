@@ -53,6 +53,34 @@ GENERAL STYLES
 		}
 	}
 
+	.slider-subnav {
+		display: block;
+		background-color: $black;
+		float: left;
+		width: 100%;
+		margin: 0;
+		
+		li {
+			text-align: center;
+
+			a {
+				color: $white;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-size: 0.75em;
+				letter-spacing: 1px;
+				padding: 1em;
+
+				@include transition(all 0.2s);
+
+				&:hover {
+					background-color: $off-black;
+				}
+
+			}
+		}
+	}
+
 	.template_section{
 
 		.content_container {
@@ -700,7 +728,7 @@ the featured post and the remaining posts....*/
 }
 
 .ourlatestfooter {
-	background: url(../images/blog-images/ourlatestfooter.jpg) no-repeat;
+	background: url(../images/blog-images/ourlatestfooter.png) no-repeat;
 }
 
 .marketzine {

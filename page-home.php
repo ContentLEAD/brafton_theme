@@ -7,14 +7,23 @@ get_header(); ?>
 
 <?php putRevSlider( "home" ) ?>
 
+<!-- "Subnav" -->
+<ul class="slider-subnav">
+	<li><a class="d-1of5 t-1of5" href="/about-brafton/content-writers">Content Writers</a></li>
+	<li><a class="d-1of5 t-1of5" href="/business-model/content-marketing">Content Marketing</a></li>
+	<li><a class="d-1of5 t-1of5" href="/business-model/video-marketing">Video</a></li>
+	<li><a class="d-1of5 t-1of5" href="/business-model/infographic-marketing">Graphics</a></li>
+	<li><a class="d-1of5 t-1of5" href="/business-model/search-engine-optimization">SEO</a></li>
+</ul>
+
 			<div id="content">
 
 				<div class="homepage_container">
 
-					<div class="template_section welcome">
+					<div class="template_section">
 
-						<div class="content_container wrap">
-							<h2><strong>Welcome</strong> to Brafton</h2>
+						<div class="content_container welcome wrap">
+							<h1><strong>Welcome</strong> to Brafton</h1>
 							<div class="content_body">
 
 							<div class="copy d-1of2 t-1of2 m-all">
