@@ -47,7 +47,7 @@ Template Name: Contact
 
 											<li><strong>Chicago</strong><br/><a href="http://goo.gl/lh1Xnq" title="See Brafton's Chicago office on a Map" target="_blank" class="address">168 North Clinton Street, 4th Floor, Chicago IL 60661</a></li>
 
-											<li><strong>San Francisco</strong><br/><a href="http://goo.gl/maps/sp3q0" title="See Brafton's San Francisco office on a Map" target="_blank" class="address">220 Montgomery Street, Suite 917, San Francisco CA 94104</a></li>
+											<li><strong>San Francisco</strong><br/><a href="https://goo.gl/maps/J8RL4" title="See Brafton's San Francisco office on a Map" target="_blank" class="address">300 Montgomery Street, Suite 638, San Francisco CA 94104</a></li>
 
 										</ul>
 
