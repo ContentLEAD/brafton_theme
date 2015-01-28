@@ -1359,6 +1359,10 @@ POSTS & CONTENT STYLES
 				max-width: 350px;
 				position: static;
 
+				p {
+					margin-bottom: 0;
+				}
+
 				&.right { 
 					border-right: 3px solid $black;
 					float: right;
