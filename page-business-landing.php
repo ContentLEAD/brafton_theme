@@ -1,6 +1,6 @@
 <?php 
 /*
-**Template Name: Business Model Landing Page
+**Template Name: Business Model/About Us Landing Page
 */
 
 get_header(); ?>
@@ -106,7 +106,7 @@ get_header(); ?>
 			<div class="fixed-page-footer">
 
 					<div class="contact_us">
-						See Examples
+						Request a Demo
 					</div>
 
 					<div class="contact_us">

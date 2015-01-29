@@ -188,7 +188,7 @@ get_header(); ?>
 			<div class="fixed-page-footer">
 
 					<div class="contact_us">
-						See Examples
+						Request A Demo
 					</div>
 
 					<div class="contact_us">

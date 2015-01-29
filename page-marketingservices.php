@@ -142,7 +142,7 @@ get_header(); ?>
 			<div class="fixed-page-footer">
 
 					<div class="contact_us">
-						See Examples
+						Request a Demo
 					</div>
 
 					<div class="contact_us">

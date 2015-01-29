@@ -549,6 +549,8 @@ BRAFTON MISSION PAGE TEMPLATE
 
 	.mission_row{
 
+		width: 75%;
+
 		.subhead {
 			text-align: center;
 			font-size: 1.5em;
@@ -561,21 +563,21 @@ BRAFTON MISSION PAGE TEMPLATE
 				text-transform: uppercase;
 				letter-spacing: 2px;
 				margin-top: 0;
-				font-size: 2.25em;
+				font-size: 1.75em;
 			}
 
 			p {
-				font-size: 1.25em;
+				font-size: 1.2em;
 			}
 
 			.item {
 				display: block;
 				width: 100%;
 				float: left;
-				margin-bottom: 1.25em;
+				margin-bottom: 2em;
 
 				.big {
-					font-size: 2.25em;
+					font-size: 1.75em;
 					display: inline;
 					margin-right: 12px;
 					text-transform: uppercase;
