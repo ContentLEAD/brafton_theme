@@ -171,7 +171,7 @@ FOOTER STYLES
 *********************//*
 check your menus here. do they look good?
 do they need tweaking?
-*/}.entry-content .alignleft,.entry-content img.alignleft{margin-right:1.5em;display:inline;float:left;}.entry-content .alignright,.entry-content img.alignright{margin-left:1.5em;display:inline;float:right;}.entry-content .aligncenter,.entry-content img.aligncenter{margin-right:auto;margin-left:auto;display:block;clear:both;}.footer-links{/* end .footer-links */}.home{/*********************
+*/}.entry-content .alignleft,.entry-content img.alignleft{margin-right:1.5em !important;display:inline;float:left;}.entry-content .alignright,.entry-content img.alignright{margin-left:1.5em !important;display:inline;float:right;}.entry-content .aligncenter,.entry-content img.aligncenter{margin-right:auto;margin-left:auto;display:block;clear:both;}.footer-links{/* end .footer-links */}.home{/*********************
 LAYOUT & GRID STYLES
 *********************/}.home .rev_slider_wrapper{display:block !important;}.home .rev_slider_wrapper .tp-bullets.tp-thumbs{margin-top:0 !important;}.home .rev_slider_wrapper .tp-bullets.tp-thumbs.navbar{background-color:#333;padding:0;}.home .rev_slider_wrapper .tp-bullets.tp-thumbs.bullet{opacity:0.3 !important;}.home .rev_slider_wrapper .slider_button{font-size:14px !important;z-index:99999;display:inline;margin-right:15px !important;}.home .slider-subnav{display:block;background-color:#000;float:left;width:100%;margin:0;}.home .slider-subnav li{text-align:center;}.home .slider-subnav li a{color:#fff;text-transform:uppercase;text-decoration:none;font-size:0.75em;letter-spacing:1px;padding:1em;-webkit-transition:all 0.2s;transition:all 0.2s;/*********************
 CSS3 GRADIENTS

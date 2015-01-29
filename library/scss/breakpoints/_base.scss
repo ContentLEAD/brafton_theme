@@ -1845,6 +1845,7 @@ SIDEBARS & ASIDES
 		}
 
 		.blog-sidebar-cta {
+			background-color: $green;
 			a {
 				text-decoration: none;
 
@@ -1945,6 +1946,16 @@ Legacy style classes...  :(
 	line-height: 0;
 	margin: 1.5em auto;
 	text-align: center;
+}
+
+.alignleft {
+	float: left;
+	margin-right: 1em;
+}
+
+.alignright {
+	float: right;
+	margin-left: 1em;
 }
 
 .entry-content .aligncenter, .entry-content img.aligncenter {

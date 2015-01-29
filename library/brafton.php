@@ -1308,21 +1308,21 @@ function addCols_tiny_mce_before_init( $initArray )
         title : 'Add 2-Column Layout',
         image : 'http://cdn.brafton.com/2col.png',
         onclick : function() {
-            ed.selection.setContent( '<div class="twelvecol row"><div class="sixcol"><p>Enter Content Here.</p></div><div class="sixcol last"><p>Enter Content Here.</p></div></div>Replace me with the next line of content or delete me.' );
+            ed.selection.setContent( '<div class="d-all t-all m-all"><div class="d-1of2 t-1of2 m-all"><p>Enter Content Here.</p></div><div class="d-1of2 t-1of2 m-all"><p>Enter Content Here.</p></div></div>Replace me with the next line of content or delete me.' );
         }
     });
 	ed.addButton('3col', {
         title : 'Add 3-Column Layout',
         image : 'http://cdn.brafton.com/3col.png',
         onclick : function() {
-            ed.selection.setContent( '<div class="twelvecol row"><div class="fourcol"><p>Enter Content Here.</p></div><div class="fourcol"><p>Enter Content Here.</p></div><div class="fourcol last"><p>Enter Content Here.</p></div></div>Replace me with the next line of content or delete me.' );
+            ed.selection.setContent( '<div class="d-all t-all m-all"><div class="d-1of3 t-1of3 m-all"><p>Enter Content Here.</p></div><div class="d-1of3 t-1of3 m-all"><p>Enter Content Here.</p></div><div class="d-1of3 t-1of3 m-all"><p>Enter Content Here.</p></div></div>Replace me with the next line of content or delete me.' );
         }
     });
 	ed.addButton('4col', {
         title : 'Add 4-Column Layout',
         image : 'http://cdn.brafton.com/4col.png',
         onclick : function() {
-            ed.selection.setContent( '<div class="twelvecol row"><div class="threecol"><p>Enter Content Here.</p></div><div class="threecol"><p>Enter Content Here.</p></div><div class="threecol"><p>Enter Content Here.</p></div><div class="threecol last"><p>Enter Content Here.</p></div></div>Replace me with the next line of content or delete me.' );
+            ed.selection.setContent( '<div class="d-all t-all m-all"><div class="d-1of4 t-1of4 m-all"><p>Enter Content Here.</p></div><div class="d-1of4 t-1of4 m-all"><p>Enter Content Here.</p></div><div class="d-1of4 t-1of4 m-all"><p>Enter Content Here.</p></div><div class="d-1of4 t-1of4 m-all"><p>Enter Content Here.</p></div></div>Replace me with the next line of content or delete me.' );
         }
     });
 }][0]
