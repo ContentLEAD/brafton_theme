@@ -68,11 +68,29 @@ get_header(); ?>
 						<div class="content_container wrap">
 							<h2><?php bold_first_word( get_field( 'learn_more_subhead' ) ); ?></h2>
 							<div class="content_body">
-								<?php $learn = get_field( 'learn_more' ); 
+								<div class="cta_image d-1of2 t-1of3 m-all">
+									<?php 
 
-								echo $learn;
+										$link = get_field( 'cta_link' );
+										$image = get_field( 'client_cta' );
 
-								?>
+										$src = $image['url'];
+
+									?>
+
+									<a href="<?php echo $link; ?>">
+										<img src="<?php echo $src; ?>"/>
+									</a>
+
+
+								</div>
+								<div class="learn_more_text d-1of2 t-2of3 m-all">
+									<?php $learn = get_field( 'learn_more' ); 
+
+									echo $learn;
+
+									?>
+								</div>
 							</div>
 						</div>
 
