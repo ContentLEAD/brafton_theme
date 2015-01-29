@@ -30,53 +30,91 @@ get_header(); ?>
 
 								<?php
 
-								$pages = get_pages("child_of=4233&exclude=4236");
+								/*This is a bit messy, but the order of these pages is important...*/
+
+								//I need to make vars, to0 hard to switch around id's constantly*/
+
+								$cm = 73683;
+								$cw = 4228;
+								$vid = 58827;
+								$graph = 54153;
+								$seo = 1714;
+								$soc = 1661;
+								$analytics = 53375;
+
+								$page_order = array($cm, $vid, $seo, $analytics, /*second column*/ $cw, $graph, $soc);
 
 								$i = 0;
 
-								foreach($pages as $page) { 
+								foreach($page_order as $p_order) {
 
-									/*The field name corresponds with the slug of the page to be
-									linked to, so we can have access to both the attributes of the 
-									custom field and also permalink*/
+									$pages = get_pages("include=" . $p_order);
 
-									$slug = $page->post_name;
+									foreach($pages as $page) { 
 
-									$object = get_field_object( $slug );
+										/*The field name corresponds with the slug of the page to be
+										linked to, so we can have access to both the attributes of the 
+										custom field and also permalink*/
 
-									//var_dump( $object );
+										$slug = $page->post_name;
 
-									//Start a new column after 4 services
+										$object = get_field_object( $slug );
 
-									if( $i==4) { ?>
-										</div>
-										<div class="copy d-1of2 t-1of2 m-all">
-									<?php } ?>
+										//var_dump( $object );
 
-									<div class="item">
-										<div class="sprite_container">
-											<a href="<?php echo get_page_link($page->ID); ?>">
-												<div class="<?php echo $object["label"] ?> sprite"></div>
-											</a>
-										</div>
-										<div class="copy_inner">
-											<div class="service_title"><?php echo $object["label"] ?></div>
-											<div class="text">
-												<?php echo $object["value"] ?>
+										//Start a new column after 4 services
+
+										if( $i==4) { ?>
+											</div>
+											<div class="copy d-1of2 t-1of2 m-all">
+										<?php } ?>
+
+										<div class="item">
+											<div class="sprite_container">
+												<a href="<?php echo get_page_link($page->ID); ?>">
+													<div class="<?php echo $object["label"] ?> sprite"></div>
+												</a>
+											</div>
+											<div class="copy_inner">
+												<div class="service_title"><?php echo $object["label"] ?></div>
+												<div class="text">
+													<?php echo $object["value"] ?>
+												</div>
 											</div>
 										</div>
+									
+										<?php 
+
+										$i++;
+
+									} //end inner loop 
+
+								} //end outer loop
+
+								//Then, manually add "clients"
+
+								?>
+
+								<div class="item">
+									<div class="sprite_container">
+										<a href="/case-studies">
+											<div class="case-studies sprite"></div>
+										</a>
 									</div>
-								
-								<?php 
-
-									$i++;
-
-								} //end for loop ?>
+									<div class="copy_inner">
+										<div class="service_title">Customers</div>
+										<div class="text">
+											<?php echo get_field( 'client_service' ); ?>
+										</div>
+									</div>
+								</div>
 
 							</div>
 						</div>
 
 					</div>
+
+					<!-- NOT APPROVED YET
 
 					<div class="template_section clients gray_body">
 
@@ -88,9 +126,9 @@ get_header(); ?>
 						</div>
 
 
-					</div>
+					</div>-->
 
-					<div class="template_section latest_blogs">
+					<div class="template_section latest_blogs gray_body">
 
 						<div class="content_container wrap">
 							<h2>Our Latest <strong>Blogs</strong></h2>
