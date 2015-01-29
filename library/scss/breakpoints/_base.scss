@@ -193,11 +193,48 @@ style a page via class
 	    height: 140px;
 	    overflow: hidden;
 
-	    img {
-		    float: left;
-		    margin-right: 10px;
-		    width: 160px;
-		    height: 160px;
+	    .news-headline-container {
+	    	display: inline-block;
+			float: left;
+			margin-right: 20px;
+
+			&.black {
+				background-color: $black;
+			}
+
+			&.blue {
+				background-color: #2467B2;
+			}
+
+			&.green {
+				background-color: $green;
+			}
+
+			&.red {
+				background-color: #EF4923;
+			}
+
+			.news-headline {
+				padding-left: 10px;
+			}
+
+			a {
+				color: $white;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-weight: bold;
+				letter-spacing: 2px;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+
+
+		    img {
+			    float: left;
+			    width: 200px;
+			}
 		}
 	}
 
@@ -656,7 +693,9 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 			}
 
 			.author {
-				font-size: 0.7em;
+				font-size: 0.8em;
+				letter-spacing: 2px;
+				text-transform: uppercase;
 			}
 
 			.company_logo {

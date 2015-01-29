@@ -144,11 +144,15 @@ get_header(); ?>
 
 										if( $news->have_posts() ) : while( $news->have_posts() ) : $news->the_post(); ?>
 											<div class="homepage_article news_homepage_article">
-												<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(9999, 85), array('alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></a>
+												<div class="news-headline-container black">
+													<a href="<?php the_permalink(); ?>">
+														<div class="news-headline">News</div>
+														<?php the_post_thumbnail(array(9999, 85), array('alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?>
+													</a>
+												</div>
 												<div class="article-title">
 													<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 													<div class="time-tag">
-														<a href="<?php home_url(); ?>/news" title="Explore Our Newsroom" class="cat">News</a>
 														<time datetime="<?php the_time('c'); ?>"><?php the_time('n.d.Y') ?></time>
 													</div>
 												</div>
@@ -162,17 +166,24 @@ get_header(); ?>
 											$blog = new WP_Query('category_name=blog&posts_per_page=1');
 
 											if( $blog->have_posts() ) : while( $blog->have_posts() ) : $blog->the_post(); ?>
-												<div class="homepage_article blog_homepage_article">
-													<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(9999, 85), array('alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></a>
-													<div class="article-title">
-														<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-														<div class="time-tag">
-															<a href="<?php home_url(); ?>/blog" title="Check out our newest blogs" class="cat">Blog</a>
-															<time datetime="<?php the_time('c'); ?>"><?php the_time('n.d.Y') ?></time>
-														</div>
+											
+											<div class="homepage_article news_homepage_article">
+												<div class="news-headline-container blue">
+													<a href="<?php the_permalink(); ?>">
+														<div class="news-headline">Blog</div>
+														<?php the_post_thumbnail(array(9999, 85), array('alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?>
+													</a>
+												</div>
+												<div class="article-title">
+													<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+													<div class="time-tag">
+														<time datetime="<?php the_time('c'); ?>"><?php the_time('n.d.Y') ?></time>
 													</div>
 												</div>
+											</div>
 										<?php endwhile; endif; ?>
+
+										<div class="sidebar_arrow_to_infinity"></div>
 
 								</div>
 
@@ -186,11 +197,15 @@ get_header(); ?>
 
 										if( $community->have_posts() ) : while( $community->have_posts() ) : $community->the_post(); ?>
 											<div class="homepage_article news_homepage_article">
-												<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(9999, 85), array('alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></a>
+												<div class="news-headline-container green">
+													<a href="<?php the_permalink(); ?>">
+														<div class="news-headline">Community</div>
+														<?php the_post_thumbnail(array(9999, 85), array('alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?>
+													</a>
+												</div>
 												<div class="article-title">
 													<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 													<div class="time-tag">
-														<a href="<?php home_url(); ?>/news" title="Explore Our Newsroom" class="cat">Brafton Community</a>
 														<time datetime="<?php the_time('c'); ?>"><?php the_time('n.d.Y') ?></time>
 													</div>
 												</div>
@@ -204,17 +219,23 @@ get_header(); ?>
 											$videos = new WP_Query('tag=videos&posts_per_page=1');
 
 											if( $videos->have_posts() ) : while( $videos->have_posts() ) : $videos->the_post(); ?>
-												<div class="homepage_article blog_homepage_article">
-													<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(9999, 85), array('alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></a>
-													<div class="article-title">
-														<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-														<div class="time-tag">
-															<a href="<?php home_url(); ?>/blog" title="Check out our newest blogs" class="cat">Video</a>
-															<time datetime="<?php the_time('c'); ?>"><?php the_time('n.d.Y') ?></time>
-														</div>
+											<div class="homepage_article news_homepage_article">
+												<div class="news-headline-container red">
+													<a href="<?php the_permalink(); ?>">
+														<div class="news-headline">Video</div>
+														<?php the_post_thumbnail(array(9999, 85), array('alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?>
+													</a>
+												</div>
+												<div class="article-title">
+													<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+													<div class="time-tag">
+														<time datetime="<?php the_time('c'); ?>"><?php the_time('n.d.Y') ?></time>
 													</div>
 												</div>
+											</div>
 										<?php endwhile; endif; wp_reset_query(); ?>
+
+										<div class="sidebar_arrow_to_infinity"></div>
 
 								</div>
 

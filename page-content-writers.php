@@ -57,7 +57,7 @@ get_header(); ?>
 							<div class="content_body">
 								<?php for($i=1; $i<=4; $i++) { ?>
 
-									<div class="d-1of4 t-1of2 m-all testimonial">
+									<div class="d-all t-all m-all testimonial">
 										<div class="testimonial_inner">
 											<p>
 												<?php echo get_field( 'testimonial_' . $i ); ?>
