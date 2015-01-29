@@ -37,39 +37,46 @@ get_header(); ?>
 
 								<?php
 
-								$pages = get_pages("child_of=4233&exclude=4236");
+								/*This is a bit messy, but the order of these pages is VERY important...*/
+
+								$page_order = array(4228,54153,58827,73683,1714,53375,1661);
+								
+								foreach($page_order as $p_order) {
+
+									$pages = get_pages("include=" . $p_order);
 
 
-								foreach($pages as $page) { ?>
+									foreach($pages as $page) { ?>
 
-								<div class="d-1of3 t-1of3 m-all img_container">
+									<div class="d-1of4 t-1of4 m-all img_container">
 
-									<a href="<?php echo get_page_link($page->ID); ?>">
+										<a href="<?php echo get_page_link($page->ID); ?>">
 
-										<?php $class = $page->post_name; ?>
+											<?php $class = $page->post_name; ?>
 
-										<div class="<?php echo $class; ?> sprite"></div>
+											<div class="<?php echo $class; ?> sprite"></div>
 
-									</a>
+										</a>
 
-								</div>
+									</div>
 
 
 								<?php
 
-									}
+									} //end inner loop
+								} //end outer loop
 
-									//then, manually add client examples link...
+								//then, manually add client examples link...
 
 								 ?>
 
 
 
 
-								<div class="d-1of3 t-1of3 m-all img_container">
-
-									<div class="client-examples sprite"></div>
-
+								<div class="d-1of4 t-1of4 m-all img_container">
+									<a href="/case-studies">
+										<div class="client-examples sprite"></div>
+									</a>
 								</div>
 		
 

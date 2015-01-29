@@ -42,9 +42,6 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   border-radius: 3px;
   max-width: 370px;
 
-  box-shadow: 0px 4px 5px 0px darken($light-grey, 20%);
-  -webkit-box-shadow: 0px 4px 5px 0px darken($light-grey, 20%);
-
   &:hover {
     @include css-gradient(lighten($green, 2%), lighten($green, 10%));
   }

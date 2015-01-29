@@ -9,7 +9,7 @@ get_header(); ?>
 				<div class="graphical-header">
 					<img src="/wp-content/themes/brafton/library/images/page-headers/blank_header.png">
 				
-					<h1><?php bold_last_word( get_field( "h1" ) ); //see bones.php ?></strong></h1>
+					<h1><?php bold_last_word( get_field( "h1" ) ); //see bones.php ?></h1>
 				</div>
 
 				<?php brafton_share( 'top' ); ?>

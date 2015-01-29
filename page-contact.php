@@ -7,6 +7,12 @@ Template Name: Contact
 
 			<div id="content">
 
+				<div class="graphical-header">
+					<img src="/wp-content/themes/brafton/library/images/page-headers/blank_header.png">
+				
+					<h1><strong>Contact</strong> Us</h1>
+				</div>
+
 				<div id="inner-content" class="wrap cf">
 
 						<div id="main" class="m-all t-all d-all cf" role="main">
@@ -14,14 +20,6 @@ Template Name: Contact
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-
-								<header class="article-header">
-
-									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
-
-									<?php if( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
-
-								</header> <?php // end article header ?>
 
 								<section class="entry-content cf" itemprop="articleBody">
 
@@ -39,7 +37,7 @@ Template Name: Contact
 
 									<aside class="d-1of2 t-1of2 m-all">
 
-										<h4>Offices</h4>
+										<h2>Offices</h2>
 
 										<ul>
 
@@ -55,7 +53,7 @@ Template Name: Contact
 
 									<aside class="d-1of2 t-1of2 m-all no-margins last" id="phone">
 
-										<h4>Contact Information</h4>
+										<h2>Contact Information</h2>
 
 										<div class="d-1of2 t-1of2 m-all no-margins">
 
