@@ -151,10 +151,17 @@ get_header(); ?>
 							<h2><strong>Learn more</strong> about real results</h2>
 							<div class="content_body">
 
-								<div class="cta_image d-1of2 t-1of3 m-all">
+									<div class="cta_image d-1of2 t-1of3 m-all">
 									<?php 
 
-										$link = get_field( 'cta_link' );
+										$selected_cta = get_field( 'cta_choice' );
+
+										if( $selected_cta == 'Case Study' ) {
+											$link = get_field( 'case_study' );
+										} elseif(  $selected_cta == 'Testimonial' ) {
+											$link = get_field( 'testimonial' );
+										}
+										
 										$image = get_field( 'client_cta' );
 
 										$src = $image['url'];
@@ -167,6 +174,7 @@ get_header(); ?>
 
 
 								</div>
+								
 								<div class="learn_more_text d-1of2 t-2of3 m-all">
 									<?php $learn = get_field( 'learn_more' ); 
 
