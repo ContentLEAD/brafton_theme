@@ -1734,7 +1734,7 @@ function subcategory_sidebar_links() {
 
 function blog_tagbar() {
 
-	$tags = get_tags( 'order=DESC&hide_empty=0&exclude=202,204,205' );
+	$tags = get_tags( 'order=DESC&hide_empty=0&include=166,201,200,199,134,218' );
 	
 	if ($tags) {
 		
@@ -1827,9 +1827,9 @@ function sidebar_tag_images() {
 
 function blog_hub_sidebar_features( $content_type ) {
 	if( $content_type == 'video' ) {
-		$sidebar_posts = new WP_Query( 'tag_id=204&posts_per_page=1' );
+		$sidebar_posts = new WP_Query( 'tag_id=107&posts_per_page=1' );
 	} elseif( $content_type == 'twit' ) {
-		$sidebar_posts = new WP_Query( 'tag_id=205&posts_per_page=1' );
+		$sidebar_posts = new WP_Query( 'tag_id=188&posts_per_page=1' );
 	} elseif( $content_type == 'downloadables' ) {
 		//picks either a downloadable or an infographic for this section
 		$rand = rand(0,1);
