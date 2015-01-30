@@ -9,8 +9,8 @@ get_header(); ?>
 
 <!-- "Subnav" -->
 <ul class="slider-subnav">
-	<li><a class="d-1of5 t-1of5" href="/about-brafton/content-writers">Content Writers</a></li>
 	<li><a class="d-1of5 t-1of5" href="/business-model/content-marketing">Content Marketing</a></li>
+	<li><a class="d-1of5 t-1of5" href="/about-brafton/content-writers">Writing</a></li>
 	<li><a class="d-1of5 t-1of5" href="/business-model/video-marketing">Video</a></li>
 	<li><a class="d-1of5 t-1of5" href="/business-model/infographic-marketing">Graphics</a></li>
 	<li><a class="d-1of5 t-1of5" href="/business-model/search-engine-optimization">SEO</a></li>
@@ -23,7 +23,7 @@ get_header(); ?>
 					<div class="template_section">
 
 						<div class="content_container welcome wrap">
-							<h1><strong>Welcome</strong> to Brafton</h1>
+							<h1><strong>Brafton</strong> content marketing</h1>
 							<div class="content_body">
 
 							<div class="copy d-1of2 t-1of2 m-all">
