@@ -187,16 +187,16 @@ style a page via class
 	.homepage_article {
 	    display: block;
 	    width: 100%;
-	    float: left;
 	    margin: 10px 0px;
 	    font-size: 16px;
-	    height: 140px;
 	    overflow: hidden;
+	    text-align: center;
 
 	    .news-headline-container {
+	    	 height: 135px;
 	    	display: inline-block;
-			float: left;
-			margin-right: 20px;
+	    	overflow: hidden;
+	    	margin-bottom: 15px;
 
 			&.black {
 				background-color: $black;
@@ -736,6 +736,10 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 				text-decoration: none;
 				text-align: center;
 			}
+		}
+
+		.cta_image {
+			margin-bottom: 2em;
 		}
 	}
 

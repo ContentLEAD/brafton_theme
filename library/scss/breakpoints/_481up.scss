@@ -23,6 +23,24 @@ them in here, they won't work.
 */
 
 
+
+/*Homepage Blog Links*/
+
+.home {
+	.homepage_article {
+	    float: left;
+	    text-align: left;
+
+
+	    .news-headline-container {
+	    	 float: left;
+	    	 margin-right: 12px;
+	    	 margin-bottom: 0;
+	    }
+	}
+}
+
+
 /*********************
 NAVIGATION STYLES
 *********************/
