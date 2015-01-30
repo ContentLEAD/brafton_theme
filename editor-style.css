@@ -105,17 +105,14 @@ ul {
 }
 .alignleft {
 	float: left;
-	line-height: 0;
 	margin: 1em 2em 1em 0;
 }
 .alignright {
 	float: right;
-	line-height: 0;
 	margin: 1em 0 1em 2em;
 }
 .aligncenter {
 	display: block;
-	line-height: 0;
 	margin: 1.5em auto;
 	text-align: center;
 }
