@@ -14,6 +14,7 @@ $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $cat_posts = new WP_Query( 'cat=50,203&posts_per_page=10&paged=' . $paged );
 
 
+
 ?>
 
 
