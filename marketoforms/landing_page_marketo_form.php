@@ -211,15 +211,15 @@ var mktFormLanguage = 'English'
 <script type="text/javascript">
 
 //function to submit Mailchimp application
-$(document).ready(function() {
-  $('#mktForm_1012').submit(function() {
+jQuery(document).ready(function() {
+  jQuery('#mktForm_1012').submit(function() {
     if ( document.getElementById('newsletterSignup').checked ) {
-      $("#message").html("<span class='error'>Adding your email address...</span>");
-      $.ajax({
+      jQuery("#message").html("<span class='error'>Adding your email address...</span>");
+      jQuery.ajax({
         url: 'inc/store-address.php',
-        data: $('#mktForm_1012').serialize(),
+        data: jQuery('#mktForm_1012').serialize(),
         success: function(msg) {
-          $('#message').html(msg);
+          jQuery('#message').html(msg);
         }
       });
       return false;

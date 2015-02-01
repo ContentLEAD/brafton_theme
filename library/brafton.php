@@ -439,7 +439,7 @@ function create_post_types() {
 				'add_new' => __( 'Add New Executive')
 			),
 			'query_var' => true,
-    			'rewrite' => array('slug' => 'executives'),
+    			'rewrite' => array('slug' => 'executive-leadership'),
     			'capability_type' => 'post',
 			'public' => true,
 			'publicly_queryable' => true,
@@ -694,7 +694,7 @@ function _save_custom_meta(){
 function brafton_author_data( $post ) {
 	$home = home_url();
 
-	$author['ID'] = ( in_category( 'news', $post ) ) ? 1 : get_the_author_id( $post );
+	$author['ID'] = get_the_author_id( $post );
 
 	$user_info = get_userdata($author['ID']);
 	$author['slug'] = $user_info->user_nicename;
@@ -1734,15 +1734,16 @@ function subcategory_sidebar_links() {
 
 function blog_tagbar() {
 
-	$tags = get_tags( 'order=DESC&hide_empty=0&include=166,201,200,199,134,218' );
+	$tags = get_tags( 'order=DESC&hide_empty=0&include=165,201,200,199,134,218' );
 	
 	if ($tags) {
 		
 		//display "all" tag- "selected" on hub pages and unselected on single.php
 
-		echo '<a class="taglink" href="' . get_site_url() . '/blog' . '">';
+		echo '<a class="taglink" href="/blog">';
+
 		
-		if ( is_category() ) {
+		if ( is_category( 'blog' ) ) {
 			echo '<div class="selected tag">All</div>';
 		} else {
 
@@ -1750,6 +1751,21 @@ function blog_tagbar() {
 		}	
 
 		echo '</a>';
+
+		//display "marketing news" tag- "selected" on hub pages and unselected on single.php
+
+		echo '<a class="taglink" href="/news">';
+
+		
+		if ( is_category( 'news' ) ) {
+			echo '<div class="selected tag">Marketing News</div>';
+		} else {
+
+			echo '<div class="tag">Marketing News</div>';
+		}	
+
+		echo '</a>';
+
 
 		//on individual posts, highlight relevant tags
 
@@ -1810,7 +1826,7 @@ function blog_tagbar() {
 
 function sidebar_tag_images() {
 
-	$tags = get_tags( 'hide_empty=0&exclude=202,204,205&order=DESC' );
+	$tags = get_tags( 'order=DESC&hide_empty=0&include=166,201,200,199,134,218' );
 
 	if ($tags) {
 

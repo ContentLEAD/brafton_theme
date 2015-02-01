@@ -97,6 +97,8 @@ get_header(); ?>
 									echo $learn;
 
 									?>
+
+									<a class="client_cta" href="/case-studies">More Client Examples</a>
 								</div>
 							</div>
 						</div>

@@ -104,7 +104,7 @@ get_header(); ?>
 
 						foreach($fields as $field) {
 
-							if( $field["field_group"] == 74887) {
+							if( $field["field_group"] == 81103) {
 								array_push( $priorities, $field );
 							}
 

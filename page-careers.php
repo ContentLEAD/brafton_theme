@@ -1,36 +1,58 @@
 <?php 
 /*
-Template Name: Careers 
+**Template Name: Careers
 */
-?>
-<?php get_header(); ?>
+
+get_header(); ?>
 
 			<div id="content">
+				<div class="graphical-header">
+					<img src="/wp-content/themes/brafton/library/images/page-headers/blank_header.png">
+				
+					<h1><?php bold_last_word( get_field( "h1" ) ); //see bones.php ?></h1>
+				</div>
 
-				<div id="inner-content" class="wrap cf">
+				<?php brafton_share( 'top' ); ?>
 
-						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+				<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<div class="business_model_container">
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+					<div class="template_section">
 
-								<header class="article-header">
+						<div class="content_container wrap">
+							<h2><?php bold_first_word( get_field('subhead_1') ); //see bones.php ?></h2>
+							<div class="content_body">
+								<?php $opps = get_field( 'massive_opportunities' ); 
 
-									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
+								echo $opps;
 
-									<?php if( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
+								?>
+							</div>
+						</div>
 
-									<?php brafton_share( 'top' ); ?>
+					</div>
 
-								</header> <?php // end article header ?>
+					<div class="template_section gray_body">
 
-								<section class="entry-content cf" itemprop="articleBody">
+						<div class="content_container wrap">
+							<h2><?php bold_first_word( get_field('subhead_2') ); ?></h2>
+							<div class="content_body">
+								<?php $talk = get_field( 'lets_talk' ); 
 
-									<?php
-										// the content (pretty self explanatory huh)
-										the_content(); ?>
+								echo $talk;
 
+								?>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="template_section how_it_works">
+
+						<div class="content_container wrap">
+							<h2><?php bold_first_word( get_field('subhead_3') ); ?></h2>
+							<div class="content_body">
 										<!--//jobvite javascript...-->
 										<iframe id="jobviteframe" style="font-size: 14px; line-height: 1.5em;" src="http://hire.jobvite.com/CompanyJobs/Careers.aspx?c=qAD9Vfw1&amp;jvresize=http://www.brafton.com/FrameResize.html" height="500" width="100%" frameborder="0" scrolling="yes"></iframe>
 										<script type="text/javascript">// <![CDATA[
@@ -71,60 +93,17 @@ Template Name: Careers
 										      }
 										// ]]></script>
 										<!--END JOBVITE CODE -->
-
-										<?php
-										/*
-										 * Link Pages is used in case you have posts that are set to break into
-										 * multiple pages. You can remove this if you don't plan on doing that.
-										 *
-										 * Also, breaking content up into multiple pages is a horrible experience,
-										 * so don't do it. While there are SOME edge cases where this is useful, it's
-										 * mostly used for people to get more ad views. It's up to you but if you want
-										 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-										 *
-										 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-										 *
-										*/
-										wp_link_pages( array(
-											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-											'after'       => '</div>',
-											'link_before' => '<span>',
-											'link_after'  => '</span>',
-										) );
-									?>
-								</section> <?php // end article section ?>
-
-								<footer class="article-footer cf">
-
-								</footer>
-
-							</article>
-
-							<?php endwhile; else : ?>
-
-									<article id="post-not-found" class="hentry cf">
-										<header class="article-header">
-											<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-										</header>
-										<section class="entry-content">
-											<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the page.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
-
-							<?php endif; ?>
-
+							</div>
 						</div>
 
-						<div class="sidebar d-2of7 t-1of3 m-all">
-							<?php dynamic_sidebar( "Careers Right Sidebar"); ?>
-						</div>
+					</div>
 
 
 				</div>
 
+				<?php endwhile; endif; ?>
+
 			</div>
 
 <?php get_footer(); ?>
+

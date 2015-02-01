@@ -314,8 +314,9 @@ jQuery(document).ready(function($) {
     });
 
     //ui effects for executive leadership page
-    $(".exec_info_onclick").hide();
-    $(".exec_onclick_shadow").hide();
+
+    //These are hidden initially by CSS
+
     $(".exec_outer_container").click(function() {
         $(this).next(".exec_info_onclick").fadeIn(400);
         $(".exec_onclick_shadow").show();
@@ -328,9 +329,9 @@ jQuery(document).ready(function($) {
     });
 
     //And a similar effect for the blog popup form...
-    $(".popup_form").hide();
-    $(".popup_form_shadow").hide();
 
+    //These are hidden initially by CSS
+    
     $(".marketzine").click(function() {
         $(".popup_form").fadeIn(400);
         $(".popup_form_shadow").show();
@@ -386,6 +387,10 @@ jQuery(document).ready(function($) {
     //Add jQuery UI tabs to blog sidebar
 
     $( "#tabs" ).tabs();
+
+    //Center videos the hard way
+
+    //$('.sublimevideo-View').removeAttr('style').css('margin','auto');
 
 
 }); /* end of as page load scripts */

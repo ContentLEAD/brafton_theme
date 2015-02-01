@@ -1,6 +1,6 @@
 <?php
 /*
-*Template Name: New Blog
+*Template Name: Video Archive
 */
 
 
@@ -8,9 +8,26 @@
 get_header(); 
 
 
-//remember to add cat=25,19 query back in!!!
+//pulls both blog/seo and news/seo subcategories
+//Also, pull all the tags!  This is to facilitate a clean transition
+//from relying on tags to using the new subcats...
 
-$cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
+$cat_posts = new WP_Query( 'cat=223,177' );
+
+$tag_posts = new WP_Query( 'tag_id=107');
+
+//var_dump( $tag_posts);
+
+
+//create new empty query and populate it with the other two
+$wp_query = new WP_Query();
+$wp_query->posts = array_merge( $cat_posts->posts, $tag_posts->posts );
+
+//populate post_count count for the loop to work correctly
+
+$wp_query->post_count = $cat_posts->post_count + $tag_posts->post_count;
+
+
 
 ?>
 
@@ -21,7 +38,7 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 	<div class="archive category_body blog">
 	<?php 
    $i = 0;
-    if( $cat_posts->have_posts() ) : while( $cat_posts->have_posts() ) : $cat_posts->the_post();
+    if( $wp_query->have_posts() ) : while( $wp_query->have_posts() ) : $wp_query->the_post();
    	//first article will be wrapped in d-all container
 	if( $i == 0 ) { ?>
 	<section class="d-all">
@@ -29,7 +46,6 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
     <?php } elseif( $i == 1 ) {  //second article starts a new d-2of3 section, in a wrapper for padding... ?>
     <div class="wrap">
     	<section class="d-5of7 t-2of3 m-all secondary-blog">
-    		<div class="arrow_to_infinity featured"></div>
 			<article class="d-all">
 	<?php } elseif ($i > 1 ) { //and the rest of the articles will just be wrapped in article tag, not in a new section ?>
 			<article class="d-all">
@@ -39,7 +55,7 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 				<div class="d-all tagbar">
 					<?php blog_tagbar(); //see brafton.php?>
 				</div>
-				<h1 itemprop="name" class="title">Marketing Blog</h1>
+				<h1 itemprop="name" class="title">Video Archive</h1>
 			<?php } ?>
 				<?php $size = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
 				<div class="image-inner <?php if( !has_post_thumbnail() ) echo ' no-img'; else echo 'alignleft'; ?>"><?php the_post_thumbnail('medium', array('itemprop' => 'image', 'alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></div>
@@ -66,9 +82,7 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 							</div>	
 						</div>		
 				</div>
-			<?php if($i > 0) { ?>
-				<div class="arrow_to_infinity"></div>
-			<?php } ?>
+			<div class="arrow_to_infinity"></div>
 		</article>
 
 		<?php if( $i == 0 ) {
@@ -77,11 +91,11 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 
 		<?php $i++; ?>
 		<?php endwhile; endif; ?>
-			<?php _paginate(); //see Brafton.php ?>
+			<?php //_paginate($cat_posts); //see Brafton.php ?>
 		</section><!--this closes the d-2of3 section after the last article-->
 	</div>
 	<?php wp_reset_query(); ?>
-	<div class="d-1of5 t-1of3 m-all sidebar blog_sidebar">
+	<div class="d-1of4 t-1of3 m-all sidebar blog_sidebar">
 		<aside>
 			<ul>
 				<?php dynamic_sidebar( "New Blog Sidebar" ); ?>
@@ -102,10 +116,7 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 		<div class="askamarketer">
 		</div>
 	</div>
-</div>
-
-
-<!--This is the popup form that goes along with the "Like what you read" CTA-->
+</div>	
 
 <div class="popup_form">
 	<div class="popup_form_inner">
@@ -118,9 +129,6 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 
 <div class="popup_form_shadow">
 </div>
-
-
-<!--End Popup form-->	
 
 <script src="//app-sj04.marketo.com/js/forms2/js/forms2.js"></script>
 <form id="mktoForm_1337"></form>

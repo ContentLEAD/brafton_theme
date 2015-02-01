@@ -39,7 +39,7 @@ get_header(); ?>
 
 								/*This is a bit messy, but the order of these pages is important...*/
 
-								$page_order = array(73683,4228,58827,54153,1714,1661,53375);
+								$page_order = array(73683,4231,58827,54153,1714,1661,53375);
 								
 								foreach($page_order as $p_order) {
 

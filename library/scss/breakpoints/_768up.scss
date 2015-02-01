@@ -388,12 +388,13 @@ the featured post and the remaining posts....*/
 		right: 0;
 
 		span {
-			font-size: 0.8em;
+			font-size: 0.6em;
 			text-transform: uppercase;
 		}
 
 		img {
 			width: 100px;
+			height: auto;
 		}
 		.user {
 			display: block;
@@ -445,7 +446,6 @@ the featured post and the remaining posts....*/
 
 
 .featured-post {
-	min-height: 315px;
 	background: url(../images/blog-images/headerbackground.png) no-repeat;
 	background-size: 100%;
 	margin-bottom: 2em;
@@ -510,7 +510,7 @@ the featured post and the remaining posts....*/
 .image-inner {
 	margin: 1em 1em 0 5em;
 	width: 25%;
-	max-height: 225px;
+	max-height: 175px;
 	overflow: hidden;
 	display: inline-block;
 	float: left;
@@ -600,19 +600,23 @@ the featured post and the remaining posts....*/
 
 /*special css for twits and videos*/
 
-	.tagged-twit, .tagged-videos {
+	.single {
+
+		&.tagged-marketing-twit, &.tagged-videos {
+
+		.blog_header {
+			margin-bottom: -20px;
+		}
 
 		#topinfo {
-			width: 95%;
-			min-height: 225px;
-			margin-top: 0px;
+			width: 80%;
+			margin-top: 0;
+			margin-bottom: 0;
 		}
 
 		.single-twit-or-video {
-			position: absolute;
-			width: 55%;
-			left: 5%;
-			top: 200px;
+
+			margin-bottom: 1em;
 
 			img {
 				width: 100%;
@@ -630,13 +634,9 @@ the featured post and the remaining posts....*/
 			width: 33%;
 		}
 
-		 .entry-content {
-			margin-top: 13%;
-		}
-
 	}
 
-	.tagged-videos {
+	&.tagged-videos {
 		.to_read {
 			display: none;
 		}
@@ -649,6 +649,7 @@ the featured post and the remaining posts....*/
 			}
 		}
 	}
+}
 
 
 /*Footer stuff*/
@@ -759,7 +760,6 @@ the featured post and the remaining posts....*/
 }
 
 .popup_form {
-	display: inline-block;
 	position: fixed;
 	z-index: 9998;
 	top: 50%;

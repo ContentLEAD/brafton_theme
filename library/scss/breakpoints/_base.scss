@@ -304,6 +304,15 @@ style a page via class
 	text-align: center;
 }
 
+/*Hide all forms before DOM render!*/
+
+.popup_form,
+.popup_form_shadow,
+.exec_info_onclick,
+.exec_onclick_shadow {
+	display: none;
+}
+
 
 .single {
 	.single-twit-or-video {
@@ -404,6 +413,9 @@ style a page via class
 
 
 	.support-ul {
+		/*GET RID OF THOS FOR NOW*/
+		display: none;
+
 		position: fixed;
 		top: 170px;
 		right: 140px;
@@ -653,7 +665,7 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 	float: left;
 
 	.content_container {
-		padding: 3em 0;
+		padding: 1.5em 0;
 	}
 
 	&.learn_more {
@@ -672,6 +684,12 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 		width: 66%;
 		margin: auto;
 		display: block;
+
+
+			.sublimevideo-View {
+				margin: auto !important;
+			}
+
 
 		img {
 			max-width: 100%;
@@ -722,6 +740,11 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 		.team_inner {
 			display: inline-block;
 			text-align: center;
+
+			.image_container {
+				height: 75px;
+				overflow: hidden;
+			}
 
 			h4 {
 				text-transform: uppercase;
@@ -858,7 +881,7 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 						background-image: url('/wp-content/themes/brafton/library/images/marketingservices/socialmedia.png');
 					}
 
-					.the-editorial-brief {
+					.content-writers {
 						background-image: url('/wp-content/themes/brafton/library/images/marketingservices/writing.png');
 					}
 
@@ -1092,7 +1115,16 @@ nav {
 		border-bottom: 0;
 		margin: 0;
 
+		/*Add a bottom border just for a couple of items*/
+
+		#menu-item-81284,
+		#menu-item-81279 {
+			border-bottom: 1px solid $off-black !important;
+			border-bottom: 1px solid $off-black !important;
+		}
+
 		li {
+
 
 			a {
 				display: block;
@@ -1416,11 +1448,11 @@ POSTS & CONTENT STYLES
 			}
 
 			blockquote {
-				background: none;
-				border-bottom: none;
+				background: $light-grey;
+				border-bottom: 11px solid black;
 				font-size: 1.3em;
+				padding: 36px;
 				line-height: 24px;
-				max-width: 350px;
 				position: static;
 
 				p {
@@ -1428,16 +1460,22 @@ POSTS & CONTENT STYLES
 				}
 
 				&.right { 
+					background: none;
+					border-bottom: 0;
 					border-right: 3px solid $black;
 					float: right;
+					max-width: 350px;
 					margin: 1.5em 0 1.5em 2em;
 					padding: 1em 1em 1em 0;
 					text-align: right;
 				}
 
 				&.left { 
+					background: none;
+					border-bottom: 0;
 					border-left: 3px solid $black;
 					float: left;
+					max-width: 350px;
 					margin: 1.5em 2em 1.5em 0;
 					padding: 1em 0 1em 1em;
 					text-align: left;
@@ -2061,5 +2099,34 @@ Legacy style classes...  :(
 		text-transform: uppercase;
 		background: $green;
 		letter-spacing: 2px;
+	}
+}
+
+.yarpp-related {
+
+	h3 {
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+
+	.yarpp-thumbnails-horizontal {
+		text-align: center;
+
+		.yarpp-thumbnail {
+			border: none !important;
+			width: 31% !important;
+			height: auto !important;
+
+			img {
+				margin: auto !important;
+			}
+		}
+
+		.yarpp-thumbnail-title {
+			max-height: 100% !important;
+			width: 90% !important;
+			margin-top: 10px;
+		}
 	}
 }

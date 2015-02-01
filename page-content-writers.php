@@ -108,11 +108,11 @@ get_header(); ?>
 					<div class="template_section team">
 
 						<div class="content_container wrap">
-							<h2><strong>Meet</strong> the team</h2>
+							<h2><strong>Editorial</strong> team spotlight</h2>
 							<div class="content_body">
 								<?php
 
-									$posts = get_posts( 'include=73046' );
+									$posts = get_posts( 'include=73046,75111,75437' );
 									//be sure to add the rest of the posts when pushing to production...
 
 									foreach($posts as $post) {
@@ -122,7 +122,15 @@ get_header(); ?>
 											case 73046:
 												$title = 'Our day-to-day';
 												break;
-											
+
+											case 75111:
+												$title = 'Researchers';
+												break;
+
+											case 75437:
+												$title = 'Writers';
+												break;	
+
 											default:
 												$title = '';
 												break;
@@ -130,9 +138,11 @@ get_header(); ?>
 
 										?>
 
-										<div class="d-1of4 t-1of4 m-all team_inner">
+										<div class="d-1of3 t-1of3 m-all team_inner">
 											<h4><strong><?php echo $title; ?></strong></h4>
-											<?php echo get_the_post_thumbnail( $post->ID ); ?>
+												<div class="image_container">
+													<?php echo get_the_post_thumbnail( $post->ID ); ?>
+												</div>
 											<a class="button" href="<?php the_permalink(); ?>">Learn More</a>
 										</div>
 

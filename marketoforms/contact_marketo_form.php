@@ -293,13 +293,9 @@ function setCookies() {
 function formSubmit(elt) {
   setCookies();
   var theURL = document.URL;
-  _gaq.push(['_set','hitCallback',function() {
-
-    return Mkto.formSubmit(elt);
-
-  }]);
  
-  _gaq.push(['_trackEvent', 'Contact Us', 'Submit', '<?php echo curPageURL(); ?>' ]);
+  ga('send', 'event', 'Contact Us', 'Submit', '<?php echo curPageURL(); ?>');
+  return Mkto.formSubmit(elt);
 }
 /*function formSubmit(elt) {
   setCookies();

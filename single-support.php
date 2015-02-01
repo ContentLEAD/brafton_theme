@@ -125,7 +125,7 @@
 						</div>
 
 						<div class="sidebar d-2of7 t-1of3 m-all">
-							<?php dynamic_sidebar( "Support Left Menu" ); ?>
+							<?php //dynamic_sidebar( "Support Left Menu" ); ?>
 						</div>
 
 

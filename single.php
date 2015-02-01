@@ -23,43 +23,56 @@
 						$size = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
 						<div class="image-inner <?php if( !has_post_thumbnail() ) echo ' no-img'; else echo 'alignleft'; ?>"><?php the_post_thumbnail('medium', array('itemprop' => 'image', 'alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></div>
 					<?php } ?>
+
 					<div id="topinfo">
 						<div class="title_info_container">
 						<h1 itemprop="name headline"><?php the_title(); ?></h1>
 						</div>
-						<div class="author-cat-time-container">
-							<div class="meta-wrapper">
-								<div class="readtime">
-									<img src="/wp-content/themes/brafton/library/images/blog-images/time.png"/>
-									<span><?php echo readtime(); //see brafton.php ?></span>
-								</div>	
-								<div class="subcategory">
-									<?php subcategory_links(); ?>
+
+						<?php if( $video_shortcode == '' && $twit_src == '' ) { ?>
+
+							<div class="author-cat-time-container">
+								<div class="meta-wrapper">
+									<div class="readtime">
+										<img src="/wp-content/themes/brafton/library/images/blog-images/time.png"/>
+										<span><?php echo readtime(); //see brafton.php ?></span>
+									</div>	
+									<div class="subcategory">
+										<?php subcategory_links(); ?>
+									</div>	
 								</div>	
 							</div>	
-						</div>		
+
+						<?php } //end twit conditional ?>	
+
 					</div>
 				</div>
 				<?php if( function_exists( 'brafton_share' ) ) brafton_share( 'top' ); ?>
 				<div class="d-all row">
 
-					<?php if( $video_shortcode ) { ?>
-						<div class="single-twit-or-video video">
-							<?php
-								echo /*do_shortcode(*/ $video_shortcode /*)*/;
-							?>
-						</div>
-					<?php
-					} elseif( $twit_src ) { ?>
-						<div class="single-twit-or-video twit">
-							<?php echo $twit_src; ?>
-						</div>
-					<?php } ?>
-
 					<div id="inner-content" class="wrap cf">
 						<section class="entry-content d-3of4 t-3of4 m-all cf" itemprop="articleBody">
+
+								<?php if( $video_shortcode ) { ?>
+									<div class="single-twit-or-video video">
+										<?php
+											echo do_shortcode( $video_shortcode );
+										?>
+									</div>
+								<?php
+								} elseif( $twit_src ) { ?>
+									<div class="single-twit-or-video twit">
+										<img src="<?php echo $twit_src; ?>" />
+									</div>
+								<?php } ?>
+
+
 								<?php the_content(); ?>
 									<?php if( function_exists( 'brafton_share' )) brafton_share( 'bottom' ); ?>
+
+									<?php related_posts(); ?>
+
+									
 									<footer class="meta">
 										<?php if(get_the_author() != 'Editorial') { ?>
 										<div class="boilerplate">
@@ -74,7 +87,7 @@
 
 											<div class="author_meta">
 
-												<a href="<?php echo $author['url']; ?>" title="View <?php echo $author['name']; ?>'s Profile" class="authorprofile"><img src="/wp-content/themes/b3/blog-images/auth_profile.png"/></a>
+												<a href="<?php echo $author['url']; ?>" title="View <?php echo $author['name']; ?>'s Profile" class="authorprofile"><img src="/wp-content/themes/brafton/library/images/blog-images/auth_profile.png"/></a>
 												<div class="icons small">
 													<?php if( $author['linkedin'] ) echo "<a href='".$author['linkedin']."' class='cube linkedin'></a>"; ?> 
 													<?php if( $author['twitter'] ) echo "<a href='http://www.twitter.com/".$author['twitter']."' class='cube twitter'></a>"; ?> 
@@ -86,6 +99,7 @@
 									<?php } ?>
 									</footer>
 									<?php do_action('after_post_content'); ?>
+
 									<div id="comments">
 										<div class="arrow_to_infinity"></div>
 										<h1>What say you?</h1>
@@ -105,7 +119,7 @@
 
 	<div class="bottom-cta d-all">
 		<div class="bottom-cta-container">
-			<a href="http://www.brafton.com/resources/reduce-reuse-recycle-repurpose-get-content"><div class="ourlatestfooter">
+			<a href="http://www.brafton.com/resources/content-social-join-party-thats-right-business"><div class="ourlatestfooter">
 			</div></a>
 
 			<div class="marketzine">

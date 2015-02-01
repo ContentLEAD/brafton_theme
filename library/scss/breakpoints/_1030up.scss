@@ -34,6 +34,15 @@ be seen on the Desktop.
 	.image-inner {
 		width: 22%;
 	}
+
+	#topinfo {
+
+		.author,
+		.meta-wrapper {
+			text-align: center;
+		}
+
+	}
 }
 
 .secondary-blog {
@@ -43,6 +52,7 @@ be seen on the Desktop.
 		.author,
 		.meta-wrapper {
 			display: inline-block;
+			text-align: center;
 		}
 
 	}
@@ -138,46 +148,40 @@ be seen on the Desktop.
 
 /*Special considerations for twits*/
 
-.tagged-twit, .tagged-videos {
 
-	#topinfo {
-		width: 95%;
-		min-height: 225px;
-		margin-top: 25px;
-	}
+.single {
+	&.tagged-marketing-twit, &.tagged-videos {
 
-	.single-twit-or-video {
-		position: absolute;
-		width: 55%;
-		left: 5%;
-		top: 245px;
-
-		img {
-			width: 100%;
-			max-width: 750px;
+		#topinfo {
+			width: 80%;
+			margin-top: 25px;
 		}
 
-		&.video {
-			height: 66%;
+		.single-twit-or-video {
 
-			/*placeholder for youtube demo*/
-
-			iframe {
-				height: 100%;
+			img {
 				width: 100%;
-				max-width: 725px;
-				max-height: 470px;
+				max-width: 750px;
+			}
+
+			&.video {
+				height: 66%;
+
+				/*placeholder for youtube demo*/
+
+				iframe {
+					height: 100%;
+					width: 100%;
+					max-width: 725px;
+					max-height: 470px;
+				}
 			}
 		}
-	}
 
-	.author-cat-time-container {
-		float: right;
-		width: 33%;
-	}
-
-	 .entry-content {
-		margin-top: 300px;
+		.author-cat-time-container {
+			float: right;
+			width: 33%;
+		}
 	}
 }
 

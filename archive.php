@@ -27,26 +27,26 @@
 				<div class="title_info_container">
 				<h2 itemprop="name headline"><a href=<?php echo '"' . get_permalink() . '"'?>><?php the_title(); ?></a></h2>
 				</div>
+				<?php if( !is_post_type_archive( 'downloadables' ) ) { ?> 
 					<div class="author">
 						<a href="<?php echo $author['url']; ?>" class="user"><?php echo get_avatar($author['ID']); ?></a>
-						<span>by <?php if(get_the_author() != 'Editorial') : ?>
+						<span>by <?php //if(get_the_author() != 'Editorial') : ?>
 							<a href="<?php echo $author['url']; ?>" title="Learn more about: <?php echo $author['name']; ?>" rel="author"><?php echo $author['name']; ?></a>
-							<?php else: ?>
-							Brafton Editorial
-							<?php endif; ?>
+							<?php //else: ?>
+							<!--Brafton Editorial -->
+							<?php //endif; ?>
 						</span>
 					</div>
 					<div class="meta-wrapper">
-						<?php if( is_post_type_archive( 'downloadables' ) ) { ?>
 							<div class="readtime">
 								<img src="/wp-content/themes/brafton/library/images/blog-images/time.png"/>
 								<span><?php echo readtime(); //see brafton.php ?></span>
 							</div>
-						<?php } ?>	
 						<div class="subcategory">
 							<?php subcategory_links(); ?>
 						</div>	
 					</div>	
+				<?php } ?>
 			</div>
 		</header>
 		<div class="arrow_to_infinity"></div>
@@ -64,10 +64,10 @@
 		<?php  _paginate(); //See Brafton.php ?>
 	
 	</section><!--this closes the eightcol section after the last article-->
-	<div class="d-2of7 t-1of3 m-all sidebar">
+	<div class="d-1of5 t-1of3 m-all blog_sidebar sidebar">
 		<aside>
 			<ul>
-				<?php dynamic_sidebar("Archive Sidebar"); ?>
+				<?php dynamic_sidebar("New Blog Sidebar"); ?>
 			</ul>
 		</aside>
 </article><!-- End #archive -->

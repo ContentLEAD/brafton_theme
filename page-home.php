@@ -35,7 +35,7 @@ get_header(); ?>
 								//I need to make vars, to0 hard to switch around id's constantly*/
 
 								$cm = 73683;
-								$cw = 4228;
+								$cw = 4231;
 								$vid = 58827;
 								$graph = 54153;
 								$seo = 1714;
@@ -57,6 +57,8 @@ get_header(); ?>
 										custom field and also permalink*/
 
 										$slug = $page->post_name;
+
+										//var_dump( $slug );
 
 										$object = get_field_object( $slug );
 
@@ -193,7 +195,7 @@ get_header(); ?>
 
 									<?php 
  
-										$community = new WP_Query('tag=brafton-community&posts_per_page=1');
+										$community = new WP_Query('tag=community&posts_per_page=1');
 
 										if( $community->have_posts() ) : while( $community->have_posts() ) : $community->the_post(); ?>
 											<div class="homepage_article news_homepage_article">
@@ -279,7 +281,7 @@ get_header(); ?>
 
 									?>
 
-									<a class="client_cta" href="/case-studies">More Client Examples</a>
+									<a class="client_cta" href="/contact">Request A Demo</a>
 								</div>
 							</div>
 						</div>

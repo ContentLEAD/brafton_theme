@@ -1,69 +1,74 @@
-<?php get_header(); ?>
-
-			<div id="content">
-
-				<div id="inner-content" class="wrap cf">
-
-					<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
-						<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
-
-						<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-							<article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article">
-
-								<header class="article-header">
-
-									<h3 class="search-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-
-                  <p class="byline vcard">
-                    <?php printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-                  </p>
-
-								</header>
-
-								<section class="entry-content">
-										<?php the_excerpt( '<span class="read-more">' . __( 'Read more &raquo;', 'bonestheme' ) . '</span>' ); ?>
-
-								</section>
-
-								<footer class="article-footer">
-
-									<?php if(get_the_category_list(', ') != ''): ?>
-                  					<?php printf( __( 'Filed under: %1$s', 'bonestheme' ), get_the_category_list(', ') ); ?>
-                  					<?php endif; ?>
-
-                 					<?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
-
-								</footer> <!-- end article footer -->
-
-							</article>
-
-						<?php endwhile; ?>
-
-								<?php bones_page_navi(); ?>
-
-							<?php else : ?>
-
-									<article id="post-not-found" class="hentry cf">
-										<header class="article-header">
-											<h1><?php _e( 'Sorry, No Results.', 'bonestheme' ); ?></h1>
-										</header>
-										<section class="entry-content">
-											<p><?php _e( 'Try your search again.', 'bonestheme' ); ?></p>
-										</section>
-										<footer class="article-footer">
-												<p><?php _e( 'This is the error message in the search.php template.', 'bonestheme' ); ?></p>
-										</footer>
-									</article>
-
-							<?php endif; ?>
-
-						</div>
-
-							<?php get_sidebar(); ?>
-
-					</div>
-
+<?php  get_header(); ?>
+<article id="archive" class="d-all" itemscope itemtype="http://schema.org/WebPage">
+	<?php 
+    $i=0;
+    if( have_posts() ) : while( have_posts() ) : the_post();
+    
+	if( $i == 0 ) { ?>
+		<section class="d-all">
+	    <article id="archive" class="d-all featured-post">
+    <?php } elseif( $i == 1 ) {  //second article starts a new 5of7 section ?>
+	    <section class="d-5of7 t-2of3 m-all secondary-blog">
+		<article id="archive" class="d-all">
+	<?php } elseif ($i > 1 ) { //and the rest of the articles will just be wrapped in article tag, not in a new section ?>
+		<article id="archive" class="d-all">
+	<?php } ?>
+	<?php $author = brafton_author_data( get_the_ID() ); ?>
+		<header class="d-all">
+			<?php if( $i == 0 ) { ?>
+				<div class="d-all tagbar">
+					<?php blog_tagbar(); ?>
+				</div>
+				<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+			<?php } ?>
+			<?php $size = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
+			<div class="image-inner <?php if( !has_post_thumbnail() ) echo ' no-img'; else echo 'alignleft'; ?>"><?php the_post_thumbnail('medium', array('itemprop' => 'image', 'alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></div>
+			<div id="topinfo">
+				<div class="title_info_container">
+				<h2 itemprop="name headline"><a href=<?php echo '"' . get_permalink() . '"'?>><?php the_title(); ?></a></h2>
+				</div>
 			</div>
+		</header>
+		<div class="arrow_to_infinity"></div>
+	</article>
 
-<?php get_footer(); ?>
+	<?php if( $i == 0 ) { 
+			echo '</section>'; //close the twelvecol section surrounding the first post 
+		} 
+
+	$i++;
+    endwhile;
+
+    else: ?>
+
+    <div class="wrap">
+
+    	<div class="d-all t-all m-all">
+
+			<article id="post-not-found" class="hentry cf">
+				<header class="article-header" style="display: block;">
+					<h1><?php _e( 'Sorry, No Results.', 'bonestheme' ); ?></h1>
+				</header>
+				<section class="entry-content">
+					<p><?php _e( 'Try your search again.', 'bonestheme' ); ?></p>
+
+					<div class="widget">
+						<?php get_search_form( true ); ?>
+					</div>
+				</section>
+			</article>
+
+		</div>
+
+	</div>
+
+
+    <?php 
+    endif;
+
+    ?>
+		<?php  _paginate(); //See Brafton.php ?>
+	
+	</section><!--this closes the eightcol section after the last article-->
+</article><!-- End #archive -->
+<?php  get_footer(); ?>
