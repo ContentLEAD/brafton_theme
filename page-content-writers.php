@@ -87,7 +87,7 @@ get_header(); ?>
 					<div class="template_section reasons gray_body">
 
 						<div class="content_container wrap">
-							<h2><strong>Here's 3 reasons why</strong> you'll golf clap for our writers</h2>
+							<h2><strong>Good</strong> reads, <strong>great</strong> results: Not your average copywriters</h2>
 							<div class="content_body">
 								
 								<?php for ($i=1; $i<=3; $i++) { ?>
@@ -113,7 +113,6 @@ get_header(); ?>
 								<?php
 
 									$posts = get_posts( 'include=73046,75111,75437' );
-									//be sure to add the rest of the posts when pushing to production...
 
 									foreach($posts as $post) {
 										setup_postdata( $post );

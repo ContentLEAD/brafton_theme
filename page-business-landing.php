@@ -63,6 +63,66 @@ get_header(); ?>
 
 					</div>
 
+					<?php
+
+					//Only display this next section if you want a "Meet the team" CTA
+
+					if( get_field('meet_the_team_cta') ) { 
+
+					?>
+						<div class="template_section team gray_body">
+
+							<div class="content_container wrap">
+								<h2><?php bold_first_word( get_field('meet_the_team_header') ); ?></h2>
+								<div class="content_body">
+									<?php
+
+									for( $i=1; $i<=3; $i++) {
+
+										$post_id = get_field( 'team_id_' . $i );
+										$title = get_field( 'team_title_' . $i );
+
+										$posts = get_posts( array(
+												'include' => $post_id,
+												'post_type' => array('post','downloadables')
+											) );
+									
+
+
+										if($post_id != '') {
+
+										foreach($posts as $post) {
+											setup_postdata( $post );
+
+											?>
+
+											<div class="d-1of3 t-1of3 m-all team_inner">
+												<h5><strong><?php echo $title; ?></strong></h5>
+													<div class="image_container">
+														<?php echo get_the_post_thumbnail( $post->ID ); ?>
+													</div>
+												<a class="button" href="<?php the_permalink(); ?>">Learn More</a>
+											</div>
+
+										<?php 
+
+											} //end foreach loop 
+
+										wp_reset_postdata();
+
+										} //end conditional
+
+									} //end for loop
+
+
+									?>
+								</div>
+							</div>
+
+						</div>
+
+					<?php } //end meet team conditional ?>
+
 					<div class="template_section learn_more green_body">
 
 						<div class="content_container wrap">
