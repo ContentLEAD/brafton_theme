@@ -64,6 +64,39 @@
 			</script>
 		<?php } ?>
 
+		<!--AdRoll Script-->
+		<script type="text/javascript">
+		adroll_adv_id = "MTCK3W5IHNAQRJJ3DEXSJJ";
+		adroll_pix_id = "BGFXYQ2CXVDQFKQ75IAACL";
+		(function () {
+		var oldonload = window.onload;
+		window.onload = function(){
+		   __adroll_loaded=true;
+		   var scr = document.createElement("script");
+		   var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+		   scr.setAttribute('async', 'true');
+		   scr.type = "text/javascript";
+		   scr.src = host + "/j/roundtrip.js";
+		   ((document.getElementsByTagName('head') || [null])[0] ||
+		    document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+		   if(oldonload){oldonload()}};
+		}());
+		</script>
+
+
+		<!--Crazy egg script-->
+
+		<?php if(is_home() || is_page(73683) || is_page(4231) || is_page(4226)) { ?>
+
+		<script type="text/javascript">
+		setTimeout(function(){var a=document.createElement("script");
+		var b=document.getElementsByTagName("script")[0];
+		a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0026/2755.js?"+Math.floor(new Date().getTime()/3600000);
+		a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+		</script>
+
+		<?php } ?>
+
 	</body>
 
 </html> <!-- end of site. what a ride! -->
