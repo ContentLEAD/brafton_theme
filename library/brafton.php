@@ -1717,9 +1717,20 @@ add_action( 'admin_head', 'add_admin_javascript');
 function subcategory_links() {
 
 	$cats = get_the_category();
-	foreach($cats as $cat) {
-		$description = $cat->category_description;
-		echo '<a href="/' .$description. '-archive"><div class="subcategory-image ' . $description . '"></div></a>';
+	if( $cats ) {
+		foreach($cats as $cat) {
+
+			//filter out news/blog parent categories
+
+			$id = $cat->term_id;
+
+			if( $id == '25' || $id == '19' ) {
+				return;
+			} else {
+				$description = $cat->category_description;
+				echo '<a href="/' .$description. '-archive"><div class="subcategory-image ' . $description . '"></div></a>';
+			}
+		}
 	}
 }
 
