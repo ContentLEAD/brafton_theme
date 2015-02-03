@@ -476,6 +476,7 @@ the featured post and the remaining posts....*/
 	.image-inner {
 		margin: 1em 1em 0 5em;
 		width: 37%;
+		max-height: 225px;
 	}
 
 	#topinfo {
@@ -516,7 +517,7 @@ the featured post and the remaining posts....*/
 	float: left;
 
 	img {
-		max-width: 100%;
+		width: 100%;
 		height: auto;
 	}
 }
@@ -580,6 +581,10 @@ the featured post and the remaining posts....*/
 		}
 	}
 
+	.blog_header {
+		padding-bottom: 1.5em;
+	}
+
 	#topinfo {
 		width: 45%;
 		margin-top: 10px;
@@ -592,6 +597,16 @@ the featured post and the remaining posts....*/
 
 	.arrow_to_infinity {
 		margin-left: 0;
+	}
+}
+
+
+.tag-client-success-stories {
+	#topinfo {
+		.meta-wrapper {
+			position: relative;
+			left: 0;
+		}
 	}
 }
 

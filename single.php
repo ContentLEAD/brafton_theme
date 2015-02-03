@@ -27,7 +27,7 @@
 					<div id="topinfo">
 						<div class="title_info_container">
 						<h1 itemprop="name headline"><?php the_title(); ?></h1>
-						</div>
+					
 
 						<?php if( $video_shortcode == '' && $twit_src == '' ) { ?>
 
@@ -44,9 +44,11 @@
 							</div>	
 
 						<?php } //end twit conditional ?>	
-
+						
+						</div>
 					</div>
 				</div>
+
 				<?php if( function_exists( 'brafton_share' ) ) brafton_share( 'top' ); ?>
 				<div class="d-all row">
 

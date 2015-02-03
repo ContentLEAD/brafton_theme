@@ -1855,16 +1855,17 @@ function sidebar_tag_images() {
 function blog_hub_sidebar_features( $content_type ) {
 	if( $content_type == 'video' ) {
 		$sidebar_posts = new WP_Query( 'tag_id=107&posts_per_page=1' );
-	} elseif( $content_type == 'twit' ) {
-		$sidebar_posts = new WP_Query( 'tag_id=188&posts_per_page=1' );
+	
 	} elseif( $content_type == 'downloadables' ) {
-		//picks either a downloadable or an infographic for this section
 		$rand = rand(0,1);
 		if($rand == 0) {
-			$sidebar_posts = new WP_Query( 'post_type=downloadables&posts_per_page=1');
+			$sidebar_posts = new WP_Query( 'tag_id=188&posts_per_page=1' );
 		} else {
 			$sidebar_posts = new WP_Query( 'post_type=infographic&posts_per_page=1');
 		}
+
+	} elseif( $content_type == 'ebook' ) {
+		$sidebar_posts = new WP_Query( 'post_type=downloadables&posts_per_page=1');
 	}
 
 	while( $sidebar_posts->have_posts() ) : $sidebar_posts->the_post();
