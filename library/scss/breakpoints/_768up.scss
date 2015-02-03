@@ -583,6 +583,13 @@ the featured post and the remaining posts....*/
 
 	.blog_header {
 		padding-bottom: 1.5em;
+
+		&:after {
+			content: " ";
+			display: block; 
+			height: 0; 
+			clear: both;
+		}
 	}
 
 	#topinfo {
