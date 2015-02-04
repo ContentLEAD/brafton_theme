@@ -14,7 +14,7 @@ get_header();
 
 $cat_posts = new WP_Query( 'cat=223,177' );
 
-$tag_posts = new WP_Query( 'tag_id=107');
+$tag_posts = new WP_Query( 'tag_id=107&cat=-223,-177');
 
 //var_dump( $tag_posts);
 

@@ -624,10 +624,12 @@ the featured post and the remaining posts....*/
 
 	.single {
 
-		&.tagged-marketing-twit, &.tagged-videos {
+		&.tagged-slideshare, &.tagged-marketing-twit, &.tagged-videos {
+
 
 		.blog_header {
-			margin-bottom: -20px;
+			margin-bottom: -25px;
+			padding-bottom: 0;
 		}
 
 		#topinfo {

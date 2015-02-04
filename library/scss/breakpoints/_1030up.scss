@@ -17,6 +17,7 @@ be seen on the Desktop.
 	.header {
 		position: fixed;
 		z-index: 11000;
+		display: block;
 	}
 
 	#archive {

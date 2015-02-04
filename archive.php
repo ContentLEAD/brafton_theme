@@ -39,11 +39,15 @@
 
 						} elseif( is_tag() ) { ?>
 
-							<h1 class="title" itemprop="name"><?php single_tag_title(); ?></span></h1>
+							<h1 class="title" itemprop="name"><?php single_tag_title(); ?></h1>
 
-				<?php	} else { ?>
-				 	
-				 			<h1 itemprop="name"><span><?php post_type_archive_title(); ?></span></h1>
+				<?php	} elseif( is_author() ) { ?>
+
+							<h1 class="title" itemprop="name">All posts by <?php the_author(); ?></h1>
+
+				 <?php  } else { ?>
+				 			
+				 			<h1 itemprop="name"><span><?php post_type_archive_title(); ?></h1>
 
 				 <?php  } 
 			

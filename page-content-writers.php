@@ -18,8 +18,8 @@ get_header(); ?>
 				<div class="template_section every_word">
 
 						<div class="content_container wrap">
-							<h2><strong>Every word counts.</strong></h2>
-							<h2>Our writers deliver results</h2>
+							<h2><strong><?php echo get_field('subhead_1'); //see bones.php ?></strong></h2>
+							<h2><?php echo get_field('subhead_2');  ?></h2>
 							<div class="content_body">
 								<?php 
 
@@ -36,7 +36,7 @@ get_header(); ?>
 					<div class="template_section gray_body who">
 
 						<div class="content_container wrap">
-							<h2><strong>Who</strong> are Brafton's writers?</h2>
+							<h2><?php bold_first_word( get_field('subhead_3') ); //see bones.php ?></h2>
 							<div class="content_body">
 								<?php 
 
@@ -53,7 +53,7 @@ get_header(); ?>
 					<div class="template_section buzz">
 
 						<div class="content_container wrap">
-							<h2><strong>The buzz</strong> on our content writers</h2>
+							<h2><?php bold_first_word( get_field('subhead_4') ); //see bones.php ?></h2>
 							<div class="content_body">
 								<?php for($i=1; $i<=4; $i++) { ?>
 
@@ -87,7 +87,7 @@ get_header(); ?>
 					<div class="template_section reasons gray_body">
 
 						<div class="content_container wrap">
-							<h2><strong>Good</strong> reads, <strong>great</strong> results: Not your average copywriters</h2>
+							<h2><?php bold_first_word( get_field('subhead_5') ); //see bones.php ?></h2>
 							<div class="content_body">
 								
 								<?php for ($i=1; $i<=3; $i++) { ?>
@@ -108,7 +108,7 @@ get_header(); ?>
 					<div class="template_section team">
 
 						<div class="content_container wrap">
-							<h2><strong>Editorial</strong> team spotlight</h2>
+							<h2><?php bold_first_word( get_field('subhead_6') ); //see bones.php ?></h2>
 							<div class="content_body">
 								<?php
 

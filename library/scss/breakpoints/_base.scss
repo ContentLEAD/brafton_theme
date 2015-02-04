@@ -294,6 +294,8 @@ style a page via class
 }
 
 .image-inner {
+	float: none;
+	
 	img {
 		display: block;
 		margin: auto;

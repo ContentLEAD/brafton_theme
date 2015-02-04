@@ -142,7 +142,7 @@ get_header(); ?>
 
 									<?php 
 
-										$news = new WP_Query('category_name=news&posts_per_page=1');
+										$news = new WP_Query('category_name=news&posts_per_page=1&tag__not_in=107&category__not_in=177,223');
 
 										if( $news->have_posts() ) : while( $news->have_posts() ) : $news->the_post(); ?>
 											<div class="homepage_article news_homepage_article">
@@ -165,7 +165,7 @@ get_header(); ?>
 										
 										<?php 
 
-											$blog = new WP_Query('category_name=blog&posts_per_page=1');
+											$blog = new WP_Query('category_name=blog&posts_per_page=1&tag__not_in=107&category__not_in=177,223');
 
 											if( $blog->have_posts() ) : while( $blog->have_posts() ) : $blog->the_post(); ?>
 											
@@ -218,7 +218,25 @@ get_header(); ?>
 										
 										<?php 
 
-											$videos = new WP_Query('tag=videos&posts_per_page=1');
+											$args = array(
+													'posts_per_page'=>1,
+
+													 'tax_query' => array(
+													    'relation' => 'OR',
+													    array(
+													      'taxonomy' => 'post_tag',
+													      'field' => 'slug',
+													      'terms' => 'videos',
+													    ),
+													    array(
+													      'taxonomy' => 'category',
+													      'field' => 'id',
+													      'terms' => array( 177, 223 ),
+													    ),
+  													),
+												);
+
+											$videos = new WP_Query( $args );
 
 											if( $videos->have_posts() ) : while( $videos->have_posts() ) : $videos->the_post(); ?>
 											<div class="homepage_article news_homepage_article">

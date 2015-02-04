@@ -1871,7 +1871,7 @@ function blog_hub_sidebar_features( $content_type ) {
 	while( $sidebar_posts->have_posts() ) : $sidebar_posts->the_post();
 		echo '<a href="' . get_permalink() . '">';
 			echo '<div class="blog-hub-sidebar-feature '. $content_type .'">';
-				the_post_thumbnail();
+				the_post_thumbnail( 'thumbnail' );
 			echo '</div>';
 		echo '</a>';
 	endwhile;

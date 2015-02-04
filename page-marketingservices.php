@@ -21,7 +21,6 @@ get_header(); ?>
 
 						<div class="content_container wrap">
 							<div class="content_body">
-								<strong>Brafton Offers</strong>
 								<?php $offer = get_field( 'brafton_offers' ); 
 
 								echo $offer;

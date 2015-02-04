@@ -19,9 +19,9 @@
 
 					//If it is neither twit nor video, output the featured image
 
-					if( $video_shortcode == '' && $twit_src == '' ) {
+					if( $video_shortcode == '' && $twit_src == '' && !has_tag( 'slideshare' )  ) {
 						$size = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
-						<div class="image-inner <?php if( !has_post_thumbnail() ) echo ' no-img'; else echo 'alignleft'; ?>"><?php the_post_thumbnail('medium', array('itemprop' => 'image', 'alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></div>
+						<div class="image-inner <?php if( !has_post_thumbnail() ) echo ' no-img';?>"><?php the_post_thumbnail('medium', array('itemprop' => 'image', 'alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></div>
 					<?php } ?>
 
 					<div id="topinfo">
@@ -29,7 +29,7 @@
 						<h1 itemprop="name headline"><?php the_title(); ?></h1>
 					
 
-						<?php if( $video_shortcode == '' && $twit_src == '' ) { ?>
+						<?php if( $video_shortcode == '' && $twit_src == ''  && !has_tag( 'slideshare' ) ) { ?>
 
 							<div class="author-cat-time-container">
 								<div class="meta-wrapper">
