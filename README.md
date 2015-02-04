@@ -64,7 +64,9 @@ Any JS libraries (responsive nav, for example) live in the library/js/libs direc
 Major components of the theme rely on a few select plugins:
 
 -WP-SCSS (for Sass compilation)
+
 -Revolution Slider (Homepage Slider)
+
 -Advanced Custom Fields (For a few of the page templates, and everyone likes it so much it will be used more and more...)
 
 For efficiency:
