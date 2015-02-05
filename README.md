@@ -40,6 +40,10 @@ Everything in the library/scss directory is compiled into the library/css direct
 HOW THE HELL DO I KNOW WHICH SASS FILE TO EDIT WHEN I NEED TO MAKE A CHANGE?? THERE ARE SO MANY!
 This is one problem with using the plugin to compile- the Compass compiler will input specific file names and line numbers as comments to tell you where to go.  The best solution at this point is to start in base.scss and work upwards- paying attention to which breakpoint the CSS file is referencing.  I think also after spending time with the Sass directory it will be easier to infer where to make appropriate changes.  That is not a good solution- I will work to make finding things easier…
 
+-MODULES:
+
+A few select pages have their own stylesheets in the "modules" folder, including all the social icons, the Executive Leadership page, and the Case Study/Testimonial Page.  Modules are a great way to contain styles that probably won't be applied to more than a select few pages/ver specific features.  They will keep your core stylesheets lighter and easier to maintain.
+
 ===================================
 2. Functions.php
 ===================================
