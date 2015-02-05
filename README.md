@@ -79,5 +79,7 @@ For efficiency:
 
 The root theme directory is a git repository.  I highly reccomend documenting all changes...
 
+This was Greg's first commit!
+
 
 
