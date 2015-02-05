@@ -237,31 +237,6 @@ jQuery(document).ready(function($) {
         return false;
     });
 
-    //slider on the careers sidebar...
-    $("#testi img").load(function() {
-        var divwidth = $("#testi img").width();
-        console.log(divwidth);
-        var dvalue = 7000;
-        $('#testi ul').css({
-            'left': '-' + divwidth + 'px'
-        });
-
-            function runtestimonials() {
-                var left_indent = parseInt($('#testi ul').css('left')) - divwidth;
-                $('#testi ul').delay(dvalue).animate({
-                    'left': left_indent
-                }, 1000, function() {
-                    //add new slide move ul to left one full slide
-                    $("#testi li:last").after($("#testi li:first"));
-                    $('#testi ul').css({
-                        'left': '-' + divwidth + 'px'
-                    });
-                    runtestimonials();
-                });
-            }
-        runtestimonials();
-    });
-
 
     //some jquery for single.php
 
@@ -284,15 +259,6 @@ jQuery(document).ready(function($) {
         });
     };
 
-    //Put title div ABOVE featured image in mobile view
-   /* window.onresize = function() {
-        var wd = $(window).width();
-        console.log(wd);
-        if( wd < 480 ) {
-            $('#topinfo').insertBefore('.image-inner');
-        }
-    };*/
-
     //Scroll to fixed 
 
     if($(".fixed-page-footer").length) {
@@ -311,6 +277,13 @@ jQuery(document).ready(function($) {
 
     $(".askamarketer").click(function(){
         MktoForms2.loadForm("//app-sj04.marketo.com", "447-XFF-352", 1337, function (form){MktoForms2.lightbox(form).show();});
+    });
+
+
+    //lightbox popup marketo form for page templates
+
+    $(".fixed-page-footer .request_demo").click(function(){
+        MktoForms2.loadForm("//app-sj04.marketo.com", "447-XFF-352", 1392, function (form){MktoForms2.lightbox(form).show();});
     });
 
     //ui effects for executive leadership page
