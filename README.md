@@ -81,5 +81,4 @@ The root theme directory is a git repository.  I highly reccomend documenting al
 
 This was Greg's first commit!
 
-
-
+git clone example
