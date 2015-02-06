@@ -76,15 +76,21 @@
 
 					<?php } //end client success conditional ?>
 					
-					<div class="meta-wrapper">
-							<div class="readtime">
-								<img src="/wp-content/themes/brafton/library/images/blog-images/time.png"/>
-								<span><?php echo readtime(); //see brafton.php ?></span>
+						<div class="meta-wrapper">
+							
+							<time datetime="<?php the_time('c'); ?>"><?php the_time('F j, Y'); ?></time>
+
+							<div class="read_cat_container">
+								<div class="readtime">
+									<img src="/wp-content/themes/brafton/library/images/blog-images/time.png"/>
+									<span><?php echo readtime(); //see brafton.php ?></span>
+								</div>	
+								<div class="subcategory">
+									<?php subcategory_links(); ?>
+								</div>
 							</div>
-						<div class="subcategory">
-							<?php subcategory_links(); ?>
+
 						</div>	
-					</div>	
 
 				<?php } ?>
 

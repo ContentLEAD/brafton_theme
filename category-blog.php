@@ -1,14 +1,11 @@
 <?php
-/*
-*Template Name: New Blog
-*/
+
 
 
 
 get_header(); 
 
 
-//remember to add cat=25,19 query back in!!!
 
 $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 
@@ -57,13 +54,19 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 							</span>
 						</div>
 						<div class="meta-wrapper">
-							<div class="readtime">
-								<img src="/wp-content/themes/brafton/library/images/blog-images/time.png"/>
-								<span><?php echo readtime(); //see brafton.php ?></span>
-							</div>	
-							<div class="subcategory">
-								<?php subcategory_links(); ?>
-							</div>	
+							
+							<time datetime="<?php the_time('c'); ?>"><?php the_time('F j, Y'); ?></time>
+
+							<div class="read_cat_container">
+								<div class="readtime">
+									<img src="/wp-content/themes/brafton/library/images/blog-images/time.png"/>
+									<span><?php echo readtime(); //see brafton.php ?></span>
+								</div>	
+								<div class="subcategory">
+									<?php subcategory_links(); ?>
+								</div>
+							</div>
+
 						</div>		
 				</div>
 			<?php if($i > 0) { ?>

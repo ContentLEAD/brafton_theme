@@ -73,13 +73,19 @@ $wp_query->post_count = $cat_posts->post_count + $tag_posts->post_count;
 							</span>
 						</div>
 						<div class="meta-wrapper">
-							<div class="readtime">
-								<img src="/wp-content/themes/brafton/library/images/blog-images/time.png"/>
-								<span><?php echo readtime(); //see brafton.php ?></span>
-							</div>	
-							<div class="subcategory">
-								<?php subcategory_links(); ?>
-							</div>	
+							
+							<time datetime="<?php the_time('c'); ?>"><?php the_time('F j, Y'); ?></time>
+
+							<div class="read_cat_container">
+								<div class="readtime">
+									<img src="/wp-content/themes/brafton/library/images/blog-images/time.png"/>
+									<span><?php echo readtime(); //see brafton.php ?></span>
+								</div>	
+								<div class="subcategory">
+									<?php subcategory_links(); ?>
+								</div>
+							</div>
+
 						</div>		
 				</div>
 			<div class="arrow_to_infinity"></div>
@@ -95,7 +101,7 @@ $wp_query->post_count = $cat_posts->post_count + $tag_posts->post_count;
 		</section><!--this closes the d-2of3 section after the last article-->
 	</div>
 	<?php wp_reset_query(); ?>
-	<div class="d-1of4 t-1of3 m-all sidebar blog_sidebar">
+	<div class="d-1of5 t-1of3 m-all sidebar blog_sidebar">
 		<aside>
 			<ul>
 				<?php dynamic_sidebar( "New Blog Sidebar" ); ?>
