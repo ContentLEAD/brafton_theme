@@ -1,10 +1,27 @@
 .exec_container {
 	position: relative;
+	overflow: hidden;
 
 	img {
 		position: relative;
 		z-index: 2;
 		margin-bottom: 0 !important;
+
+		-webkit-transition: all 0.7s ease; /* Safari and Chrome */
+	    -moz-transition: all 0.7s ease; /* Firefox */
+	    -ms-transition: all 0.7s ease; /* IE 9 */
+	    -o-transition: all 0.7s ease; /* Opera */
+	    transition: all 0.7s ease;
+	}
+
+	&:hover {
+		img {
+			-webkit-transform:scale(1.01); /* Safari and Chrome */
+		    -moz-transform:scale(1.01); /* Firefox */
+		    -ms-transform:scale(1.01); /* IE 9 */
+		    -o-transform:scale(1.01); /* Opera */
+		     transform:scale(1.01);
+		}
 	}
 
 	.exec_info {
