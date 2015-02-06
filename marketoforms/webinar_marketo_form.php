@@ -56,19 +56,6 @@ function curPageURL() {
 ?>
 
 
-<style>
-
-#mktFrmSubmit{
-    color: #FFFFFF !important;
-	/*font-size:13px;*/
-	}
-
-div.buttonSubmit:hover input {
-	background: #8DC01D;
-	}
-
-
-</style>
 <script type="text/javscript">
   function del_cookie(name) {
     document.cookie = name + '=; expires=Thu, 01-Jan-70 00:00:01 GMT;';

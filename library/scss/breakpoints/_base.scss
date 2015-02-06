@@ -462,6 +462,7 @@ style a page via class
 	@extend .post-type-archive-support;
 }
 
+
 .post-type-archive-infographic {
 
 	article {
@@ -523,7 +524,14 @@ style a page via class
 			background: $light-grey;
 		}
 	}
-}                 
+} 
+
+.single-webinar {
+	.webinar_form_headline {
+		text-transform: uppercase;
+		text-align: center;
+	}
+}                
 
 .single-infographic {
 	.infographic-container {
@@ -689,6 +697,14 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 		margin: auto;
 		margin-top: 1em;
 		display: block;
+
+		ul {
+			list-style: disc outside none;
+
+			ul {
+				padding-left: 1.75em;
+			}
+		}
 
 
 			.sublimevideo-View {
@@ -1381,6 +1397,14 @@ POSTS & CONTENT STYLES
 		.entry-content {
 			padding: 1.5em;
 			padding-top: 1em;
+
+			ul {
+				list-style: disc outside none;
+
+				ul {
+					padding-left: 1.75em;
+				}
+			}
 
 			p {
 				margin: 0 0 1.5em;

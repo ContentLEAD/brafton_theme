@@ -11,16 +11,26 @@ be seen on the Desktop.
 
 
 
-/*fixed navbar ONLY on blog page*/
+/*fixed navbar ONLY on select pages*/
 
-.category-blog {
+.category-blog,
+.post-type-archive-downloadables,
+.post-type-archive-webinar,
+.post-type-archive-brafton_glossary {
 	.header {
 		position: fixed;
 		z-index: 11000;
 		display: block;
 	}
 
+	#main,
 	#archive {
+		margin-top: 70px;
+	}
+}
+
+.post-type-archive-brafton_glossary {
+	.sidebar {
 		margin-top: 70px;
 	}
 }

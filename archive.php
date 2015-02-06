@@ -7,16 +7,16 @@
 	if( $i == 0 ) { ?>
 		
 		<section class="d-all">
-	    <article id="archive" class="d-all featured-post">
+	    <article class="d-all featured-post">
     
     <?php } elseif( $i == 1 ) {  //second article starts a new 5of7 section ?>
 	    
 	    <section class="d-5of7 t-2of3 m-all secondary-blog">
-		<article id="archive" class="d-all">
+		<article class="d-all">
 	
 	<?php } elseif ($i > 1 ) { //and the rest of the articles will just be wrapped in article tag, not in a new section ?>
 		
-		<article id="archive" class="d-all">
+		<article class="d-all">
 
 	<?php } ?>
 	

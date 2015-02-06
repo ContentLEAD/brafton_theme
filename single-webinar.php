@@ -57,8 +57,6 @@ if ( $_COOKIE[ 'Name' ] ) {
 
 									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 
-									<?php if( function_exists( 'dimox_breadcrumbs' ) ) dimox_breadcrumbs(); ?>
-
 								</header> <?php // end article header ?>
 
 								<section class="entry-content cf" itemprop="articleBody">
@@ -133,9 +131,9 @@ if ( $_COOKIE[ 'Name' ] ) {
 
 						<div class="sidebar d-2of7 t-1of3 m-all">
 							<?php if( has_term( 'webinars', 'event-type', get_the_ID() ) || has_term( 'pre-webinar', 'event-type', get_the_ID() )) {
-								echo '<h4 class="dark">Sign up to view this webinar!';
+								echo '<h2 class="webinar_form_headline"><strong>Sign up</strong> to view this webinar!';
 								
-								echo'</h4>';
+								echo'</h2>';
 								get_template_part('marketoforms/webinar_marketo_form');
 							} else if ( has_term( 'twitter-chats', 'event-type', get_the_ID() ) || has_term( 'pre-chat', 'event-type', get_the_ID() ) ) { 
 								echo '<iframe src="http://fuel.brafton.com/BRTwitteriFrame.html" width=375 height=675></iframe>';
