@@ -120,6 +120,73 @@
 							<?php if ( !function_exists( "dynamic_sidebar" ) || !dynamic_sidebar( "Single Sidebar" ) ) : ?>
 								<p>Add Widgets to the Post Sidebar</p>
 							<?php endif; ?>
+							<li class="widget widget_text">
+								<div class="scrolly">
+
+									<?php //Display Product CTA automatically by subcategory...
+
+									if( in_category( array( 220,48 ) ) ) { ?>
+										
+										<div class="sprite content_marketing_cta"></div>
+									
+									<?php } elseif( in_category( array( 221,120 ) ) ) { ?>
+
+										<a href="/about-brafton/content-writers">
+										
+											<div class="sprite content_writing_cta"></div>
+
+										</a>
+									
+									<?php } elseif( in_category( array( 148,219 ) ) ) { ?>
+
+										<a href="/business-model/analytics">
+										
+											<div class="sprite content_analytics_cta"></div>
+
+										</a>
+									
+									<?php } elseif( in_category( array( 222,125,223,177 ) ) ) { ?>
+										
+										<a href="/business-model/video-marketing">
+											
+											<div class="sprite video_cta"></div>
+
+										</a>
+									
+									<?php } elseif( in_category( array( 224,120 ) ) ) { ?>
+
+										<a href="/business-model/infographic-marketing">
+										
+											<div class="sprite graphics_cta"></div>
+
+										</a>
+										
+									<?php } elseif( in_category( array( 225,5 ) ) ) { ?>
+
+										<a href="/business-model/social-media-marketing">
+										
+											<div class="sprite social_media_cta"></div>
+
+										</a>
+										
+									<?php } elseif( in_category( array( 202,50 ) ) ) { ?>
+
+										<a href="/business-model/search-engine-optimization">
+										
+											<div class="sprite seo_cta"></div>
+
+										</a>
+
+									<?php } else {  ?>
+
+										<?php echo do_shortcode('[advertisement]'); ?>
+
+									<?php } ?>
+
+								</div>
+
+							</li>
+						
 						</div>
 					</div>
 
