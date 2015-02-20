@@ -131,7 +131,7 @@ jQuery(document).ready(function($) {
         load: 'http://www.brafton.com/wp-content/themes/brafton/library/js/libs/jquery.sharrre.min.js',
         complete: function() {
             var template = '<div class="count">{total}</div>';
-            var url = 'http://www.brafton.com/' + window.location.pathname;
+            var url = 'http://www.brafton.com' + window.location.pathname;
             var title = $('h1').text();
             $('a[data-service="linkedin"]').sharrre({
                 click: function(api, options) {
@@ -154,11 +154,6 @@ jQuery(document).ready(function($) {
                         related: 'Brafton'
                     }
                 },
-                script: {
-		            src     : '//platform.twitter.com/widgets.js',
-		            id      : 'twitter-wjs',
-		            charset : 'utf-8'
-		        },
                 click: function(api, options) {
                     api.simulateClick();
                     api.openPopup('twitter');
@@ -170,8 +165,7 @@ jQuery(document).ready(function($) {
                 },
                 title: title,
                 template: '<div class="cube twitter"></div>' + template,
-                url: url,
-                urlCurl: 'http://www.brafton.com/wp-content/themes/brafton/library/php/sharrre.php'
+                url: url
             });
             $('a[data-service="facebook"]').sharrre({
                 click: function(api, options) {

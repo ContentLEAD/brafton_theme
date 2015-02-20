@@ -34,16 +34,6 @@
       }
 
     }
-    else if($type == 'twitter'){
-      $content = parse("http://cdn.api.twitter.com/1/urls/count.json?url=http://{$url}");
-      
-      $result = json_decode($content);
-      if (isset($result->result->views))
-      {
-          $json['count'] = $result->result->views;
-      }
-
-    }
     // else if($type == 'pinterest'){
       // $content = parse("http://api.pinterest.com/v1/urls/count.json?callback=&url=$url");
       
