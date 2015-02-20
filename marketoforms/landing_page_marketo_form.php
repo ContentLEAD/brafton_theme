@@ -152,15 +152,15 @@ var mktFormLanguage = 'English'
     </div>
     <div class='mktFormReq mktField f-row'>
       <label class="cell-left">Email:</label>
-      <span class='mktInput wpcf7-form-control-wrap'><input class='mktFormText mktFormEmail mktFReq cell-right req' name="Email" id="Email" type='text' value="<?php echo $_COOKIE['Email']; ?>"  maxlength='255' tabIndex='7' size="40" /><span class='mktFormMsg'></span></span>
+      <span class='mktInput wpcf7-form-control-wrap'><input class='mktFormText mktFormEmail mktFReq cell-right req' name="Email" id="Email" type='text' value="<?php echo $_COOKIE['Email']; ?>"  maxlength='255' tabIndex='4' size="40" /><span class='mktFormMsg'></span></span>
     </div>
 	<div class='mktField f-row'>
       <label class="cell-left">Phone:</label>
-      <span class='mktInput wpcf7-form-control-wrap'><input class='mktFormText mktFormPhone cell-right' name="Phone" id="Phone" type='text' value="<?php echo $_COOKIE['Phone']; ?>"  maxlength='255' tabIndex='6' size="40" /><span class='mktFormMsg'></span></span>
+      <span class='mktInput wpcf7-form-control-wrap'><input class='mktFormText mktFormPhone cell-right' name="Phone" id="Phone" type='text' value="<?php echo $_COOKIE['Phone']; ?>"  maxlength='255' tabIndex='5' size="40" /><span class='mktFormMsg'></span></span>
     </div>
 		<div class='mktFormReq mktField f-row'>
       <label class="cell-left">Website:</label>
-      <span class='mktInput wpcf7-form-control-wrap'><input class='mktFormText mktFormUrl mktFReq cell-right req' name="Website" id="Website" type='text' value="<?php echo $_COOKIE['Website']; ?>"  maxlength='255' tabIndex='8' size="40" /><span class='mktFormMsg'></span></span>
+      <span class='mktInput wpcf7-form-control-wrap'><input class='mktFormText mktFormUrl mktFReq cell-right req' name="Website" id="Website" type='text' value="<?php echo $_COOKIE['Website']; ?>"  maxlength='255' tabIndex='6' size="40" /><span class='mktFormMsg'></span></span>
     </div>
 		<!--<div class='mktField' style="display: none;">
       <label class="cell-left">Lead Source:</label>
@@ -183,6 +183,13 @@ var mktFormLanguage = 'English'
         <label for="sign_up">Get Our Marketing News? (Weekly Email)</label>
       </div>
     </div>
+    <div class="f-row message">
+        <label for="message-contact">Include a Message? (Optional)</label>
+        <span class='mktInput wpcf7-form-control-wrap message'>
+          <textarea class='mktFormTextarea mktFormTextarea' name="BR_Contact_Us_Message" id="BR_Contact_Us_Message" placeholder="A one-liner about your company and/or industry would be helpful, as well as availability." cols='40' rows='4'  tabIndex='7'></textarea>
+          <span class='mktFormMsg'></span>
+        </span>
+      </div>
 		
 		<div id='mktFrmButtons f-row'>
       <!--<input id='mktFrmSubmit' type='submit' style="width: auto; overflow: visible; padding-left: .25em; padding-right: .25em;" value='Submit' name='submitButton' onclick='formSubmit(document.getElementById("mktForm_1012")); return false;' />-->

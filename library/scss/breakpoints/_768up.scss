@@ -833,6 +833,8 @@ the featured post and the remaining posts....*/
 
 	&.landing_page_popup {
 		margin: -285px 0 0 -230px;
+		max-height: 600px;
+		overflow: auto;
 
 		h2 {
 			text-transform: uppercase;
@@ -845,7 +847,7 @@ the featured post and the remaining posts....*/
 		}
 
 		input[type="text"] {
-			padding: 14px 12px;
+			/*padding: 14px 12px;*/
 		}
 	}
 }

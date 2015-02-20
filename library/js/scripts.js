@@ -154,6 +154,11 @@ jQuery(document).ready(function($) {
                         related: 'Brafton'
                     }
                 },
+                script: {
+		            src     : '//platform.twitter.com/widgets.js',
+		            id      : 'twitter-wjs',
+		            charset : 'utf-8'
+		        },
                 click: function(api, options) {
                     api.simulateClick();
                     api.openPopup('twitter');
@@ -165,7 +170,8 @@ jQuery(document).ready(function($) {
                 },
                 title: title,
                 template: '<div class="cube twitter"></div>' + template,
-                url: url
+                url: url,
+                urlCurl: 'http://www.brafton.com/wp-content/themes/brafton/library/php/sharrre.php'
             });
             $('a[data-service="facebook"]').sharrre({
                 click: function(api, options) {
