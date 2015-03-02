@@ -67,7 +67,7 @@
 						</div>
 
 						<div class="sidebar d-2of7 t-1of3 m-all">
-							<?php dynamic_sidebar( "Page Sidebar" ); ?>
+							<?php dynamic_sidebar( "Case Study Testimonial Sidebar" ); ?>
 						</div>
 
 

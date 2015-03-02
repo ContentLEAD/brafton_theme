@@ -1323,10 +1323,17 @@ form .req {
 	}
 }
 
+#mktoform_1012::before {
+	content: "Schedule a meeting to see client examples";
+}
 
+#mktoForm_1012 div.mktoFormCol:nth-child(8), #mktoForm_1012 div.mktoFormCol:nth-child(9) {
+	display: none;
+}
 
 .mktoForm {
 	font-family: 'Proxima Nova', sans-serif !important;
+	max-width:300px;
 	
 	h1 {
 		margin-top: 0 !important;

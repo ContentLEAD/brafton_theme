@@ -82,7 +82,7 @@ function curPageURL() {
 
     function mailchimpSignup(){
     
-      var $form = $jQ("#mktForm_1389");
+      var $form = $jQ("#mktForm_1392");
       // let's select and cache all the fields
       var $inputs = $form.find("input, select, button, textarea");
       // serialize the data in the form
@@ -98,7 +98,7 @@ function curPageURL() {
           // log a message to the console
           console.log("Hooray, it worked!"+serializedData);
           //submit form on page
-          document.mktForm_1389.submit();
+          document.mktForm_1392.submit();
         });
 
     }
@@ -128,7 +128,7 @@ var profiling = {
 };
 var mktFormLanguage = 'English'
 </script>
-<script type="text/javascript"> function mktoGetForm() {return document.getElementById('mktForm_1389'); }</script>
+<script type="text/javascript"> function mktoGetForm() {return document.getElementById('mktForm_1392'); }</script>
 <style>
 .wpcf7-form-control-wrap {
   width: 68%;
@@ -137,88 +137,89 @@ var mktFormLanguage = 'English'
 
 <div class="wpcf7">
 
-
-<form class="lpeRegForm formNotEmpty" method="post" enctype="application/x-www-form-urlencoded" action="http://fuel.brafton.com/index.php/leadCapture/save" id="mktForm_1389" name="mktForm_1389">
-  <ul class='mktLblLeft'>
-    <li  class='mktFormReq mktField' >
-      <label>First Name:</label>
-      <span class='mktInput'>
-        <input class='mktFormText mktFormString mktFReq' name="FirstName" id="FirstName" type='text' value=""  maxlength='255' tabIndex='1' />
+  <form class="lpeRegForm formNotEmpty" method="post" enctype="application/x-www-form-urlencoded" action="http://fuel.brafton.com/index.php/leadCapture/save" id="mktForm_1392" name="mktForm_1392">
+  <div class='mktLblLeft left-col'>
+    <div class='mktFormReq mktField f-row'>
+      <label class="cell-left">First Name:</label>
+      <span class='mktInput wpcf7-form-control-wrap'>
+        <input class='mktFormText mktFormString mktFReq' name="FirstName" id="FirstName" type='text' value="<?php echo $_COOKIE['FirstName']; ?>"  maxlength='255' tabIndex='1' />
         <span class='mktFormMsg'>
         </span>
       </span>
-    </li>
-    <li  class='mktFormReq mktField' >
-      <label>Last Name:</label>
-      <span class='mktInput'>
-        <input class='mktFormText mktFormString mktFReq' name="LastName" id="LastName" type='text' value=""  maxlength='255' tabIndex='2' />
+    </div>
+    <div class='mktFormReq mktField f-row'>
+      <label class="cell-left">Last Name:</label>
+      <span class='mktInput wpcf7-form-control-wrap'>
+        <input class='mktFormText mktFormString mktFReq' name="LastName" id="LastName" type='text' value="<?php echo $_COOKIE['LastName']; ?>"  maxlength='255' tabIndex='2' />
         <span class='mktFormMsg'>
         </span>
       </span>
-    </li>
-    <li  class='mktFormReq mktField' >
-      <label>Email:</label>
-      <span class='mktInput'>
-        <input class='mktFormText mktFormEmail mktFReq' name="Email" id="Email" type='text' value=""  maxlength='255' tabIndex='3' />
+    </div>
+    <div class='mktFormReq mktField f-row'>
+      <label class="cell-left">Email:</label>
+      <span class='mktInput wpcf7-form-control-wrap'>
+        <input class='mktFormText mktFormEmail mktFReq' name="Email" id="Email" type='text' value="<?php echo $_COOKIE['Email']; ?>"  maxlength='255' tabIndex='3' />
         <span class='mktFormMsg'>
         </span>
       </span>
-    </li>
-    <li  class='mktField' >
-      <label>Phone:</label>
-      <span class='mktInput'>
-        <input class='mktFormText mktFormString' name="MainPhone" id="MainPhone" type='text' value=""  maxlength='255' tabIndex='4' />
+    </div>
+    <div class='mktField f-row'>
+      <label class="cell-left">Phone:</label>
+      <span class='mktInput wpcf7-form-control-wrap'>
+        <input class='mktFormText mktFormString' name="MainPhone" id="MainPhone" type='text' value="<?php echo $_COOKIE['Phone']; ?>"  maxlength='255' tabIndex='4' />
         <span class='mktFormMsg'>
         </span>
       </span>
-    </li>
-    <li  class='mktFormReq mktField' >
-      <label>Company:</label>
-      <span class='mktInput'>
-        <input class='mktFormText mktFormString mktFReq' name="Company" id="Company" type='text' value=""  maxlength='255' tabIndex='5' />
+    </div>
+    <div class='mktFormReq mktField f-row'>
+      <label class="cell-left">Company:</label>
+      <span class='mktInput wpcf7-form-control-wrap'>
+        <input class='mktFormText mktFormString mktFReq' name="Company" id="Company" type='text' value="<?php echo $_COOKIE['Company']; ?>"  maxlength='255' tabIndex='5' />
         <span class='mktFormMsg'>
         </span>
       </span>
-    </li>
-  <li  class='mktField' >
-    <label>Website:</label>
-    <span class='mktInput'>
-      <input class='mktFormText mktFormString' name="Corporate_Website__c" id="Corporate_Website__c" type='text' value=""  maxlength='1300' tabIndex='6' />
+    </div>
+  <div class='mktField f-row'>
+    <label class="cell-left">Website:</label>
+    <span class='mktInput wpcf7-form-control-wrap'>
+      <input class='mktFormText mktFormString' name="Corporate_Website__c" id="Corporate_Website__c" type='text' value="<?php echo $_COOKIE['Website']; ?>"  maxlength='1300' tabIndex='6' />
       <span class='mktFormMsg'>
       </span>
     </span>
-  </li>
-  <li  class='mktField' >
-    <label>Include a Message?</label>
-    <span class='mktInput'>
-      <textarea class='mktFormTextarea mktFormTextarea' name="BR_Contact_Us_Message" id="BR_Contact_Us_Message" cols='20' rows='2'  tabIndex='7'>
-      </textarea>
-      <span class='mktFormMsg'>
-      </span>
-    </span>
-  </li>
-  <li  class='mktField' style="display: none;">
-    <label>Lead Source:</label>
-    <span class='mktInput'>
+  </div>
+</div>
+  <div class="right-col">
+    <div class='mktField f-row'>
+      <div class="f-row message">
+          <label for="message-contact">Include a Message? (Optional)</label>
+          <span class='mktInput wpcf7-form-control-wrap message'>
+            <textarea class='mktFormTextarea mktFormTextarea' name="requestademomessage" id="requestademomessage" placeholder="A one-liner about your company and/or industry would be helpful, as well as availability." cols='40' rows='4'  tabIndex='7'></textarea>
+            <span class='mktFormMsg'></span>
+          </span>
+        </div>
+    </div>
+  <div class='mktField' style="display: none;">
+    <label class="cell-left">Lead Source:</label>
+    <span class='mktInput wpcf7-form-control-wrap'>
       <input class='mktFormHidden' name="LeadSource" id="LeadSource" type='hidden' value="Web (Brafton.com Web Referral)" />
       <span class='mktFormMsg'>
       </span>
     </span>
-  </li>
-  <li  class='mktField' style="display: none;">
-    <label>MKTO Source:</label>
-    <span class='mktInput'>
+  </div>
+  <div class='mktField' style="display: none;">
+    <label class="cell-left">MKTO Source:</label>
+    <span class='mktInput wpcf7-form-control-wrap'>
       <input class='mktFormHidden' name="MKTO_Source__c" id="MKTO_Source__c" type='hidden' value="Web (Brafton.com Web Referral)" />
       <span class='mktFormMsg'></span>
     </span>
-  </li>
-  <li id='mktFrmButtons'>
-    <label>&nbsp;</label>
-    <input id='mktFrmSubmit' type='submit' style="width: auto; overflow: visible; padding-left: .25em; padding-right: .25em;" value='Submit' name='submitButton' onclick='formSubmit(document.getElementById("mktForm_1389")); return false;' />&nbsp;
-    <input style='display: none;' id='mktFrmReset' type='reset'
-              value='Clear' name='resetButton' onclick='formReset(document.getElementById("mktForm_1389")); return false;' />
-            </li>  
-          </ul>
+  </div>
+  <div id='mktFrmButtons f-row'>
+    <!--<input id='mktFrmSubmit' type='submit' style="width: auto; overflow: visible; padding-left: .25em; padding-right: .25em;" value='Request a Demo' name='submitButton' onclick='formSubmit(document.getElementById("mktForm_1392")); return false;' />&nbsp;-->
+     <input id='mktFrmSubmit' type='submit' class="wpcf7-submit button" value='Request a Demo' name='submitButton' onclick='formSubmit(document.getElementById("mktForm_1392")); return false;' />
+            <input style='display: none;' id='mktFrmReset' type='reset'
+              value='Clear' name='resetButton' onclick='formReset(document.getElementById("mktForm_1392")); return false;' /> 
+          </div>
+  </div>
   <span style="display:none;"><input type="text" name="_marketo_comments" value="" /></span>
   <input type="hidden" name="lpId" value="1911" />
   <input type="hidden" name="subId" value="25" />
@@ -227,7 +228,7 @@ var mktFormLanguage = 'English'
   <input type="hidden" name="cr" value="" />
   <input type="hidden" name="searchstr" value="" />
   <input type="hidden" name="lpurl" value="http://fuel.brafton.com/RequestademoBridge.html?cr={creative}&kw={keyword}" />
-  <input type="hidden" name="formid" value="1389" />
+  <input type="hidden" name="formid" value="1392" />
   <input type="hidden" name="returnURL" value="http://fuel.brafton.com/ThankYouContact.html" />
   <input type="hidden" name="retURL" value="http://fuel.brafton.com/ThankYouContact.html" />
   <input type="hidden" name="returnLPId" value="1068" />
@@ -241,12 +242,12 @@ var mktFormLanguage = 'English'
 
 //function to submit Mailchimp application
 jQuery(document).ready(function() {
-  jQuery('#mktForm_1389').submit(function() {
+  jQuery('#mktForm_1392').submit(function() {
     if ( document.getElementById('newsletterSignup').checked ) {
       jQuery("#message").html("<span class='error'>Adding your email address...</span>");
       jQuery.ajax({
         url: 'inc/store-address.php',
-        data: jQuery('#mktForm_1389').serialize(),
+        data: jQuery('#mktForm_1392').serialize(),
         success: function(msg) {
           jQuery('#message').html(msg);
         }
