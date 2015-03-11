@@ -165,7 +165,7 @@ get_header(); ?>
 										
 										<?php 
 
-											$blog = new WP_Query('category_name=blog&posts_per_page=1&tag__not_in=107&category__not_in=177,223');
+											$blog = new WP_Query('category_name=blog&posts_per_page=1&tag__not_in=165&category__not_in=177,223');
 
 											if( $blog->have_posts() ) : while( $blog->have_posts() ) : $blog->the_post(); ?>
 											
@@ -201,7 +201,7 @@ get_header(); ?>
 											<div class="homepage_article news_homepage_article">
 												<div class="news-headline-container green">
 													<a href="<?php the_permalink(); ?>">
-														<div class="news-headline">Community</div>
+														<div class="news-headline">Inside Brafton</div>
 														<?php the_post_thumbnail(array(9999, 85), array('alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?>
 													</a>
 												</div>

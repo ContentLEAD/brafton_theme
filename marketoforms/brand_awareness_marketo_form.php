@@ -157,8 +157,8 @@ var mktFormLanguage = 'English'
 	<input type="hidden" name="searchstr" value="" />
 	<input type="hidden" name="lpurl" value="http://fuel.brafton.com/Bridge-Download-Resource-Fueling-FB--Twitter-with-Custom-News.html" />
 	<input type="hidden" name="formid" value="1418" />
-  <input type="hidden" name="returnURL" value="http://fuel.brafton.com/rs/brafton/images/Brafton_Fueling_Facebook_Twitter_Conversations_with_Custom_News_2010.pdf?mkt_tok=3RkMMJWWfF9wsRokvK7Ndu%2FhmjTEU5z17%2B4vX6a2hYkz2EFye%2BLIHETpodcMTsVjMrzYDBceEJhqyQJxPr3BKNcNwtN7RhLnCg%3D%3D&aliId=22477742" />
-  <input type="hidden" name="retURL" value="http://fuel.brafton.com/rs/brafton/images/Brafton_Fueling_Facebook_Twitter_Conversations_with_Custom_News_2010.pdf?mkt_tok=3RkMMJWWfF9wsRokvK7Ndu%2FhmjTEU5z17%2B4vX6a2hYkz2EFye%2BLIHETpodcMTsVjMrzYDBceEJhqyQJxPr3BKNcNwtN7RhLnCg%3D%3D&aliId=22477742" />
+  <input type="hidden" name="returnURL" value="http://fuel.brafton.com/rs/brafton/images/eBook_01.2015_ContentforGoals_1BrandAwareness%20%282%29.pdf" />
+  <input type="hidden" name="retURL" value="http://fuel.brafton.com/rs/brafton/images/eBook_01.2015_ContentforGoals_1BrandAwareness%20%282%29.pdf" />
 	<input type="hidden" name="returnLPId" value="-1" />
 	<input type="hidden" name="_mkt_disp" value="return" />
   <input type="hidden" name="_mkt_trk" value="" />
@@ -204,5 +204,5 @@ function formReset(elt) {
 </script>
 
 <script type="text/javascript" src="https://ssl-munchkin.marketo.net/js/munchkin.js"></script>
-<script>mktoMunchkin('447-XFF-352', {customName: 'FuelingFBDownload', wsInfo: 'j1RR'});</script>
+<script>mktoMunchkin('447-XFF-352', {customName: 'BrandAwarenessDownload', wsInfo: 'j1RR'});</script>
 <!-- <script>Munchkin.init('447-XFF-352');</script> -->
