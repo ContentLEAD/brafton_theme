@@ -124,6 +124,9 @@
 										case '82560':
 											get_template_part('marketoforms/brand_awareness_marketo_form');
 											break;
+										case '82754':
+											get_template_part('marketoforms/content_goals_seo_marketo_form');
+											break;
 										default:
 											get_template_part('resource_marketo_form');
 											break;

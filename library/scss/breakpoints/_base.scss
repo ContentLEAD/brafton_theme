@@ -1313,6 +1313,61 @@ form .req {
 	width: 100%;
 }
 
+.embedded-form {
+	float: right; 
+	margin-left: 40px; 
+	padding: 10px 15px 0px 15px; 
+	margin-bottom: 20px; 
+	background: $white; 
+	border: 10px solid $light-grey;
+	max-width: 350px;
+
+		input, select {
+			height: 30px;
+		}
+		.mktoForm .mktoFormCol {
+			margin-bottom: 15px!important;
+			min-height: 0px;
+		}
+		p {
+			margin: 0px!important;
+		}
+		.mktoButtonRow {
+			width: 100%;
+		}
+		label {
+			width: 98px!important;
+			text-align: right!important;
+		}
+		span {
+			font-family: 'Proxima Nova', sans-serif !important;
+		}
+		.mktoForm .mktoButtonWrap.mktoSimple .mktoButton {
+			border-radius: 0;
+			@include css-gradient(lighten($green, 10%), lighten($green, 2%));
+			color: $black;
+			cursor: pointer;
+			font-size: 0.9em;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			line-height: 2.2;
+			position: relative;
+			text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+			display: block;
+			margin: auto;
+			width: 100%;
+			padding: 0.5em;
+			border-radius: 3px;
+			max-width: 370px;
+			border: 2px outset buttonface;
+			  &:hover {
+			    @include css-gradient(lighten($green, 2%), lighten($green, 10%));
+			    border: 2px outset buttonface;
+			  }
+		}
+}
+
 /*Ask a marketer popup*/
 
 .mktoModal {
