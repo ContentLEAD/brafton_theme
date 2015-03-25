@@ -41,7 +41,7 @@ Template Name: Contact
 
 										<ul>
 
-											<li><strong>Boston (HQ)</strong><br/><a href="http://g.co/maps/hxvyn" title="See Brafton's Boston office on a Map" target="_blank" class="address">1 Winthrop Square, Floor 5, Boston MA 02110</a></li>
+											<li><strong>Boston (HQ)</strong><br/><a href="http://goo.gl/OUX8yW" title="See Brafton's Boston office on a Map" target="_blank" class="address">2 Oliver Street, FL2, Boston MA 02110</a></li>
 
 											<li><strong>Chicago</strong><br/><a href="http://goo.gl/lh1Xnq" title="See Brafton's Chicago office on a Map" target="_blank" class="address">168 North Clinton Street, 4th Floor, Chicago IL 60661</a></li>
 

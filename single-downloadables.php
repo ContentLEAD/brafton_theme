@@ -130,6 +130,12 @@
 										case '82835':
 											get_template_part('marketoforms/content_goals_engagement_marketo_form');
 											break;
+										case '82870':
+											get_template_part('marketoforms/content_goals_thought_leadership_marketo_form');
+											break;
+										case '82946':
+											get_template_part('marketoforms/content_goals_lead_generation');
+											break;
 										default:
 											get_template_part('resource_marketo_form');
 											break;
