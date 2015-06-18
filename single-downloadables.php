@@ -138,9 +138,12 @@
 										case '82946':
 											get_template_part('marketoforms/content_goals_lead_generation');
 											break;
+<<<<<<< HEAD
 										case '83000':
 											get_template_part('marketoforms/content_goals_conversions');
 											break;
+=======
+>>>>>>> acb5b714363bc478f8bca10f8217d007625dc034
 										default:
 											get_template_part('resource_marketo_form');
 											break;
