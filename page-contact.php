@@ -43,11 +43,9 @@ Template Name: Contact+
 
 										<ul>
 
-<<<<<<< HEAD
 											<li><strong>Boston (HQ)</strong><br/><a href="http://goo.gl/OUX8yW" title="See Brafton's Boston office on a Map" target="_blank" class="address">2 Oliver Street, FL2, Boston MA 02109</a></li>
-=======
+
 											<li><strong>Boston (HQ)</strong><br/><a href="http://goo.gl/OUX8yW" title="See Brafton's Boston office on a Map" target="_blank" class="address">2 Oliver Street, FL2, Boston MA 02110</a></li>
->>>>>>> acb5b714363bc478f8bca10f8217d007625dc034
 
 											<li><strong>Chicago</strong><br/><a href="http://goo.gl/lh1Xnq" title="See Brafton's Chicago office on a Map" target="_blank" class="address">168 North Clinton Street, 4th Floor, Chicago IL 60661</a></li>
 
