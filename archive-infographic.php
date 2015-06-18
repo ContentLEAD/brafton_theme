@@ -6,6 +6,8 @@
 
 <?php get_header(); ?>
 
+        <div class="inner">
+
             <div id="content">
 
                 <div id="inner-content" class="wrap cf">
@@ -56,5 +58,7 @@
                 </div>
 
             </div>
+
+        </div>
 
 <?php get_footer(); ?>

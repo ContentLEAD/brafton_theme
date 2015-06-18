@@ -9,7 +9,7 @@ get_header(); ?>
 				<div class="graphical-header">
 					<img src="/wp-content/themes/brafton/library/images/page-headers/blank_header.png">
 				
-					<h1><?php bold_last_word( get_field( "h1" ) ); //see bones.php ?></h1>
+					<h1><div class="inner"><?php bold_last_word( get_field( "h1" ) ); //see bones.php ?></div></h1>
 				</div>
 
 				<?php brafton_share( 'top' ); ?>
@@ -20,20 +20,26 @@ get_header(); ?>
 
 					<div class="template_section what_is">
 
-						<div class="content_container wrap">
-							<h2><?php bold_first_word( get_field('subhead_1') ); //see bones.php ?></h2>
-							<div class="content_body">
-								<?php $what = get_field( 'what_is_content' ); 
+						<div class="inner">
 
-								echo $what;
+							<div class="content_container wrap">
+								<h2><?php bold_first_word( get_field('subhead_1') ); //see bones.php ?></h2>
+								<div class="content_body">
+									<?php $what = get_field( 'what_is_content' ); 
 
-								?>
+									echo $what;
+
+									?>
+								</div>
 							</div>
+
 						</div>
 
 					</div>
 
 					<div class="template_section why_you_need gray_body">
+
+						<div class="inner">
 
 						<div class="content_container wrap">
 							<h2><?php bold_first_word( get_field('subhead_2') ); ?></h2>
@@ -46,9 +52,13 @@ get_header(); ?>
 							</div>
 						</div>
 
+						</div>
+
 					</div>
 
 					<div class="template_section how_it_works">
+
+						<div class="inner">
 
 						<div class="content_container wrap">
 							<h2><?php bold_first_word( get_field('subhead_3') ); ?></h2>
@@ -61,6 +71,8 @@ get_header(); ?>
 							</div>
 						</div>
 
+						</div>
+
 					</div>
 
 					<?php
@@ -71,6 +83,8 @@ get_header(); ?>
 
 					?>
 						<div class="template_section team gray_body">
+
+							<div class="inner">
 
 							<div class="content_container wrap">
 								<h2><?php bold_first_word( get_field('meet_the_team_header') ); ?></h2>
@@ -118,12 +132,14 @@ get_header(); ?>
 									?>
 								</div>
 							</div>
-
+							</div>
 						</div>
 
 					<?php } //end meet team conditional ?>
 
 					<div class="template_section learn_more green_body">
+
+						<div class="inner">
 
 						<div class="content_container wrap">
 							<h2><?php bold_first_word( get_field( 'learn_more_subhead' ) ); ?></h2>
@@ -161,6 +177,8 @@ get_header(); ?>
 									<a class="client_cta" href="/case-studies">More Client Examples</a>
 								</div>
 							</div>
+						</div>
+
 						</div>
 
 					</div>

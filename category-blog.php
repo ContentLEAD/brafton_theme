@@ -25,6 +25,7 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
     <article class="d-all t-all m-all featured-post">
     <?php } elseif( $i == 1 ) {  //second article starts a new d-2of3 section, in a wrapper for padding... ?>
     <div class="wrap">
+		<div class="inner">
     	<section class="d-5of7 t-2of3 m-all secondary-blog">
     		<div class="arrow_to_infinity featured"></div>
 			<article class="d-all">
@@ -34,10 +35,14 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 		<?php $author = brafton_author_data( get_the_ID() ); ?>
 			<?php if( $i == 0 ) { ?>
 				<div class="d-all tagbar">
-					<?php blog_tagbar(); //see brafton.php?>
+					<div class="inner">
+						<?php blog_tagbar(); //see brafton.php?>
+					</div>
 				</div>
-				<h1 itemprop="name" class="title">Marketing Blog</h1>
+				<div class="inner"><h1 itemprop="name" class="title">Marketing Blog</h1></div>
 			<?php } ?>
+
+				<div class="inner">
 				<?php $size = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
 				<div class="image-inner <?php if( !has_post_thumbnail() ) echo ' no-img'; else echo 'alignleft'; ?>"><?php the_post_thumbnail('medium', array('itemprop' => 'image', 'alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></div>
 				<div id="topinfo">
@@ -72,7 +77,11 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 			<?php if($i > 0) { ?>
 				<div class="arrow_to_infinity"></div>
 			<?php } ?>
+		</div>
 		</article>
+
+
+	<div class="inner">
 
 		<?php if( $i == 0 ) {
 			echo '</section>'; //close the d-all section surrounding the first post 
@@ -82,9 +91,8 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 		<?php endwhile; endif; ?>
 			<?php _paginate(); //see Brafton.php ?>
 		</section><!--this closes the d-2of3 section after the last article-->
-	</div>
 	<?php wp_reset_query(); ?>
-	<div class="d-1of5 t-1of3 m-all sidebar blog_sidebar">
+	<div class="d-1of4 t-1of3 m-all sidebar blog_sidebar">
 		<aside>
 			<ul>
 				<?php dynamic_sidebar( "New Blog Sidebar" ); ?>
@@ -94,17 +102,22 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 	</div>
 </article><!-- End #archive -->
 
-<div class="bottom-cta d-all">
-	<div class="bottom-cta-container">
-		<a href="http://www.brafton.com/resources/content-social-join-party-thats-right-business"><div class="ourlatestfooter">
-		</div></a>
 
-		<div class="marketzine">
-		</div>
+<div class="inner">
+	<section class="d-5of7 t-2of3 m-all">
+		<div class="bottom-cta d-all">
+			<div class="bottom-cta-container">
+				<a onclick="ga('send', 'event', 'Download eBook', 'Button Click', 'Download_eBook');" href="http://www.brafton.com/resources/content-social-join-party-thats-right-business"><div class="ourlatestfooter">
+				</div></a>
 
-		<div class="askamarketer">
+				<div class="marketzine">
+				</div>
+
+				<div class="askamarketer">
+				</div>
+			</div>
 		</div>
-	</div>
+	</section>
 </div>
 
 
@@ -127,5 +140,8 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 
 <script src="//app-sj04.marketo.com/js/forms2/js/forms2.js"></script>
 <form id="mktoForm_1337"></form>
+
+</div>
+</div>
 
 <?php  get_footer(); ?>

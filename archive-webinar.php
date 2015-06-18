@@ -21,7 +21,7 @@ get_header();
     
     <?php } elseif( $i == 1 ) {  //second article starts a new d-2of3 section, in a wrapper for padding... ?>
     
-    	<section class="d-5of7 t-2of3 m-all secondary-blog">
+    	<section class="d-4of7 t-2of3 m-all secondary-blog">
 			<article class="d-all">
 	
 	<?php } elseif ($i > 1 ) { //and the rest of the articles will just be wrapped in article tag, not in a new section ?>
@@ -55,7 +55,7 @@ get_header();
 			<?php _paginate(); //see Brafton.php ?>
 		</section><!--this closes the d-2of3 section after the last article-->
 	<?php wp_reset_query(); ?>
-	<div class="d-1of5 t-1of3 m-all sidebar blog_sidebar">
+	<div class="d-3of7 t-1of3 m-all sidebar blog_sidebar">
 		<aside>
 			<ul>
 				<?php dynamic_sidebar( "New Blog Sidebar" ); ?>
@@ -65,17 +65,21 @@ get_header();
 	</div>
 </article><!-- End #archive -->
 
-<div class="bottom-cta d-all">
-	<div class="bottom-cta-container">
-		<a href="http://www.brafton.com/resources/reduce-reuse-recycle-repurpose-get-content"><div class="ourlatestfooter">
-		</div></a>
+<div class="inner">
+	<section class="d-5of7 t-2of3 m-all">
+		<div class="bottom-cta d-all">
+			<div class="bottom-cta-container">
+				<a href="http://www.brafton.com/resources/reduce-reuse-recycle-repurpose-get-content"><div class="ourlatestfooter">
+				</div></a>
 
-		<div class="marketzine">
-		</div>
+				<div class="marketzine">
+				</div>
 
-		<div class="askamarketer">
+				<div class="askamarketer">
+				</div>
+			</div>
 		</div>
-	</div>
+	</section>
 </div>
 
 <div class="popup_form">

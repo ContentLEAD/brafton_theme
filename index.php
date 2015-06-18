@@ -4,6 +4,8 @@
 
 				<div id="inner-content" class="wrap cf">
 
+					<div class="inner">
+
 						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -63,6 +65,7 @@
 
 					<?php get_sidebar(); ?>
 
+				</div>
 				</div>
 
 			</div>

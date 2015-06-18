@@ -1,4 +1,5 @@
 <?php  get_header(); ?>
+<div class="inner">
 <article id="archive" class="d-all" itemscope itemtype="http://schema.org/WebPage">
 	<?php 
     $i=0;
@@ -17,9 +18,9 @@
 		<header class="d-all">
 			<?php if( $i == 0 ) { ?>
 				<div class="d-all tagbar">
-					<?php blog_tagbar(); ?>
+					<div class="inner"><?php blog_tagbar(); ?></div>
 				</div>
-				<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+				<div class="inner"><h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1></div>
 			<?php } ?>
 			<?php $size = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
 			<div class="image-inner <?php if( !has_post_thumbnail() ) echo ' no-img'; else echo 'alignleft'; ?>"><?php the_post_thumbnail('medium', array('itemprop' => 'image', 'alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></div>
@@ -45,6 +46,8 @@
 
     	<div class="d-all t-all m-all">
 
+    		<div class="inner">
+
 			<article id="post-not-found" class="hentry cf">
 				<header class="article-header" style="display: block;">
 					<h1><?php _e( 'Sorry, No Results.', 'bonestheme' ); ?></h1>
@@ -57,6 +60,8 @@
 					</div>
 				</section>
 			</article>
+
+			</div>
 
 		</div>
 
@@ -71,4 +76,5 @@
 	
 	</section><!--this closes the eightcol section after the last article-->
 </article><!-- End #archive -->
+</div>
 <?php  get_footer(); ?>

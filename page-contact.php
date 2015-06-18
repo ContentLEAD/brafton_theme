@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Contact
+Template Name: Contact+
 */
 ?>
 <?php get_header(); ?>
@@ -10,10 +10,12 @@ Template Name: Contact
 				<div class="graphical-header">
 					<img src="/wp-content/themes/brafton/library/images/page-headers/blank_header.png">
 				
-					<h1><strong>Contact</strong> Us</h1>
+					<h1><div class="inner"><strong>Contact</strong> Us</div></h1>
 				</div>
 
 				<div id="inner-content" class="wrap cf">
+
+					<div class="inner">
 
 						<div id="main" class="m-all t-all d-all cf" role="main">
 
@@ -41,7 +43,7 @@ Template Name: Contact
 
 										<ul>
 
-											<li><strong>Boston (HQ)</strong><br/><a href="http://goo.gl/OUX8yW" title="See Brafton's Boston office on a Map" target="_blank" class="address">2 Oliver Street, FL2, Boston MA 02110</a></li>
+											<li><strong>Boston (HQ)</strong><br/><a href="http://goo.gl/OUX8yW" title="See Brafton's Boston office on a Map" target="_blank" class="address">2 Oliver Street, FL2, Boston MA 02109</a></li>
 
 											<li><strong>Chicago</strong><br/><a href="http://goo.gl/lh1Xnq" title="See Brafton's Chicago office on a Map" target="_blank" class="address">168 North Clinton Street, 4th Floor, Chicago IL 60661</a></li>
 

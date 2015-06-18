@@ -29,6 +29,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.inner {
+	max-width: 1250px;
+	margin: 0 auto;
+}
+
 /********************
 WORDPRESS BODY CLASSES
 style a page via class
@@ -55,8 +60,8 @@ style a page via class
 			&.welcome {
 				padding: 2em 0;
 				h1 {
-					font-size: 3em;
-					letter-spacing: 6px;
+					font-size: 2em;
+					letter-spacing: 2px;
 					text-align: center;
 					text-transform: uppercase;
 					margin: 0;
@@ -68,7 +73,7 @@ style a page via class
 
 				.item {
 					margin: 2em 1em;
-					padding: 1em;
+					padding: 0em;
 
 					.service_title {
 						text-transform: uppercase;
@@ -299,6 +304,7 @@ style a page via class
 	img {
 		display: block;
 		margin: auto;
+		width: 100%;
 	}
 }
 
@@ -315,6 +321,22 @@ style a page via class
 	display: none;
 }
 
+article#single {
+	max-width: 100%;
+		iframe {
+			max-width: 100%;
+		}
+}
+
+.page {
+	.single-twit-or-video {
+		position: relative;
+		display: block;
+		width: 100%;
+		top: auto;
+		max-width: 640px!important;
+	}
+}
 
 .single {
 	.single-twit-or-video {
@@ -322,9 +344,13 @@ style a page via class
 		display: block;
 		width: 100%;
 		top: auto;
+		max-width: 640px!important;
 
 		img {
 			max-width: 100%;
+		}
+
+		.sublimevideo-View {
 		}
 	}
 
@@ -381,22 +407,28 @@ style a page via class
  		font-weight: bold;
  	}
 
+ 	#content .entry-content {
+ 		width: 100%;
+ 	}
+
  	#pagination {
  		text-align: center;
  		background-color: $black;
  		padding: 1em;
+ 		overflow: auto;
 
 
  		div {
  			color: $white;
- 			display: inline;
- 			margin-right: 1em
+ 			margin-right: 1em;
+ 			display: block;
  		}
 
  		a {
  			color: $white;
  			text-decoration: none;
  			padding: 0.5em;
+ 			float: left;
 
  			&:hover {
  				background-color: $off-black;
@@ -450,7 +482,7 @@ style a page via class
 		font-weight: bold;
 		font-size: 1.5em;
 		text-transform: uppercase;
-		letter-spacing: 2px;
+		letter-spacing: 1px;
 	}
 
 
@@ -648,7 +680,7 @@ BRAFTON MISSION PAGE TEMPLATE
 
 	.mission_row{
 
-		width: 75%;
+		width: 100%;
 
 		.subhead {
 			text-align: center;
@@ -680,7 +712,7 @@ BRAFTON MISSION PAGE TEMPLATE
 					display: inline;
 					margin-right: 12px;
 					text-transform: uppercase;
-					letter-spacing: 3px;
+					letter-spacing: 1.5px;
 
 				}
 
@@ -728,12 +760,12 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 		text-align: center;
 		margin: 0;
 		line-height: 1.2em;
-		letter-spacing: 2px;
+		letter-spacing: 0.5px;
 	}
 
 
 	.content_body {
-		width: 66%;
+		width: 100%;
 		margin: auto;
 		margin-top: 1em;
 		display: block;
@@ -855,7 +887,7 @@ GENERAL STYLES FOR FULL WIDTH PAGE TEMPLATE
 			padding: 0.3em;
 			width: 285px;
 			font-size: 1em;
-			letter-spacing: 3px;
+			letter-spacing: 1.5px;
 			text-transform: uppercase;
 			text-decoration: none;
 			text-align: center;
@@ -1019,6 +1051,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	}
 }
 
+.single h1, .single .h1 {
+	font-size: 1.75em;
+	line-height: 1.333em;
+}
+
+.blog h2, .blog .h2 {
+	font-size: 1.5em;
+	line-height: 1.4em;
+	margin: 0px 10px;
+}
+
 h1, .h1 {
 	font-size: 2.5em;
 	line-height: 1.333em;
@@ -1063,7 +1106,8 @@ HEADER STYLES
 
 .full_logo {
 	display: block;
-	width: 220px;
+	width: 180px;
+	margin-left: 20px;
 }
 	.logo {
 		float: left;
@@ -1092,7 +1136,7 @@ HEADER STYLES
 		padding: 20px;
 		text-align: center;
 		width: 100%;
-		letter-spacing: 8px;
+		letter-spacing: 2px;
 		text-transform: uppercase;
 		float: left;
 		margin-top: 0;
@@ -1109,6 +1153,10 @@ HEADER STYLES
 			border-right: 20px solid white;
 			z-index: 1000;
 		}*/
+
+			.inner {
+				max-width: 1050px;
+			}
 	}
 }
 
@@ -1126,8 +1174,8 @@ and more scalable.
 
 #nav-toggle {
 	position: absolute;
-	right: -20px;
-	top: -5px;
+	right: 0px;
+	top: 0px;
 
 	span {
 		cursor: pointer;
@@ -1497,10 +1545,7 @@ POSTS & CONTENT STYLES
 
 		/* entry content */
 		.entry-content {
-			padding: 1.5em;
 			/* new style added here */
-			padding-left:2.6em;
-			padding-top: 1em;
 
 			ul {
 				list-style: none;

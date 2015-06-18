@@ -60,6 +60,8 @@
 
 			<header class="header" role="banner">
 
+				<div class="inner">
+
 					<p class="full_logo logo"><a href="<?php echo home_url(); ?>" title="Return to Homepage"><img src="/wp-content/themes/brafton/library/images/logos/full_logo.png" alt="Brafton Logo" /></a></p>
 					<p class="mobile_logo logo"><a href="<?php echo home_url(); ?>" title="Return to Homepage"><img src="/wp-content/themes/brafton/library/images/logos/mobile_logo.png" alt="Brafton Logo" /></a></p>
 
@@ -81,5 +83,7 @@
 						)); ?>
 
 					</nav>
+					
+				</div>
 
 			</header>

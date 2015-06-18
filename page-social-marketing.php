@@ -9,7 +9,7 @@ get_header(); ?>
 				<div class="graphical-header">
 					<img src="/wp-content/themes/brafton/library/images/page-headers/blank_header.png">
 				
-					<h1><?php bold_last_word( get_field( "h1" ) ); //see bones.php ?></h1>
+					<h1><div class="inner"><?php bold_last_word( get_field( "h1" ) ); //see bones.php ?></div></h1>
 				</div>
 
 				<?php brafton_share( 'top' ); ?>
@@ -20,91 +20,111 @@ get_header(); ?>
 
 					<div class="template_section what_is">
 
-						<div class="content_container wrap">
-							<h2><?php bold_first_word( get_field('subhead_1') ); //see bones.php ?></h2>
-							<div class="content_body">
-								<?php $what = get_field( 'what_is_content' ); 
+						<div class="inner">
 
-								echo $what;
+							<div class="content_container wrap">
+								<h2><?php bold_first_word( get_field('subhead_1') ); //see bones.php ?></h2>
+								<div class="content_body">
+									<?php $what = get_field( 'what_is_content' ); 
 
-								?>
+									echo $what;
+
+									?>
+								</div>
 							</div>
+
 						</div>
 
 					</div>
 
 					<div class="template_section why_you_need gray_body">
 
-						<div class="content_container wrap">
-							<h2><?php bold_first_word( get_field('subhead_2') ); ?></h2>
-							<div class="content_body">
-								<?php $why = get_field( 'why_you_need_content' ); 
+						<div class="inner">
 
-								echo $why;
+							<div class="content_container wrap">
+								<h2><?php bold_first_word( get_field('subhead_2') ); ?></h2>
+								<div class="content_body">
+									<?php $why = get_field( 'why_you_need_content' ); 
 
-								?>
+									echo $why;
+
+									?>
+								</div>
 							</div>
+
 						</div>
 
 					</div>
 
 					<div class="template_section how_it_works">
 
-						<div class="content_container wrap">
-							<h2><?php bold_first_word( get_field('subhead_3') ); ?></h2>
-							<div class="content_body">
-								<?php $how = get_field( 'how_it_works' ); 
+						<div class="inner">
 
-								echo $how;
+							<div class="content_container wrap">
+								<h2><?php bold_first_word( get_field('subhead_3') ); ?></h2>
+								<div class="content_body">
+									<?php $how = get_field( 'how_it_works' ); 
 
-								?>
+									echo $how;
+
+									?>
+								</div>
 							</div>
+
 						</div>
 
 					</div>
 
 					<div class="template_section buzz">
 
-						<div class="content_container wrap">
+						<div class="inner">
 
-							<div class="content_body">
+							<div class="content_container wrap">
 
-									<div class="d-all t-all m-all testimonial">
-										<div class="testimonial_inner">
-											<p>
-												<?php echo get_field( 'testimonial_1' ); ?>
-											</p>
+								<div class="content_body">
 
-											<div class="author">
-												<?php echo get_field( 'author_1' ); ?> 
+										<div class="d-all t-all m-all testimonial">
+											<div class="testimonial_inner">
+												<p>
+													<?php echo get_field( 'testimonial_1' ); ?>
+												</p>
+
+												<div class="author">
+													<?php echo get_field( 'author_1' ); ?> 
+												</div>
+
+												<?php $src = get_field( 'testimonial_1_image' )['url']; ?>
+
+												<div class="company_logo">
+													<img src="<?php echo $src; ?>"/> 
+												</div>
+													
 											</div>
 
-											<?php $src = get_field( 'testimonial_1_image' )['url']; ?>
-
-											<div class="company_logo">
-												<img src="<?php echo $src; ?>"/> 
-											</div>
-												
 										</div>
 
-									</div>
-
+								</div>
+								
 							</div>
-							
+
 						</div>
 
 					</div>
 
 					<div class="template_section how_it_works">
 
-						<div class="content_container wrap">
-							<div class="content_body">
-								<?php $howcontd = get_field( 'how_it_works_continued' ); 
+						<div class="inner">
 
-								echo $howcontd;
+							<div class="content_container wrap">
+								<div class="content_body">
+									<?php $howcontd = get_field( 'how_it_works_continued' ); 
 
-								?>
+									echo $howcontd;
+
+									?>
+								</div>
 							</div>
+
 						</div>
 
 					</div>
@@ -117,6 +137,8 @@ get_header(); ?>
 
 					?>
 						<div class="template_section team gray_body">
+
+							<div class="inner">
 
 							<div class="content_container wrap">
 								<h2><?php bold_first_word( get_field('meet_the_team_header') ); ?></h2>
@@ -166,10 +188,13 @@ get_header(); ?>
 							</div>
 
 						</div>
+					</div>
 
 					<?php } //end meet team conditional ?>
 
 					<div class="template_section learn_more green_body">
+
+						<div class="inner">
 
 						<div class="content_container wrap">
 							<h2><?php bold_first_word( get_field( 'learn_more_subhead' ) ); ?></h2>
@@ -208,7 +233,7 @@ get_header(); ?>
 								</div>
 							</div>
 						</div>
-
+					</div>
 					</div>
 
 

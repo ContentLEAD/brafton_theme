@@ -9,7 +9,7 @@ get_header(); ?>
 				<div class="graphical-header">
 					<img src="/wp-content/themes/brafton/library/images/page-headers/blank_header.png">
 				
-					<h1><?php bold_last_word( get_field( "h1" ) ); //see bones.php ?></h1>
+					<h1><div class="inner"><?php bold_last_word( get_field( "h1" ) ); //see bones.php ?></div></h1>
 				</div>
 
 				<?php brafton_share( 'top' ); ?>
@@ -20,35 +20,45 @@ get_header(); ?>
 
 					<div class="template_section">
 
-						<div class="content_container wrap">
-							<h2><?php bold_first_word( get_field('subhead_1') ); //see bones.php ?></h2>
-							<div class="content_body">
-								<?php $opps = get_field( 'massive_opportunities' ); 
+						<div class="inner">
 
-								echo $opps;
+							<div class="content_container wrap">
+								<h2><?php bold_first_word( get_field('subhead_1') ); //see bones.php ?></h2>
+								<div class="content_body">
+									<?php $opps = get_field( 'massive_opportunities' ); 
 
-								?>
+									echo $opps;
+
+									?>
+								</div>
 							</div>
+
 						</div>
 
 					</div>
 
 					<div class="template_section gray_body">
 
-						<div class="content_container wrap">
-							<h2><?php bold_first_word( get_field('subhead_2') ); ?></h2>
-							<div class="content_body">
-								<?php $talk = get_field( 'lets_talk' ); 
+						<div class="inner">
 
-								echo $talk;
+							<div class="content_container wrap">
+								<h2><?php bold_first_word( get_field('subhead_2') ); ?></h2>
+								<div class="content_body">
+									<?php $talk = get_field( 'lets_talk' ); 
 
-								?>
+									echo $talk;
+
+									?>
+								</div>
 							</div>
+
 						</div>
 
 					</div>
 
 					<div class="template_section how_it_works">
+
+						<div class="inner">
 
 						<div class="content_container wrap">
 							<h2><?php bold_first_word( get_field('subhead_3') ); ?></h2>
@@ -95,6 +105,8 @@ get_header(); ?>
 										<!--END JOBVITE CODE -->
 							</div>
 						</div>
+
+					</div>
 
 					</div>
 

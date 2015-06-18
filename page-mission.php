@@ -9,18 +9,19 @@ get_header(); ?>
 				<div class="graphical-header">
 					<img src="/wp-content/themes/brafton/library/images/page-headers/blank_header.png">
 
-					<h1>Our <strong>Mission</strong></h1>
+					<h1><div class="inner">Our <strong>Mission</strong></div></h1>
 				</div>
 
 				<div class="objectives mission_container">
+					<div class="inner">
 					<div class="mission_row wrap">
-						<?php
+							<?php
 
-							$subhead = get_field( 'subhead' );
+								$subhead = get_field( 'subhead' );
 
-						?>
-						<div class="subhead d-all t-all m-all">
-							<?php echo $subhead; ?>
+							?>
+							<div class="subhead d-all t-all m-all">
+								<?php echo $subhead; ?>
 						</div>
 					</div>
 
@@ -28,33 +29,35 @@ get_header(); ?>
 
 					<div class="mission_row wrap">
 
-						<?php
+							<?php
 
-							$grow = get_field( 'grow' );
-							$strengthen = get_field( 'strengthen' );
-							$develop = get_field( 'develop' );
+								$grow = get_field( 'grow' );
+								$strengthen = get_field( 'strengthen' );
+								$develop = get_field( 'develop' );
 
-						?>
+							?>
 
-						<div class="copy d-1of3 t-1of3 m-all">
-							<h2>Grow</h2>
-							<p><?php echo $grow; ?></p>
-						</div>
-						
-						<div class="copy d-1of3 t-1of3 m-all">
-							<h2>Strengthen</h2>
-							<p><?php echo $strengthen; ?></p>
-						</div>
+							<div class="copy d-1of3 t-1of3 m-all">
+								<h2>Grow</h2>
+								<p><?php echo $grow; ?></p>
+							</div>
+							
+							<div class="copy d-1of3 t-1of3 m-all">
+								<h2>Strengthen</h2>
+								<p><?php echo $strengthen; ?></p>
+							</div>
 
-						<div class="copy d-1of3 t-1of3 m-all">
-							<h2>Develop</h2>
-							<p><?php echo $develop; ?></p>
+							<div class="copy d-1of3 t-1of3 m-all">
+								<h2>Develop</h2>
+								<p><?php echo $develop; ?></p>
+							</div>
 						</div>
 					</div>
 				</div>
 
 
 				<div class="values mission_container">
+					<div class="inner">
 					<img src="/wp-content/themes/brafton/library/images/mission/employee_values.jpg"/>
 					<div class="mission_row wrap">
 
@@ -82,7 +85,6 @@ get_header(); ?>
 									</div>
 								</div>
 							<?php } //end for loop ?>
-
 						</div>
 					</div>
 
@@ -155,6 +157,7 @@ get_header(); ?>
 
 					</div>
 
+				</div>
 
 				</div>
 

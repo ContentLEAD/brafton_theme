@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+<div class="d-all tagbar">
+	<div class="inner">
+		<?php blog_tagbar(); //see functions.php ?>
+	</div>
+</div>
+<div class="inner">
 	<div id="content">
 		<article itemscope itemtype="http://schema.org/<?php if(in_category('blog')) echo 'Blog'; else echo 'Article'; ?>" id="single" class="d-all row">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post();
@@ -6,9 +12,6 @@
 				$author = brafton_author_data( get_the_ID() ); ?>
 
 				<div class="d-all blog_header" style="overflow: visible">
-					<div class="d-all tagbar">
-						<?php blog_tagbar(); //see functions.php ?>
-					</div>
 					<?php //If this is a video post, change things around a bit
 					//Or, if it's a twit, echo the twit custom field
 					//SEE- just above the_content();
@@ -193,19 +196,24 @@
 				<?php endwhile; endif; ?>
 		</article><!-- End #single -->
 	</div>
+</div>
 
-	<div class="bottom-cta d-all">
-		<div class="bottom-cta-container">
-			<a href="http://www.brafton.com/resources/content-social-join-party-thats-right-business"><div class="ourlatestfooter">
-			</div></a>
+<div class="inner">
+	<section class="entry-content d-3of4 t-3of4 m-all cf">
+		<div class="bottom-cta d-all">
+			<div class="bottom-cta-container">
+				<a href="http://www.brafton.com/resources/content-social-join-party-thats-right-business"><div class="ourlatestfooter">
+				</div></a>
 
-			<div class="marketzine">
+				<div class="marketzine">
+				</div>
+
+				<div class="askamarketer">
+				</div>
 			</div>
-
-			<div class="askamarketer">
-			</div>
-		</div>
-	</div>	
+		</div>	
+	</section>
+</div>
 
 <!--This is the popup form that goes along with the "Like what you read" CTA-->
 

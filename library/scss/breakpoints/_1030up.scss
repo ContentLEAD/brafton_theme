@@ -33,6 +33,14 @@ be seen on the Desktop.
 	.sidebar {
 		margin-top: 70px;
 	}
+	#pagination {
+		a {
+			float: none;
+		}
+		div {
+			display: inline;
+		}
+	}
 }
 
 .tagbar {
@@ -87,6 +95,7 @@ be seen on the Desktop.
 .full_logo {
 	display: inline-block;
 	width: 268px;
+	margin: 0px;
 }
 
 .logo {
@@ -131,12 +140,79 @@ be seen on the Desktop.
 }
 
 
+/*Homepage Container Styles*/
+
+.home { 
+	.template_section{
+		.content_container {
+			&.welcome {
+				padding: 2em 0;
+				h1 {
+					font-size: 3em;
+					letter-spacing: 2px;
+					text-align: center;
+					text-transform: uppercase;
+					margin: 0;
+				}
+			}
+		}
+		.content_body {
+				width: 100%;
+
+				.item {
+					margin: 2em 1em;
+					padding: 1em;
+				}
+		}
+	}
+}
+
+/*Single Blog Post Styles*/
+
+/* entry content */
+#content {
+		.entry-content {
+			padding: 1.5em;
+			/* new style added here */
+			padding-left:2.6em;
+			padding-top: 1em;
+		}
+}
+
+/*Page Styles*/
+
+.template_section { 
+	.content_body {
+		width: 66%;
+		margin: auto;
+		margin-top: 1em;
+		display: block;
+	}
+}
+
+/*********************
+BRAFTON MISSION PAGE TEMPLATE 
+*********************/
+.mission_container {
+	.mission_row{
+		width: 75%;
+	}
+}
+
 /*Bring up the sidebar on the blog hub page on larger devices...*/
 
 .blog_sidebar {
-	position: absolute;
+	/*position: absolute;
 	right: 0;
-	top: 20%;
+	top: 20%;*/
+	padding-right: 0px;
+	margin-top: -150px;
+}
+
+.archive {
+	.blog_sidebar {
+		margin-top: -120px;
+	}
 }
 
 /*Special considerations for single blog posts*/

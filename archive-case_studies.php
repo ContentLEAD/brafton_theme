@@ -5,6 +5,7 @@ Template Name: Case Studies & Testimonals
 ?>
 <?php  get_header(); ?>
 
+<div class="inner">
 <!-- Currently not in use as of jan 21 2014 Ali-->
 <article id="archive-case page" class="d-all t-all m-all" itemscope itemtype="http://schema.org/WebPage">
 	
@@ -145,6 +146,6 @@ Template Name: Case Studies & Testimonals
 		<a href="http://www.brafton.com/contact" target="_blank"><div class="bottomexamples bottom_cta"></div></a>
 	</div>
 
-
+</div>
 
 <?php  get_footer(); ?>

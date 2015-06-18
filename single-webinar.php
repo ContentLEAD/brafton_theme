@@ -43,6 +43,8 @@ if ( $_COOKIE[ 'Name' ] ) {
 
  ?>
 
+ 		<div class="inner">
+
 			<div id="content">
 
 				<div id="inner-content" class="wrap cf">
@@ -144,5 +146,7 @@ if ( $_COOKIE[ 'Name' ] ) {
 				</div>
 
 			</div>
+
+		</div>
 
 <?php get_footer(); ?>

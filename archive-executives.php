@@ -4,8 +4,10 @@
 
 				<div class="graphical-header">
 					<img src="/wp-content/themes/brafton/library/images/page-headers/blank_header.png">
-					<h1>Our <strong>Leadership</strong></h1>
+					<h1><div class="inner">Our <strong>Leadership</strong></div></h1>
 				</div>
+
+				<div class="inner">
 
 				<div id="inner-content" class="wrap cf">
 
@@ -71,6 +73,8 @@
 				</div>
 
 			<div class="exec_onclick_shadow">
+			</div>
+
 			</div>
 
 			</div>

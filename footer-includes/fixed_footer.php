@@ -1,14 +1,14 @@
 <div class="fixed-page-footer">
 
-		<div class="request_demo">
+		<div onClick="ga('send', 'event', 'Request a Demo', 'Button Click', 'Request_A_Demo');" class="request_demo">
 			Request A Demo
 		</div>
 
-		<div class="contact_us">
+		<div onClick="ga('send', 'event', 'Contact Us', 'Button Click', 'Contact_Us');" class="contact_us">
 			Contact Us
 		</div>
 
-		<div class="askamarketer">
+		<div onClick="ga('send', 'event', 'Ask A Marketer', 'Button Click', 'Ask_A_Marketer');" class="askamarketer">
 			Ask A Marketer
 		</div>
 </div>

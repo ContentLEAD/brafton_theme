@@ -8,7 +8,7 @@ get_header(); ?>
 			<div id="content">
 				<div class="graphical-header">
 					<img src="/wp-content/themes/brafton/library/images/page-headers/blank_header.png">
-					<h1>Our Marketing <strong>Services</strong></h1>
+					<h1><div class="inner">Our Marketing <strong>Services</strong></div></h1>
 				</div>
 
 				<?php brafton_share( 'top' ); ?>
@@ -17,21 +17,30 @@ get_header(); ?>
 
 				<div class="services_container">
 
-					<div class="template_section brafton_offers">
+						<div class="template_section brafton_offers">
 
-						<div class="content_container wrap">
-							<div class="content_body">
-								<?php $offer = get_field( 'brafton_offers' ); 
+							<div class="inner">
 
-								echo $offer;
+								<div class="content_container wrap">
 
-								?>
+									<div class="content_body">
+										<?php $offer = get_field( 'brafton_offers' ); 
+
+										echo $offer;
+
+										?>
+									</div>
+
+								</div>
+
 							</div>
+
 						</div>
 
-					</div>
-
 					<div class="template_section link_graphics gray_body">
+
+					<div class="inner">
+
 						<div class="link_graphics_inner">
 
 								<?php
@@ -81,24 +90,32 @@ get_header(); ?>
 
 						</div>
 
+						</div>
+
 					</div>
 
 					<div class="template_section our_marketing_services">
 
-						<div class="content_container wrap">
-							<h2>Our Marketing <strong>Services</strong></h2>
-							<div class="content_body">
-								<?php $services = get_field( 'our_marketing_services' ); 
+						<div class="inner">
 
-								echo $services;
+							<div class="content_container wrap">
+								<h2>Our Marketing <strong>Services</strong></h2>
+								<div class="content_body">
+									<?php $services = get_field( 'our_marketing_services' ); 
 
-								?>
+									echo $services;
+
+									?>
+								</div>
 							</div>
+
 						</div>
 
 					</div>
 
 					<div class="template_section learn_more green_body">
+
+					<div class="inner">
 
 						<div class="content_container wrap">
 							<h2><strong>Learn more</strong> about real results</h2>
@@ -145,6 +162,8 @@ get_header(); ?>
 				<?php endwhile; endif; ?>
 
 			</div>
+
+		</div>
 
 			<?php get_template_part( "footer-includes/fixed_footer" ); ?>
 

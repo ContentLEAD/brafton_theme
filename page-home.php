@@ -9,11 +9,13 @@ get_header(); ?>
 
 <!-- "Subnav" -->
 <ul class="slider-subnav">
-	<li><a class="d-1of5 t-1of5" href="/business-model/content-marketing">Content Marketing</a></li>
-	<li><a class="d-1of5 t-1of5" href="/about-brafton/content-writers">Writing</a></li>
-	<li><a class="d-1of5 t-1of5" href="/business-model/video-marketing">Video</a></li>
-	<li><a class="d-1of5 t-1of5" href="/business-model/infographic-marketing">Graphics</a></li>
-	<li><a class="d-1of5 t-1of5" href="/business-model/search-engine-optimization">SEO</a></li>
+	<div class="inner">
+		<li><a class="d-1of5 t-1of5" href="/business-model/content-marketing">Content Marketing</a></li>
+		<li><a class="d-1of5 t-1of5" href="/about-brafton/content-writers">Writing</a></li>
+		<li><a class="d-1of5 t-1of5" href="/business-model/video-marketing">Video</a></li>
+		<li><a class="d-1of5 t-1of5" href="/business-model/infographic-marketing">Graphics</a></li>
+		<li><a class="d-1of5 t-1of5" href="/business-model/search-engine-optimization">SEO</a></li>
+	</div>
 </ul>
 
 			<div id="content">
@@ -23,6 +25,7 @@ get_header(); ?>
 					<div class="template_section">
 
 						<div class="content_container welcome wrap">
+							<div class="inner">
 							<h1><strong>Brafton</strong> content marketing</h1>
 							<div class="content_body">
 
@@ -114,6 +117,8 @@ get_header(); ?>
 							</div>
 						</div>
 
+						</div>
+
 					</div>
 
 					<!-- NOT APPROVED YET
@@ -133,6 +138,7 @@ get_header(); ?>
 					<div class="template_section latest_blogs gray_body">
 
 						<div class="content_container wrap">
+							<div class="inner">
 							<h2>Our Latest <strong>Blogs</strong></h2>
 							<div class="content_body">
 
@@ -260,6 +266,7 @@ get_header(); ?>
 								</div>
 
 							</div>
+							</div>
 						</div>
 
 					</div>
@@ -267,6 +274,7 @@ get_header(); ?>
 					<div class="template_section learn_more green_body">
 
 						<div class="content_container wrap">
+							<div class="inner">
 							<h2><strong>Learn more</strong> about real results</h2>
 							<div class="content_body">
 								<div class="cta_image d-1of2 t-1of3 m-all">
@@ -306,6 +314,7 @@ get_header(); ?>
 
 					</div>
 
+				</div>
 
 				</div>
 

@@ -213,7 +213,7 @@ var mktFormLanguage = 'English'
       <span class='mktFormMsg'></span>
     </span>
   </div>
-  <div id='mktFrmButtons f-row'>
+  <div id='mktFrmButtons f-row' onclick="ga('send', 'event', 'Request a Demo', 'Form Submission', 'Request_A_Demo');">
     <!--<input id='mktFrmSubmit' type='submit' style="width: auto; overflow: visible; padding-left: .25em; padding-right: .25em;" value='Request a Demo' name='submitButton' onclick='formSubmit(document.getElementById("mktForm_1392")); return false;' />&nbsp;-->
      <input id='mktFrmSubmit' type='submit' class="wpcf7-submit button" value='Request a Demo' name='submitButton' onclick='formSubmit(document.getElementById("mktForm_1392")); return false;' />
             <input style='display: none;' id='mktFrmReset' type='reset'
@@ -302,28 +302,17 @@ function formSubmit(elt) {
   setCookies();
   var theURL = document.URL;
   
-  ga('send', 'event', 'Request A Demo', 'Submit', '<?php echo curPageURL(); ?>');
+  ga('send', 'event', 'Request a Demo', 'Form Submission', 'Request_A_Demo');
   
   return Mkto.formSubmit(elt);
   
 }
-/*
-function formSubmit(elt) {
-  setCookies();
-  var theURL = document.URL;
-  _gaq.push(['_trackEvent', 'Webinar', 'Access', '<?php echo curPageURL(); ?>' ]);
 
-   setTimeout(function(){
- return Mkto.formSubmit(elt)
-
-   },1500)
- 
-}*/
 function formReset(elt) {
   return Mkto.formReset(elt);
 }
 </script>
 
-
+<script type="text/javascript" src="https://ssl-munchkin.marketo.net/js/munchkin.js"></script>
 <script>mktoMunchkin('447-XFF-352', {customName: 'BRWebinar', wsInfo: 'j1RR'});</script>
 <!-- <script>Munchkin.init('447-XFF-352');</script> -->

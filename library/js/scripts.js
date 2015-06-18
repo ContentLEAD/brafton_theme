@@ -138,11 +138,11 @@ jQuery(document).ready(function($) {
                     api.simulateClick();
                     api.openPopup('linkedin');
                 },
-                enableHover: false,
-                enableTracking: true,
                 share: {
                     linkedin: true
                 },
+                enableHover: false,
+                enableTracking: true,
                 title: title,
                 template: '<div class="cube linkedin"></div>' + template,
                 url: url
@@ -276,14 +276,24 @@ jQuery(document).ready(function($) {
     //lightbox popup marketo form for blog and single post pages...
 
     $(".askamarketer").click(function(){
-        MktoForms2.loadForm("//app-sj04.marketo.com", "447-XFF-352", 1337, function (form){MktoForms2.lightbox(form).show();});
+        MktoForms2.loadForm("//app-sj04.marketo.com", "447-XFF-352", 1337, function (form){
+            MktoForms2.lightbox(form).show();
+            form.onSubmit(function(){
+                ga('send', 'event', 'Ask A Marketer', 'Form Completion', 'Ask_A_Marketer');
+            });
+        });
     });
 
 
     //lightbox popup marketo form for page templates
 
     $(".fixed-page-footer .contact_us").click(function(){
-        MktoForms2.loadForm("//app-sj04.marketo.com", "447-XFF-352", 1409, function (form){MktoForms2.lightbox(form).show();});
+        MktoForms2.loadForm("//app-sj04.marketo.com", "447-XFF-352", 1409, function (form){
+            MktoForms2.lightbox(form).show();
+            form.onSubmit(function(){
+                ga('send', 'event', 'Contact Us', 'Form Completion', 'Contact_Us');
+            });
+        });
     });
 
     //ui effects for executive leadership page

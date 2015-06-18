@@ -8,7 +8,7 @@ get_header(); ?>
 			<div id="content">
 				<div class="graphical-header">
 					<img src="/wp-content/themes/brafton/library/images/page-headers/blank_header.png">
-					<h1>Content <strong>Writers</strong></h1>
+					<h1><div class="inner">Content <strong>Writers</strong></div></h1>
 				</div>
 
 				<?php brafton_share( 'top' ); ?>
@@ -16,6 +16,8 @@ get_header(); ?>
 				<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
 				<div class="template_section every_word">
+
+					<div class="inner">
 
 						<div class="content_container wrap">
 							<h2><strong><?php echo get_field('subhead_1'); //see bones.php ?></strong></h2>
@@ -33,7 +35,11 @@ get_header(); ?>
 
 					</div>
 
+				</div>
+
 					<div class="template_section gray_body who">
+
+						<div class="inner">
 
 						<div class="content_container wrap">
 							<h2><?php bold_first_word( get_field('subhead_3') ); //see bones.php ?></h2>
@@ -48,9 +54,13 @@ get_header(); ?>
 							</div>
 						</div>
 
+						</div>
+
 					</div>
 
 					<div class="template_section buzz">
+
+						<div class="inner">
 
 						<div class="content_container wrap">
 							<h2><?php bold_first_word( get_field('subhead_4') ); //see bones.php ?></h2>
@@ -82,30 +92,36 @@ get_header(); ?>
 							</div>
 						</div>
 
-					</div>
-
-					<div class="template_section reasons gray_body">
-
-						<div class="content_container wrap">
-							<h2><?php bold_first_word( get_field('subhead_5') ); //see bones.php ?></h2>
-							<div class="content_body">
-								
-								<?php for ($i=1; $i<=3; $i++) { ?>
-
-									<div class="reasons_inner d-all t-all m-all">
-
-										<?php echo get_field( 'reason_' . $i ); ?>
-
-									</div>
-
-								<?php } //end for loop ?>
-
-							</div>
 						</div>
 
 					</div>
 
+					<div class="template_section reasons gray_body">
+
+						<div class="inner">
+
+							<div class="content_container wrap">
+								<h2><?php bold_first_word( get_field('subhead_5') ); //see bones.php ?></h2>
+								<div class="content_body">
+									
+									<?php for ($i=1; $i<=3; $i++) { ?>
+
+										<div class="reasons_inner d-all t-all m-all">
+
+											<?php echo get_field( 'reason_' . $i ); ?>
+
+										</div>
+
+									<?php } //end for loop ?>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
 					<div class="template_section team">
+
+						<div class="inner">
 
 						<div class="content_container wrap">
 							<h2><?php bold_first_word( get_field('subhead_6') ); //see bones.php ?></h2>
@@ -151,10 +167,12 @@ get_header(); ?>
 								?>
 							</div>
 						</div>
-
+						</div>
 					</div>
 
 					<div class="template_section learn_more green_body">
+
+						<div class="inner">
 
 						<div class="content_container wrap">
 							<h2><strong>Learn more</strong> about real results</h2>
@@ -195,7 +213,7 @@ get_header(); ?>
 
 							</div>
 						</div>
-
+					</div>
 					</div>
 
 				<?php endwhile; endif; ?>

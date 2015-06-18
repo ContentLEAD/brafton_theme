@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+		<div class="inner">
+
 			<div id="content">
 
 				<div id="inner-content" class="wrap cf">
@@ -136,6 +138,9 @@
 										case '82946':
 											get_template_part('marketoforms/content_goals_lead_generation');
 											break;
+										case '83000':
+											get_template_part('marketoforms/content_goals_conversions');
+											break;
 										default:
 											get_template_part('resource_marketo_form');
 											break;
@@ -150,5 +155,7 @@
 				</div>
 
 			</div>
+
+		</div>
 
 <?php get_footer(); ?>

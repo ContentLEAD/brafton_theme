@@ -14,6 +14,17 @@ come into play. Have fun!
 GENERAL STYLES
 *********************/
 
+.single h1, .single .h1 {
+	font-size: 2.5em;
+	line-height: 1.333em;
+}
+
+.blog h2, .blog .h2 {
+	font-size: 1.75em;
+	line-height: 1.4em;
+	margin: 0px;
+}
+
 /*unveil the slidr starting in tablet view...*/
 .home {
 	.rev_slider_wrapper {
@@ -475,8 +486,7 @@ the featured post and the remaining posts....*/
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		display: block;
-		padding-bottom: 0px;
-		margin: 0.25em 2em;
+		padding: 0.25em 2em;
 		text-align: left;
 	}
 
@@ -486,7 +496,7 @@ the featured post and the remaining posts....*/
 
 
 	.image-inner {
-		margin: 1em 1em 0 5em;
+		margin: 0.4em 1em 0 5em;
 		width: 37%;
 		max-height: 225px;
 	}
@@ -503,7 +513,11 @@ the featured post and the remaining posts....*/
 	}
 }
 
-
+.tag {
+	.tagbar {
+		margin: 0px 0px 40px 0px;
+	}
+}
 
 
 .blog_header {
@@ -523,7 +537,7 @@ the featured post and the remaining posts....*/
 }
 
 .image-inner {
-	margin: 1em 1em 0 5em;
+	margin: 0.3em 1em 0 5em;
 	width: 25%;
 	max-height: 175px;
 	overflow: hidden;
@@ -592,13 +606,15 @@ the featured post and the remaining posts....*/
 		h1 {
 			font-size: 1.75em;
 			text-transform: none;
+			padding: 0px;
 		}
-
-
+		.image-inner {
+			margin: 42px 1em 0 5em;
+		}
 	}
 
 	.blog_header {
-		padding-bottom: 1.5em;
+		/*padding-bottom: 1.5em;*/
 
 		&:after {
 			content: " ";
@@ -611,7 +627,7 @@ the featured post and the remaining posts....*/
 	#topinfo {
 		width: 45%;
 		margin-top: 10px;
-		height: 160px;
+		/*height: 160px;*/
 
 		.meta-wrapper {
 			position: relative;
@@ -647,6 +663,9 @@ the featured post and the remaining posts....*/
 		.blog_header {
 			margin-bottom: -25px;
 			padding-bottom: 0;
+				h1 {
+					padding: 0px;
+				}
 		}
 
 		#topinfo {
@@ -739,7 +758,6 @@ the featured post and the remaining posts....*/
 }
 
 .bottom-cta {
-	height: 64px;
 	margin-top: 75px;
 	overflow: visible;
 	margin-bottom: 35px;
@@ -886,7 +904,7 @@ the featured post and the remaining posts....*/
 		text-decoration: none;
 		font-size: 0.8em;
 		font-weight: bold;
-		letter-spacing: 3px;
+		letter-spacing: 1.5px;
 		background: $green;
 		color: $off-black;
 		padding: 9px 16px;
@@ -909,7 +927,7 @@ the featured post and the remaining posts....*/
 		text-decoration: none;
 		font-size: 0.8em;
 		font-weight: bold;
-		letter-spacing: 3px;
+		letter-spacing: 1.5px;
 		background: $green;
 		color: $off-black;
 		padding: 9px;

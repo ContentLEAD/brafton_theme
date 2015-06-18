@@ -5,6 +5,9 @@
 
 
 					<div id="top-footer">
+
+						<div class="inner">
+
 						<nav role="navigation">
 							<?php wp_nav_menu(array(
 		    					'container' => '',                              // remove nav container
@@ -36,15 +39,18 @@
 								<div class="follow-us">FOLLOW US</div>
 							</div>
 						</div>
-
-
+						</div>
 					</div>
 
 				<?php //} ?>
 
 				<div id="inner-footer" class="wrap cf">
 
-					<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+					<div class="inner">
+
+						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+
+					</div>
 
 				</div>
 
