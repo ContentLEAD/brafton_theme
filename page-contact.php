@@ -109,7 +109,7 @@ Template Name: Contact+
 											'link_after'  => '</span>',
 										) );
 									?>
-								</section> <?php // end article section! ?>
+								</section> <?php // end article section ?>
 
 								<footer class="article-footer cf">
 

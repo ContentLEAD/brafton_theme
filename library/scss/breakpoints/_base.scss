@@ -294,7 +294,7 @@ style a page via class
 
 .featured-post {
 	h1 {
-		text-align: center;
+		padding: 10px;
 	}
 }
 
@@ -306,10 +306,6 @@ style a page via class
 		margin: auto;
 		width: 100%;
 	}
-}
-
-.title_info_container {
-	text-align: center;
 }
 
 /*Hide all forms before DOM render!*/
@@ -411,6 +407,30 @@ article#single {
  		width: 100%;
  	}
 
+ 	article {
+ 		p {
+ 			a.morelink {
+ 				display: table;
+				text-transform: uppercase;
+				text-decoration: none;
+				font-size: 0.8em;
+				font-weight: bold;
+				letter-spacing: 1.5px;
+				background: #8cc040;
+				color: #333;
+				padding: 4px 8px;
+				margin: 10px 0px 0px 0px;
+				-webkit-transition: all 0.2s;
+				transition: all 0.2s;
+				  &:hover {
+				  	  background: #333;
+					  color: #8cc040;
+					  cursor: pointer;
+				  }
+ 			}
+ 		}
+ 	}
+
  	#pagination {
  		text-align: center;
  		background-color: $black;
@@ -435,6 +455,26 @@ article#single {
  			}
  		}
  	}
+ 	.back-to-top {
+	background: none;
+	margin: 0;
+	position: fixed;
+	bottom: 0;
+	right: 20px;
+	width: 60px;
+	height: 60px;
+	z-index: 100;
+	display: none;
+	text-decoration: none;
+	color: #333;
+	background-color: #8cc040;
+	text-align: center;
+	font-weight: 400;
+		i {
+  			font-size: 54px;
+  			font-style: normal;
+		}
+	}
 }  
 
 .post-type-archive-support {
@@ -597,6 +637,38 @@ article#single {
 		}
 	}
 } 
+
+.post-type-archive-downloadables {
+	#topinfo .meta-wrapper {
+		position: relative;
+	}
+	.featured-post #topinfo .meta-wrapper, .blog_header #topinfo .meta-wrapper, .secondary-blog #topinfo .meta-wrapper {
+		left: 0px;
+		bottom: 0px;
+	}
+	a.excerpt-read-more, #topinfo a.excerpt-read-more {
+		display: none;
+	}
+	.title_info_container p a {
+		  display: table;
+		  text-transform: uppercase;
+		  text-decoration: none;
+		  font-size: 0.8em;
+		  font-weight: bold;
+		  letter-spacing: 1.5px;
+		  background: #8cc040;
+		  color: #333;
+		  padding: 4px 8px;
+		  margin: 10px 0px 0px 0px;
+		  -webkit-transition: all 0.2s;
+		  transition: all 0.2s;
+		  &:hover {
+		  	  background: #333;
+			  color: #8cc040;
+			  cursor: pointer;
+		  }
+	}
+}
 
 .single-webinar {
 	.webinar_form_headline {
@@ -1728,6 +1800,78 @@ POSTS & CONTENT STYLES
 	}
 }
 
+/*********************
+SOCIAL LANDING PAGE STYLES
+*********************/
+.social-landing-title {
+	background: #fff;
+	overflow: auto;
+	width: 100%;
+		h1 {
+			text-align: center;
+		}
+}
+#social-landing {
+	height: 72vh;
+	clear: both;
+	background-image: url('http://www.brafton.com/wp-content/uploads/2015/06/shutterstock_183833231.jpg');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	background-position: center center;
+  	.overlay {
+		background-color: rgba(140, 192, 64, 0.6);
+		.inner {
+		display: table;
+		table-layout: fixed;
+		max-width: 1150px;
+		margin: 0 auto;
+		height: 72vh;
+		color: #fff;
+		}
+		.content {
+			display: table-cell;
+			vertical-align: middle;
+			width: 100%;
+			p {
+				margin: 0px 20px 0px 0px;
+				text-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+				font-size: 20px;
+				font-weight: 300;
+			}
+		}
+		.image-inner {
+			margin: 0px 40px 40px 0px;
+			max-height: 100%;
+				img {
+					border: 10px solid #333;
+					height: 100%;
+				}
+		}
+		.form {
+			clear: both;
+			input[type="text"], input[type="email"], input {
+				width: 18.5%;
+				float: left;
+				margin-right: 20px;
+				border: 0px;
+				font-size: 16px;
+				box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+				border-radius: 0px;
+			}
+			input[type="submit"] {
+				margin-right: 0px;
+				height: 42px;
+				border: 0px;
+				background: #273511;
+				color: #fff;
+				text-transform: uppercase;
+			}
+		}
+  	}
+}
+
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
@@ -1737,9 +1881,9 @@ PAGE NAVI STYLES
 	margin: 1.5em 0;
 }
 	.pagination{
+	display: table;
     text-align: center;
     margin: 0 auto;
-    width: 50%;
 
     li {
       padding: 0;

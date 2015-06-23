@@ -43,7 +43,7 @@
                                 
                                 if ($this_char != $last_char) {
                                     $last_char = $this_char;
-                                    if( $this_char != "A" ) echo '<a href="#top" class="btt">Back to top</a>';
+                                    if( $this_char != "A" )
                                     echo "<h2><a name='$this_char'>$this_char</a></h2>";
                                  } ?>
                                 <article itemscope itemtype="http://schema.org/CreativeWork">
@@ -54,8 +54,6 @@
                                 </article>
 
                             <?php endwhile; endif; wp_reset_query(); ?>
-                            
-                            <a href="#top" class="btt">Back to top</a>
 
                         </div>
 
@@ -65,10 +63,32 @@
                         <?php dynamic_sidebar( "Archive Sidebar" ); ?>
                     </div>
 
+                    <a class="back-to-top" href="#"><i>^</i></a>
+
                 </div>
 
             </div>
 
         </div>
+
+<script>
+jQuery(document).ready(function() {
+    var offset = 650;
+    var duration = 300;
+    jQuery(window).scroll(function() {
+        if (jQuery(this).scrollTop() > offset) {
+            jQuery('.back-to-top').fadeIn(duration);
+        } else {
+            jQuery('.back-to-top').fadeOut(duration);
+        }
+    });
+
+    jQuery('.back-to-top').click(function(event) {
+        event.preventDefault();
+        jQuery('html, body').animate({scrollTop: 0}, duration);
+        return false;
+    })
+});
+</script>
 
 <?php get_footer(); ?>

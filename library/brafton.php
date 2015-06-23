@@ -399,6 +399,25 @@ function create_post_types() {
 		)
 	);
 
+	register_post_type( 'social_media_ad',
+		array(
+			'labels' => array(
+				'name' => __( 'Social Media Ads' ),
+				'singular_name' => __( 'Social Media Ad' ),
+				'all_items' => __( 'View All Social Media Ad Pages' ),
+				'add_new' => __( 'Add New Page')
+			),
+    			'rewrite' => array('slug' => 'social-media-ads'),
+    			'capability_type' => 'post',
+			'description' => 'Non-navigable social media ads.',
+			'public' => true,
+			'show_in_nav_menus' => false,
+			'has_archive' => false,
+			'menu_position' => 8,
+			'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'author', 'custom-fields' )
+		)
+	);
+
 	register_post_type( 'case_studies',
 		array(
 			'labels' => array(
