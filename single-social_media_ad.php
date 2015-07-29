@@ -51,6 +51,15 @@
         document.write(unescape("%3Cscript src='" + document.location.protocol + "//munchkin.marketo.net/munchkin.js' type='text/javascript'%3E%3C/script%3E"));
     </script>
 
+    <script type="text/javascript">
+	  jQuery(document).ready(function($) {
+	    $(".scroll").click(function(event) {
+	    event.preventDefault();
+	    $('html,body').animate( { scrollTop:$(this.hash).offset().top } , 1000);
+	    } );
+	  } );
+	</script>
+
     <script>Munchkin.init('447-XFF-352');</script>
 
 	</head>
@@ -88,29 +97,50 @@
 				</div>
 
 			</header>
-				<div class="social-landing-title">
-					<div class="inner">
 
-						<h1><?php the_title(); ?></h1>
+			<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 
-					</div>
-				</div>
-				<div id="social-landing">
+				<?php 
+					$image = get_field( 'background_image' );
+				?>
+
+				<div id="social-landing" style="background-image: url('<?php echo $image; ?>');">
 
 					<div class="overlay">
 
 						<div class="inner">
 
+							<div class="title">
+								<h1><?php the_title(); ?></h1>
+							</div>
+
 							<div class="content">
 
-								<div class="image-inner <?php if( !has_post_thumbnail() ) echo ' no-img';?>"><?php the_post_thumbnail('medium', array('itemprop' => 'image', 'alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></div>
-
-								<?php the_content(); ?>
-
-								<div class="form">
-									<?php echo do_shortcode('[contact-form-7 id="84645" title="Social Media Ad Placeholder"]'); ?>
+								<div class="content_body">
+									<?php the_content(); ?>
 								</div>
 
+								<div class="form">
+									<?php 
+								
+									$theID = get_the_ID();
+
+									switch ($theID) {
+
+										case '84601':
+										    get_template_part('marketoforms/social_ad_marketo_form');
+											break;
+										case '84810':
+											get_template_part('marketoforms/social_ad_content_for_social_marketo_form');
+											break;
+									}
+									?>
+								</div>
+
+							</div>
+
+							<div class="learn">
+								<a href="#learnmore" class="scroll"><img src="http://brafton.com/wp-content/themes/brafton/library/images/learnMore_arrow.png" alt="" /></a>
 							</div>
 
 						</div>
@@ -119,12 +149,192 @@
 
 				</div>
 
+				<?php 
+					$content1 = get_field( 'content_1');  ?>
+
+				<?php if ($content1) { ?>
+
+				<div id="learnmore" class="template_section">
+
+					<div class="inner">
+
+						<div class="content_container wrap">
+							<h2><?php echo get_field('subhead_1'); ?></h2>
+							<div class="content_body">
+								<?php 
+
+									echo $content1;
+
+								?>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<?php } ?>
+
+				<?php 
+					$learn = get_field( 'learn_more');  ?>
+
+				<?php if ($learn) { ?>
+
+				<div class="template_section learn_more green_body">
+
+						<div class="inner">
+
+						<div class="content_container wrap">
+							<h2><?php bold_first_word( get_field( 'learn_more_subhead' ) ); ?></h2>
+							<div class="content_body">
+								<div class="cta_image d-1of2 t-1of3 m-all">
+									<?php 
+										$link = get_field( 'image_link' );
+										$src = get_field( 'client_cta' );
+									?>
+
+									<a href="<?php echo $link; ?>">
+										<img src="<?php echo $src; ?>"/>
+									</a>
+
+								</div>
+								<div class="learn_more_text d-1of2 t-2of3 m-all">
+									<?php  
+
+									echo $learn;
+
+									?>
+
+									<a class="client_cta" href="/case-studies">More Client Examples</a>
+								</div>
+							</div>
+						</div>
+
+						</div>
+
+					</div>
+
+				<?php } ?>
+
+				<?php 
+					$content2 = get_field( 'content_2');  ?>
+
+				<?php if ($content2) { ?>
+
+				<div id="learnmore" class="template_section">
+
+					<div class="inner">
+
+						<div class="content_container wrap">
+							<h2><?php echo get_field('subhead_2'); ?></h2>
+							<div class="content_body">
+								<?php 
+
+									echo $content2;
+
+								?>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<?php } ?>
+
 			</div>
 
 		</div>
 
-		<?php wp_footer(); ?>
+		<?php
+			//Only display this next section if you want a "Meet the team" CTA
+					if( get_field('meet_the_team_cta') ) { 
 
-	</body>
+					?>
+						<div class="template_section team gray_body">
 
-</html>
+							<div class="inner">
+
+							<div class="content_container wrap">
+								<h2><?php bold_first_word( get_field('meet_the_team_header') ); ?></h2>
+								<div class="content_body">
+									<?php
+
+									for( $i=1; $i<=3; $i++) {
+
+										$post_id = get_field( 'team_id_' . $i );
+										$title = get_field( 'team_title_' . $i );
+
+										$posts = get_posts( array(
+												'include' => $post_id,
+												'post_type' => array('post','downloadables','infographic','case_studies','webinar')
+											) );
+									
+
+
+										if($post_id != '') {
+
+										foreach($posts as $post) {
+											setup_postdata( $post );
+
+											?>
+
+											<div class="d-1of3 t-1of3 m-all team_inner">
+												<h5><strong><a href="<?php the_permalink(); ?>"><?php echo $title; ?></a></strong></h5>
+													<div class="image_container">
+														<?php echo get_the_post_thumbnail( $post->ID ); ?>
+													</div>
+											</div>
+
+										<?php 
+
+											} //end foreach loop 
+
+										wp_reset_postdata();
+
+										} //end conditional
+
+									} //end for loop
+
+
+									?>
+								</div>
+							</div>
+							</div>
+						</div>
+
+					<?php } //end meet team conditional ?>
+
+		<?php endwhile; endif; ?>
+
+		<div class="fixed-page-footer">
+
+				<div onClick="ga('send', 'event', 'Request a Demo', 'Button Click', 'Request_A_Demo');" class="request_demo">
+					Request A Demo
+				</div>
+
+				<div onClick="ga('send', 'event', 'Contact Us', 'Button Click', 'Contact_Us');" class="contact_us">
+					Contact Us
+				</div>
+
+				<div onClick="ga('send', 'event', 'Ask A Marketer', 'Button Click', 'Ask_A_Marketer');" class="askamarketer">
+					Ask A Marketer
+				</div>
+		</div>
+
+		<script src="//app-sj04.marketo.com/js/forms2/js/forms2.js"></script>
+
+		<div class="popup_form landing_page_popup">
+			<div class="popup_form_inner">
+				<script src="//app-sj04.marketo.com/js/forms2/js/forms2.min.js"></script>
+				<center><form id="mktoForm_1392"></form></center>
+				<script>MktoForms2.loadForm("//app-sj04.marketo.com", "447-XFF-352", 1392);</script>
+			</div>
+			<div class="popup_form_exit">X</div>
+
+		</div>
+
+		<div class="popup_form_shadow">
+		</div>
+
+<?php get_footer(); ?>

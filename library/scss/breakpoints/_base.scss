@@ -334,6 +334,21 @@ article#single {
 	}
 }
 
+/* Brafton Atlantis Embed Styles */
+#singlePostVideo {
+		margin-bottom: 25px;
+
+		.ajs-default-skin div.vjs-big-play-button span {
+			top: 40%!important;
+		}
+	}
+
+/* Fix for existing Atlantis videos */
+
+.ajs-default-skin div.vjs-big-play-button span {
+	top: 40%!important;
+}
+
 .single {
 	.single-twit-or-video {
 		position: relative;
@@ -1812,9 +1827,9 @@ SOCIAL LANDING PAGE STYLES
 		}
 }
 #social-landing {
-	height: 72vh;
+	height: 100%;
+	min-height: 400px;
 	clear: both;
-	background-image: url('http://www.brafton.com/wp-content/uploads/2015/06/shutterstock_183833231.jpg');
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -1822,27 +1837,53 @@ SOCIAL LANDING PAGE STYLES
   	background-position: center center;
   	.overlay {
 		background-color: rgba(140, 192, 64, 0.6);
+		box-sizing: border-box;
+		min-height: 400px;
+		.title {
+  			display: table-row;
+  			vertical-align: top;
+  			height: 60px;
+  			h1 {
+  				padding: 1em 0 0 0;
+  				margin: 0;
+  				text-align: center;
+				text-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+				text-transform: uppercase;
+  			}
+  		}
 		.inner {
 		display: table;
 		table-layout: fixed;
 		max-width: 1150px;
 		margin: 0 auto;
-		height: 72vh;
+		height: 100%;
+		min-height: 400px;
 		color: #fff;
+		width: 100%;
+		box-sizing: border-box;
 		}
 		.content {
 			display: table-cell;
 			vertical-align: middle;
 			width: 100%;
+			padding: 20px 20px 0px!important;
+			box-sizing: boder-box;
+			font-size: 20px;
+			text-align: center;
+			.content_body {
+				margin: auto;
+			}
 			p {
-				margin: 0px 20px 0px 0px;
+				margin: 15px 20px 15px 0px;
 				text-shadow: 0px 0px 10px rgba(0,0,0,0.4);
-				font-size: 20px;
 				font-weight: 300;
+			}
+			.image-inner {
+				margin: 15px 30px 40px 0px;
 			}
 		}
 		.image-inner {
-			margin: 0px 40px 40px 0px;
+			margin: 0px 0px 40px 0px;
 			max-height: 100%;
 				img {
 					border: 10px solid #333;
@@ -1851,24 +1892,47 @@ SOCIAL LANDING PAGE STYLES
 		}
 		.form {
 			clear: both;
+			margin: 40px auto 0px auto;
 			input[type="text"], input[type="email"], input {
-				width: 18.5%;
-				float: left;
-				margin-right: 20px;
+				width: 100%;
+				max-width: 250px;
+				float: none;
+				margin: 0px auto;
 				border: 0px;
 				font-size: 16px;
 				box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
 				border-radius: 0px;
 			}
 			input[type="submit"] {
-				margin-right: 0px;
+				margin: 0px auto;
 				height: 42px;
 				border: 0px;
 				background: #273511;
 				color: #fff;
 				text-transform: uppercase;
+				padding: 5px;
 			}
 		}
+		.learn {
+			text-align: center;
+			display: table-row;
+			height: 40px;
+			a {
+				display: table-cell;
+				vertical-align: bottom;
+			}
+		}
+  	}
+}
+.single-social_media_ad {
+  	.template_section {
+  		.content_body {
+  			.team_inner {
+  				.image_container {
+  					margin: 0px 0px 30px 0px;
+  				}
+  			}
+  		}
   	}
 }
 
@@ -1884,6 +1948,7 @@ PAGE NAVI STYLES
 	display: table;
     text-align: center;
     margin: 0 auto;
+    clear: both;
 
     li {
       padding: 0;

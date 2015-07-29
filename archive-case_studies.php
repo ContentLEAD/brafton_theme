@@ -5,19 +5,7 @@ Template Name: Case Studies & Testimonals
 ?>
 <?php  get_header(); ?>
 
-<div class="inner">
-<!-- Currently not in use as of jan 21 2014 Ali-->
-<article id="archive-case page" class="d-all t-all m-all" itemscope itemtype="http://schema.org/WebPage">
-	
-	<div class="d-all t-all m-all">
-
-		<?php if( function_exists( 'brafton_share' ) ) brafton_share(); ?>
-
-		<div class="case-study-wrapper">
-
-			<section class="d-all t-all m-all" itemprop="mainContentOfPage">
-
-				<?php
+<?php
 
 				$terms1 = get_terms( 'industry', array(
 				 	'orderby'    => 'count',
@@ -81,6 +69,18 @@ Template Name: Case Studies & Testimonals
 					</div>
 				</div>
 
+<div class="inner">
+<!-- Currently not in use as of jan 21 2014 Ali-->
+<article id="archive-case page" class="d-all t-all m-all" itemscope itemtype="http://schema.org/WebPage">
+	
+	<div class="d-all t-all m-all">
+
+		<?php if( function_exists( 'brafton_share' ) ) brafton_share(); ?>
+
+		<div class="case-study-wrapper">
+
+			<section class="d-all t-all m-all" itemprop="mainContentOfPage">
+
 				<div class="below_filter_wrapper">
 					<div id="cases">
 					<?php 
@@ -108,7 +108,9 @@ Template Name: Case Studies & Testimonals
 
 							if ( $the_query->have_posts() ) :while ( $the_query->have_posts() ) : $the_query->the_post();
 							
-							$term=wp_get_post_terms( $post->ID, 'industry');
+							//$term=wp_get_post_terms( $post->ID, 'industry');
+							//$term=wp_get_post_terms( $post->ID, 'prod-service');
+							$term=wp_get_post_terms( $post->ID, 'client-size');
 							$type=get_post_type( $post );
 							$hover_image=get_post_meta($post->ID, 'hover_image', TRUE);
 

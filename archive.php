@@ -92,12 +92,14 @@
 			<?php  _paginate(); //See Brafton.php ?>
 		</section><!--this closes the d-2of3 section after the last article-->
 	<?php wp_reset_query(); ?>
-	<div class="d-1of4 t-1of3 m-all sidebar blog_sidebar">
-		<aside>
-			<ul>
-				<?php dynamic_sidebar( "New Blog Sidebar" ); ?>
-			</ul>
-		</aside>
+	<div class="inner">
+		<div class="d-1of4 t-1of3 m-all sidebar blog_sidebar">
+			<aside>
+				<ul>
+					<?php dynamic_sidebar( "New Blog Sidebar" ); ?>
+				</ul>
+			</aside>
+		</div>
 	</div>
 	</div>
 </article><!-- End #archive -->

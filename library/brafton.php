@@ -554,7 +554,7 @@ function create_case_taxonomy(){
 
 function create_client_size_taxonomy() {
 	$labels = array(
-		'name'              => _x( 'Client Sizes', 'taxonomy general name' ),
+		'name'              => _x( 'Client Size', 'taxonomy general name' ),
 		'singular_name'     => _x( 'Client Size', 'taxonomy singular name' ),
 		'search_items'      => __( 'Search Client Size' ),
 		'all_items'         => __( 'All Client Sizes' ),
@@ -1623,6 +1623,7 @@ function our_ajax_function(){
 	$industry=$_REQUEST['industry'];
 	$ind=$_REQUEST['id'];
 	$prodid=$_REQUEST['prodid'];
+	$size=$_REQUEST['sizeid'];
 
 
 if ($industry=='all'){
@@ -1656,6 +1657,11 @@ $args1 = array(
 			'taxonomy' => 'prod-service',
 			'field' => 'id',
 			'terms' => $prodid
+		),
+		array(
+			'taxonomy' => 'client-size',
+			'field' => 'id',
+			'terms' => $size
 		)
 	)
 

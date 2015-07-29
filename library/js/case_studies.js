@@ -55,11 +55,12 @@ jQuery(document).ready(function($) {
                 'prodid': prodid,
                 'sizeid': sizeid,
                 'action': 'do_ajax',
-                'industry': industry
+                'industry': industry,
+                'client-size': 'client-size'
             },
             dataType: 'JSON', // I find JSON to be most versatile
             beforeSend: function() {
-                $('#carousel-ul').html('<p>Loading...</p>')
+                $('#carousel-ul').html('<p>Loading...</p>');
             },
             success: function(data) {
                 $('#carousel-ul').html('');
@@ -80,25 +81,27 @@ jQuery(document).ready(function($) {
                 alert(indid + ' ' + prodid);
                 console.log(errorThrown);
             }
-        })
-        // or $(this).val()
+        });
+        // or $(this).val();
     });
    
 
 
    $(document).on('click', '.viewall', function() {
-        $('#sel-ind').val('')
-        $('#sel-prod').val('')
+        $('#sel-ind').val('');
+        $('#sel-prod').val('');
+        $('#sel-size').val('');
         $.ajax({
             url: 'http://www.brafton.com/wp-admin/admin-ajax.php',
             data: {
                 'action': 'do_ajax',
-                'industry': 'all'
+                'industry': 'all',
+                'client-size': 'all'
             },
             //end ajax 
             dataType: 'JSON', // I find JSON to be most versatile
             beforeSend: function() {
-                $('#carousel-ul').html('<p>Loading...</p>')
+                $('#carousel-ul').html('<p>Loading...</p>');
             },
             success: function(data) {
                 $('#carousel-ul').html('');
@@ -116,7 +119,7 @@ jQuery(document).ready(function($) {
                 //end success
             }
             //end ajax
-        })
+        });
     });
     //end document ready
 });

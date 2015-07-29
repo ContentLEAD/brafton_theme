@@ -654,8 +654,22 @@ the featured post and the remaining posts....*/
 	}
 }
 
-
-
+/* Social Landing Page Styles */
+#social-landing {
+	.overlay {
+		.image-inner {
+			margin: 0px 40px 40px 0px;
+		}
+		.title {
+			h1 {
+				font-size: 3em;
+			}
+		}
+		.learn {
+			height: 100px;
+		}
+	}
+}
 
 /*special css for twits and videos*/
 

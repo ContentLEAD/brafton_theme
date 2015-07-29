@@ -11,6 +11,7 @@
 
 				$author = brafton_author_data( get_the_ID() ); ?>
 
+
 				<div class="d-all blog_header" style="overflow: visible">
 					<?php //If this is a video post, change things around a bit
 					//Or, if it's a twit, echo the twit custom field
@@ -18,11 +19,13 @@
 
 					$video_shortcode = get_post_meta( $post->ID, 'video_shortcode', true) ;
 
+					$brafton_video = get_post_meta( $post->ID, 'brafton_video', true ) ;
+
 					$twit_src = get_post_meta( $post->ID, 'twit_image_code', true) ;
 
 					//If it is neither twit nor video, output the featured image
 
-					if( $video_shortcode == '' && $twit_src == '' && !has_tag( 'slideshare' )  ) {
+					if( $video_shortcode == '' && $brafton_video == '' && $twit_src == '' && !has_tag( 'slideshare' )  ) {
 						$size = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
 						<div class="image-inner <?php if( !has_post_thumbnail() ) echo ' no-img';?>"><?php the_post_thumbnail('medium', array('itemprop' => 'image', 'alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></div>
 					<?php } ?>
@@ -32,7 +35,7 @@
 						<h1 itemprop="name headline"><?php the_title(); ?></h1>
 					
 
-						<?php if( $video_shortcode == '' && $twit_src == ''  && !has_tag( 'slideshare' ) ) { ?>
+						<?php if( $video_shortcode == '' && $brafton_video == '' && $twit_src == ''  && !has_tag( 'slideshare' ) ) { ?>
 
 							<div class="author-cat-time-container">
 
@@ -66,7 +69,7 @@
 					<div id="inner-content" class="wrap cf">
 						<section class="entry-content d-3of4 t-3of4 m-all cf" itemprop="articleBody">
 
-								<?php if( $video_shortcode ) { ?>
+								<?php if( $video_shortcode  ) { ?>
 									<div class="single-twit-or-video video">
 										<?php
 											echo do_shortcode( $video_shortcode );
@@ -77,9 +80,12 @@
 									<div class="single-twit-or-video twit">
 										<img src="<?php echo $twit_src; ?>" />
 									</div>
+								<?php 
+								} elseif( $brafton_video ) { ?>
+									<?php
+											echo do_shortcode( $brafton_video );
+										?>
 								<?php } ?>
-
-
 								<?php the_content(); ?>
 									<?php if( function_exists( 'brafton_share' )) brafton_share( 'bottom' ); ?>
 
