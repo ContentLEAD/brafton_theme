@@ -65,28 +65,37 @@ get_header(); ?>
 						<div class="content_container wrap">
 							<h2><?php bold_first_word( get_field('subhead_4') ); //see bones.php ?></h2>
 							<div class="content_body">
+
 								<?php for($i=1; $i<=4; $i++) { ?>
 
-									<div class="d-all t-all m-all testimonial">
-										<div class="testimonial_inner">
-											<p>
-												<?php echo get_field( 'testimonial_' . $i ); ?>
-											</p>
+									<?php 
+									$testimonial = get_field( 'testimonial_' . $i ); ?>
 
-											<div class="author">
-												<?php echo get_field( 'author_' . $i ); ?> 
+										<div class="d-all t-all m-all testimonial">
+
+										<?php if ($testimonial) { ?>
+											<div class="testimonial_inner">
+												<p>
+													<?php echo $testimonial; ?>
+												</p>
+
+												<div class="author">
+													<?php echo get_field( 'author_' . $i ); ?> 
+												</div>
+
+												<?php $src = get_field( 'testimonial_' . $i . '_image' )['url']; ?>
+
+												<div class="company_logo">
+													<img src="<?php echo $src; ?>"/> 
+												</div>
+													
+
 											</div>
 
-											<?php $src = get_field( 'testimonial_' . $i . '_image' )['url']; ?>
 
-											<div class="company_logo">
-												<img src="<?php echo $src; ?>"/> 
-											</div>
-												
+										<?php } ?>
 
 										</div>
-
-									</div>
 
 								<?php } //end for loop ?>
 							</div>

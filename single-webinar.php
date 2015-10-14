@@ -78,11 +78,10 @@ if ( $_COOKIE[ 'Name' ] ) {
 													<?php
 
 														if( $registered == true ) {
-															$sublime_text = get_post_meta( get_the_ID(), 'sublime_vid_shortcode', true );
-															if ( $sublime_text )
-																echo do_shortcode( $sublime_text );
-															else
-																echo get_post_meta( get_the_ID(), 'embed_code', true );
+															$braftonvid = get_post_meta( get_the_ID(), 'brafton_video', true );
+															if ( $braftonvid ) {
+																echo do_shortcode( $braftonvid );
+															}
 														}else if ( has_term( 'webinars', 'event-type', get_the_ID() ) || has_term( 'pre-webinar', 'event-type', get_the_ID() )) {
 															echo "<span id='webinar-preview'>";
 															the_post_thumbnail();

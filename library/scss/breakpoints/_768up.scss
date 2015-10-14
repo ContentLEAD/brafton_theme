@@ -385,6 +385,12 @@ BLOG-Landing Page
 /*#topinfo- container for an individual post.  Shared by both
 the featured post and the remaining posts....*/
 
+.category-blog, .archive {
+	#topinfo {
+		width: 38%;
+	}
+}
+
 #topinfo {
 
 	position: relative;
@@ -473,8 +479,8 @@ the featured post and the remaining posts....*/
 
 
 .featured-post {
-	background: url(../images/blog-images/headerbackground.png) no-repeat;
-	background-size: 100%;
+	/*background: url(../images/blog-images/headerbackground.png) no-repeat;
+	background-size: 100%;*/
 	margin-bottom: 2em;
 
 	.arrow_to_infinity {
@@ -775,6 +781,20 @@ the featured post and the remaining posts....*/
 	margin-bottom: -15px;
 }
 
+/* entry content */
+#content {
+		.entry-content {
+			/* new style added here */
+			padding-left: 3em;
+		}
+}
+
+.template_section {
+	.content_container {
+		padding-left: 3em;
+	}
+}
+
 .bottom-cta {
 	margin-top: 75px;
 	overflow: visible;
@@ -789,29 +809,61 @@ the featured post and the remaining posts....*/
 .ourlatestfooter,
 .marketzine,
 .askamarketer {
-	width: 250px;
+	width: 390px;
 	height: 162px;
 	display: inline-block;
 	margin-top: -70px;
 	background-size: 100% !important;
 	margin-left: 20px;
+}
 
+.askamarketer, .eBook_cta, #eBook-CTA {
 	&:hover {
-		background-position: 0px -163px;
 		cursor: pointer;
 	}
 }
 
 .ourlatestfooter {
 	background: url(../images/blog-images/ourlatestfooter.png) no-repeat;
+	display: none;
 }
 
 .marketzine {
-	background: url(../images/blog-images/marketzine.jpg) no-repeat;
+	background: url(http://www.brafton.com/wp-content/uploads/2015/09/cta_NewsletterTemplate.png) no-repeat;
+
+		.marketzine-form {
+			display: table;
+			height: 100%;
+			width: 100%;
+			.wpcf7 {
+				display: table-cell;
+				vertical-align: bottom;
+				padding: 10px 10px 5px 10px;
+				form {
+					input[type="email"] {
+						width: 64%;
+						float: left;
+					}
+					input[type="submit"] {
+						width: 35%;
+						float: right;
+						letter-spacing: 0px;
+						padding: 0.3em;
+					}
+					img.ajax-loader {
+						position: absolute;
+						height: 0px;
+					}
+					div.wpcf7-validation-errors, div.wpcf7-mail-sent-ok {
+						background: #fff;
+					}
+				}
+			}
+		}
 }
 
 .askamarketer {
-	background: url(../images/blog-images/askamarketer.jpg) no-repeat;
+	background: url(http://www.brafton.com/wp-content/uploads/2015/09/cta_AskAMarketer.png) no-repeat;
 }
 
 .bottom-cta-container {
@@ -819,7 +871,6 @@ the featured post and the remaining posts....*/
 	display: block;
 	margin: auto;
 }
-
 
 /*Popup footer form*/
 

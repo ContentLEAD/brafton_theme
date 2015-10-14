@@ -120,22 +120,24 @@
 									<?php the_content(); ?>
 								</div>
 
+								<?php if (is_single(array(84810)) ) { ?>
 								<div class="form">
 									<?php 
 								
-									$theID = get_the_ID();
+									//$theID = get_the_ID();
 
-									switch ($theID) {
+									//switch ($theID) {
 
-										case '84601':
-										    get_template_part('marketoforms/social_ad_marketo_form');
-											break;
-										case '84810':
+										//case '84601':
+										    //get_template_part('marketoforms/social_ad_marketo_form');
+											//break;
+										//case '84810':
 											get_template_part('marketoforms/social_ad_content_for_social_marketo_form');
-											break;
-									}
+											//break;
+									//}
 									?>
 								</div>
+								<?php } ?>
 
 							</div>
 
@@ -172,6 +174,30 @@
 					</div>
 
 				</div>
+
+					<?php if (is_single(array(84601)) ) { ?>
+					<div class="form-container">
+						<div class="inner">
+							<div class="form">
+									<?php 
+										
+											//$theID = get_the_ID();
+
+											//switch ($theID) {
+
+												//case '84601':
+												    get_template_part('marketoforms/social_ad_marketo_form');
+													//break;
+												//case '84810':
+													//get_template_part('marketoforms/social_ad_content_for_social_marketo_form');
+													//break;
+											//}
+									?>
+							</div>
+						</div>
+					</div>
+
+					<?php } ?>
 
 				<?php } ?>
 
@@ -306,35 +332,5 @@
 					<?php } //end meet team conditional ?>
 
 		<?php endwhile; endif; ?>
-
-		<div class="fixed-page-footer">
-
-				<div onClick="ga('send', 'event', 'Request a Demo', 'Button Click', 'Request_A_Demo');" class="request_demo">
-					Request A Demo
-				</div>
-
-				<div onClick="ga('send', 'event', 'Contact Us', 'Button Click', 'Contact_Us');" class="contact_us">
-					Contact Us
-				</div>
-
-				<div onClick="ga('send', 'event', 'Ask A Marketer', 'Button Click', 'Ask_A_Marketer');" class="askamarketer">
-					Ask A Marketer
-				</div>
-		</div>
-
-		<script src="//app-sj04.marketo.com/js/forms2/js/forms2.js"></script>
-
-		<div class="popup_form landing_page_popup">
-			<div class="popup_form_inner">
-				<script src="//app-sj04.marketo.com/js/forms2/js/forms2.min.js"></script>
-				<center><form id="mktoForm_1392"></form></center>
-				<script>MktoForms2.loadForm("//app-sj04.marketo.com", "447-XFF-352", 1392);</script>
-			</div>
-			<div class="popup_form_exit">X</div>
-
-		</div>
-
-		<div class="popup_form_shadow">
-		</div>
 
 <?php get_footer(); ?>

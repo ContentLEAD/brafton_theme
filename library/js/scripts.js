@@ -248,12 +248,16 @@ jQuery(document).ready(function($) {
             if ( $window.scrollTop() < pos ) {
                 $this.css({
                     position: 'relative',
-                    top: 0
+                    top: 0,
+                    width: '263px',
+                    'max-width': '100%',
                 });
             } else {
                 $this.css({
                     position: 'fixed',
-                    top: '25px'
+                    top: '25px',
+                    width: '21%',
+                    'max-width': '263px',
                 });
             }
         });
@@ -296,6 +300,62 @@ jQuery(document).ready(function($) {
         });
     });
 
+    //lightbox popup marketo forms for eBook CTAs
+
+    $(".eBook_cta").click(function(){
+        MktoForms2.loadForm("//app-sj04.marketo.com", "447-XFF-352", 1456, function (form){
+            MktoForms2.lightbox(form).show();
+            form.onSubmit(function(){
+                ga('send', 'event', 'Resource', 'Download', '<?php the_permalink(); ?>');
+            });
+        });
+    });
+
+    $(".branding_eBook_cta").click(function(){
+        MktoForms2.loadForm("//app-sj04.marketo.com", "447-XFF-352", 1418, function (form){
+            MktoForms2.lightbox(form).show();
+            form.onSubmit(function(){
+                ga('send', 'event', 'Resource', 'Download', '<?php the_permalink(); ?>');
+            });
+        });
+    });
+
+    $(".convert_eBook_cta").click(function(){
+        MktoForms2.loadForm("//app-sj04.marketo.com", "447-XFF-352", 1457, function (form){
+            MktoForms2.lightbox(form).show();
+            form.onSubmit(function(){
+                ga('send', 'event', 'Resource', 'Download', '<?php the_permalink(); ?>');
+            });
+        });
+    });
+
+    $(".engage_eBook_cta").click(function(){
+        MktoForms2.loadForm("//app-sj04.marketo.com", "447-XFF-352", 1442, function (form){
+            MktoForms2.lightbox(form).show();
+            form.onSubmit(function(){
+                ga('send', 'event', 'Resource', 'Download', '<?php the_permalink(); ?>');
+            });
+        });
+    });
+
+    $(".seo_eBook_cta").click(function(){
+        MktoForms2.loadForm("//app-sj04.marketo.com", "447-XFF-352", 1436, function (form){
+            MktoForms2.lightbox(form).show();
+            form.onSubmit(function(){
+                ga('send', 'event', 'Resource', 'Download', '<?php the_permalink(); ?>');
+            });
+        });
+    });
+
+    $(".thought_eBook_cta").click(function(){
+        MktoForms2.loadForm("//app-sj04.marketo.com", "447-XFF-352", 1454, function (form){
+            MktoForms2.lightbox(form).show();
+            form.onSubmit(function(){
+                ga('send', 'event', 'Resource', 'Download', '<?php the_permalink(); ?>');
+            });
+        });
+    });
+
     //ui effects for executive leadership page
 
     //These are hidden initially by CSS
@@ -315,7 +375,12 @@ jQuery(document).ready(function($) {
 
     //These are hidden initially by CSS
     
-    $(".marketzine").click(function() {
+    //$(".marketzine").click(function() {
+        //$(".popup_form").fadeIn(400);
+        //$(".popup_form_shadow").show();
+    //});
+
+    $(".scrolly .request_demo").click(function() {
         $(".popup_form").fadeIn(400);
         $(".popup_form_shadow").show();
     });

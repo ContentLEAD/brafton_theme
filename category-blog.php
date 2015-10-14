@@ -1,13 +1,44 @@
 <?php
 
-
-
-
 get_header(); 
 
+$wp_query = new WP_Query( 'posts_per_page=10&paged=' . $paged );
 
+//$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
 
-$cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
+//$cat_posts = get_posts( 
+	//array(
+		//'fields' => 'ids',
+		//'post_type' => 'post',
+		//'posts_per_page' => -1,
+		//'paged' => $paged,
+		//'orderby' => 'date',
+		//'order' => 'DESC'
+	//)
+//);
+
+//$news_posts = get_posts( 
+	//array(
+		//'fields' => 'ids',
+		//'cat' => '19',
+		//'post_type' => 'post',
+		//'posts_per_page' => -1,
+		//'paged' => $paged,
+		//'orderby' => 'date',
+		//'order' => 'DESC'
+	//)
+//);
+
+//$post_ids = array_merge( $news_posts, $cat_posts );
+
+//$wp_query = new WP_Query( array (
+		//'post_type'      => 'any',
+        //'post__in'       => $post_ids, 
+        //'paged'          => $paged,
+        //'orderby'        => 'date', 
+        //'order'          => 'DESC',
+        //'posts_per_page' => 10
+	//));
 
 ?>
 
@@ -18,7 +49,7 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 	<div class="archive category_body blog">
 	<?php 
    $i = 0;
-    if( $cat_posts->have_posts() ) : while( $cat_posts->have_posts() ) : $cat_posts->the_post();
+    if( $wp_query->have_posts() ) : while( $wp_query->have_posts() ) : $wp_query->the_post();
    	//first article will be wrapped in d-all container
 	if( $i == 0 ) { ?>
 	<section class="d-all">
@@ -89,7 +120,7 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 
 		<?php $i++; ?>
 		<?php endwhile; endif; ?>
-			<?php _paginate(); //see Brafton.php ?>
+			<?php _paginate($wp_query); //see Brafton.php ?>
 		</section><!--this closes the d-2of3 section after the last article-->
 	<?php wp_reset_query(); ?>
 	<div class="d-1of4 t-1of3 m-all sidebar blog_sidebar">
@@ -104,21 +135,25 @@ $cat_posts = new WP_Query( 'cat=25,19&posts_per_page=10&paged=' . $paged );
 
 
 <div class="inner">
-	<section class="d-5of7 t-2of3 m-all">
+	<section class="entry-content d-3of4 t-3of4 m-all cf">
 		<div class="bottom-cta d-all">
 			<div class="bottom-cta-container">
-				<a onclick="ga('send', 'event', 'Download eBook', 'Button Click', 'Download_eBook');" href="http://www.brafton.com/resources/content-social-join-party-thats-right-business"><div class="ourlatestfooter">
-				</div></a>
+				<!--<a href="http://www.brafton.com/resources/content-social-join-party-thats-right-business"><div class="ourlatestfooter">
+				</div></a>-->
 
 				<div class="marketzine">
+					<div class="marketzine-form">
+						<?php echo do_shortcode ('[contact-form-7 id="86173" title="Newsletter Signup - Email Only"]'); ?>
+					</div>
 				</div>
 
 				<div class="askamarketer">
 				</div>
 			</div>
-		</div>
+		</div>	
 	</section>
 </div>
+
 
 
 <!--This is the popup form that goes along with the "Like what you read" CTA-->

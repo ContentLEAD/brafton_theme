@@ -3,7 +3,7 @@
 <!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
+<!--[if gt IE 8]><!--> <html <?php // language_attributes(); ?> class="no-js"><!--<![endif]-->
 
 	<head>
 		<meta charset="utf-8">
@@ -14,9 +14,9 @@
 		<title><?php wp_title(''); ?></title>
 
 		<?php // mobile meta (hooray!) ?>
-		<noscript>Please enable JavaScript!
-          <META HTTP-EQUIV="Refresh" CONTENT="0;URL=<?php echo get_permalink(); ?>">
-        </noscript>
+		<!--<noscript>
+          <META HTTP-EQUIV="Refresh" CONTENT="0;URL=<?php // echo get_permalink(); ?>">
+        </noscript>-->
 		<meta name="HandheldFriendly" content="True">
 		<meta name="MobileOptimized" content="320">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -33,7 +33,7 @@
 		<meta name="msapplication-TileColor" content="#f01d4f">
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
 		<meta name="google-site-verification" content="S7JTvnasyJGSMb9aNhZ9UyL-_7DJIxOOliBzevQisCY" />
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+		<!--<link rel="pingback" href="<?php // bloginfo('pingback_url'); ?>">-->
 		
 		<?php // wordpress head functions ?>
 		<?php wp_head(); ?>
@@ -63,7 +63,7 @@
 
 		<div id="container">
 
-			<header class="header" role="banner">
+			<header class="header">
 
 				<div class="inner">
 
@@ -71,7 +71,7 @@
 					<p class="mobile_logo logo"><a href="<?php echo home_url(); ?>" title="Return to Homepage"><img src="/wp-content/themes/brafton/library/images/logos/mobile_logo.png" alt="Brafton Logo" /></a></p>
 
 
-					<nav role="navigation">
+					<nav>
 						<a href="#" id="nav-toggle"><span></span></a>
 						<?php wp_nav_menu(array(
     					'container' => false,                           // remove nav container

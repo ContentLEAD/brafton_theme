@@ -126,65 +126,67 @@
 									</div>
 							</section>
 						<div class="sidebar d-1of4 t-1of4 m-all">
-							<?php if ( !function_exists( "dynamic_sidebar" ) || !dynamic_sidebar( "Single Sidebar" ) ) : ?>
+							<?php
+								if (get_post_meta( $post->ID, 'selected_ebook_ad', true ) ) { ?>
+
+								<li class="widget widget_text">
+									<?php echo do_shortcode('[ebook-ad]'); ?>
+								</li>
+
+							<?php } elseif ( !function_exists( "dynamic_sidebar" ) || !dynamic_sidebar( "Single Sidebar" ) ) { ?>
 								<p>Add Widgets to the Post Sidebar</p>
-							<?php endif; ?>
+							<?php } ?>
+
 							<li class="widget widget_text">
 								<div class="scrolly">
 
-									<?php //Display Product CTA automatically by subcategory...
-
-									if( in_category( array( 220,48 ) ) ) { ?>
+									<?php
 										
-										<div class="sprite content_marketing_cta"></div>
+										if (get_post_meta( $post->ID, 'selected_ad', true ) ) { ?>
+											
+										<?php echo do_shortcode('[advertisement]'); ?>
+
+									<?php } elseif ( in_category( array( 220,48 ) ) ) { ?>
+										
+										<div onClick="ga('send', 'event', 'CTA', 'Click', 'Content Marketing');" class="request_demo">
+											<img src="/wp-content/themes/brafton/library/images/blog-images/new-ctas/cta_Writing.png" />
+										</div>
 									
 									<?php } elseif( in_category( array( 221,120 ) ) ) { ?>
 
-										<a href="/about-brafton/content-writers">
-										
-											<div class="sprite content_writing_cta"></div>
-
-										</a>
+										<div onClick="ga('send', 'event', 'CTA', 'Click', 'Writing');" class="request_demo">
+											<img src="/wp-content/themes/brafton/library/images/blog-images/new-ctas/cta_Writing.png" />
+										</div>
 									
 									<?php } elseif( in_category( array( 148,219 ) ) ) { ?>
 
-										<a href="/business-model/analytics">
-										
-											<div class="sprite content_analytics_cta"></div>
-
-										</a>
+										<div onClick="ga('send', 'event', 'CTA', 'Click', 'Analytics');" class="request_demo">
+											<img src="/wp-content/themes/brafton/library/images/blog-images/new-ctas/cta_Analytics.png" />
+										</div>
 									
 									<?php } elseif( in_category( array( 222,125,223,177 ) ) ) { ?>
 										
-										<a href="/business-model/video-marketing">
-											
-											<div class="sprite video_cta"></div>
-
-										</a>
+										<div onClick="ga('send', 'event', 'CTA', 'Click', 'Video');" class="request_demo">
+											<img src="/wp-content/themes/brafton/library/images/blog-images/new-ctas/cta_Video.png" />
+										</div>
 									
 									<?php } elseif( in_category( array( 224,120 ) ) ) { ?>
 
-										<a href="/business-model/infographic-marketing">
-										
-											<div class="sprite graphics_cta"></div>
-
-										</a>
+										<div onClick="ga('send', 'event', 'CTA', 'Click', 'Graphics');" class="request_demo">
+											<img src="/wp-content/themes/brafton/library/images/blog-images/new-ctas/cta_Graphics.png" />
+										</div>
 										
 									<?php } elseif( in_category( array( 225,5 ) ) ) { ?>
 
-										<a href="/business-model/social-media-marketing">
-										
-											<div class="sprite social_media_cta"></div>
-
-										</a>
+										<div onClick="ga('send', 'event', 'CTA', 'Click', 'Social');" class="request_demo">
+											<img src="/wp-content/themes/brafton/library/images/blog-images/new-ctas/cta_Social.png" />
+										</div>
 										
 									<?php } elseif( in_category( array( 202,50 ) ) ) { ?>
 
-										<a href="/business-model/search-engine-optimization">
-										
-											<div class="sprite seo_cta"></div>
-
-										</a>
+										<div onClick="ga('send', 'event', 'CTA', 'Click', 'SEO');" class="request_demo">
+											<img src="/wp-content/themes/brafton/library/images/blog-images/new-ctas/cta_SEO.png" />
+										</div>
 
 									<?php } else {  ?>
 
@@ -212,6 +214,9 @@
 				</div></a>
 
 				<div class="marketzine">
+					<div class="marketzine-form">
+						<?php echo do_shortcode ('[contact-form-7 id="86173" title="Newsletter Signup - Email Only"]'); ?>
+					</div>
 				</div>
 
 				<div class="askamarketer">
@@ -223,10 +228,22 @@
 
 <!--This is the popup form that goes along with the "Like what you read" CTA-->
 
-<div class="popup_form">
+<!--<div class="popup_form">
 	<div class="popup_form_inner">
 		<h2>Get the <strong>Content Marketzine</strong></h2>
-		<?php echo do_shortcode( '[contact-form-7 id="54255" title="Newsletter Signup"]'); ?>
+		<?php // echo do_shortcode( '[contact-form-7 id="54255" title="Newsletter Signup"]'); ?>
+	</div>
+	<div class="popup_form_exit">X</div>
+
+</div> -->
+
+
+<script src="//app-sj04.marketo.com/js/forms2/js/forms2.js"></script>
+
+<div class="popup_form landing_page_popup">
+	<div class="popup_form_inner">
+		<h2><strong>Request</strong> a demo</strong></h2>
+		<?php get_template_part("marketoforms/request_demo_marketo_form"); ?>
 	</div>
 	<div class="popup_form_exit">X</div>
 
@@ -235,7 +252,6 @@
 <div class="popup_form_shadow">
 </div>
 
-<script src="//app-sj04.marketo.com/js/forms2/js/forms2.js"></script>
 <form id="mktoForm_1337"></form>
 
 

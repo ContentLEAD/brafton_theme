@@ -177,9 +177,15 @@ be seen on the Desktop.
 		.entry-content {
 			padding: 1.5em;
 			/* new style added here */
-			padding-left:2.6em;
+			padding-left: 2.6em;
 			padding-top: 1em;
 		}
+}
+
+.template_section {
+	.content_container {
+		padding-left: 0px;
+	}
 }
 
 /*Page Styles*/
@@ -224,6 +230,13 @@ BRAFTON MISSION PAGE TEMPLATE
 	.blog_sidebar {
 		margin-top: -120px;
 		float: right;
+	}
+
+}
+
+.category-blog, .archive {
+	.blog_sidebar {
+		margin-top: -280px;
 	}
 }
 
@@ -460,8 +473,29 @@ SOCIAL MEDIA AD TEMPLATE
 				width: 25%;
 				float: none;
 				clear: both;
+				margin: 0 auto;
 			}
 		}
 	}
 
+}
+
+.form-container {
+	.form {
+			input[type="text"], input[type="email"], input {
+				width: 23.1%;
+				max-width: 100%;
+				float: left;
+				margin: 0px 10px 20px 0px;
+				&:last-child {
+					margin-right: 0px;
+				}			
+			}
+			input[type="submit"] {
+				width: 25%;
+				float: none;
+				clear: both;
+				margin: 0 auto;
+			}
+		}
 }

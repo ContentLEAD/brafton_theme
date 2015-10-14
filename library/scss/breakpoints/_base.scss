@@ -336,17 +336,11 @@ article#single {
 
 /* Brafton Atlantis Embed Styles */
 #singlePostVideo {
-		margin-bottom: 25px;
-
-		.ajs-default-skin div.vjs-big-play-button span {
-			top: 40%!important;
-		}
+	margin-bottom: 25px;
+	ul li {
+		margin: 0px!important;
+		list-style: none;
 	}
-
-/* Fix for existing Atlantis videos */
-
-.ajs-default-skin div.vjs-big-play-button span {
-	top: 40%!important;
 }
 
 .single {
@@ -367,7 +361,9 @@ article#single {
 
 	.sidebar {
 		.scrolly {
-			min-width: 25%;
+			.request_demo {
+				cursor: pointer;
+			}
 			.sprite {
 				width: 100%;
 				height: 0;
@@ -387,7 +383,7 @@ article#single {
 				}
 
 				&.content_analytics_cta {
-					//background-image: url('/wp-content/themes/brafton/library/images/blog-images/product_cta/writing.png');
+					background-image: url('/wp-content/themes/brafton/library/images/blog-images/product_cta/writing.png');
 				}
 
 				&.seo_cta {
@@ -1828,7 +1824,7 @@ SOCIAL LANDING PAGE STYLES
 }
 #social-landing {
 	height: 100%;
-	min-height: 400px;
+	min-height: 300px;
 	clear: both;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
@@ -1838,7 +1834,7 @@ SOCIAL LANDING PAGE STYLES
   	.overlay {
 		background-color: rgba(140, 192, 64, 0.6);
 		box-sizing: border-box;
-		min-height: 400px;
+		min-height: 300px;
 		.title {
   			display: table-row;
   			vertical-align: top;
@@ -1857,7 +1853,7 @@ SOCIAL LANDING PAGE STYLES
 		max-width: 1150px;
 		margin: 0 auto;
 		height: 100%;
-		min-height: 400px;
+		min-height: 300px;
 		color: #fff;
 		width: 100%;
 		box-sizing: border-box;
@@ -1923,6 +1919,29 @@ SOCIAL LANDING PAGE STYLES
 			}
 		}
   	}
+}
+.form-container {
+	.form {
+			clear: both;
+			margin: 40px auto;
+			input[type="text"], input[type="email"], input {
+				width: 100%;
+				max-width: 250px;
+				float: none;
+				margin: 0px auto;
+				font-size: 16px;
+				border-radius: 0px;
+			}
+			input[type="submit"] {
+				margin: 0px auto;
+				height: 42px;
+				border: 0px;
+				background: #273511;
+				color: #fff;
+				text-transform: uppercase;
+				padding: 5px;
+			}
+		}
 }
 .single-social_media_ad {
   	.template_section {

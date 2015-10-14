@@ -250,8 +250,8 @@ var mktFormLanguage = 'English'
   	<input type="hidden" name="searchstr" value="" />
   	<input type="hidden" name="lpurl" value="http://fuel.brafton.com/ContactUsBridge.html?cr={creative}&kw={keyword}" />
   	<input type="hidden" name="formid" value="1012" />
-    <input type="hidden" name="returnURL" value="http://fuel.brafton.com/ThanksForYourInterest.html" />
-    <input type="hidden" name="retURL" value="http://fuel.brafton.com/ThanksForYourInterest.html" />
+    <input type="hidden" name="returnURL" value="http://fuel.brafton.com/ThankYou1.html" />
+    <input type="hidden" name="retURL" value="http://fuel.brafton.com/ThankYou1.html" />
   	<input type="hidden" name="returnLPId" value="-1" />
   	<input type="hidden" name="_mkt_disp" value="return" />
     <input type="hidden" name="_mkt_trk" value="" />

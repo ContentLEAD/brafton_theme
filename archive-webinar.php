@@ -20,8 +20,8 @@ get_header();
     <article class="d-all t-all m-all featured-post">
     
     <?php } elseif( $i == 1 ) {  //second article starts a new d-2of3 section, in a wrapper for padding... ?>
-    
-    	<section class="d-4of7 t-2of3 m-all secondary-blog">
+    	<div class="inner">
+    	<section class="d-5of7 t-2of3 m-all secondary-blog">
 			<article class="d-all">
 	
 	<?php } elseif ($i > 1 ) { //and the rest of the articles will just be wrapped in article tag, not in a new section ?>
@@ -33,8 +33,9 @@ get_header();
 			<header class="d-all">
 				<?php $author = brafton_author_data( get_the_ID() ); ?>
 					<?php if( $i == 0 ) { ?>
-						<h1 itemprop="name" class="title">Webinars & Events</h1>
+						<div class="inner"><h1 itemprop="name" class="title">Webinars & Events</h1></div>
 					<?php } ?>
+					<div class="inner">
 						<?php $size = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' ); ?>
 						<div class="image-inner <?php if( !has_post_thumbnail() ) echo ' no-img'; else echo 'alignleft'; ?>"><?php the_post_thumbnail('medium', array('itemprop' => 'image', 'alt' => get_the_excerpt(), 'title' => get_the_excerpt())); ?></div>
 						<div id="topinfo">
@@ -42,8 +43,9 @@ get_header();
 							<h2 itemprop="name headline"><a href=<?php echo '"' . get_permalink() . '"'?>><?php the_title(); ?></a></h2>
 							</div>		
 						</div>
+					</div>
 			</header>
-			<div class="arrow_to_infinity"></div>
+			<div class="inner"><div class="arrow_to_infinity"></div></div>
 		</article>
 
 		<?php if( $i == 0 ) {
@@ -55,7 +57,7 @@ get_header();
 			<?php _paginate(); //see Brafton.php ?>
 		</section><!--this closes the d-2of3 section after the last article-->
 	<?php wp_reset_query(); ?>
-	<div class="d-3of7 t-1of3 m-all sidebar blog_sidebar">
+	<div class="d-1of4 t-1of3 m-all sidebar blog_sidebar">
 		<aside>
 			<ul>
 				<?php dynamic_sidebar( "New Blog Sidebar" ); ?>
@@ -66,19 +68,22 @@ get_header();
 </article><!-- End #archive -->
 
 <div class="inner">
-	<section class="d-5of7 t-2of3 m-all">
+	<section class="entry-content d-3of4 t-3of4 m-all cf">
 		<div class="bottom-cta d-all">
 			<div class="bottom-cta-container">
-				<a href="http://www.brafton.com/resources/reduce-reuse-recycle-repurpose-get-content"><div class="ourlatestfooter">
-				</div></a>
+				<!--<a href="http://www.brafton.com/resources/content-social-join-party-thats-right-business"><div class="ourlatestfooter">
+				</div></a>-->
 
 				<div class="marketzine">
+					<div class="marketzine-form">
+						<?php echo do_shortcode ('[contact-form-7 id="86173" title="Newsletter Signup - Email Only"]'); ?>
+					</div>
 				</div>
 
 				<div class="askamarketer">
 				</div>
 			</div>
-		</div>
+		</div>	
 	</section>
 </div>
 

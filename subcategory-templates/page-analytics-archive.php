@@ -3,31 +3,46 @@
 *Template Name: Content Analytics Archive
 */
 
-
-
 get_header(); 
-
 
 //pulls both blog/seo and news/seo subcategories
 //Also, pull all the tags!  This is to facilitate a clean transition
 //from relying on tags to using the new subcats...
 
-$cat_posts = new WP_Query( 'cat=148,219' );
+$cat_posts = get_posts( 
+	array(
+		'fields' => 'ids',
+		'cat' => '148,219',
+		'post_type' => 'post',
+		'posts_per_page' => -1,
+		'paged' => $paged,
+		'orderby' => 'date',
+		'order' => 'DESC'
+	)
+);
 
-$tag_posts = new WP_Query( 'tag_id=148');
+$tag_posts = get_posts( 
+	array(
+		'fields' => 'ids',
+		'tag_id' => '148',
+		'post_type' => 'post',
+		'posts_per_page' => -1,
+		'paged' => $paged,
+		'orderby' => 'date',
+		'order' => 'DESC'
+	)
+);
 
-//var_dump( $tag_posts);
+$post_ids = array_merge( $cat_posts, $tag_posts );
 
-
-//create new empty query and populate it with the other two
-$wp_query = new WP_Query();
-$wp_query->posts = array_merge( $cat_posts->posts, $tag_posts->posts );
-
-//populate post_count count for the loop to work correctly
-
-$wp_query->post_count = $cat_posts->post_count + $tag_posts->post_count;
-
-
+$wp_query = new WP_Query( array (
+		'post_type'      => 'any',
+        'post__in'       => $post_ids, 
+        'paged'          => $paged,
+        'orderby'        => 'date', 
+        'order'          => 'DESC',
+        'posts_per_page' => 10
+	));
 
 ?>
 
@@ -100,7 +115,7 @@ $wp_query->post_count = $cat_posts->post_count + $tag_posts->post_count;
 
 		<?php $i++; ?>
 		<?php endwhile; endif; ?>
-			<?php //_paginate($cat_posts); //see Brafton.php ?>
+			<?php _paginate($wp_query); //see Brafton.php ?>
 		</section><!--this closes the d-2of3 section after the last article-->
 	<?php wp_reset_query(); ?>
 	<div class="d-1of4 t-1of3 m-all sidebar blog_sidebar">
@@ -114,13 +129,16 @@ $wp_query->post_count = $cat_posts->post_count + $tag_posts->post_count;
 </article><!-- End #archive -->
 
 <div class="inner">
-	<section class="d-5of7 t-2of3 m-all">
+	<section class="entry-content d-3of4 t-3of4 m-all cf">
 		<div class="bottom-cta d-all">
 			<div class="bottom-cta-container">
-				<a href="http://www.brafton.com/resources/content-social-join-party-thats-right-business"><div class="ourlatestfooter">
-				</div></a>
+				<!--<a href="http://www.brafton.com/resources/content-social-join-party-thats-right-business"><div class="ourlatestfooter">
+				</div></a>-->
 
 				<div class="marketzine">
+					<div class="marketzine-form">
+						<?php echo do_shortcode ('[contact-form-7 id="86173" title="Newsletter Signup - Email Only"]'); ?>
+					</div>
 				</div>
 
 				<div class="askamarketer">

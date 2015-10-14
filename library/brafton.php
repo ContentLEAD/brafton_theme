@@ -1917,3 +1917,19 @@ function load_fonts() {
 }
     
 add_action('wp_print_styles', 'load_fonts');
+
+
+//add news posts to blog category query
+//add_action( 'pre_get_posts', 'custom_query_vars' );
+//function custom_query_vars( $query ) {
+  //if ( is_category( $blog ) && $query->is_main_query() ) {
+    //$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+	         //$query->set( 'post_type', 'any' );
+	         //$query->set( 'cat', '228,19' );
+	         //$query->set( 'orderby', 'date' );
+	         //$query->set( 'posts_per_page', 10 );
+	         //$query->set ( 'paged', $paged );
+	         //$query->set ( 'order', 'DESC');
+  	//}
+  //return $query;
+//}

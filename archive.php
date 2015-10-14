@@ -105,19 +105,22 @@
 </article><!-- End #archive -->
 
 <div class="inner">
-	<section class="d-5of7 t-2of3 m-all">
+	<section class="entry-content d-3of4 t-3of4 m-all cf">
 		<div class="bottom-cta d-all">
 			<div class="bottom-cta-container">
-				<a href="http://www.brafton.com/resources/content-social-join-party-thats-right-business"><div class="ourlatestfooter">
-				</div></a>
+				<!--<a href="http://www.brafton.com/resources/content-social-join-party-thats-right-business"><div class="ourlatestfooter">
+				</div></a>-->
 
 				<div class="marketzine">
+					<div class="marketzine-form">
+						<?php echo do_shortcode ('[contact-form-7 id="86173" title="Newsletter Signup - Email Only"]'); ?>
+					</div>
 				</div>
 
 				<div class="askamarketer">
 				</div>
 			</div>
-		</div>
+		</div>	
 	</section>
 </div>
 
