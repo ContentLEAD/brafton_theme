@@ -829,7 +829,10 @@ the featured post and the remaining posts....*/
 }
 
 .marketzine {
-	background: url(http://www.brafton.com/wp-content/uploads/2015/09/cta_NewsletterTemplate.png) no-repeat;
+	visibility: visible;
+	background: #010103 url(http://brafton.com/wp-content/themes/brafton/library/images/newsletter-new.jpg) no-repeat;
+	background-size: initial!important;
+	background-position: 5% 25%;
 
 		.marketzine-form {
 			display: table;
@@ -839,14 +842,21 @@ the featured post and the remaining posts....*/
 				display: table-cell;
 				vertical-align: bottom;
 				padding: 10px 10px 5px 10px;
+				.form-right {
+					width: 60%;
+					float: right;
+				}
 				form {
 					input[type="email"] {
-						width: 64%;
+						width: 100%;
 						float: left;
 					}
+					input {
+						width: 100%;
+						margin-bottom: 5px;
+					}
 					input[type="submit"] {
-						width: 35%;
-						float: right;
+						width: 100%;
 						letter-spacing: 0px;
 						padding: 0.3em;
 					}
@@ -856,6 +866,13 @@ the featured post and the remaining posts....*/
 					}
 					div.wpcf7-validation-errors, div.wpcf7-mail-sent-ok {
 						background: #fff;
+					}
+					.wpcf7-response-output {
+						position: absolute;
+						z-index: 0;
+						margin-top: 140px;
+						width: 220px;
+						margin-left: 150px;
 					}
 				}
 			}

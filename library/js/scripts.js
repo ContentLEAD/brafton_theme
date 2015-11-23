@@ -380,6 +380,11 @@ jQuery(document).ready(function($) {
         //$(".popup_form_shadow").show();
     //});
 
+    $(".content_body .request_demo").click(function() {
+        $(".popup_form").fadeIn(400);
+        $(".popup_form_shadow").show();
+    });
+
     $(".scrolly .request_demo").click(function() {
         $(".popup_form").fadeIn(400);
         $(".popup_form_shadow").show();

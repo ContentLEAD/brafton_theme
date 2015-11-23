@@ -113,7 +113,7 @@
 
 				<div class="marketzine">
 					<div class="marketzine-form">
-						<?php echo do_shortcode ('[contact-form-7 id="86173" title="Newsletter Signup - Email Only"]'); ?>
+						<?php echo do_shortcode ('[contact-form-7 id="54255" title="Newsletter Signup"]'); ?>
 					</div>
 				</div>
 

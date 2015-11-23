@@ -143,7 +143,7 @@ $wp_query = new WP_Query( 'posts_per_page=10&paged=' . $paged );
 
 				<div class="marketzine">
 					<div class="marketzine-form">
-						<?php echo do_shortcode ('[contact-form-7 id="86173" title="Newsletter Signup - Email Only"]'); ?>
+						<?php echo do_shortcode ('[contact-form-7 id="54255" title="Newsletter Signup"]'); ?>
 					</div>
 				</div>
 
@@ -158,14 +158,14 @@ $wp_query = new WP_Query( 'posts_per_page=10&paged=' . $paged );
 
 <!--This is the popup form that goes along with the "Like what you read" CTA-->
 
-<div class="popup_form">
+<!--<div class="popup_form">
 	<div class="popup_form_inner">
 		<h2>Get the <strong>Content Marketzine</strong></h2>
-		<?php echo do_shortcode( '[contact-form-7 id="54255" title="Newsletter Signup"]'); ?>
+		<?php // echo do_shortcode( '[contact-form-7 id="54255" title="Newsletter Signup"]'); ?>
 	</div>
 	<div class="popup_form_exit">X</div>
 
-</div>
+</div>-->
 
 <div class="popup_form_shadow">
 </div>

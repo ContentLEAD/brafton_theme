@@ -125,6 +125,7 @@
 										<?php comments_template(); ?>
 									</div>
 							</section>
+							
 						<div class="sidebar d-1of4 t-1of4 m-all">
 							<?php
 								if (get_post_meta( $post->ID, 'selected_ebook_ad', true ) ) { ?>
@@ -138,6 +139,11 @@
 							<?php } ?>
 
 							<li class="widget widget_text">
+
+								<div class="catcher">
+									<!--catcher-->
+								</div>
+
 								<div class="scrolly">
 
 									<?php
@@ -190,11 +196,17 @@
 
 									<?php } else {  ?>
 
-										<?php echo do_shortcode('[advertisement]'); ?>
+										<div onClick="ga('send', 'event', 'CTA', 'Click', 'Content Marketing');" class="request_demo">
+											<img src="/wp-content/themes/brafton/library/images/blog-images/new-ctas/cta_Writing.png" />
+										</div>
 
 									<?php } ?>
 
 								</div>
+
+								<div class="catcher">
+									    <!--catcher-->
+									</div>
 
 							</li>
 						
@@ -215,7 +227,7 @@
 
 				<div class="marketzine">
 					<div class="marketzine-form">
-						<?php echo do_shortcode ('[contact-form-7 id="86173" title="Newsletter Signup - Email Only"]'); ?>
+						<?php echo do_shortcode ('[contact-form-7 id="54255" title="Newsletter Signup"]'); ?>
 					</div>
 				</div>
 

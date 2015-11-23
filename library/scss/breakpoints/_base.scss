@@ -808,6 +808,87 @@ BRAFTON MISSION PAGE TEMPLATE
 	}
 }
 
+/********************
+BRAFTON SMB STYLES 
+*********************/
+
+.page-template-page-smb {
+	.content_body {
+		.request_demo {
+			cursor: pointer;
+			text-decoration: underline;
+		}
+	}
+	.reasons {
+		.inner {
+			.content_body {
+				.reasons_inner {
+					background: #E4E4E6;
+					padding: 1em 3em;
+					h3 {
+						font-size: 1.5em;
+						line-height: 120%;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	.who {
+		.inner {
+			.content_container {
+				.content_body {
+					.img_container {
+						margin-bottom: 15px;
+					}
+				}
+			}
+		}
+	}
+	.work_samples {
+		.inner {
+			.content_container {
+				.content_body {
+					h3 {
+						text-align: center;
+						font-weight: bold;
+						font-size: 1.5em;
+					}
+					p {
+						text-align: center;
+					}
+					.client_cta {
+						display: block;
+						margin: 30px auto;
+						padding: 0.3em;
+						max-width: 340px;
+						text-decoration: none;
+						text-align: center;
+						color: #333;
+						border: 2px solid #333;
+						border-radius: 25px;
+						-webkit-transition: all 0.2s;
+						transition: all 0.2s;
+						text-decoration: none;
+						h4 {
+							margin: 0px;
+							font-weight: normal;
+							font-size: 1.5em;
+						}
+						span {
+							font-size: 0.9em;
+						}
+						&:hover {
+							background: #333;
+    						color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
 
 
 /*********************
@@ -1497,6 +1578,16 @@ form .req {
 			    border: 2px outset buttonface;
 			  }
 		}
+}
+
+.askamarketer, .eBook_cta, #eBook-CTA {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.marketzine {
+	visibility: hidden;
 }
 
 /*Ask a marketer popup*/
