@@ -2047,6 +2047,35 @@ SOCIAL LANDING PAGE STYLES
 }
 
 /******************************************************************
+NEWSLETTER TEMPLATE STYLES
+******************************************************************/
+
+.page-template-page-newsletter {
+	.inner {
+		.text {
+			width: 80%;
+			margin: 0 auto 40px auto;
+			overflow: auto;
+			h1 {
+				text-align: center;
+				font-size: 3em;
+			}
+			.form-right {
+				max-width: 400px;
+				margin: 0 auto;
+				input[type="name"] {
+					margin-bottom: 10px;
+				}
+			}
+			#cta1, #cta2, #cta3 {
+				float: left;
+				margin: 0px 8px;
+			}
+		}
+	}
+}
+
+/******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
 

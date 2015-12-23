@@ -24,6 +24,7 @@
                             <ul class="version-container">
                                 <li><a class="version" href="http://www.brafton.com/support/drupal">V6.x</a></li>
                                 <li><a class="version" href="http://www.brafton.com/support/drupal-7">V7.x</a></li>
+                                <li><a class="version" href="http://www.brafton.com/support/drupal-8">V8.x</a></li>
                             </ul>
                         </li>
                         <li class="support-link">

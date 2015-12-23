@@ -1320,7 +1320,9 @@ function brafton_share( $location ){
 	echo "<div class='share icons $location small cf'>";
 	foreach( $services as $network )
 		echo "<a data-service='$network' href='#'></a>";
-
+		if (is_page('71465')) {
+			echo "<a target='_blank' class='glassdoor-icon' href='https://www.glassdoor.com/Reviews/Brafton-Reviews-E337405.htm'><img src='http://brafton.com/wp-content/themes/brafton/library/images/glassdoor.png' alt='Glassdoor' /></a>";
+		}
 	echo '</div>';
 }
 

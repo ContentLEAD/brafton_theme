@@ -160,11 +160,12 @@ jQuery(document).ready(function($) {
                 },
                 enableHover: false,
                 enableTracking: true,
+                enableCounter: false,
                 share: {
                     twitter: true
                 },
                 title: title,
-                template: '<div class="cube twitter"></div>' + template,
+                //template: '<div class="cube twitter"></div>' + template,
                 url: url
             });
             $('a[data-service="facebook"]').sharrre({
